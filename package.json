@@ -108,7 +108,8 @@
     "prepublishOnly": "node build.js && node test/run-tests.js",
     "version": "node scripts/sync-cdn-version.js && node scripts/sync-site-stats.js && git add -A -- '*.html'",
     "cdn:check": "node scripts/sync-cdn-version.js --check",
-    "site:stats": "node scripts/sync-site-stats.js"
+    "site:stats": "node scripts/sync-site-stats.js",
+    "classes:check": "node scripts/check-classes.js --strict"
   },
   "peerDependencies": {
     "postcss": ">=8.0.0",

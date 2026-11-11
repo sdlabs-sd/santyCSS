@@ -11,12 +11,16 @@ const { buildIndex } = require('./lib/apply');
 const gridSystem = require('./lib/grid-system');
 
 // ─── VALUE RANGES ───────────────────────────────────────────────────────────
-// T-shirt spacing scale — 32 values covering all real-world design needs.
+// T-shirt spacing scale — 37 values covering all real-world design needs.
+// 36/44/60/72 fill the gaps designers reach for most (section rhythm, 44px
+// touch targets, 60px hero padding) and were used across the site already.
 // Migration: add-padding-7 → add-padding-8, add-padding-9 → add-padding-10, etc.
-const spacing = [0,1,2,3,4,5,6,8,10,12,14,16,18,20,24,28,32,40,48,56,64,80,96,128,160,192,256,320,384,512,640,768,1024];
+const spacing = [0,1,2,3,4,5,6,8,10,12,14,16,18,20,24,28,32,36,40,44,48,56,60,64,72,80,96,128,160,192,256,320,384,512,640,768,1024];
+// Extra fixed sizes for width/height only (avatars, logos, sidebars, cards).
+const sizeExtras = [90,100,120,140,180,200,220,240,280,300,360,420,480,560];
 
 const fontSizes = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96, 120, 144];
-const radii = [...new Set([0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 96, 128])];
+const radii = [...new Set([0, 2, 3, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 96, 128])];
 const borderWidths = [...new Set([0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 28, 32, 40, 48])];
 const zIndexes = [0, 1, 2, 3, 5, 10, 20, 30, 40, 50, 100, 200, 500, 999, 1000, 9999];
 const opacities = [];
@@ -44,6 +48,15 @@ const palette = {
   gray:    { 50:'#f9fafb',100:'#f3f4f6',200:'#e5e7eb',300:'#d1d5db',400:'#9ca3af',500:'#6b7280',600:'#4b5563',700:'#374151',800:'#1f2937',900:'#111827' },
   zinc:    { 50:'#fafafa',100:'#f4f4f5',200:'#e4e4e7',300:'#d4d4d8',400:'#a1a1aa',500:'#71717a',600:'#52525b',700:'#3f3f46',800:'#27272a',900:'#18181b' },
   stone:   { 50:'#fafaf9',100:'#f5f5f4',200:'#e7e5e4',300:'#d6d3d1',400:'#a8a29e',500:'#78716c',600:'#57534e',700:'#44403c',800:'#292524',900:'#1c1917' },
+};
+// Extra families that ship as base utilities only (text / background / border /
+// fill / stroke + on-hover tints) — not multiplied across every variant prefix,
+// which would add ~23 KB gzipped. Use the JIT or santy.config.json for more.
+const basePaletteExtras = {
+  emerald: { 50:'#ecfdf5',100:'#d1fae5',200:'#a7f3d0',300:'#6ee7b7',400:'#34d399',500:'#10b981',600:'#059669',700:'#047857',800:'#065f46',900:'#064e3b' },
+  sky:     { 50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',300:'#7dd3fc',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7',700:'#0369a1',800:'#075985',900:'#0c4a6e' },
+  fuchsia: { 50:'#fdf4ff',100:'#fae8ff',200:'#f5d0fe',300:'#f0abfc',400:'#e879f9',500:'#d946ef',600:'#c026d3',700:'#a21caf',800:'#86198f',900:'#701a75' },
+  neutral: { 50:'#fafafa',100:'#f5f5f5',200:'#e5e5e5',300:'#d4d4d4',400:'#a3a3a3',500:'#737373',600:'#525252',700:'#404040',800:'#262626',900:'#171717' },
 };
 const namedColors = { white: '#ffffff', black: '#000000', transparent: 'transparent', current: 'currentColor' };
 
@@ -80,6 +93,7 @@ if (userConfig.colors) {
     }
   }
 }
+const fullPalette = { ...basePaletteExtras, ...palette };
 if (Array.isArray(userConfig.spacing)) {
   userConfig.spacing.forEach(v => { if (!spacing.includes(v)) spacing.push(v); });
   spacing.sort((a, b) => a - b);
@@ -355,6 +369,7 @@ spacing.forEach(v => {
 mod('sizing');
 add(`\n/* ── Width ── */`);
 spacing.forEach(v => add(`.set-width-${v} { width: ${v}px; }`));
+sizeExtras.forEach(v => add(`.set-width-${v} { width: ${v}px; }`));
 [1,2,3,4,5,6,7,8,9,10,11,12].forEach(n => {
   [2,3,4,5,6,12].forEach(d => {
     if (n < d) {
@@ -373,6 +388,7 @@ add(`.set-width-fit    { width: fit-content; }`);
 
 add(`\n/* ── Height ── */`);
 spacing.forEach(v => add(`.set-height-${v} { height: ${v}px; }`));
+sizeExtras.forEach(v => add(`.set-height-${v} { height: ${v}px; }`));
 add(`.set-height-full   { height: 100%; }`);
 add(`.set-height-screen { height: 100vh; }`);
 add(`.set-height-auto   { height: auto; }`);
@@ -381,7 +397,7 @@ add(`.set-height-max    { height: max-content; }`);
 add(`.set-height-fit    { height: fit-content; }`);
 
 add(`\n/* ── Min/Max Width/Height ── */`);
-spacing.filter(v => v <= 512).forEach(v => {
+[...spacing.filter(v => v <= 512), ...sizeExtras].forEach(v => {
   add(`.min-width-${v}  { min-width: ${v}px; }`);
   add(`.max-width-${v}  { max-width: ${v}px; }`);
   add(`.min-height-${v} { min-height: ${v}px; }`);
@@ -423,6 +439,7 @@ add(`\n/* ── Border Style ── */
 radii.forEach(v => add(`.round-corners-${v} { border-radius: ${v}px; }`));
 add(`.make-circle          { border-radius: 50%; }`);
 add(`.make-pill            { border-radius: 9999px; }`);
+add(`.round-corners-full   { border-radius: 9999px; }`);
 add(`.round-top-${0}       { border-top-left-radius: 0; border-top-right-radius: 0; }`);
 radii.filter(v=>v>0).forEach(v => {
   add(`.round-top-${v}    { border-top-left-radius: ${v}px; border-top-right-radius: ${v}px; }`);
@@ -516,7 +533,7 @@ add(`.letter-space-widest { letter-spacing: 0.1em; }`);
 // ─── COLORS ──────────────────────────────────────────────────────────────────
 mod('colors');
 add(`\n/* ── Text Colors ── */`);
-Object.entries(palette).forEach(([name, shades]) => {
+Object.entries(fullPalette).forEach(([name, shades]) => {
   Object.entries(shades).forEach(([shade, hex]) => {
     add(`.color-${name}-${shade} { color: ${hex}; }`);
   });
@@ -524,7 +541,7 @@ Object.entries(palette).forEach(([name, shades]) => {
 Object.entries(namedColors).forEach(([name, val]) => add(`.color-${name} { color: ${val}; }`));
 
 add(`\n/* ── Background Colors ── */`);
-Object.entries(palette).forEach(([name, shades]) => {
+Object.entries(fullPalette).forEach(([name, shades]) => {
   Object.entries(shades).forEach(([shade, hex]) => {
     add(`.background-${name}-${shade} { background-color: ${hex}; }`);
   });
@@ -532,7 +549,7 @@ Object.entries(palette).forEach(([name, shades]) => {
 Object.entries(namedColors).forEach(([name, val]) => add(`.background-${name} { background-color: ${val}; }`));
 
 add(`\n/* ── Border Colors ── */`);
-Object.entries(palette).forEach(([name, shades]) => {
+Object.entries(fullPalette).forEach(([name, shades]) => {
   Object.entries(shades).forEach(([shade, hex]) => {
     add(`.border-color-${name}-${shade} { border-color: ${hex}; }`);
   });
@@ -567,14 +584,14 @@ add(`
 `);
 
 add(`\n/* ── Fill (SVG) ── */`);
-Object.entries(palette).forEach(([name, shades]) => {
+Object.entries(fullPalette).forEach(([name, shades]) => {
   Object.entries(shades).forEach(([shade, hex]) => {
     add(`.fill-${name}-${shade} { fill: ${hex}; }`);
   });
 });
 
 add(`\n/* ── Stroke (SVG) ── */`);
-Object.entries(palette).forEach(([name, shades]) => {
+Object.entries(fullPalette).forEach(([name, shades]) => {
   Object.entries(shades).forEach(([shade, hex]) => {
     add(`.stroke-${name}-${shade} { stroke: ${hex}; }`);
   });
@@ -1032,8 +1049,12 @@ const responsiveClasses = [
   ['text-left','text-align:left'],['text-center','text-align:center'],['text-right','text-align:right'],
 ];
 // Responsive spacing for common values
-const respSpacing = [0,4,8,12,16,20,24,32,40,48,64];
+const respSpacing = [0,4,8,12,16,20,24,32,40,48,64,80];
 respSpacing.forEach(v => {
+  responsiveClasses.push([`add-padding-top-${v}`,`padding-top:${v}px`]);
+  responsiveClasses.push([`add-padding-bottom-${v}`,`padding-bottom:${v}px`]);
+  responsiveClasses.push([`add-margin-top-${v}`,`margin-top:${v}px`]);
+  responsiveClasses.push([`add-margin-bottom-${v}`,`margin-bottom:${v}px`]);
   responsiveClasses.push([`add-padding-${v}`,`padding:${v}px`]);
   responsiveClasses.push([`add-padding-x-${v}`,`padding-left:${v}px;padding-right:${v}px`]);
   responsiveClasses.push([`add-padding-y-${v}`,`padding-top:${v}px;padding-bottom:${v}px`]);
@@ -1047,7 +1068,7 @@ gridCols.forEach(n => {
   responsiveClasses.push([`grid-cols-${n}`,`grid-template-columns:repeat(${n},minmax(0,1fr))`]);
 });
 // Responsive font sizes
-[12,14,16,18,20,24,28,32,36,40,48,56,64].forEach(v => {
+[12,14,16,18,20,22,24,26,28,32,36,40,48,56,64,72].forEach(v => {
   responsiveClasses.push([`set-text-${v}`,`font-size:${v}px`]);
 });
 // Responsive widths
@@ -1168,12 +1189,36 @@ stateClasses.push(['transition-normal','transition:var(--santy-transition-normal
   stateClasses.push([`add-border-${v}`, `border:${v}px solid`]);
 });
 
+// Hover-only extras — light tints (50–200) for hover backgrounds, deep shades
+// (800/900) for hover text, plain white/black, and a few transforms. Emitted
+// for on-hover / group-hover only so the other 10 state variants stay lean.
+const hoverExtraClasses = [
+  ['background-white','background-color:#ffffff'], ['background-black','background-color:#000000'],
+  ['color-white','color:#ffffff'], ['color-black','color:#000000'],
+  ['border-color-white','border-color:#ffffff'], ['background-transparent','background-color:transparent'],
+  ['add-shadow-xl','box-shadow:var(--santy-shadow-xl)'],
+  ['rotate-0','transform:rotate(0deg)'], ['rotate-45','transform:rotate(45deg)'],
+  ['rotate-90','transform:rotate(90deg)'], ['rotate-180','transform:rotate(180deg)'],
+  ['translate-y-minus-2','transform:translateY(-2px)'], ['translate-y-minus-4','transform:translateY(-4px)'],
+];
+Object.entries(fullPalette).forEach(([name, shades]) => {
+  [50,100,200].forEach(sh => shades[sh] && hoverExtraClasses.push([`background-${name}-${sh}`, `background-color:${shades[sh]}`]));
+  [200].forEach(sh => shades[sh] && hoverExtraClasses.push([`border-color-${name}-${sh}`, `border-color:${shades[sh]}`]));
+  [800,900].forEach(sh => {
+    if (!shades[sh]) return;
+    hoverExtraClasses.push([`background-${name}-${sh}`, `background-color:${shades[sh]}`]);
+    hoverExtraClasses.push([`color-${name}-${sh}`, `color:${shades[sh]}`]);
+  });
+});
+const hoverExtraVariants = new Set(['on-hover']);
+
 const startStateVariants = new Set(['on-hover', 'on-focus']);
 stateVariants.forEach(([prefix, pseudo]) => {
   const isStart = startStateVariants.has(prefix);
   if (!isStart) add(`\n/* ═══ VARIANTS_BLOCK_START ═══ */`);
   add(`\n/* ${prefix} */`);
-  stateClasses.forEach(([cls, prop]) => {
+  const list = hoverExtraVariants.has(prefix) ? stateClasses.concat(hoverExtraClasses) : stateClasses;
+  list.forEach(([cls, prop]) => {
     add(`.${prefix}\\:${cls}${pseudo} { ${prop}; }`);
   });
   if (!isStart) add(`/* ═══ VARIANTS_BLOCK_END ═══ */`);
@@ -1182,7 +1227,7 @@ stateVariants.forEach(([prefix, pseudo]) => {
 // Group hover
 add(`\n/* ═══ VARIANTS_BLOCK_START ═══ */`);
 add(`\n/* ── Group Hover ── */\n/* Add class="group" to parent, then use group-hover: on children */`);
-stateClasses.forEach(([cls, prop]) => {
+stateClasses.concat(hoverExtraClasses).forEach(([cls, prop]) => {
   add(`.group:hover .group-hover\\:${cls} { ${prop}; }`);
 });
 add(`/* ═══ VARIANTS_BLOCK_END ═══ */`);
@@ -1192,7 +1237,39 @@ add(`\n/* ═══ VARIANTS_BLOCK_START ═══ */`);
 add(`\n/* ── Print Utilities ── */\n@media print {\n  .print\\:hidden { display: none; }\n  .print\\:block  { display: block; }\n  .print\\:no-shadow { box-shadow: none !important; }\n}\n`);
 add(`/* ═══ VARIANTS_BLOCK_END ═══ */`);
 
-// ─── MISSING UTILITIES ────────────────────────────────────────────────────────
+// ─── ALIASES & TRANSLATE (core, not variants) ────────────────────────────────
+mod('effects');
+add(`\n/* ── Translate ── */`);
+const translateSteps = [0,1,2,4,6,8,12,16,20,24,32,40,48,64];
+translateSteps.forEach(v => {
+  add(`.translate-x-${v} { transform: translateX(${v}px); }`);
+  add(`.translate-y-${v} { transform: translateY(${v}px); }`);
+  if (v) {
+    add(`.translate-x-minus-${v} { transform: translateX(-${v}px); }`);
+    add(`.translate-y-minus-${v} { transform: translateY(-${v}px); }`);
+  }
+});
+add(`.translate-x-full { transform: translateX(100%); }`);
+add(`.translate-y-full { transform: translateY(100%); }`);
+add(`.translate-x-half { transform: translateX(50%); }`);
+add(`.translate-y-half { transform: translateY(50%); }`);
+add(`
+/* ── Common aliases (names people reach for first) ── */
+.flex-col            { flex-direction: column; }
+.flex-col-reverse    { flex-direction: column-reverse; }
+.flex-shrink-0       { flex-shrink: 0; }
+.flex-grow-0         { flex-grow: 0; }
+.flex-grow-1         { flex-grow: 1; }
+.align-self-auto     { align-self: auto; }
+.align-self-start    { align-self: flex-start; }
+.align-self-center   { align-self: center; }
+.align-self-end      { align-self: flex-end; }
+.align-self-stretch  { align-self: stretch; }
+.text-extrabold      { font-weight: 800; }
+.text-regular        { font-weight: 400; }
+.rotate-0            { transform: rotate(0deg); }
+`);
+mod('variants');
 add(`
 /* ── Backdrop Filter ── */
 .backdrop-blur-none { backdrop-filter: blur(0); -webkit-backdrop-filter: blur(0); }

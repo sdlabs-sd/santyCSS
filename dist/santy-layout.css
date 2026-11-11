@@ -113,11 +113,21 @@
 .pin-left-32   { left: 32px; }
 .pin-right-32  { right: 32px; }
 .pin-all-32    { top: 32px; right: 32px; bottom: 32px; left: 32px; }
+.pin-top-36    { top: 36px; }
+.pin-bottom-36 { bottom: 36px; }
+.pin-left-36   { left: 36px; }
+.pin-right-36  { right: 36px; }
+.pin-all-36    { top: 36px; right: 36px; bottom: 36px; left: 36px; }
 .pin-top-40    { top: 40px; }
 .pin-bottom-40 { bottom: 40px; }
 .pin-left-40   { left: 40px; }
 .pin-right-40  { right: 40px; }
 .pin-all-40    { top: 40px; right: 40px; bottom: 40px; left: 40px; }
+.pin-top-44    { top: 44px; }
+.pin-bottom-44 { bottom: 44px; }
+.pin-left-44   { left: 44px; }
+.pin-right-44  { right: 44px; }
+.pin-all-44    { top: 44px; right: 44px; bottom: 44px; left: 44px; }
 .pin-top-48    { top: 48px; }
 .pin-bottom-48 { bottom: 48px; }
 .pin-left-48   { left: 48px; }
@@ -128,11 +138,21 @@
 .pin-left-56   { left: 56px; }
 .pin-right-56  { right: 56px; }
 .pin-all-56    { top: 56px; right: 56px; bottom: 56px; left: 56px; }
+.pin-top-60    { top: 60px; }
+.pin-bottom-60 { bottom: 60px; }
+.pin-left-60   { left: 60px; }
+.pin-right-60  { right: 60px; }
+.pin-all-60    { top: 60px; right: 60px; bottom: 60px; left: 60px; }
 .pin-top-64    { top: 64px; }
 .pin-bottom-64 { bottom: 64px; }
 .pin-left-64   { left: 64px; }
 .pin-right-64  { right: 64px; }
 .pin-all-64    { top: 64px; right: 64px; bottom: 64px; left: 64px; }
+.pin-top-72    { top: 72px; }
+.pin-bottom-72 { bottom: 72px; }
+.pin-left-72   { left: 72px; }
+.pin-right-72  { right: 72px; }
+.pin-all-72    { top: 72px; right: 72px; bottom: 72px; left: 72px; }
 .pin-top-80    { top: 80px; }
 .pin-bottom-80 { bottom: 80px; }
 .pin-left-80   { left: 80px; }

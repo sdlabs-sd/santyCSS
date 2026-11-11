@@ -106,6 +106,33 @@ test('classmap is valid JSON with >15k classes', () => {
     .forEach(c => assert(map.classes.includes(c), `classmap missing "${c}"`));
 });
 
+// ── 7b. Gap-fill classes (class audit) ───────────────────────────────────────
+[
+  '.add-padding-36', '.add-margin-bottom-60', '.add-padding-y-72', '.gap-44',
+  '.set-width-120', '.set-height-200', '.max-width-360', '.round-corners-3', '.round-corners-full',
+  '.background-emerald-100', '.color-sky-600', '.border-color-fuchsia-300', '.background-neutral-900',
+  '.flex-col', '.flex-shrink-0', '.align-self-center', '.text-extrabold', '.text-regular',
+  '.rotate-0', '.translate-y-minus-4', '.translate-x-8',
+  '.on-hover\\:color-white', '.on-hover\\:background-gray-100', '.on-hover\\:add-shadow-xl',
+  '.group-hover\\:background-blue-50', '.on-mobile\\:set-text-22', '.md\\:add-padding-top-80',
+].forEach(sel => test(`gap-fill ${sel.replace(/\\\\/g, '')}`, () => assert(css.includes(sel + ' ') || css.includes(sel + ':'), `${sel} not found`)));
+
+test('hover-triggered animations are escaped (valid selectors)', () => {
+  const anim = read('santy-animations.css');
+  assert(!/^\.on-hover:animate-/m.test(anim), 'found unescaped ".on-hover:animate-…" — selector never matches');
+  assert(anim.includes('.on-hover\\:animate-bounce:hover'), 'on-hover:animate-bounce missing');
+  assert(anim.includes('.on-hover\\:animate-shake:hover'), 'on-hover:animate-shake missing');
+});
+
+test('class audit: every SantyCSS-looking class used on the site exists', () => {
+  const { execFileSync } = require('child_process');
+  try {
+    execFileSync(process.execPath, [path.join(ROOT, 'scripts', 'check-classes.js'), '--strict'], { stdio: 'pipe' });
+  } catch (e) {
+    assert(false, String(e.stdout || e.message).trim());
+  }
+});
+
 // ── 8. Minified output is structurally sound ─────────────────────────────────
 test('santy.min.css braces balanced, no comments', () => {
   const min = read('santy.min.css');

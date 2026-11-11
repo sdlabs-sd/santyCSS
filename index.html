@@ -747,7 +747,7 @@ const santy = require('santycss');
         <!-- Recommended -->
         <div style="border:2px solid #2563eb;border-radius:10px;overflow:hidden;margin-bottom:10px;">
           <div style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;letter-spacing:.05em;display:flex;align-items:center;gap:8px;">
-            FULL — Everything, minified <span style="font-weight:400;opacity:.85;">(<span data-stat="size:santy.min.css">1.37 MB</span> · <span data-stat="gz:santy.min.css">161 KB</span> gzipped)</span>
+            FULL — Everything, minified <span style="font-weight:400;opacity:.85;">(<span data-stat="size:santy.min.css">1.45 MB</span> · <span data-stat="gz:santy.min.css">170 KB</span> gzipped)</span>
           </div>
           <div class="code-block" style="border-radius:0;border:none;margin:0;">
 <pre><span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span>
@@ -758,7 +758,7 @@ const santy = require('santycss');
         <!-- Starter -->
         <div style="border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;margin-bottom:10px;">
           <div style="background:#f8fafc;color:#475569;font-size:11px;font-weight:700;padding:4px 14px;letter-spacing:.05em;">
-            ⭐ RECOMMENDED — Starter: utilities + components, no xl/xxl/motion/RTL variants <span style="font-weight:400;opacity:.85;">(<span data-stat="size:santy-start.css">775 KB</span> · <span data-stat="gz:santy-start.css">110 KB</span> gzipped)</span>
+            ⭐ RECOMMENDED — Starter: utilities + components, no xl/xxl/motion/RTL variants <span style="font-weight:400;opacity:.85;">(<span data-stat="size:santy-start.css">807 KB</span> · <span data-stat="gz:santy-start.css">114 KB</span> gzipped)</span>
           </div>
           <div class="code-block" style="border-radius:0;border:none;margin:0;">
 <pre><span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span>
@@ -772,8 +772,8 @@ const santy = require('santycss');
             SPLIT BUILD — Full coverage, load variants separately (better caching)
           </div>
           <div class="code-block" style="border-radius:0;border:none;margin:0;">
-<pre><span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-core.css"</span><span class="c-tag">&gt;</span>  <span class="c-com">&lt;!-- <span data-stat="size:santy-core.css">421 KB</span> --&gt;</span>
-<span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-variants.css"</span><span class="c-tag">&gt;</span>  <span class="c-com">&lt;!-- <span data-stat="size:santy-variants.css">799 KB</span> --&gt;</span></pre>
+<pre><span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-core.css"</span><span class="c-tag">&gt;</span>  <span class="c-com">&lt;!-- <span data-stat="size:santy-core.css">453 KB</span> --&gt;</span>
+<span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-variants.css"</span><span class="c-tag">&gt;</span>  <span class="c-com">&lt;!-- <span data-stat="size:santy-variants.css">859 KB</span> --&gt;</span></pre>
           </div>
         </div>
         <div class="make-flex gap-10 flex-wrap">
@@ -813,7 +813,7 @@ const santy = require('santycss');
 <span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"santy-animations.css"</span><span class="c-tag">&gt;</span></pre>
         </div>
         <div class="make-flex gap-12 add-margin-top-12 flex-wrap">
-          <span class="chip chip-blue">santy-core.css — <span data-stat="size:santy-core.css">421 KB</span></span>
+          <span class="chip chip-blue">santy-core.css — <span data-stat="size:santy-core.css">453 KB</span></span>
           <span class="chip chip-green">santy-components.css — <span data-stat="size:santy-components.css">354 KB</span></span>
           <span class="chip chip-purple">santy-animations.css — <span data-stat="size:santy-animations.css">71 KB</span></span>
         </div>
@@ -910,7 +910,7 @@ module.exports = {
   ],
 }
 
-<span class="c-com">// Result: <span data-stat="size:santy.css">1.58 MB</span> → ~<span data-stat="purged-gz">15 KB</span> gzipped for a typical page</span></pre></div>
+<span class="c-com">// Result: <span data-stat="size:santy.css">1.67 MB</span> → ~<span data-stat="purged-gz">15 KB</span> gzipped for a typical page</span></pre></div>
       </div>
       <div class="add-margin-top-20">
         <p class="set-text-13 text-semibold add-margin-bottom-12" style="color:#7dd3fc;">4. Use in components</p>
@@ -990,7 +990,7 @@ createApp(App).mount(<span class="c-str">'#app'</span>)</pre></div>
 <span class="c-com">// can intercept and serve purged CSS:</span>
 <span class="c-key">import</span> <span class="c-str">'santy.css'</span>
 
-<span class="c-com">// Dev  → serves full <span data-stat="size:santy.css">1.58 MB</span> CSS (all classes available)</span>
+<span class="c-com">// Dev  → serves full <span data-stat="size:santy.css">1.67 MB</span> CSS (all classes available)</span>
 <span class="c-com">// Build → inlines only used classes (~<span data-stat="purged-gz">15 KB</span> gzipped)</span></pre></div>
         </div>
       </div>
@@ -1089,7 +1089,7 @@ node purge.js --input=./src --out=dist/santy.min.css
 <span class="c-com"># Then link the minified version:</span>
 <span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"santy.min.css"</span><span class="c-tag">&gt;</span>
 
-<span class="c-com"># Result: <span data-stat="size:santy.css">1.58 MB</span> → ~<span data-stat="purged">101 KB</span> (<span data-stat="purged-gz">15 KB</span> gzip) for a full landing page</span></pre></div>
+<span class="c-com"># Result: <span data-stat="size:santy.css">1.67 MB</span> → ~<span data-stat="purged">101 KB</span> (<span data-stat="purged-gz">15 KB</span> gzip) for a full landing page</span></pre></div>
         </div>
       </div>
       <div class="add-margin-top-24">
@@ -1108,11 +1108,11 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
       <h3 class="set-text-18 text-semibold color-white add-margin-bottom-24">Production Size Summary</h3>
       <div class="make-grid grid-cols-4 gap-20">
         <div class="text-center">
-          <div class="set-text-32 text-bold color-red-400" style="line-height:1;"><span data-stat="size:santy.min.css">1.37 MB</span></div>
+          <div class="set-text-32 text-bold color-red-400" style="line-height:1;"><span data-stat="size:santy.min.css">1.45 MB</span></div>
           <div class="set-text-12 add-margin-top-6" style="color:#64748b;">Full (raw, minified)</div>
         </div>
         <div class="text-center">
-          <div class="set-text-32 text-bold color-orange-400" style="line-height:1;"><span data-stat="gz:santy.min.css">161 KB</span></div>
+          <div class="set-text-32 text-bold color-orange-400" style="line-height:1;"><span data-stat="gz:santy.min.css">170 KB</span></div>
           <div class="set-text-12 add-margin-top-6" style="color:#64748b;">Full (gzip)</div>
         </div>
         <div class="text-center">
@@ -1341,7 +1341,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
       <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>
     </tr><tr style="background:#f8fafc">
       <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">File size (unminified)</td>
-      <td style="text-align:center;font-size:13px;color:#374151;font-weight:600;">421 KB (core)</td>
+      <td style="text-align:center;font-size:13px;color:#374151;font-weight:600;">453 KB (core)</td>
       <td style="text-align:center;font-size:12px;color:#374151;">N/A (JIT)</td><td style="text-align:center;font-size:12px;color:#374151;">232KB</td><td style="text-align:center;font-size:12px;color:#374151;">JS bundle</td><td style="text-align:center;font-size:12px;color:#374151;">205KB</td><td style="text-align:center;font-size:12px;color:#374151;">212KB</td>
     </tr><tr style="background:#fff">
       <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Purged production size (gzip)</td>
@@ -1406,7 +1406,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
       <div class="background-orange-50 round-corners-16 add-padding-28 add-border-1 border-color-orange-200">
         <h4 class="set-text-16 text-semibold color-orange-800 add-margin-bottom-10">No build step — drop-in CDN</h4>
         <p class="set-text-13 color-orange-700 line-height-relaxed add-margin-bottom-12">Tailwind's Play CDN is meant for development, and production use needs its CLI or a bundler. SantyCSS's CDN files are production builds.</p>
-        <div class="code-block" style="padding:10px 14px;font-size:12px;"><span style="color:#86efac;">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy.css"&gt;</span><br><span style="color:#64748b;">// All <span data-stat="classes">22,600+</span> class names ready — no build needed.</span></div>
+        <div class="code-block" style="padding:10px 14px;font-size:12px;"><span style="color:#86efac;">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy.css"&gt;</span><br><span style="color:#64748b;">// All <span data-stat="classes">24,400+</span> class names ready — no build needed.</span></div>
       </div>
 
       <div class="background-pink-50 round-corners-16 add-padding-28 add-border-1 border-color-pink-200">
@@ -3247,7 +3247,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
       <div>
         <h5 class="set-text-13 text-semibold color-gray-400 text-uppercase letter-space-wide add-margin-bottom-16">Quick Stats</h5>
         <ul class="list-none make-flex flex-column gap-10">
-          <li class="set-text-14 color-gray-400">📦 <span data-stat="gz:santy.min.css">161 KB</span> full (gzip) · <span data-stat="gz:santy-core.css">51 KB</span> core · <span data-stat="purged-gz">15 KB</span> purged page</li>
+          <li class="set-text-14 color-gray-400">📦 <span data-stat="gz:santy.min.css">170 KB</span> full (gzip) · <span data-stat="gz:santy-core.css">56 KB</span> core · <span data-stat="purged-gz">15 KB</span> purged page</li>
           <li class="set-text-14 color-gray-400">🎨 20 color families</li>
           <li class="set-text-14 color-gray-400">🎬 120+ animations</li>
           <li class="set-text-14 color-gray-400">⚡ No build step</li>
@@ -3477,7 +3477,7 @@ const FULL = [
   { feature:'Modular CSS split files',        s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'❌', fo:'❌' },
   { feature:'Centering shortcut (1 class)',   s:'✅',  tw:'❌', bs:'❌', mui:'❌', bu:'❌', fo:'❌' },
   { feature:'JS-free (pure CSS)',             s:'✅',  tw:'✅', bs:'❌', mui:'❌', bu:'✅', fo:'⚠️' },
-  { feature:'File size (unminified)',         s:/*stat:size:santy-core.css*/'421 KB' + ' (core)',tw:'N/A (JIT)',bs:'232KB',mui:'JS bundle',bu:'205KB',fo:'212KB' },
+  { feature:'File size (unminified)',         s:/*stat:size:santy-core.css*/'453 KB' + ' (core)',tw:'N/A (JIT)',bs:'232KB',mui:'JS bundle',bu:'205KB',fo:'212KB' },
   { feature:'Purged production size (gzip)', s:'~' + /*stat:purged-gz*/'15 KB', tw:'~3KB',bs:'~20KB',mui:'~80KB',bu:'~15KB',fo:'~20KB' },
 ];
 
@@ -3605,7 +3605,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
       <svg width="16" height="16" fill="none" stroke="#3b82f6" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
       <span>
         <span style="display:block;">santy.css</span>
-        <span style="font-size:11px;color:#64748b;font-weight:400;">Full framework · <span data-stat="size:santy.css">1.58 MB</span></span>
+        <span style="font-size:11px;color:#64748b;font-weight:400;">Full framework · <span data-stat="size:santy.css">1.67 MB</span></span>
       </span>
     </button>
 
@@ -3613,7 +3613,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
       <svg width="16" height="16" fill="none" stroke="#22c55e" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
       <span>
         <span style="display:block;">santy.min.css</span>
-        <span style="font-size:11px;color:#64748b;font-weight:400;">Minified, everything · <span data-stat="size:santy.min.css">1.37 MB</span></span>
+        <span style="font-size:11px;color:#64748b;font-weight:400;">Minified, everything · <span data-stat="size:santy.min.css">1.45 MB</span></span>
       </span>
     </button>
 
