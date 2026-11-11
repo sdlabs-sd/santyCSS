@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Templates — SantyCSS</title>
+  <meta name="description" content="Modern resume templates for every job title, built with SantyCSS in React and Vue 3. Download free, buy premium for $10, or host it on your own sub-domain for ₹999/year with an online editor." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/santy.css" />
+</head>
+<body class="reset-margins font-sans background-slate-50 color-slate-900">
+
+<header class="position-sticky pin-top-0 layer-40 background-white add-border-bottom-1 border-color-slate-200">
+  <div class="max-width-1152 center-margin add-padding-x-20 add-padding-y-12 make-flex align-center justify-between gap-16">
+    <a href="/" class="make-flex align-center gap-10 text-no-decoration">
+      <span class="make-inline-flex align-center justify-center set-width-36 set-height-36 round-corners-10 background-blue-600 color-white text-extrabold">S</span>
+      <span class="set-text-18 text-extrabold color-slate-900">Santy<span class="color-blue-600">Resumes</span></span>
+    </a>
+    <nav class="make-flex align-center gap-20">
+      <a href="#templates" class="on-mobile:make-hidden set-text-14 text-semibold color-slate-600 on-hover:color-slate-900 text-no-decoration">Templates</a>
+      <a href="#pricing" class="on-mobile:make-hidden set-text-14 text-semibold color-slate-600 on-hover:color-slate-900 text-no-decoration">Pricing</a>
+      <a href="https://santycss.santy.in" class="on-mobile:make-hidden set-text-14 text-semibold color-slate-600 on-hover:color-slate-900 text-no-decoration">SantyCSS</a>
+      <div id="user-chip"></div>
+    </nav>
+  </div>
+</header>
+
+<section class="background-slate-900 color-white add-padding-y-80 on-mobile:add-padding-y-48 add-padding-x-20">
+  <div class="max-width-960 center-margin text-center">
+    <p class="make-inline-flex align-center gap-8 add-padding-x-16 add-padding-y-6 make-pill add-border-1 border-color-slate-700 set-text-13 text-semibold color-sky-300">
+      React · Vue 3 · 100% SantyCSS classes
+    </p>
+    <h1 class="set-text-56 on-mobile:set-text-36 text-extrabold line-height-tight letter-space-tight add-margin-top-20 text-balance">
+      A resume that looks the part, <span class="color-amber-400">for every job title</span>
+    </h1>
+    <p class="set-text-18 on-mobile:set-text-16 color-slate-300 line-height-relaxed add-margin-top-20 max-width-720 center-margin">
+      Pick a template, edit it in the browser, then download the source — or let us host it at
+      <span class="font-mono color-white">yourname.<span data-root-domain>resumes.santy.in</span></span> with a Gmail-protected editor.
+    </p>
+    <div class="make-flex flex-wrap justify-center gap-12 add-margin-top-32">
+      <a href="#templates" class="add-padding-x-24 add-padding-y-12 make-pill background-amber-400 on-hover:background-amber-300 color-slate-900 set-text-15 text-bold text-no-decoration">Browse templates</a>
+      <a href="#pricing" class="add-padding-x-24 add-padding-y-12 make-pill add-border-1 border-color-slate-600 on-hover:border-color-white color-white set-text-15 text-bold text-no-decoration">How hosting works</a>
+    </div>
+  </div>
+</section>
+
+<main id="templates" class="max-width-1152 center-margin add-padding-x-20 add-padding-y-56">
+  <div class="make-flex flex-wrap align-end justify-between gap-16 add-margin-bottom-28">
+    <div>
+      <h2 class="set-text-32 text-extrabold letter-space-tight">Templates</h2>
+      <p class="set-text-15 color-slate-600 add-margin-top-4"><span id="count">12</span> designs · free to download or $10 premium</p>
+    </div>
+    <div class="make-flex flex-wrap align-center gap-12">
+      <input id="search" type="search" placeholder="Search job title…" aria-label="Search by job title"
+        class="font-sans set-width-240 on-mobile:set-width-full add-padding-x-16 add-padding-y-10 make-pill add-border-1 border-color-slate-300 background-white set-text-14 on-focus:border-color-blue-500 on-focus:outline-none" />
+      <div class="make-flex add-padding-4 make-pill background-slate-200" role="group" aria-label="Framework">
+        <button data-fw="react" class="fw-btn font-sans add-padding-x-14 add-padding-y-6 make-pill set-text-13 text-bold add-border-0 cursor-pointer">React</button>
+        <button data-fw="vue" class="fw-btn font-sans add-padding-x-14 add-padding-y-6 make-pill set-text-13 text-bold add-border-0 cursor-pointer">Vue 3</button>
+      </div>
+    </div>
+  </div>
+  <div id="filters" class="make-flex flex-wrap gap-8 add-margin-bottom-28" role="group" aria-label="Filter templates"></div>
+  <div id="grid" class="make-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24"></div>
+  <p id="empty" class="make-hidden text-center color-slate-500 add-padding-y-48">No templates match that search.</p>
+</main>
+
+<section id="pricing" class="background-white add-border-top-1 add-border-bottom-1 border-color-slate-200 add-padding-y-64 add-padding-x-20">
+  <div class="max-width-1024 center-margin">
+    <h2 class="set-text-32 text-extrabold letter-space-tight text-center">Two ways to use a template</h2>
+    <p class="set-text-16 color-slate-600 text-center add-margin-top-8">Every template ships with the same admin editor — the difference is who hosts it.</p>
+    <div class="make-grid grid-cols-1 md:grid-cols-2 gap-24 add-margin-top-40">
+      <div class="round-corners-20 add-border-1 border-color-slate-200 add-padding-32">
+        <p class="set-text-13 text-bold text-uppercase letter-space-widest color-slate-500">Option 1</p>
+        <h3 class="set-text-24 text-extrabold add-margin-top-6">Download &amp; self-host</h3>
+        <p class="add-margin-top-12"><span class="set-text-36 text-extrabold">Free</span> <span class="color-slate-500">· premium designs $10 one-time</span></p>
+        <ul class="list-none add-padding-0 add-margin-top-20 set-text-15 color-slate-700">
+          <li class="add-margin-bottom-10">✓ Full React or Vue 3 + Vite source</li>
+          <li class="add-margin-bottom-10">✓ Built-in editor, autosaves in your browser</li>
+          <li class="add-margin-bottom-10">✓ Export / import JSON, print to PDF</li>
+          <li class="add-margin-bottom-10">✓ Deploy anywhere: Netlify, Vercel, GitHub Pages</li>
+        </ul>
+      </div>
+      <div class="round-corners-20 add-border-2 border-color-blue-600 add-padding-32 position-relative">
+        <span class="position-absolute pin-top-0 pin-right-24 translate-y-minus-16 add-padding-x-12 add-padding-y-4 make-pill background-blue-600 color-white set-text-12 text-bold">Most popular</span>
+        <p class="set-text-13 text-bold text-uppercase letter-space-widest color-blue-600">Option 2</p>
+        <h3 class="set-text-24 text-extrabold add-margin-top-6">We host it for you</h3>
+        <p class="add-margin-top-12"><span class="set-text-36 text-extrabold" data-price="hosting">₹999</span> <span class="color-slate-500">/ year · per site</span></p>
+        <ul class="list-none add-padding-0 add-margin-top-20 set-text-15 color-slate-700">
+          <li class="add-margin-bottom-10">✓ Your own address: <span class="font-mono">name.<span data-root-domain>resumes.santy.in</span></span></li>
+          <li class="add-margin-bottom-10">✓ Sign in with Gmail to edit — changes go live instantly</li>
+          <li class="add-margin-bottom-10">✓ Switch templates and colours any time</li>
+          <li class="add-margin-bottom-10">✓ HTTPS, fast global delivery, no setup</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="add-padding-y-40 add-padding-x-20 text-center set-text-13 color-slate-500">
+  Built with <a href="https://santycss.santy.in" class="color-blue-600 text-no-decoration">SantyCSS</a> · Payments by Razorpay · Sign-in with Google
+</footer>
+
+<dialog id="host-dialog" class="dialog font-sans max-width-480 set-width-full round-corners-20 add-border-0 add-padding-0 add-shadow-xl"></dialog>
+
+<script type="module" src="/web/market.js"></script>
+</body>
+</html>

@@ -3142,6 +3142,10 @@ img, video, picture, svg { max-width: 100%; height: auto; }
 .rotate-270       { transform: rotate(270deg); }
 .rotate-minus-45  { transform: rotate(-45deg); }
 .rotate-minus-90  { transform: rotate(-90deg); }
+.scale-0          { transform: scale(0); }
+.scale-25         { transform: scale(0.25); }
+.scale-30         { transform: scale(0.3); }
+.scale-50         { transform: scale(0.5); }
 .scale-75         { transform: scale(0.75); }
 .scale-90         { transform: scale(0.90); }
 .scale-95         { transform: scale(0.95); }

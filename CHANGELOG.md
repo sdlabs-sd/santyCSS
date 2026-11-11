@@ -3,6 +3,40 @@
 All notable changes to SantyCSS are documented here.
 The full illustrated changelog lives at [santycss.santy.in/changelog.html](https://santycss.santy.in/changelog.html).
 
+## [Unreleased]
+
+### Fixed
+- **`on-hover:animate-*` works.** All 13 hover-triggered animations shipped as
+  `.on-hover:animate-bounce:hover` (the `\:` escape was lost in a JS template
+  literal), an invalid selector that never matched.
+- **Purge no longer breaks CSS.** The purge minifier (CLI, PostCSS and Vite
+  plugins) stripped the spaces in `calc(50% + 16px)` and the descendant space in
+  `.card :hover`; both are kept now. It also extracts multi-class strings in JSX
+  expressions (`className={'a b ' + x}`), which used to be purged away.
+- **Documented colours exist.** `emerald`, `sky`, `fuchsia` and `neutral`
+  (listed in `santycss.context.md`) now generate text / background / border /
+  fill / stroke utilities, plus hover shades.
+- **Documented `translate-x-{n}` / `translate-y-{n}` exist**, with `-minus-{n}`,
+  `-full` and `-half`.
+
+### Added
+- **Class audit:** `npm run classes:check` reports classes used on the site or in
+  templates that no stylesheet defines; it runs in the test suite.
+- Spacing steps **36, 44, 60, 72**; fixed sizes 90–560 for `set-width/height`
+  and `min/max-*`; page caps `max-width-640 … max-width-1440`; `round-corners-3`,
+  `round-corners-full`; `scale-0/25/30/50`; `flex-1`.
+- Responsive `md:span-col-*`, `*:set-text-22/26/72`, `*:add-padding-top/bottom-*`
+  and `*:add-margin-top/bottom-*`.
+- Hover / group-hover: white & black, 50–200 tints, 800/900 shades,
+  `add-shadow-xl`, rotate and lift transforms; `on-hover:animate-shake`.
+- Aliases: `flex-col`, `flex-shrink-0`, `flex-grow-0/1`, `align-self-*`,
+  `text-extrabold`, `text-regular`, `rotate-0`.
+- `reset-margins`: opt-in, zero-specificity reset of default heading /
+  paragraph / list margins inside a wrapper.
+- **Resume templates** (`resume-templates/`): 12 job-title templates in React and
+  Vue 3 with an admin editor, a marketplace, Google sign-in, Razorpay checkout
+  ($10 premium, ₹999/year hosting) and sub-domain hosting.
+
 ## [2.9.6] — 2026-10-14
 
 ### Fixed

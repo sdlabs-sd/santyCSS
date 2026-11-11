@@ -1,0 +1,12 @@
+{
+  "name": "santycss-resume-templates",
+  "private": true,
+  "description": "Resume template marketplace: React + Vue 3 templates styled with SantyCSS, and the hosting server.",
+  "scripts": {
+    "setup": "npm --prefix react install && npm --prefix vue install",
+    "build": "node ../build.js && npm --prefix react run build && npm --prefix vue run build",
+    "start": "npm --prefix server start",
+    "dev:server": "npm --prefix server run dev",
+    "test": "npm --prefix server test && node ../scripts/check-classes.js --strict react/src vue/src web shared"
+  }
+}

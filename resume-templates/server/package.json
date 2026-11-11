@@ -1,0 +1,13 @@
+{
+  "name": "santycss-resume-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Resume template marketplace + subdomain hosting for SantyCSS templates. Zero runtime dependencies.",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "ALLOW_DEV_LOGIN=1 node --watch index.js",
+    "test": "node --test test/*.test.js"
+  }
+}
