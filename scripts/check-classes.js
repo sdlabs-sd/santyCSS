@@ -105,9 +105,9 @@ function usedClasses(src) {
     found.push(c);
   });
   const patterns = [
-    /\bclass(?:Name)?\s*=\s*"([^"]*)"/g,
-    /\bclass(?:Name)?\s*=\s*'([^']*)'/g,
-    /\bclassName\s*=\s*\{\s*['"`]([^'"`]*)['"`]\s*\}/g,
+    /\b(?:class|className|[a-z]+Class)\s*=\s*"([^"]*)"/g,
+    /\b(?:class|className|[a-z]+Class)\s*=\s*'([^']*)'/g,
+    /\b(?:className|[a-z]+Class)\s*=\s*\{\s*['"`]([^'"`]*)['"`]\s*\}/g,
     /\b(?:cn|clsx|cx)\(\s*['"`]([^'"`]*)['"`]/g,
     /\bcls\s*:\s*['"`]([^'"`]*)['"`]/g,
   ];
@@ -116,11 +116,11 @@ function usedClasses(src) {
     while ((m = re.exec(src))) push(m[1]);
   }
   // Template literals / string literals inside className={`…`} or :class="`…`"
-  const tl = /\b(?::class|className)\s*=\s*\{?\s*`([^`]*)`/g;
+  const tl = /(?::class|\bclassName|\b[a-z]+Class)\s*=\s*\{?\s*`([^`]*)`/g;
   let m;
   while ((m = tl.exec(src))) push(m[1].replace(/\$\{[^}]*\}/g, ' '));
   // Quoted strings in :class bindings / ternaries:  :class="x ? 'a b' : 'c'"
-  const bind = /(?::class|className)\s*=\s*(?:"([^"]*)"|\{([^}]*)\})/g;
+  const bind = /(?::class|:[a-z]+-class|\bclassName|\b[a-z]+Class)\s*=\s*(?:"([^"]*)"|\{([^}]*)\})/g;
   while ((m = bind.exec(src))) {
     const body = m[1] || m[2] || '';
     const q = /'([^']*)'/g;

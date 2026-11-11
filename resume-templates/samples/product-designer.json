@@ -1,0 +1,155 @@
+{
+  "basics": {
+    "name": "Sofia Marín",
+    "title": "Senior Product Designer",
+    "email": "sofia.marin@example.com",
+    "phone": "+34 612 345 678",
+    "location": "Barcelona, Spain",
+    "website": "https://sofiamarin.design",
+    "summary": "Product designer turning messy, multi-sided problems into calm interfaces. 7 years across fintech and health, from discovery research to pixel-polished design systems.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "Dribbble",
+      "url": "https://dribbble.com/example"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    },
+    {
+      "label": "Read.cv",
+      "url": "https://read.cv/example"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Senior Product Designer",
+      "company": "Kinto Health",
+      "location": "Remote",
+      "start": "2022",
+      "end": "Present",
+      "highlights": [
+        "Redesigned patient onboarding — completion up from 41% to 73%.",
+        "Built 'Pulse', a 140-component design system adopted by 5 squads."
+      ]
+    },
+    {
+      "role": "Product Designer",
+      "company": "Monzo-like Bank",
+      "location": "London",
+      "start": "2019",
+      "end": "2022",
+      "highlights": [
+        "Owned savings & budgeting flows used by 3M customers.",
+        "Ran 60+ usability sessions and set up the research repository."
+      ]
+    },
+    {
+      "role": "UI Designer",
+      "company": "Studio Nómada",
+      "location": "Barcelona",
+      "start": "2017",
+      "end": "2019",
+      "highlights": [
+        "Designed brand and web experiences for 20+ startups."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BA, Interaction Design",
+      "school": "Elisava School of Design",
+      "start": "2013",
+      "end": "2017",
+      "details": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Figma",
+      "level": 96
+    },
+    {
+      "name": "Prototyping",
+      "level": 92
+    },
+    {
+      "name": "User research",
+      "level": 88
+    },
+    {
+      "name": "Design systems",
+      "level": 94
+    },
+    {
+      "name": "Motion",
+      "level": 75
+    }
+  ],
+  "projects": [
+    {
+      "name": "Kinto onboarding",
+      "description": "Case study: reducing drop-off for chronic-care patients.",
+      "url": "https://sofiamarin.design/kinto",
+      "tags": [
+        "Health",
+        "Research"
+      ]
+    },
+    {
+      "name": "Pulse design system",
+      "description": "Tokens, components and docs for a multi-platform product.",
+      "url": "",
+      "tags": [
+        "Systems",
+        "Figma"
+      ]
+    },
+    {
+      "name": "Budget buddy",
+      "description": "Concept app helping Gen-Z build saving habits.",
+      "url": "",
+      "tags": [
+        "Fintech",
+        "Concept"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Google UX Design Certificate",
+      "issuer": "Google",
+      "year": "2020"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Spanish",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Fluent"
+    },
+    {
+      "name": "Catalan",
+      "level": "Native"
+    }
+  ],
+  "stats": [
+    {
+      "value": "+32%",
+      "label": "Onboarding completion"
+    },
+    {
+      "value": "140",
+      "label": "Components shipped"
+    },
+    {
+      "value": "3M",
+      "label": "Users served"
+    }
+  ]
+}

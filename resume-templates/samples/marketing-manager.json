@@ -1,0 +1,133 @@
+{
+  "basics": {
+    "name": "Chloé Dubois",
+    "title": "Growth Marketing Manager",
+    "email": "chloe.dubois@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "website": "https://chloedubois.fr",
+    "summary": "Growth marketer blending brand storytelling with performance rigour. I build lean, data-driven teams that turn campaigns into compounding growth loops.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    },
+    {
+      "label": "Portfolio",
+      "url": "https://chloedubois.fr/work"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Growth Marketing Manager",
+      "company": "Lumen SaaS",
+      "location": "Paris",
+      "start": "2021",
+      "end": "Present",
+      "highlights": [
+        "Grew MQLs 3.4× in 18 months while cutting CAC by 28%.",
+        "Launched a referral programme now driving 22% of sign-ups.",
+        "Manages a €2.5M annual paid budget across 6 channels."
+      ]
+    },
+    {
+      "role": "Senior Marketing Specialist",
+      "company": "Atelier Nord",
+      "location": "Lyon",
+      "start": "2018",
+      "end": "2021",
+      "highlights": [
+        "Rebranded the company and doubled organic traffic in a year.",
+        "Ran lifecycle email programme with 41% open rate."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Marketing & Digital",
+      "school": "ESSEC Business School",
+      "start": "2016",
+      "end": "2018",
+      "details": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Performance marketing",
+      "level": 92
+    },
+    {
+      "name": "SEO / Content",
+      "level": 88
+    },
+    {
+      "name": "Lifecycle & CRM",
+      "level": 85
+    },
+    {
+      "name": "Analytics (GA4)",
+      "level": 86
+    },
+    {
+      "name": "Brand strategy",
+      "level": 80
+    }
+  ],
+  "projects": [
+    {
+      "name": "“Build in Public” campaign",
+      "description": "Multi-channel launch that earned 12M impressions.",
+      "url": "",
+      "tags": [
+        "Brand",
+        "Social"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Google Ads Search Certification",
+      "issuer": "Google",
+      "year": "2023"
+    },
+    {
+      "name": "HubSpot Inbound Marketing",
+      "issuer": "HubSpot",
+      "year": "2022"
+    }
+  ],
+  "languages": [
+    {
+      "name": "French",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Fluent"
+    },
+    {
+      "name": "Spanish",
+      "level": "Professional"
+    }
+  ],
+  "stats": [
+    {
+      "value": "3.4×",
+      "label": "MQL growth"
+    },
+    {
+      "value": "-28%",
+      "label": "CAC"
+    },
+    {
+      "value": "12M",
+      "label": "Impressions"
+    },
+    {
+      "value": "€2.5M",
+      "label": "Budget managed"
+    }
+  ]
+}

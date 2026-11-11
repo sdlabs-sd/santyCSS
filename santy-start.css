@@ -16,6 +16,12 @@
 /* ── Responsive Media Reset ── */
 img, video, picture, svg { max-width: 100%; height: auto; }
 
+/* ── Opt-in scoped reset ──
+   class="reset-margins" on a wrapper (or <body>) zeroes browser-default
+   margins on itself and every heading / paragraph / list / figure inside.
+   :where() keeps specificity at 0, so any add-margin-* utility still wins. */
+:where(.reset-margins), :where(.reset-margins) :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, figure, blockquote, pre, hr) { margin: 0; }
+
 /* ── CSS Custom Properties (Theme) ── */
 :root {
   /* ── Design Tokens (override to customise) ── */
@@ -1265,6 +1271,17 @@ img, video, picture, svg { max-width: 100%; height: auto; }
 .max-width-560  { max-width: 560px; }
 .min-height-560 { min-height: 560px; }
 .max-height-560 { max-height: 560px; }
+.max-width-640 { max-width: 640px; }
+.max-width-720 { max-width: 720px; }
+.max-width-768 { max-width: 768px; }
+.max-width-840 { max-width: 840px; }
+.max-width-896 { max-width: 896px; }
+.max-width-960 { max-width: 960px; }
+.max-width-1024 { max-width: 1024px; }
+.max-width-1152 { max-width: 1152px; }
+.max-width-1280 { max-width: 1280px; }
+.max-width-1440 { max-width: 1440px; }
+.flex-1           { flex: 1 1 0%; }
 .min-width-full   { min-width: 100%; }
 .max-width-full   { max-width: 100%; }
 .min-width-screen { min-width: 100vw; }
@@ -4291,6 +4308,66 @@ img, video, picture, svg { max-width: 100%; height: auto; }
 .on-hover\:rotate-180:hover { transform:rotate(180deg); }
 .on-hover\:translate-y-minus-2:hover { transform:translateY(-2px); }
 .on-hover\:translate-y-minus-4:hover { transform:translateY(-4px); }
+.on-hover\:background-emerald-300:hover { background-color:#6ee7b7; }
+.on-hover\:color-emerald-300:hover { color:#6ee7b7; }
+.on-hover\:border-color-emerald-300:hover { border-color:#6ee7b7; }
+.on-hover\:background-emerald-400:hover { background-color:#34d399; }
+.on-hover\:color-emerald-400:hover { color:#34d399; }
+.on-hover\:border-color-emerald-400:hover { border-color:#34d399; }
+.on-hover\:background-emerald-500:hover { background-color:#10b981; }
+.on-hover\:color-emerald-500:hover { color:#10b981; }
+.on-hover\:border-color-emerald-500:hover { border-color:#10b981; }
+.on-hover\:background-emerald-600:hover { background-color:#059669; }
+.on-hover\:color-emerald-600:hover { color:#059669; }
+.on-hover\:border-color-emerald-600:hover { border-color:#059669; }
+.on-hover\:background-emerald-700:hover { background-color:#047857; }
+.on-hover\:color-emerald-700:hover { color:#047857; }
+.on-hover\:border-color-emerald-700:hover { border-color:#047857; }
+.on-hover\:background-sky-300:hover { background-color:#7dd3fc; }
+.on-hover\:color-sky-300:hover { color:#7dd3fc; }
+.on-hover\:border-color-sky-300:hover { border-color:#7dd3fc; }
+.on-hover\:background-sky-400:hover { background-color:#38bdf8; }
+.on-hover\:color-sky-400:hover { color:#38bdf8; }
+.on-hover\:border-color-sky-400:hover { border-color:#38bdf8; }
+.on-hover\:background-sky-500:hover { background-color:#0ea5e9; }
+.on-hover\:color-sky-500:hover { color:#0ea5e9; }
+.on-hover\:border-color-sky-500:hover { border-color:#0ea5e9; }
+.on-hover\:background-sky-600:hover { background-color:#0284c7; }
+.on-hover\:color-sky-600:hover { color:#0284c7; }
+.on-hover\:border-color-sky-600:hover { border-color:#0284c7; }
+.on-hover\:background-sky-700:hover { background-color:#0369a1; }
+.on-hover\:color-sky-700:hover { color:#0369a1; }
+.on-hover\:border-color-sky-700:hover { border-color:#0369a1; }
+.on-hover\:background-fuchsia-300:hover { background-color:#f0abfc; }
+.on-hover\:color-fuchsia-300:hover { color:#f0abfc; }
+.on-hover\:border-color-fuchsia-300:hover { border-color:#f0abfc; }
+.on-hover\:background-fuchsia-400:hover { background-color:#e879f9; }
+.on-hover\:color-fuchsia-400:hover { color:#e879f9; }
+.on-hover\:border-color-fuchsia-400:hover { border-color:#e879f9; }
+.on-hover\:background-fuchsia-500:hover { background-color:#d946ef; }
+.on-hover\:color-fuchsia-500:hover { color:#d946ef; }
+.on-hover\:border-color-fuchsia-500:hover { border-color:#d946ef; }
+.on-hover\:background-fuchsia-600:hover { background-color:#c026d3; }
+.on-hover\:color-fuchsia-600:hover { color:#c026d3; }
+.on-hover\:border-color-fuchsia-600:hover { border-color:#c026d3; }
+.on-hover\:background-fuchsia-700:hover { background-color:#a21caf; }
+.on-hover\:color-fuchsia-700:hover { color:#a21caf; }
+.on-hover\:border-color-fuchsia-700:hover { border-color:#a21caf; }
+.on-hover\:background-neutral-300:hover { background-color:#d4d4d4; }
+.on-hover\:color-neutral-300:hover { color:#d4d4d4; }
+.on-hover\:border-color-neutral-300:hover { border-color:#d4d4d4; }
+.on-hover\:background-neutral-400:hover { background-color:#a3a3a3; }
+.on-hover\:color-neutral-400:hover { color:#a3a3a3; }
+.on-hover\:border-color-neutral-400:hover { border-color:#a3a3a3; }
+.on-hover\:background-neutral-500:hover { background-color:#737373; }
+.on-hover\:color-neutral-500:hover { color:#737373; }
+.on-hover\:border-color-neutral-500:hover { border-color:#737373; }
+.on-hover\:background-neutral-600:hover { background-color:#525252; }
+.on-hover\:color-neutral-600:hover { color:#525252; }
+.on-hover\:border-color-neutral-600:hover { border-color:#525252; }
+.on-hover\:background-neutral-700:hover { background-color:#404040; }
+.on-hover\:color-neutral-700:hover { color:#404040; }
+.on-hover\:border-color-neutral-700:hover { border-color:#404040; }
 .on-hover\:background-emerald-50:hover { background-color:#ecfdf5; }
 .on-hover\:background-emerald-100:hover { background-color:#d1fae5; }
 .on-hover\:background-emerald-200:hover { background-color:#a7f3d0; }

@@ -1,0 +1,119 @@
+{
+  "basics": {
+    "name": "Marcus Reed",
+    "title": "Enterprise Account Executive",
+    "email": "marcus.reed@example.com",
+    "phone": "+1 (555) 330-9182",
+    "location": "Austin, TX",
+    "website": "",
+    "summary": "Consultative enterprise seller who consistently beats quota by building multi-threaded relationships with C-level buyers in SaaS and fintech.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Enterprise Account Executive",
+      "company": "Vantage Cloud",
+      "location": "Austin",
+      "start": "2020",
+      "end": "Present",
+      "highlights": [
+        "Closed $8.4M in new ARR; 142% average quota attainment over 4 years.",
+        "Landed the company's largest-ever deal ($1.9M ACV) with a Fortune 100 bank.",
+        "President's Club 2021, 2022 and 2024."
+      ]
+    },
+    {
+      "role": "Mid-Market Account Executive",
+      "company": "Brightline HR",
+      "location": "Dallas",
+      "start": "2017",
+      "end": "2020",
+      "highlights": [
+        "Ranked #1 of 24 reps in 2019 with 131% of quota."
+      ]
+    },
+    {
+      "role": "Sales Development Rep",
+      "company": "Brightline HR",
+      "location": "Dallas",
+      "start": "2015",
+      "end": "2017",
+      "highlights": [
+        "Generated $3M in qualified pipeline; promoted in 18 months."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BBA, Marketing",
+      "school": "The University of Texas at Austin",
+      "start": "2011",
+      "end": "2015",
+      "details": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Enterprise negotiation",
+      "level": 94
+    },
+    {
+      "name": "MEDDICC",
+      "level": 90
+    },
+    {
+      "name": "Salesforce",
+      "level": 88
+    },
+    {
+      "name": "Forecasting",
+      "level": 86
+    },
+    {
+      "name": "Executive presence",
+      "level": 92
+    }
+  ],
+  "projects": [],
+  "certifications": [
+    {
+      "name": "MEDDICC Certified",
+      "issuer": "MEDDICC Academy",
+      "year": "2022"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "Spanish",
+      "level": "Professional"
+    }
+  ],
+  "stats": [
+    {
+      "value": "142%",
+      "label": "Avg. quota"
+    },
+    {
+      "value": "$8.4M",
+      "label": "New ARR"
+    },
+    {
+      "value": "3×",
+      "label": "President's Club"
+    },
+    {
+      "value": "$1.9M",
+      "label": "Largest deal"
+    }
+  ]
+}

@@ -13,6 +13,12 @@
 /* ── Responsive Media Reset ── */
 img, video, picture, svg { max-width: 100%; height: auto; }
 
+/* ── Opt-in scoped reset ──
+   class="reset-margins" on a wrapper (or <body>) zeroes browser-default
+   margins on itself and every heading / paragraph / list / figure inside.
+   :where() keeps specificity at 0, so any add-margin-* utility still wins. */
+:where(.reset-margins), :where(.reset-margins) :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, figure, blockquote, pre, hr) { margin: 0; }
+
 /* ── CSS Custom Properties (Theme) ── */
 :root {
   /* ── Design Tokens (override to customise) ── */

@@ -133,6 +133,12 @@ add(
 /* ── Responsive Media Reset ── */
 img, video, picture, svg { max-width: 100%; height: auto; }
 
+/* ── Opt-in scoped reset ──
+   class="reset-margins" on a wrapper (or <body>) zeroes browser-default
+   margins on itself and every heading / paragraph / list / figure inside.
+   :where() keeps specificity at 0, so any add-margin-* utility still wins. */
+:where(.reset-margins), :where(.reset-margins) :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, figure, blockquote, pre, hr) { margin: 0; }
+
 /* ── CSS Custom Properties (Theme) ── */
 :root {
   /* ── Design Tokens (override to customise) ── */
@@ -403,6 +409,9 @@ add(`\n/* ── Min/Max Width/Height ── */`);
   add(`.min-height-${v} { min-height: ${v}px; }`);
   add(`.max-height-${v} { max-height: ${v}px; }`);
 });
+// Page-width caps for centred layouts (articles, resumes, dashboards).
+[640,720,768,840,896,960,1024,1152,1280,1440].forEach(v => add(`.max-width-${v} { max-width: ${v}px; }`));
+add(`.flex-1           { flex: 1 1 0%; }`);
 add(`.min-width-full   { min-width: 100%; }`);
 add(`.max-width-full   { max-width: 100%; }`);
 add(`.min-width-screen { min-width: 100vw; }`);
@@ -1067,6 +1076,11 @@ respSpacing.forEach(v => {
 gridCols.forEach(n => {
   responsiveClasses.push([`grid-cols-${n}`,`grid-template-columns:repeat(${n},minmax(0,1fr))`]);
 });
+// Responsive column spans — pair with md:grid-cols-* (e.g. md:grid-cols-3 + md:span-col-2)
+gridCols.forEach(n => {
+  responsiveClasses.push([`span-col-${n}`,`grid-column:span ${n}/span ${n}`]);
+});
+responsiveClasses.push(['span-col-full','grid-column:1/-1']);
 // Responsive font sizes
 [12,14,16,18,20,22,24,26,28,32,36,40,48,56,64,72].forEach(v => {
   responsiveClasses.push([`set-text-${v}`,`font-size:${v}px`]);
@@ -1201,6 +1215,14 @@ const hoverExtraClasses = [
   ['rotate-90','transform:rotate(90deg)'], ['rotate-180','transform:rotate(180deg)'],
   ['translate-y-minus-2','transform:translateY(-2px)'], ['translate-y-minus-4','transform:translateY(-4px)'],
 ];
+// Base-only families still get the standard 300–700 hover shades.
+Object.entries(basePaletteExtras).forEach(([name, shades]) => {
+  [300,400,500,600,700].forEach(sh => {
+    hoverExtraClasses.push([`background-${name}-${sh}`, `background-color:${shades[sh]}`]);
+    hoverExtraClasses.push([`color-${name}-${sh}`, `color:${shades[sh]}`]);
+    hoverExtraClasses.push([`border-color-${name}-${sh}`, `border-color:${shades[sh]}`]);
+  });
+});
 Object.entries(fullPalette).forEach(([name, shades]) => {
   [50,100,200].forEach(sh => shades[sh] && hoverExtraClasses.push([`background-${name}-${sh}`, `background-color:${shades[sh]}`]));
   [200].forEach(sh => shades[sh] && hoverExtraClasses.push([`border-color-${name}-${sh}`, `border-color:${shades[sh]}`]));

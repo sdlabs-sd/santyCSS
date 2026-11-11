@@ -1,0 +1,117 @@
+{
+  "basics": {
+    "name": "Hannah Weber",
+    "title": "Chartered Accountant",
+    "email": "hannah.weber@example.com",
+    "phone": "+49 151 2345 6789",
+    "location": "Munich, Germany",
+    "website": "",
+    "summary": "Detail-driven chartered accountant with 8 years in audit and group reporting. Experienced with IFRS, HGB and SAP S/4HANA, and with leading month-end closes for multinational groups.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Group Reporting Manager",
+      "company": "Alpentech AG",
+      "location": "Munich",
+      "start": "2021",
+      "end": "Present",
+      "highlights": [
+        "Leads consolidation for 34 entities across 12 countries under IFRS.",
+        "Shortened the month-end close from 9 to 5 working days.",
+        "Coordinated statutory audits with KPMG with zero material findings."
+      ]
+    },
+    {
+      "role": "Senior Auditor",
+      "company": "Deloitte",
+      "location": "Frankfurt",
+      "start": "2016",
+      "end": "2021",
+      "highlights": [
+        "Managed audit engagements for DAX-listed clients with revenues up to €6B."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Accounting & Finance",
+      "school": "LMU Munich",
+      "start": "2014",
+      "end": "2016",
+      "details": ""
+    },
+    {
+      "degree": "BSc, Business Administration",
+      "school": "University of Mannheim",
+      "start": "2011",
+      "end": "2014",
+      "details": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "IFRS / HGB",
+      "level": 95
+    },
+    {
+      "name": "Consolidation",
+      "level": 92
+    },
+    {
+      "name": "SAP S/4HANA",
+      "level": 85
+    },
+    {
+      "name": "Excel & Power BI",
+      "level": 90
+    },
+    {
+      "name": "Internal controls",
+      "level": 88
+    }
+  ],
+  "projects": [],
+  "certifications": [
+    {
+      "name": "Steuerberater (Tax Advisor)",
+      "issuer": "Bundessteuerberaterkammer",
+      "year": "2020"
+    },
+    {
+      "name": "ACCA Member",
+      "issuer": "ACCA",
+      "year": "2018"
+    }
+  ],
+  "languages": [
+    {
+      "name": "German",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Fluent"
+    }
+  ],
+  "stats": [
+    {
+      "value": "34",
+      "label": "Entities consolidated"
+    },
+    {
+      "value": "5 days",
+      "label": "Month-end close"
+    },
+    {
+      "value": "€6B",
+      "label": "Largest client"
+    }
+  ]
+}

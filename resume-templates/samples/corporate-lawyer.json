@@ -1,0 +1,135 @@
+{
+  "basics": {
+    "name": "Alexander Grant",
+    "title": "Senior Associate, Corporate & M&A",
+    "email": "alexander.grant@example.com",
+    "phone": "+44 20 7946 0958",
+    "location": "London, UK",
+    "website": "",
+    "summary": "Corporate lawyer advising private-equity sponsors and listed companies on cross-border M&A, joint ventures and governance. Commercial, precise and calm at 2 a.m. signings.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Senior Associate, Corporate",
+      "company": "Magic-Circle Firm LLP",
+      "location": "London",
+      "start": "2020",
+      "end": "Present",
+      "highlights": [
+        "Advised on 25+ transactions with aggregate value above £9B.",
+        "Led the legal workstream on a £1.2B take-private of a FTSE 250 company.",
+        "Supervises 4 junior associates and trainees."
+      ]
+    },
+    {
+      "role": "Associate, Corporate",
+      "company": "International Law Firm",
+      "location": "London",
+      "start": "2016",
+      "end": "2020",
+      "highlights": [
+        "Seconded to a global bank's in-house legal team for 9 months."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Legal Practice Course (LPC), Distinction",
+      "school": "BPP University",
+      "start": "2014",
+      "end": "2015",
+      "details": ""
+    },
+    {
+      "degree": "LLB (Hons) Law",
+      "school": "University of Oxford",
+      "start": "2011",
+      "end": "2014",
+      "details": "First class"
+    }
+  ],
+  "skills": [
+    {
+      "name": "M&A",
+      "level": 95
+    },
+    {
+      "name": "Private equity",
+      "level": 90
+    },
+    {
+      "name": "Corporate governance",
+      "level": 88
+    },
+    {
+      "name": "Negotiation",
+      "level": 92
+    },
+    {
+      "name": "Due diligence",
+      "level": 90
+    }
+  ],
+  "projects": [
+    {
+      "name": "£1.2B FTSE 250 take-private",
+      "description": "Lead associate for the bidder.",
+      "url": "",
+      "tags": [
+        "Public M&A"
+      ]
+    },
+    {
+      "name": "Cross-border JV",
+      "description": "US–UK renewable energy joint venture.",
+      "url": "",
+      "tags": [
+        "JV",
+        "Energy"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Solicitor of England & Wales",
+      "issuer": "Solicitors Regulation Authority",
+      "year": "2016"
+    },
+    {
+      "name": "Attorney, New York Bar",
+      "issuer": "NY State Bar",
+      "year": "2018"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "German",
+      "level": "Professional"
+    }
+  ],
+  "stats": [
+    {
+      "value": "£9B+",
+      "label": "Deal value"
+    },
+    {
+      "value": "25+",
+      "label": "Transactions"
+    },
+    {
+      "value": "2",
+      "label": "Bar admissions"
+    }
+  ]
+}

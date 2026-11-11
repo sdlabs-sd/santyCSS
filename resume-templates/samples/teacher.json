@@ -1,0 +1,131 @@
+{
+  "basics": {
+    "name": "Priya Nair",
+    "title": "High School Science Teacher",
+    "email": "priya.nair@example.com",
+    "phone": "+91 99887 66554",
+    "location": "Kochi, India",
+    "website": "",
+    "summary": "Science educator who makes chemistry and biology hands-on and joyful. 10 years teaching grades 9–12, building inquiry-based labs and coaching students to national olympiads.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Senior Science Teacher",
+      "company": "Greenfield International School",
+      "location": "Kochi",
+      "start": "2019",
+      "end": "Present",
+      "highlights": [
+        "Teaches Chemistry & Biology to 160 students across grades 9–12 (IB & CBSE).",
+        "Raised average board-exam scores in Chemistry from 71% to 86%.",
+        "Founded the school Science Club; 9 students reached national olympiad finals."
+      ]
+    },
+    {
+      "role": "Science Teacher",
+      "company": "Kendriya Vidyalaya",
+      "location": "Thrissur",
+      "start": "2014",
+      "end": "2019",
+      "highlights": [
+        "Designed low-cost lab kits adopted by 12 schools in the district."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.Sc., Chemistry",
+      "school": "University of Kerala",
+      "start": "2011",
+      "end": "2013",
+      "details": ""
+    },
+    {
+      "degree": "B.Ed., Science Education",
+      "school": "Mahatma Gandhi University",
+      "start": "2013",
+      "end": "2014",
+      "details": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Curriculum design",
+      "level": 92
+    },
+    {
+      "name": "Inquiry-based learning",
+      "level": 90
+    },
+    {
+      "name": "Classroom management",
+      "level": 94
+    },
+    {
+      "name": "EdTech (Google Classroom)",
+      "level": 85
+    },
+    {
+      "name": "Lab safety",
+      "level": 95
+    }
+  ],
+  "projects": [
+    {
+      "name": "Kitchen-chemistry kits",
+      "description": "Low-cost lab kits for rural schools.",
+      "url": "",
+      "tags": [
+        "STEM",
+        "Outreach"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CTET — Central Teacher Eligibility Test",
+      "issuer": "CBSE",
+      "year": "2014"
+    },
+    {
+      "name": "IB Category 1 — Chemistry",
+      "issuer": "International Baccalaureate",
+      "year": "2020"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Malayalam",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Fluent"
+    },
+    {
+      "name": "Hindi",
+      "level": "Fluent"
+    }
+  ],
+  "stats": [
+    {
+      "value": "10 yrs",
+      "label": "Teaching"
+    },
+    {
+      "value": "86%",
+      "label": "Avg. board score"
+    },
+    {
+      "value": "9",
+      "label": "Olympiad finalists"
+    }
+  ]
+}

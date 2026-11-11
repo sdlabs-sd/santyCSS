@@ -1,0 +1,115 @@
+{
+  "basics": {
+    "name": "Grace Thompson",
+    "title": "Registered Nurse, ICU",
+    "email": "grace.thompson@example.com",
+    "phone": "+1 (555) 214-7788",
+    "location": "Toronto, Canada",
+    "website": "",
+    "summary": "Compassionate critical-care nurse with 9 years in high-acuity ICU settings. Calm under pressure, precise with documentation, and a strong advocate for patients and families.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Registered Nurse, ICU",
+      "company": "Toronto General Hospital",
+      "location": "Toronto",
+      "start": "2019",
+      "end": "Present",
+      "highlights": [
+        "Care for 2–3 critically ill patients per shift in a 32-bed medical-surgical ICU.",
+        "Charge nurse for 40+ shifts; precepted 12 new graduate nurses.",
+        "Led a sepsis-bundle compliance project raising adherence to 94%."
+      ]
+    },
+    {
+      "role": "Registered Nurse, Emergency",
+      "company": "St. Michael's Hospital",
+      "location": "Toronto",
+      "start": "2015",
+      "end": "2019",
+      "highlights": [
+        "Triaged and treated 30+ patients per shift in a Level I trauma centre."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Nursing",
+      "school": "University of Toronto",
+      "start": "2011",
+      "end": "2015",
+      "details": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Critical care",
+      "level": 95
+    },
+    {
+      "name": "Ventilator management",
+      "level": 88
+    },
+    {
+      "name": "Patient education",
+      "level": 92
+    },
+    {
+      "name": "EHR (Epic)",
+      "level": 90
+    },
+    {
+      "name": "Triage",
+      "level": 86
+    }
+  ],
+  "projects": [],
+  "certifications": [
+    {
+      "name": "Registered Nurse Licence — CNO",
+      "issuer": "College of Nurses of Ontario",
+      "year": "2015"
+    },
+    {
+      "name": "CCRN — Adult Critical Care",
+      "issuer": "AACN",
+      "year": "2020"
+    },
+    {
+      "name": "ACLS & BLS",
+      "issuer": "Heart & Stroke Foundation",
+      "year": "2024"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "French",
+      "level": "Intermediate"
+    }
+  ],
+  "stats": [
+    {
+      "value": "9 yrs",
+      "label": "Clinical experience"
+    },
+    {
+      "value": "94%",
+      "label": "Sepsis compliance"
+    },
+    {
+      "value": "12",
+      "label": "Nurses precepted"
+    }
+  ]
+}

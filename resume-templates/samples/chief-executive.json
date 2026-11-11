@@ -1,0 +1,130 @@
+{
+  "basics": {
+    "name": "Eleanor Vance",
+    "title": "Chief Executive Officer",
+    "email": "eleanor.vance@example.com",
+    "phone": "+1 (555) 600-1200",
+    "location": "New York, NY",
+    "website": "https://eleanorvance.com",
+    "summary": "Operator-CEO who has scaled two B2B companies from Series A to IPO-readiness. Known for building leadership benches, disciplined capital allocation and cultures people stay for.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    },
+    {
+      "label": "Website",
+      "url": "https://eleanorvance.com"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Chief Executive Officer",
+      "company": "Meridian Logistics",
+      "location": "New York",
+      "start": "2019",
+      "end": "Present",
+      "highlights": [
+        "Grew revenue from $40M to $310M ARR while reaching EBITDA profitability.",
+        "Led $180M Series D and two strategic acquisitions.",
+        "Built an executive team of 9; employee engagement at 87%."
+      ]
+    },
+    {
+      "role": "Chief Operating Officer",
+      "company": "Parcelly",
+      "location": "Boston",
+      "start": "2015",
+      "end": "2019",
+      "highlights": [
+        "Scaled operations to 14 countries and 1,200 employees."
+      ]
+    },
+    {
+      "role": "Vice President, Strategy",
+      "company": "McKinsey-style Consultancy",
+      "location": "New York",
+      "start": "2009",
+      "end": "2015",
+      "highlights": [
+        "Advised Fortune 500 boards on transformation programmes."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MBA",
+      "school": "Harvard Business School",
+      "start": "2007",
+      "end": "2009",
+      "details": ""
+    },
+    {
+      "degree": "BA, Economics",
+      "school": "Princeton University",
+      "start": "2001",
+      "end": "2005",
+      "details": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Strategy",
+      "level": 96
+    },
+    {
+      "name": "Capital allocation",
+      "level": 92
+    },
+    {
+      "name": "M&A",
+      "level": 88
+    },
+    {
+      "name": "Board relations",
+      "level": 94
+    },
+    {
+      "name": "Org design",
+      "level": 90
+    }
+  ],
+  "projects": [],
+  "certifications": [
+    {
+      "name": "Board Director — NACD.DC",
+      "issuer": "NACD",
+      "year": "2021"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "French",
+      "level": "Professional"
+    }
+  ],
+  "stats": [
+    {
+      "value": "$310M",
+      "label": "ARR"
+    },
+    {
+      "value": "7.7×",
+      "label": "Revenue growth"
+    },
+    {
+      "value": "$180M",
+      "label": "Capital raised"
+    },
+    {
+      "value": "1,200",
+      "label": "Employees led"
+    }
+  ]
+}

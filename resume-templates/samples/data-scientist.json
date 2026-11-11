@@ -1,0 +1,144 @@
+{
+  "basics": {
+    "name": "Daniel Okafor",
+    "title": "Lead Data Scientist",
+    "email": "daniel.okafor@example.com",
+    "phone": "+44 7700 900123",
+    "location": "London, UK",
+    "website": "https://danielokafor.ai",
+    "summary": "Data scientist who ships models that move business metrics, not just notebooks. Experienced in forecasting, experimentation and LLM evaluation at scale.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/example"
+    },
+    {
+      "label": "Kaggle",
+      "url": "https://kaggle.com/example"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Lead Data Scientist",
+      "company": "Northwind Retail",
+      "location": "London",
+      "start": "2021",
+      "end": "Present",
+      "highlights": [
+        "Built a demand-forecasting system across 18k SKUs, lowering stock-outs by 23%.",
+        "Set up the experimentation platform; 140+ A/B tests run in year one.",
+        "Leads a team of 5 data scientists and 2 ML engineers."
+      ]
+    },
+    {
+      "role": "Data Scientist",
+      "company": "Ocado-like Grocery",
+      "location": "Hatfield",
+      "start": "2018",
+      "end": "2021",
+      "highlights": [
+        "Churn model drove targeted offers worth £4.1M incremental revenue.",
+        "Productionised models with MLflow and Airflow."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc, Machine Learning",
+      "school": "University College London",
+      "start": "2017",
+      "end": "2018",
+      "details": "Distinction"
+    },
+    {
+      "degree": "BSc, Mathematics",
+      "school": "University of Lagos",
+      "start": "2013",
+      "end": "2017",
+      "details": "First class"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "level": 95
+    },
+    {
+      "name": "SQL",
+      "level": 92
+    },
+    {
+      "name": "PyTorch",
+      "level": 85
+    },
+    {
+      "name": "Causal inference",
+      "level": 80
+    },
+    {
+      "name": "Spark",
+      "level": 78
+    },
+    {
+      "name": "dbt",
+      "level": 74
+    }
+  ],
+  "projects": [
+    {
+      "name": "forecastbench",
+      "description": "Benchmark suite for retail demand forecasting models.",
+      "url": "https://github.com/example/forecastbench",
+      "tags": [
+        "Python",
+        "Time series"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "TensorFlow Developer Certificate",
+      "issuer": "Google",
+      "year": "2021"
+    },
+    {
+      "name": "Databricks ML Associate",
+      "issuer": "Databricks",
+      "year": "2023"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "Yoruba",
+      "level": "Native"
+    }
+  ],
+  "stats": [
+    {
+      "value": "23%",
+      "label": "Fewer stock-outs"
+    },
+    {
+      "value": "£4.1M",
+      "label": "Revenue impact"
+    },
+    {
+      "value": "140+",
+      "label": "Experiments run"
+    },
+    {
+      "value": "18k",
+      "label": "SKUs forecast"
+    }
+  ]
+}

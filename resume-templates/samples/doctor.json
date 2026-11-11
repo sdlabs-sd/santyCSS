@@ -1,0 +1,152 @@
+{
+  "basics": {
+    "name": "Dr. Amara Singh",
+    "title": "Consultant Cardiologist",
+    "email": "amara.singh@example.com",
+    "phone": "+65 9123 4567",
+    "location": "Singapore",
+    "website": "",
+    "summary": "Consultant cardiologist specialising in interventional cardiology and structural heart disease. Committed to evidence-based care, clinical research and training the next generation of physicians.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    },
+    {
+      "label": "ORCID",
+      "url": "https://orcid.org/0000-0000-0000-0000"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Consultant Cardiologist",
+      "company": "National Heart Centre",
+      "location": "Singapore",
+      "start": "2020",
+      "end": "Present",
+      "highlights": [
+        "Performs 350+ coronary and structural interventions annually.",
+        "Principal investigator on 3 multicentre TAVI trials.",
+        "Programme director for the cardiology fellowship."
+      ]
+    },
+    {
+      "role": "Cardiology Fellow",
+      "company": "Royal Brompton Hospital",
+      "location": "London",
+      "start": "2016",
+      "end": "2020",
+      "highlights": [
+        "Completed advanced fellowship in interventional cardiology."
+      ]
+    },
+    {
+      "role": "Internal Medicine Resident",
+      "company": "Singapore General Hospital",
+      "location": "Singapore",
+      "start": "2012",
+      "end": "2016",
+      "highlights": [
+        "Chief resident, 2015–2016."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MRCP (UK)",
+      "school": "Royal College of Physicians",
+      "start": "2014",
+      "end": "2014",
+      "details": ""
+    },
+    {
+      "degree": "MBBS",
+      "school": "Yong Loo Lin School of Medicine, NUS",
+      "start": "2006",
+      "end": "2011",
+      "details": "Gold medal in Medicine"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Interventional cardiology",
+      "level": 96
+    },
+    {
+      "name": "TAVI / structural",
+      "level": 90
+    },
+    {
+      "name": "Echocardiography",
+      "level": 92
+    },
+    {
+      "name": "Clinical research",
+      "level": 88
+    },
+    {
+      "name": "Medical education",
+      "level": 86
+    }
+  ],
+  "projects": [
+    {
+      "name": "TAVI outcomes in Asian populations",
+      "description": "Lead author, European Heart Journal (2023).",
+      "url": "",
+      "tags": [
+        "Publication"
+      ]
+    },
+    {
+      "name": "Same-day PCI discharge",
+      "description": "Co-author, JACC Interventions (2022).",
+      "url": "",
+      "tags": [
+        "Publication"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Specialist Registration — Cardiology",
+      "issuer": "Singapore Medical Council",
+      "year": "2020"
+    },
+    {
+      "name": "FESC — Fellow",
+      "issuer": "European Society of Cardiology",
+      "year": "2022"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "Punjabi",
+      "level": "Native"
+    },
+    {
+      "name": "Mandarin",
+      "level": "Conversational"
+    }
+  ],
+  "stats": [
+    {
+      "value": "350+",
+      "label": "Procedures / yr"
+    },
+    {
+      "value": "22",
+      "label": "Publications"
+    },
+    {
+      "value": "3",
+      "label": "Trials led"
+    }
+  ]
+}

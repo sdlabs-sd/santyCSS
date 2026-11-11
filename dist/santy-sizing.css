@@ -339,6 +339,17 @@
 .max-width-560  { max-width: 560px; }
 .min-height-560 { min-height: 560px; }
 .max-height-560 { max-height: 560px; }
+.max-width-640 { max-width: 640px; }
+.max-width-720 { max-width: 720px; }
+.max-width-768 { max-width: 768px; }
+.max-width-840 { max-width: 840px; }
+.max-width-896 { max-width: 896px; }
+.max-width-960 { max-width: 960px; }
+.max-width-1024 { max-width: 1024px; }
+.max-width-1152 { max-width: 1152px; }
+.max-width-1280 { max-width: 1280px; }
+.max-width-1440 { max-width: 1440px; }
+.flex-1           { flex: 1 1 0%; }
 .min-width-full   { min-width: 100%; }
 .max-width-full   { max-width: 100%; }
 .min-width-screen { min-width: 100vw; }

@@ -1,0 +1,21 @@
+{
+  "pricing": {
+    "hosting": { "amount": 99900, "currency": "INR", "label": "₹999 / year", "period": "year" },
+    "premium": { "amount": 1000, "currency": "USD", "label": "$10", "period": "one-time" }
+  },
+  "accents": ["blue", "indigo", "violet", "teal", "emerald", "rose", "amber", "sky", "slate"],
+  "templates": [
+    { "id": "commit",     "name": "Commit",     "job": "Software Engineer",   "category": "Technology", "tier": "free",    "accent": "indigo",  "sample": "software-engineer",  "description": "Dark terminal-style header, monospace labels and a tech-stack grid for engineers." },
+    { "id": "canvas",     "name": "Canvas",     "job": "Product Designer",    "category": "Creative",   "tier": "free",    "accent": "rose",    "sample": "product-designer",   "description": "Editorial oversized name, case-study cards and a clean two-column rhythm." },
+    { "id": "signal",     "name": "Signal",     "job": "Data Scientist",      "category": "Technology", "tier": "free",    "accent": "teal",    "sample": "data-scientist",     "description": "Metric tiles up top and proficiency bars that read like a dashboard." },
+    { "id": "spotlight",  "name": "Spotlight",  "job": "Marketing Manager",   "category": "Business",   "tier": "free",    "accent": "amber",   "sample": "marketing-manager",  "description": "Bold colour band, campaign impact numbers and punchy highlights." },
+    { "id": "care",       "name": "Care",       "job": "Registered Nurse",    "category": "Healthcare", "tier": "free",    "accent": "sky",     "sample": "registered-nurse",   "description": "Calm, scannable layout with licences and certifications up front." },
+    { "id": "chalkboard", "name": "Chalkboard", "job": "Teacher",             "category": "Education",  "tier": "free",    "accent": "emerald", "sample": "teacher",            "description": "Friendly sidebar layout for educators with subjects and achievements." },
+    { "id": "quota",      "name": "Quota",      "job": "Sales Executive",     "category": "Business",   "tier": "free",    "accent": "blue",    "sample": "sales-executive",    "description": "Results-first: quota attainment and deal stats before anything else." },
+    { "id": "ledger",     "name": "Ledger",     "job": "Accountant",          "category": "Finance",    "tier": "free",    "accent": "slate",   "sample": "accountant",         "description": "Conservative, ATS-friendly single column with tidy ruled sections." },
+    { "id": "boardroom",  "name": "Boardroom",  "job": "Chief Executive",     "category": "Leadership", "tier": "premium", "accent": "amber",   "sample": "chief-executive",    "description": "Luxurious dark cover panel, leadership metrics and board-ready polish." },
+    { "id": "roadmap",    "name": "Roadmap",    "job": "Product Manager",     "category": "Technology", "tier": "premium", "accent": "violet",  "sample": "product-manager",    "description": "Vertical milestone timeline with launch outcomes and a skills matrix." },
+    { "id": "counsel",    "name": "Counsel",    "job": "Corporate Lawyer",    "category": "Legal",      "tier": "premium", "accent": "slate",   "sample": "corporate-lawyer",   "description": "Refined serif typography, bar admissions and notable matters." },
+    { "id": "physician",  "name": "Physician",  "job": "Doctor",              "category": "Healthcare", "tier": "premium", "accent": "teal",    "sample": "doctor",             "description": "Clinical two-column layout with publications, residencies and licences." }
+  ]
+}

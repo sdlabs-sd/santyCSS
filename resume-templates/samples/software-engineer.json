@@ -1,0 +1,152 @@
+{
+  "basics": {
+    "name": "Aarav Mehta",
+    "title": "Senior Software Engineer",
+    "email": "aarav.mehta@example.com",
+    "phone": "+91 98765 43210",
+    "location": "Bengaluru, India",
+    "website": "https://aarav.dev",
+    "summary": "Backend-leaning full-stack engineer with 8 years building payment and data platforms. I like boring infrastructure, fast feedback loops and mentoring engineers into owners.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/example"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Senior Software Engineer",
+      "company": "Finlytic",
+      "location": "Bengaluru",
+      "start": "2021",
+      "end": "Present",
+      "highlights": [
+        "Led the rewrite of the ledger service in Go, cutting p99 latency from 480ms to 70ms.",
+        "Designed an idempotent payouts pipeline processing ₹1,200 Cr monthly with zero double-pays.",
+        "Mentored 6 engineers; 3 promoted to senior within 18 months."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "CloudKart",
+      "location": "Pune",
+      "start": "2018",
+      "end": "2021",
+      "highlights": [
+        "Built the order-tracking platform on Kafka and PostgreSQL serving 2M daily events.",
+        "Introduced contract testing, reducing integration incidents by 60%."
+      ]
+    },
+    {
+      "role": "Associate Engineer",
+      "company": "Infosys",
+      "location": "Mysuru",
+      "start": "2016",
+      "end": "2018",
+      "highlights": [
+        "Shipped internal tooling in Java and React used by 4,000 employees."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Tech, Computer Science",
+      "school": "NIT Trichy",
+      "start": "2012",
+      "end": "2016",
+      "details": "CGPA 8.7 / 10"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Go",
+      "level": 92
+    },
+    {
+      "name": "TypeScript",
+      "level": 90
+    },
+    {
+      "name": "PostgreSQL",
+      "level": 88
+    },
+    {
+      "name": "Kubernetes",
+      "level": 80
+    },
+    {
+      "name": "React",
+      "level": 78
+    },
+    {
+      "name": "AWS",
+      "level": 82
+    }
+  ],
+  "projects": [
+    {
+      "name": "ledgerkit",
+      "description": "Open-source double-entry ledger library for Go with 2.3k GitHub stars.",
+      "url": "https://github.com/example/ledgerkit",
+      "tags": [
+        "Go",
+        "OSS"
+      ]
+    },
+    {
+      "name": "tracewise",
+      "description": "Lightweight distributed tracing UI for small teams.",
+      "url": "",
+      "tags": [
+        "React",
+        "OpenTelemetry"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Solutions Architect – Associate",
+      "issuer": "Amazon Web Services",
+      "year": "2022"
+    },
+    {
+      "name": "Certified Kubernetes Application Developer",
+      "issuer": "CNCF",
+      "year": "2021"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Fluent"
+    },
+    {
+      "name": "Hindi",
+      "level": "Native"
+    },
+    {
+      "name": "Kannada",
+      "level": "Conversational"
+    }
+  ],
+  "stats": [
+    {
+      "value": "8+",
+      "label": "Years shipping"
+    },
+    {
+      "value": "2.3k",
+      "label": "GitHub stars"
+    },
+    {
+      "value": "70ms",
+      "label": "p99 latency"
+    }
+  ]
+}

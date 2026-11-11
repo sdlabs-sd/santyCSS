@@ -133,6 +133,16 @@ test('class audit: every SantyCSS-looking class used on the site exists', () => 
   }
 });
 
+test('purge minifier keeps calc() whitespace and JSX multi-class strings', () => {
+  const { purge, extractClasses } = require(path.join(ROOT, 'lib', 'purge-core.js'));
+  const { css: out } = purge({ css: '.a { left: calc(50% + 16px); }', content: ['<i class="a">'], minifyOutput: true });
+  assert(out.includes('calc(50% + 16px)'), 'calc() spaces stripped: ' + out);
+  const { css: out2 } = purge({ css: '.a :where(p) { margin: 0; }', content: ['<i class="a">'], minifyOutput: true });
+  assert(out2.includes('.a :where(p)'), 'descendant space before ":" stripped: ' + out2);
+  const found = extractClasses("<p className={'set-text-12 text-bold ' + x}>{y ? 'color-white' : z + ' make-flex'}</p>");
+  ['set-text-12', 'text-bold', 'make-flex'].forEach(c => assert(found.has(c), c + ' not extracted'));
+});
+
 // ── 8. Minified output is structurally sound ─────────────────────────────────
 test('santy.min.css braces balanced, no comments', () => {
   const min = read('santy.min.css');
@@ -855,8 +865,9 @@ test('Tailwind dynamic patterns convert to real classes or stay unmapped', () =>
     'row-span-3': 'span-row-3', 'text-blue-500': 'color-blue-500', 'bg-gray-100': 'background-gray-100',
     'rounded-t-lg': 'round-top-8', 'flex-col': 'flex-column', 'w-full': 'set-width-full',
     'mx-auto': 'add-margin-x-auto', 'object-cover': 'object-fit-cover',
+    'max-w-7xl': 'max-width-1280', // 80rem — real class since the max-width page caps were added
     // No SantyCSS equivalent: must be left as-is, not rewritten to a missing class.
-    'max-w-7xl': 'max-w-7xl', 'col-start-2': 'col-start-2', 'duration-300': 'duration-300',
+    'col-start-2': 'col-start-2', 'duration-300': 'duration-300',
     'basis-full': 'basis-full', 'float-left': 'float-left',
   };
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'santy-tw-dyn-'));

@@ -1,0 +1,138 @@
+{
+  "basics": {
+    "name": "Kenji Watanabe",
+    "title": "Senior Product Manager",
+    "email": "kenji.watanabe@example.com",
+    "phone": "+81 90 1234 5678",
+    "location": "Tokyo, Japan",
+    "website": "https://kenji.pm",
+    "summary": "Product manager who pairs customer obsession with crisp prioritisation. I've launched B2B and consumer products used by millions, from 0→1 bets to scaling mature platforms.",
+    "photo": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/example"
+    },
+    {
+      "label": "Blog",
+      "url": "https://kenji.pm/writing"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Senior Product Manager",
+      "company": "Sakura Pay",
+      "location": "Tokyo",
+      "start": "2021",
+      "end": "Present",
+      "highlights": [
+        "Launched QR merchant payments: 400k merchants onboarded in 12 months.",
+        "Defined the product strategy for a 40-person org across 5 squads.",
+        "Raised merchant NPS from 18 to 52."
+      ]
+    },
+    {
+      "role": "Product Manager",
+      "company": "Mercari-like Marketplace",
+      "location": "Tokyo",
+      "start": "2018",
+      "end": "2021",
+      "highlights": [
+        "Shipped AI-assisted listing, cutting listing time by 45%."
+      ]
+    },
+    {
+      "role": "Associate Product Manager",
+      "company": "Rakuten",
+      "location": "Tokyo",
+      "start": "2016",
+      "end": "2018",
+      "highlights": [
+        "Owned the checkout funnel; +6% conversion."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BEng, Information Engineering",
+      "school": "The University of Tokyo",
+      "start": "2012",
+      "end": "2016",
+      "details": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Product strategy",
+      "level": 94
+    },
+    {
+      "name": "Discovery & research",
+      "level": 90
+    },
+    {
+      "name": "Roadmapping",
+      "level": 92
+    },
+    {
+      "name": "SQL & analytics",
+      "level": 84
+    },
+    {
+      "name": "Stakeholder mgmt",
+      "level": 90
+    }
+  ],
+  "projects": [
+    {
+      "name": "QR merchant payments",
+      "description": "0→1 launch across 47 prefectures.",
+      "url": "",
+      "tags": [
+        "Fintech",
+        "0→1"
+      ]
+    },
+    {
+      "name": "AI listing assistant",
+      "description": "Image-to-listing with LLMs.",
+      "url": "",
+      "tags": [
+        "AI",
+        "Marketplace"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Scrum Product Owner",
+      "issuer": "Scrum Alliance",
+      "year": "2019"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Japanese",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Fluent"
+    }
+  ],
+  "stats": [
+    {
+      "value": "400k",
+      "label": "Merchants"
+    },
+    {
+      "value": "+34",
+      "label": "NPS points"
+    },
+    {
+      "value": "-45%",
+      "label": "Listing time"
+    }
+  ]
+}
