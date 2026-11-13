@@ -5678,6 +5678,54 @@ const RENAME_COLLISIONS = [];
 const aliasMode = userConfig.legacyNames === false ? 'replace' : 'alias';
 const withNames = css => aliasCSS(css, RENAME_MAP, aliasMode);
 
+// ─── SANTY UI: THEME + COMPONENT LAYER (v2.10) ───────────────────────────────
+// lib/ui/theme.css      design tokens (light/dark), base type, .eyebrow
+// lib/ui/components.css button, card, navbar, input, badge, alert, modal,
+//                       tabs, pricing — written in the grammar, no aliases.
+//
+// santy-ui.css   = theme + components. Pairs with santy-core.css, or works
+//                  alone for components-only use.
+// santy-next.css = components → grammar-only utilities → theme. Utilities
+//                  come after components so `padding-8` on a .button wins; the
+//                  theme comes last so its tokens beat core's :root defaults.
+//                  No classic components, so .card/.badge never collide.
+const UI_THEME_CSS = fs.readFileSync(path.join(__dirname, 'lib', 'ui', 'theme.css'), 'utf8');
+const UI_COMPONENTS_CSS = fs.readFileSync(path.join(__dirname, 'lib', 'ui', 'components.css'), 'utf8');
+const pkgVer = require('./package.json').version;
+const UI_HEADER = `/*! SantyCSS UI v${pkgVer} — theme "Persimmon" + components | MIT | https://santycss.santy.in */\n`;
+const UI_CSS = UI_HEADER + UI_THEME_CSS + '\n' + UI_COMPONENTS_CSS;
+const NEXT_CSS = `/*! SantyCSS Next v${pkgVer} — grammar names only, theme + components + utilities | MIT
+   One file for new projects: <link rel="stylesheet" href="…/dist/santy-next.css">
+   Legacy names (add-padding-24, make-flex) are NOT included here; use santy-start.css for those. */\n`
+  + UI_COMPONENTS_CSS + '\n' + aliasCSS(slimmedCoreCSS, RENAME_MAP, 'replace') + '\n' + nextResponsiveCSS() + '\n' + UI_THEME_CSS;
+
+// santy-core.css ships no breakpoint variants (they live in santy-variants.css).
+// A one-file bundle needs them, so santy-next carries sm/md/lg/xl for the
+// responsive set (display, flex, spacing, grid, type, width) plus column spans,
+// all in grammar names.
+function nextResponsiveCSS() {
+  const extra = [];
+  for (let n = 1; n <= 12; n++) extra.push([`span-col-${n}`, `grid-column:span ${n} / span ${n}`]);
+  extra.push(['span-col-full', 'grid-column:1 / -1']);
+  [44, 52, 60, 72].forEach(v => extra.push([`set-text-${v}`, `font-size:${v}px`]));
+  [80, 96, 128].forEach(v => extra.push([`add-padding-y-${v}`, `padding-top:${v}px;padding-bottom:${v}px`]));
+  extra.push(['make-inline-flex', 'display:inline-flex'], ['flex-equal', 'flex:1 1 0%'], ['text-left', 'text-align:left']);
+  const all = responsiveClasses.concat(extra);
+  const seen = new Set();
+  let out = '/* ── Responsive variants (sm 640 · md 768 · lg 1024 · xl 1280) ── */\n';
+  for (const bp of ['sm', 'md', 'lg', 'xl']) {
+    out += `@media ${breakpoints[bp]} {\n`;
+    for (const [cls, props] of all) {
+      const name = naming.toNew(cls) || cls;
+      if (seen.has(bp + name)) continue;
+      seen.add(bp + name);
+      out += `  .${bp}\\:${name} { ${props.split(';').map(p => p.trim() + ';').join(' ')} }\n`;
+    }
+    out += '}\n';
+  }
+  return out;
+}
+
 // ─── APPLY OPTIONAL CLASS PREFIX (santy.config.json → "prefix") ──────────────
 const OUT_CSS = {
   // Extended components, grid and plugin CSS sit past the component marker, so
@@ -5695,6 +5743,8 @@ const OUT_CSS = {
   'santy-animations.css': applyPrefix(withNames(animCSS)) + MOTION_GUARD_CSS,
   'santy-email.css': applyPrefix(withNames(EMAIL_CSS.trim())),
   'santy-themes.css': applyPrefix(withNames(THEMES_CSS)),
+  'santy-ui.css': applyPrefix(UI_CSS),
+  'santy-next.css': applyPrefix(NEXT_CSS) + MOTION_GUARD_CSS,
 };
 for (const name of MODULE_NAMES) {
   OUT_CSS[`santy-${name}.css`] = applyPrefix(withNames(moduleCSS[name]));
@@ -5704,7 +5754,7 @@ for (const name of MODULE_NAMES) {
 // Every generated class name — powers editor IntelliSense, AI tooling, linters.
 const pkgVersion = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8')).version;
 const classSet = new Set();
-const allGeneratedCSS = OUT_CSS['santy.css'] + '\n' + OUT_CSS['santy-themes.css'];
+const allGeneratedCSS = OUT_CSS['santy.css'] + '\n' + OUT_CSS['santy-themes.css'] + '\n' + OUT_CSS['santy-ui.css'];
 // Selectors only: scanning raw text used to pick up comments, URLs and JS
 // identifiers (forEach, w3.org, …) as if they were classes.
 for (const cls of selectorClasses(allGeneratedCSS)) {
@@ -5803,6 +5853,8 @@ console.log(`✅ santy-merge.js     — ${kb(MERGE_JS.length)} (cn() conflict-aw
 console.log(`✅ grid system        — ${kb(GRID_CSS.length)} (Bootstrap-compatible .row / .col-md-6)`);
 console.log(`✅ santy-icons.css    — ${kb(ICONS_CSS.length)} (2,100+ icons — brand, business, communication, essential UI)`);
 console.log(`✅ santy-themes.css   — ${kb(THEMES_CSS.length)} (5 prebuilt data-theme presets)`);
+console.log(`✅ santy-ui.css       — ${kb(OUT_CSS['santy-ui.css'].length)} (theme "Persimmon" + 9 components, grammar names)`);
+console.log(`✅ santy-next.css     — ${kb(OUT_CSS['santy-next.css'].length)} (new projects: theme + components + grammar-only utilities)`);
 console.log(`✅ santy-classmap.json — ${kb(CLASSMAP_JSON.length)} (${classSet.size.toLocaleString()} class names for IntelliSense/AI)`);
 console.log(`✅ dist/              — mirrored for NPM package`);
 console.log('');

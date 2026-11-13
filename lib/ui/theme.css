@@ -1,0 +1,197 @@
+/* ═══ SANTY UI · THEME "PERSIMMON" ═══════════════════════════════════════════
+   Warm paper, ink type and one confident persimmon accent.
+   Every value is a CSS variable: override any of them on :root, or on any
+   element to re-theme just that subtree. See THEME.md.
+
+   Dark mode: add data-theme="dark" (or class="dark") to <html>, or
+   data-theme="auto" to follow the operating system.
+   ════════════════════════════════════════════════════════════════════════════ */
+:root {
+  color-scheme: light;
+
+  /* ── Brand ─────────────────────────────────────────────────────────────── */
+  --santy-primary:            #cc4520;   /* persimmon: white text 4.7:1 */
+  --santy-primary-dark:       #b03a17;   /* hover, links on paper (5.6:1) */
+  --santy-primary-light:      #fde6dc;   /* tinted backgrounds */
+  --santy-primary-contrast:   #ffffff;   /* text on primary */
+  --santy-secondary:          #1d1a16;   /* ink */
+  --santy-secondary-dark:     #000000;
+  --santy-secondary-light:    #ece5da;
+  --santy-secondary-contrast: #faf7f2;
+  --santy-accent:             #e9a23b;   /* marigold, for highlights only */
+
+  /* ── Status ────────────────────────────────────────────────────────────── */
+  --santy-success:       #1d6b45;  --santy-success-light: #dcefe3;
+  --santy-warning:       #8a5a12;  --santy-warning-light: #fbefd6;
+  --santy-danger:        #b42a37;  --santy-danger-light:  #fbe2e3;
+  --santy-info:          #245683;  --santy-info-light:    #dde8f2;
+
+  /* ── Surfaces & text ───────────────────────────────────────────────────── */
+  --santy-surface:        #faf7f2;   /* the page: warm paper */
+  --santy-surface-alt:    #f3eee5;   /* sunken: inputs, table stripes */
+  --santy-surface-raised: #ffffff;   /* cards, menus, dialogs */
+  --santy-text:           #1d1a16;   /* 16:1 on paper */
+  --santy-text-muted:     #6e655b;   /* 5.3:1 on paper */
+  --santy-border-color:   #e7dfd3;   /* hairlines */
+  --santy-border-strong:  #cfc3b2;   /* control borders */
+  --santy-backdrop:       rgba(29, 26, 22, .48);
+  --santy-focus:          rgba(204, 69, 32, .35);
+
+  /* ── Shape ─────────────────────────────────────────────────────────────── */
+  --santy-radius-sm:      6px;       /* badges, tags, small controls */
+  --santy-radius:         10px;      /* buttons, inputs */
+  --santy-radius-md:      16px;      /* cards, alerts */
+  --santy-radius-lg:      22px;      /* dialogs, feature panels */
+  --santy-radius-xl:      28px;
+  --santy-radius-full:    9999px;
+
+  /* ── Depth: warm-tinted, short key light + long soft fill ──────────────── */
+  --santy-shadow-sm:    0 1px 0 rgba(29,26,22,.05), 0 1px 2px rgba(29,26,22,.06);
+  --santy-shadow:       0 1px 0 rgba(29,26,22,.05), 0 4px 12px -4px rgba(29,26,22,.12);
+  --santy-shadow-md:    0 1px 0 rgba(29,26,22,.05), 0 14px 30px -14px rgba(29,26,22,.24);
+  --santy-shadow-lg:    0 2px 0 rgba(29,26,22,.04), 0 28px 56px -24px rgba(29,26,22,.32);
+  --santy-shadow-xl:    0 2px 0 rgba(29,26,22,.04), 0 40px 80px -32px rgba(29,26,22,.40);
+  --santy-shadow-inner: inset 0 1px 2px rgba(29,26,22,.08);
+  /* the "key" bevel under buttons: what makes them feel pressable */
+  --santy-bevel:        inset 0 -2px 0 rgba(0,0,0,.16);
+
+  /* ── Type ──────────────────────────────────────────────────────────────── */
+  --santy-font-sans:    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --santy-font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", Georgia, ui-serif, serif;
+  --santy-font-mono:    ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+  --santy-font-serif:   var(--santy-font-display);
+  /* major-third scale (×1.25) from 16px */
+  --santy-text-xs:   12px;
+  --santy-text-sm:   14px;
+  --santy-text-base: 16px;
+  --santy-text-lg:   20px;
+  --santy-text-xl:   25px;
+  --santy-text-2xl:  31px;
+  --santy-text-3xl:  39px;
+  --santy-text-4xl:  49px;
+  --santy-text-5xl:  61px;
+  --santy-leading:        1.6;
+  --santy-leading-tight:  1.12;
+  --santy-tracking-display: -0.022em;
+  --santy-tracking-label:    0.14em;
+
+  /* ── Space & sizing (4px grid, roomy) ──────────────────────────────────── */
+  --santy-space:        4px;
+  --santy-control-sm:   32px;
+  --santy-control-md:   40px;
+  --santy-control-lg:   48px;
+  --santy-section:      96px;
+
+  /* ── Motion ────────────────────────────────────────────────────────────── */
+  --santy-ease:          cubic-bezier(.2, .8, .2, 1);
+  --santy-duration:      160ms;
+  --santy-transition-fast:   all 120ms var(--santy-ease);
+  --santy-transition-normal: all 200ms var(--santy-ease);
+  --santy-transition-slow:   all 400ms var(--santy-ease);
+}
+
+/* ── Dark: warm charcoal, not blue-black ─────────────────────────────────── */
+[data-theme="dark"], .dark {
+  color-scheme: dark;
+  --santy-primary:            #ff6f45;
+  --santy-primary-dark:       #ff8c69;   /* hover goes lighter in the dark */
+  --santy-primary-light:      #3a1d12;
+  --santy-primary-contrast:   #1b0f0a;   /* ink on persimmon: 6.6:1 */
+  --santy-secondary:          #f3ede4;
+  --santy-secondary-dark:     #ffffff;
+  --santy-secondary-light:    #2c2620;
+  --santy-secondary-contrast: #17140f;
+  --santy-accent:             #f2bd5c;
+  --santy-success: #6fd39e;  --santy-success-light: #15301f;
+  --santy-warning: #efb54d;  --santy-warning-light: #33270f;
+  --santy-danger:  #ff8a93;  --santy-danger-light:  #3a1418;
+  --santy-info:    #8cbcec;  --santy-info-light:    #13253a;
+  --santy-surface:        #15120f;
+  --santy-surface-alt:    #1c1814;
+  --santy-surface-raised: #221d18;
+  --santy-text:           #f3ede4;
+  --santy-text-muted:     #a69c90;
+  --santy-border-color:   #332c25;
+  --santy-border-strong:  #4a4138;
+  --santy-backdrop:       rgba(0, 0, 0, .62);
+  --santy-focus:          rgba(255, 111, 69, .45);
+  --santy-shadow-sm:  0 1px 0 rgba(0,0,0,.3);
+  --santy-shadow:     0 1px 0 rgba(0,0,0,.3), 0 6px 16px -6px rgba(0,0,0,.5);
+  --santy-shadow-md:  0 1px 0 rgba(0,0,0,.3), 0 16px 32px -14px rgba(0,0,0,.6);
+  --santy-shadow-lg:  0 2px 0 rgba(0,0,0,.3), 0 30px 60px -24px rgba(0,0,0,.7);
+  --santy-shadow-xl:  0 2px 0 rgba(0,0,0,.3), 0 40px 80px -30px rgba(0,0,0,.8);
+  --santy-bevel:      inset 0 -2px 0 rgba(0,0,0,.28);
+}
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] {
+    color-scheme: dark;
+    --santy-primary:            #ff6f45;
+    --santy-primary-dark:       #ff8c69;
+    --santy-primary-light:      #3a1d12;
+    --santy-primary-contrast:   #1b0f0a;
+    --santy-secondary:          #f3ede4;
+    --santy-secondary-dark:     #ffffff;
+    --santy-secondary-light:    #2c2620;
+    --santy-secondary-contrast: #17140f;
+    --santy-accent:             #f2bd5c;
+    --santy-success: #6fd39e;  --santy-success-light: #15301f;
+    --santy-warning: #efb54d;  --santy-warning-light: #33270f;
+    --santy-danger:  #ff8a93;  --santy-danger-light:  #3a1418;
+    --santy-info:    #8cbcec;  --santy-info-light:    #13253a;
+    --santy-surface:        #15120f;
+    --santy-surface-alt:    #1c1814;
+    --santy-surface-raised: #221d18;
+    --santy-text:           #f3ede4;
+    --santy-text-muted:     #a69c90;
+    --santy-border-color:   #332c25;
+    --santy-border-strong:  #4a4138;
+    --santy-backdrop:       rgba(0, 0, 0, .62);
+    --santy-focus:          rgba(255, 111, 69, .45);
+    --santy-shadow-sm:  0 1px 0 rgba(0,0,0,.3);
+    --santy-shadow:     0 1px 0 rgba(0,0,0,.3), 0 6px 16px -6px rgba(0,0,0,.5);
+    --santy-shadow-md:  0 1px 0 rgba(0,0,0,.3), 0 16px 32px -14px rgba(0,0,0,.6);
+    --santy-shadow-lg:  0 2px 0 rgba(0,0,0,.3), 0 30px 60px -24px rgba(0,0,0,.7);
+    --santy-shadow-xl:  0 2px 0 rgba(0,0,0,.3), 0 40px 80px -30px rgba(0,0,0,.8);
+    --santy-bevel:      inset 0 -2px 0 rgba(0,0,0,.28);
+  }
+}
+
+/* ── Base: the page itself carries the theme ─────────────────────────────── */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--santy-surface);
+  color: var(--santy-text);
+  font-family: var(--santy-font-sans);
+  font-size: var(--santy-text-base);
+  line-height: var(--santy-leading);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3 {
+  font-family: var(--santy-font-display);
+  font-weight: 600;
+  line-height: var(--santy-leading-tight);
+  letter-spacing: var(--santy-tracking-display);
+  text-wrap: balance;
+}
+h4, h5, h6 { font-weight: 650; line-height: 1.3; }
+p { text-wrap: pretty; }
+a { color: var(--santy-primary-dark); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+code, kbd, samp, pre { font-family: var(--santy-font-mono); font-size: .92em; }
+::selection { background: var(--santy-primary-light); color: var(--santy-text); }
+:focus-visible { outline: 2px solid var(--santy-primary); outline-offset: 2px; }
+hr { border: 0; border-top: 1px solid var(--santy-border-color); }
+
+/* Eyebrow: the small tracked mono label above a heading, a Persimmon signature */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--santy-font-mono);
+  font-size: var(--santy-text-xs);
+  font-weight: 600;
+  letter-spacing: var(--santy-tracking-label);
+  text-transform: uppercase;
+  color: var(--santy-primary-dark);
+}
+.eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; border-radius: 2px; }

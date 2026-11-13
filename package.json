@@ -12,6 +12,8 @@
     },
     "./css": "./dist/santy.css",
     "./css/start": "./dist/santy-start.css",
+    "./css/next": "./dist/santy-next.css",
+    "./css/ui": "./dist/santy-ui.css",
     "./css/core": "./dist/santy-core.css",
     "./css/variants": "./dist/santy-variants.css",
     "./css/components": "./dist/santy-components.css",
