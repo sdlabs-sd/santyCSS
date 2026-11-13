@@ -36,32 +36,32 @@ const STARTER_HTML = `<!DOCTYPE html>
 </head>
 <body class="background-surface color-text" style="margin:0;font-family:var(--santy-font-sans);">
 
-  <section class="make-flex flex-column align-center justify-center text-center add-padding-y-96 add-padding-x-24">
-    <span class="badge badge-primary add-margin-bottom-16">SantyCSS starter</span>
-    <h1 class="set-text-48 text-bold add-margin-bottom-16 on-mobile:set-text-32">
+  <section class="display-flex flex-column align-center justify-center text-center padding-y-96 padding-x-24">
+    <span class="badge badge-primary margin-bottom-16">SantyCSS starter</span>
+    <h1 class="text-size-48 text-bold margin-bottom-16 on-mobile:text-size-32">
       Plain-English CSS.<br>No build step.
     </h1>
-    <p class="set-text-18 color-text-muted line-height-relaxed add-margin-bottom-32 set-max-width-readable">
+    <p class="text-size-18 color-text-muted line-height-relaxed margin-bottom-32 max-width-readable">
       Edit this file and refresh — class names read like sentences, so you already know them.
     </p>
-    <div class="make-flex gap-12 flex-wrap justify-center">
+    <div class="display-flex gap-12 flex-wrap justify-center">
       <button class="btn btn-primary btn-lg on-hover:scale-105 transition-all">Get started</button>
       <a href="https://santycss.santy.in/classes.html" class="btn btn-outline btn-lg">Class reference</a>
     </div>
   </section>
 
-  <section class="make-grid grid-cols-3 gap-24 add-padding-48 on-mobile:grid-cols-1 md:grid-cols-2 set-max-width-1024 add-margin-x-auto">
-    <div class="card background-surface-raised add-padding-24 round-corners-16 add-shadow-sm on-hover:add-shadow-lg transition-all">
-      <h3 class="set-text-18 text-semibold add-margin-bottom-8">Utilities</h3>
-      <p class="set-text-14 color-text-muted line-height-relaxed">add-padding-24, make-flex, set-text-18 — 21,000+ classes.</p>
+  <section class="display-grid grid-columns-3 gap-24 padding-48 on-mobile:grid-columns-1 md:grid-columns-2 container">
+    <div class="card background-surface-raised padding-24 radius-16 shadow-sm on-hover:shadow-lg transition-all">
+      <h3 class="text-size-18 text-semibold margin-bottom-8">Utilities</h3>
+      <p class="text-size-14 color-text-muted line-height-relaxed">add-padding-24, make-flex, set-text-18 — 21,000+ classes.</p>
     </div>
-    <div class="card background-surface-raised add-padding-24 round-corners-16 add-shadow-sm on-hover:add-shadow-lg transition-all">
-      <h3 class="set-text-18 text-semibold add-margin-bottom-8">Components</h3>
-      <p class="set-text-14 color-text-muted line-height-relaxed">Buttons, cards, modals, toasts, carousels — ready to use.</p>
+    <div class="card background-surface-raised padding-24 radius-16 shadow-sm on-hover:shadow-lg transition-all">
+      <h3 class="text-size-18 text-semibold margin-bottom-8">Components</h3>
+      <p class="text-size-14 color-text-muted line-height-relaxed">Buttons, cards, modals, toasts, carousels — ready to use.</p>
     </div>
-    <div class="card background-surface-raised add-padding-24 round-corners-16 add-shadow-sm on-hover:add-shadow-lg transition-all">
-      <h3 class="set-text-18 text-semibold add-margin-bottom-8">Themes</h3>
-      <p class="set-text-14 color-text-muted line-height-relaxed">Try &lt;html data-theme="ocean"&gt; — semantic colors flip instantly.</p>
+    <div class="card background-surface-raised padding-24 radius-16 shadow-sm on-hover:shadow-lg transition-all">
+      <h3 class="text-size-18 text-semibold margin-bottom-8">Themes</h3>
+      <p class="text-size-14 color-text-muted line-height-relaxed">Try &lt;html data-theme="ocean"&gt; — semantic colors flip instantly.</p>
     </div>
   </section>
 

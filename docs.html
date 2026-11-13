@@ -36,7 +36,7 @@
   </script>
 
   <link rel="icon" type="image/png" href="assest/santy_css.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css" />
   <style>
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; overflow-x: hidden; }
@@ -246,6 +246,12 @@
   <aside class="docs-sidebar">
 
     <div class="sidebar-group">
+      <div class="sidebar-group-label">Start here</div>
+      <a href="#naming-rules" class="sidebar-link"><span class="sidebar-dot" style="background:#cc4520;"></span>Naming rules (v2.10)</a>
+      <a href="#theme-persimmon" class="sidebar-link"><span class="sidebar-dot" style="background:#1d1a16;"></span>Theme &amp; components</a>
+    </div>
+
+    <div class="sidebar-group">
       <div class="sidebar-group-label">Getting Started</div>
       <a href="#install" class="sidebar-link active"><span class="sidebar-dot" style="background:#3b82f6;"></span>Installation</a>
       <a href="#package-structure" class="sidebar-link"><span class="sidebar-dot" style="background:#3b82f6;"></span>Package Structure</a>
@@ -304,6 +310,62 @@
       <h1 class="set-text-40 text-bold color-gray-900 add-margin-bottom-12" style="letter-spacing:-1px;">Module Documentation</h1>
       <p class="set-text-18 color-gray-500 line-height-relaxed" style="max-width:640px;">SantyCSS ships as 5 independent CSS modules. Use the full bundle, or load only what you need for optimal performance.</p>
     </div>
+
+    <!-- ── NAMING RULES (v2.10) ─────────────────────────────────────────── -->
+    <section id="naming-rules" class="doc-section">
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Naming rules</h2>
+      <p class="text-size-15 color-gray-500 margin-bottom-24 line-height-relaxed">Since v2.10, every utility reads <code class="chip">property-[modifier]-value</code>. Know the CSS property and you can guess the class. The old names (<code class="chip">add-padding-24</code>, <code class="chip">make-flex</code>) still work as deprecated aliases with identical CSS until v3. Why this grammar won: <a href="https://github.com/Santy-Labs/santyCSS/blob/main/NAMING.md">NAMING.md</a>.</p>
+      <div class="code-block margin-bottom-24">
+<pre>&lt;!-- before --&gt;
+&lt;div class="make-flex align-center gap-16 add-padding-24 round-corners-12 add-shadow-md"&gt;
+&lt;!-- after --&gt;
+&lt;div class="display-flex align-center gap-16 padding-24 radius-12 shadow-md"&gt;</pre>
+      </div>
+      <div class="table-wrap margin-bottom-24">
+        <table>
+          <thead><tr><th>#</th><th>Rule</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><b>Property first, then modifier, then value. No verbs.</b> Variants go in front with a colon.</td><td><code class="chip">padding-top-24</code> <code class="chip">border-left-2</code> <code class="chip">md:display-flex</code> <code class="chip">on-hover:shadow-lg</code></td></tr>
+            <tr><td>2</td><td><b>Properties are whole words.</b> Use the CSS name or one short word from the vocabulary: <code class="chip">display</code> <code class="chip">text</code> <code class="chip">radius</code> <code class="chip">shadow</code> <code class="chip">background</code>. No <code class="chip">p-</code>, <code class="chip">w-</code>, <code class="chip">bg-</code>, <code class="chip">z-</code>.</td><td><code class="chip">radius-12</code> <code class="chip">z-index-10</code> <code class="chip">background-cover</code></td></tr>
+            <tr><td>3</td><td><b>Numbers are literal and whole.</b> Lengths are px. Unitless ratios are %. Negatives are <code class="chip">minus-N</code>, fractions <code class="chip">N-of-M</code>, aspect ratios <code class="chip">N-by-M</code>.</td><td><code class="chip">gap-16</code> = 16px <code class="chip">opacity-50</code> <code class="chip">line-height-150</code> <code class="chip">margin-top-minus-8</code> <code class="chip">width-1-of-3</code> <code class="chip">aspect-16-by-9</code></td></tr>
+            <tr><td>4</td><td><b>A word means one thing.</b> One size scale: <code class="chip">xs sm md lg xl 2xl</code>. Leave out the modifier only when the value is unambiguous.</td><td><code class="chip">text-bold</code> <code class="chip">text-center</code>, but <code class="chip">text-size-18</code> <code class="chip">text-weight-600</code></td></tr>
+            <tr><td>5</td><td><b>Components are nouns, and their options are suffixes:</b> component, then variant, then size.</td><td><code class="chip">button button-primary button-lg</code> <code class="chip">card card-outline</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrap margin-bottom-24">
+        <table>
+          <thead><tr><th>Before (still works)</th><th>Now</th></tr></thead>
+          <tbody>
+            <tr><td><code class="chip">make-flex</code> · <code class="chip">make-hidden</code></td><td><code class="chip">display-flex</code> · <code class="chip">display-none</code></td></tr>
+            <tr><td><code class="chip">add-padding-x-24</code> · <code class="chip">add-margin-top-8</code></td><td><code class="chip">padding-x-24</code> · <code class="chip">margin-top-8</code></td></tr>
+            <tr><td><code class="chip">subtract-margin-top-16</code></td><td><code class="chip">margin-top-minus-16</code></td></tr>
+            <tr><td><code class="chip">set-width-320</code> · <code class="chip">set-height-full</code></td><td><code class="chip">width-320</code> · <code class="chip">height-full</code></td></tr>
+            <tr><td><code class="chip">set-text-18</code> · <code class="chip">set-font-weight-600</code></td><td><code class="chip">text-size-18</code> · <code class="chip">text-weight-600</code></td></tr>
+            <tr><td><code class="chip">round-corners-12</code> · <code class="chip">make-pill</code></td><td><code class="chip">radius-12</code> · <code class="chip">radius-pill</code></td></tr>
+            <tr><td><code class="chip">add-shadow-md</code> · <code class="chip">pin-top-0</code> · <code class="chip">z-10</code></td><td><code class="chip">shadow-md</code> · <code class="chip">top-0</code> · <code class="chip">z-index-10</code></td></tr>
+            <tr><td><code class="chip">line-height-1-5</code> · <code class="chip">aspect-ratio-16-9</code> · <code class="chip">span-col-2</code></td><td><code class="chip">line-height-150</code> · <code class="chip">aspect-16-by-9</code> · <code class="chip">grid-column-span-2</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-size-15 color-gray-500 margin-bottom-12 line-height-relaxed"><b>Migrate a project</b> (HTML, JSX, TSX, Vue):</p>
+      <div class="install-box margin-bottom-12">
+        <code>npx santycss migrate --from=legacy src/ --dry-run --diff</code>
+        <button class="copy-btn" onclick="copyText('npx santycss migrate --from=legacy src/ --dry-run --diff', this)">Copy</button>
+      </div>
+      <p class="text-size-13 color-gray-500 line-height-relaxed">Drop <code class="chip">--dry-run</code> to rewrite files, or add <code class="chip">--check</code> in CI. The full map of 1,600+ renames is in <code class="chip">santycss/renames</code> (<code class="chip">dist/santy-renames.json</code>). For slimmer CSS without aliases, set <code class="chip">"legacyNames": false</code> in <code class="chip">santy.config.json</code>.</p>
+    </section>
+
+    <!-- ── THEME + COMPONENTS (v2.10) ───────────────────────────────────── -->
+    <section id="theme-persimmon" class="doc-section">
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Theme &amp; components</h2>
+      <p class="text-size-15 color-gray-500 margin-bottom-24 line-height-relaxed">SantyCSS now has a look of its own. <b>Persimmon</b> pairs warm paper with ink type, serif headlines and one persimmon accent. It ships nine components, each with <code class="chip">primary</code> / <code class="chip">secondary</code> / <code class="chip">outline</code> / <code class="chip">ghost</code> variants and <code class="chip">sm</code> / <code class="chip">md</code> / <code class="chip">lg</code> sizes: button, card, navbar, input, badge, alert, modal, tabs and pricing table. They need no JavaScript and no build step.</p>
+      <div class="install-box margin-bottom-16">
+        <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10/dist/santy-next.css"&gt;</code>
+        <button class="copy-btn" onclick="copyText('&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/santycss@2.10/dist/santy-next.css&quot;&gt;', this)">Copy</button>
+      </div>
+      <p class="text-size-13 color-gray-500 line-height-relaxed"><code class="chip">santy-next.css</code> is one file for new projects: theme + components + grammar-only utilities. <code class="chip">santy-ui.css</code> is the theme and components alone, to pair with <code class="chip">santy-core.css</code>. Existing <code class="chip">santy-start.css</code> / <code class="chip">santy.css</code> sites look exactly as before. Every value is a <code class="chip">--santy-*</code> variable; see <a href="https://github.com/Santy-Labs/santyCSS/blob/main/THEME.md">THEME.md</a>. Live examples: <a href="examples/saas-landing.html">SaaS landing</a> · <a href="examples/dashboard.html">dashboard</a> · <a href="examples/components.html">all components</a>.</p>
+    </section>
 
     <!-- ── INSTALLATION ─────────────────────────────────────────────────── -->
     <section id="install" class="doc-section">

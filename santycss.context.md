@@ -4,54 +4,92 @@
 ---
 
 ## What is SantyCSS?
-SantyCSS is a plain-English utility-first CSS framework. Classes read like English sentences.
-No build step required (optional build for customization) — just link `santy.css` and use the classes directly.
+SantyCSS is a utility-first CSS framework whose classes are whole words with literal pixel values, plus its own theme ("Persimmon") and components. No build step is needed: link the CSS and use the classes.
 
 Install: `npm install santycss`
-CDN: `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy.css">`
+CDN (new projects): `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-next.css">`
+CDN (classic build, old + new names): `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-start.css">`
 
 ---
 
-## Core Naming Conventions
+## Naming rules (v2.10). Always generate these names
 
-| Pattern | Example | Meaning |
-|---|---|---|
-| `add-{prop}-{n}` | `add-padding-24` | Additive: border, padding, margin, shadow |
-| `make-{val}` | `make-flex`, `make-circle` | Display / behaviour |
-| `set-{prop}-{val}` | `set-text-24`, `set-width-320` | Dimension / size setter |
-| `pin-{side}-{n}` | `pin-top-0`, `pin-center` | Absolute / fixed positioning |
-| `{state}:{class}` | `on-hover:scale-110`, `md:grid-cols-3` | State / responsive prefix |
+Every class is `property-[modifier]-value`.
+
+1. **Property first, then modifier, then value. No verbs.** `padding-top-24`, `border-left-2`, `md:display-flex`, `on-hover:shadow-lg`.
+2. **Properties are whole words**: the CSS name or `display`, `text`, `font`, `radius`, `shadow`, `background`, `color`, `align`, `justify`, `inset`, `aspect`, `animation`. Never `p-`, `w-`, `bg-`, `z-`.
+3. **Numbers are literal and whole.** Lengths are px (`gap-16` = 16px, NOT Tailwind's ×4 scale). Unitless ratios are %: `opacity-50`, `scale-105`, `line-height-150` (= 1.5). Negatives are `minus-N` (`margin-top-minus-8`), fractions `N-of-M` (`width-1-of-3`), ratios `N-by-M` (`aspect-16-by-9`).
+4. **A word means one thing.** Sizes are `xs sm md lg xl 2xl`. Keywords drop the modifier (`text-bold`, `text-center`, `text-uppercase`); numbers keep it (`text-size-18`, `text-weight-600`).
+5. **Components are nouns, and their options are suffixes:** `button button-primary button-lg`.
+
+| Tailwind | SantyCSS |
+|---|---|
+| `flex` / `hidden` | `display-flex` / `display-none` |
+| `p-6` / `px-4` / `-mt-2` | `padding-24` / `padding-x-16` / `margin-top-minus-8` |
+| `w-80` / `w-1/3` | `width-320` / `width-1-of-3` |
+| `text-lg font-semibold` | `text-size-18 text-weight-600` (or `text-semibold`) |
+| `rounded-xl` / `rounded-full` | `radius-12` / `radius-pill` |
+| `shadow-md` / `z-10` | `shadow-md` / `z-index-10` |
+| `items-center justify-between` | `align-center justify-between` |
+| `grid-cols-3 col-span-2` | `grid-columns-3 grid-column-span-2` |
+| `bg-blue-500 text-gray-900` | `background-blue-500 color-gray-900` |
+| `hover:` / `md:` | `on-hover:` / `md:` |
+
+**Legacy names.** Code written before v2.10 uses `make-flex`, `add-padding-24`, `set-width-320`, `round-corners-12` and `pin-top-0`. Those still work in `santy-start.css` and `santy.css`, but never generate them in new code. `npx santycss migrate --from=legacy` rewrites them.
+
+---
+
+## Components (santy-next.css / santy-ui.css)
+
+Pattern: `component component-{primary|secondary|outline|ghost} component-{sm|md|lg}`. Plain HTML, no JavaScript.
+
+```html
+<button class="button button-primary button-lg">Save</button>      <!-- also button-danger, button-success, button-pill, button-block, button-icon -->
+<article class="card"> <h3 class="card-title">…</h3> <p class="card-text">…</p> <div class="card-footer">…</div> </article>
+<nav class="navbar navbar-sticky"> <a class="navbar-brand">…</a> <input class="navbar-toggle" type="checkbox" aria-label="Menu">
+  <ul class="navbar-links"><li><a class="navbar-link" aria-current="page">…</a></li></ul> <div class="navbar-actions">…</div> </nav>
+<label class="input-label" for="e">Email</label> <input class="input" id="e"> <span class="input-hint">…</span>
+<span class="badge badge-success badge-dot">Live</span>                 <!-- also badge-warning, badge-danger, badge-info, badge-mono -->
+<div class="alert alert-warning"><div><strong class="alert-title">…</strong><p>…</p></div></div>
+<button popovertarget="m">Open</button>
+<div class="modal" id="m" popover><div class="modal-panel"><div class="modal-header"><h3 class="modal-title">…</h3></div><div class="modal-body">…</div><div class="modal-footer">…</div></div></div>
+<div class="tabs"><input class="tabs-input" type="radio" name="t" id="t1" checked><label class="tabs-item" for="t1">One</label><div class="tabs-panel">…</div></div>
+<div class="pricing"><div class="pricing-plan pricing-featured"><h3 class="pricing-name">Pro</h3><p class="pricing-price">$24<span class="pricing-period">/mo</span></p><ul class="pricing-features"><li>…</li></ul><a class="button button-primary button-block">Buy</a></div></div>
+<main class="shell">…</main>   <span class="eyebrow">Label</span>
+```
+
+Theme tokens are `--santy-*` variables (`--santy-primary`, `--santy-radius`, `--santy-font-display`, …). For dark mode use `<html data-theme="dark">` or `data-theme="auto"`. Theme-aware colour utilities: `background-surface`, `background-surface-alt`, `background-primary`, `background-secondary`, `color-text`, `color-text-muted`, `color-primary`, `color-secondary-contrast`, `border-color-default`.
 
 ---
 
 ## Layout
 
 ```
-make-flex          flex-row          flex-column        flex-wrap
-make-grid          make-block        make-inline         make-hidden
+display-flex          flex-row          flex-column        flex-wrap
+display-grid          display-block        display-inline         display-none
 align-center       align-start       align-end           align-stretch
 justify-center     justify-between   justify-around      justify-end
-grid-cols-1 … grid-cols-12
+grid-columns-1 … grid-columns-12
 gap-{n}            gap-x-{n}         gap-y-{n}           (n = 0–200)
 ```
 
 ## Spacing (n = 0–200px)
 
 ```
-add-padding-{n}           add-padding-x-{n}      add-padding-y-{n}
-add-padding-top-{n}       add-padding-bottom-{n}
-add-padding-left-{n}      add-padding-right-{n}
-add-margin-{n}            add-margin-x-{n}       add-margin-y-{n}
-add-margin-top-{n}        add-margin-bottom-{n}
-add-margin-left-{n}       add-margin-right-{n}
+padding-{n}           padding-x-{n}      padding-y-{n}
+padding-top-{n}       padding-bottom-{n}
+padding-left-{n}      padding-right-{n}
+margin-{n}            margin-x-{n}       margin-y-{n}
+margin-top-{n}        margin-bottom-{n}
+margin-left-{n}       margin-right-{n}
 ```
 
 ## Sizing
 
 ```
-set-width-{n}     set-height-{n}     set-min-width-{n}   set-max-width-{n}
-set-width-full    set-width-screen   set-height-screen    set-height-full
-set-text-{n}      (8–144px)
+width-{n}     height-{n}     min-width-{n}   max-width-{n}
+width-full    width-screen   height-screen    height-full
+text-size-{n}      (8–144px)
 ```
 
 ## Colors — 20 families × 10 shades (50–950)
@@ -68,18 +106,18 @@ color-white   color-black   background-white   background-transparent
 ## Borders
 
 ```
-add-border-{n}               /* all sides, n = 1–8 */
-add-border-top-{n}           add-border-bottom-{n}
-add-border-left-{n}          add-border-right-{n}
+border-{n}               /* all sides, n = 1–8 */
+border-top-{n}           border-bottom-{n}
+border-left-{n}          border-right-{n}
 border-color-{name}-{shade}
-round-corners-{n}            /* border-radius, n = 0–48 */
-make-circle                  make-pill
+radius-{n}            /* border-radius, n = 0–48 */
+radius-circle                  radius-pill
 ```
 
 ## Shadows
 
 ```
-add-shadow-sm    add-shadow-md    add-shadow-lg    add-shadow-xl    add-shadow-none
+shadow-sm    shadow-md    shadow-lg    shadow-xl    shadow-none
 ring-offset-1    ring-offset-2    ring-offset-4
 ```
 
@@ -91,15 +129,15 @@ text-italic   text-underline   text-strikethrough   text-no-decoration
 text-center   text-left   text-right   text-justify
 text-uppercase   text-lowercase   text-capitalize
 line-height-tight   line-height-normal   line-height-relaxed   line-height-loose
-letter-space-tight   letter-space-normal   letter-space-wide
+letter-spacing-tight   letter-spacing-normal   letter-spacing-wide
 ```
 
 ## Positioning
 
 ```
 position-relative   position-absolute   position-fixed   position-sticky
-pin-top-{n}   pin-bottom-{n}   pin-left-{n}   pin-right-{n}   pin-center
-z-0   z-10   z-20   z-30   z-40   z-50   z-100   z-auto
+top-{n}   bottom-{n}   left-{n}   right-{n}   inset-center
+z-index-0   z-index-10   z-index-20   z-index-30   z-index-40   z-index-50   z-index-100   z-index-auto
 ```
 
 ## Object / Aspect Ratio
@@ -107,7 +145,7 @@ z-0   z-10   z-20   z-30   z-40   z-50   z-100   z-auto
 ```
 object-fit-cover     object-fit-contain    object-fit-fill     object-fit-none
 object-position-center   object-position-top   object-position-bottom
-aspect-ratio-16-9    aspect-ratio-1-1    aspect-ratio-4-3
+aspect-16-by-9    aspect-1-by-1    aspect-4-by-3
 aspect-square        aspect-video
 ```
 
@@ -155,14 +193,14 @@ on-desktop:{class}   (1024px+)
 ## Animations
 
 ```
-animate-fade-in          animate-fade-out
-animate-slide-up         animate-slide-down     animate-slide-left    animate-slide-right
-animate-zoom-in          animate-zoom-out
-animate-bounce           animate-spin           animate-pulse
-animate-flip-in-x        animate-flip-in-y
-animate-bounce-in-down   animate-bounce-in-up
-animate-rotate-in        animate-swing
-animate-heartbeat        animate-shake          animate-wobble         animate-jello
+animation-fade-in          animation-fade-out
+animation-slide-up         animation-slide-down     animation-slide-in-from-left    animation-slide-in-from-right
+animation-zoom-in          animation-zoom-out
+animation-bounce           animation-spin           animation-pulse
+animation-flip-in-x        animation-flip-in-y
+animation-bounce-in-from-top   animation-bounce-in-from-bottom
+animation-rotate-in        animation-swing
+animation-heartbeat        animation-shake-x        animation-wobble         animation-jelly
 ```
 
 ## Gradients & Color Stops
@@ -271,10 +309,10 @@ Lifecycle events (cancelable — `preventDefault()` vetoes the transition):
 </button>
 
 <div class="modal-overlay" id="confirm">
-  <div class="modal-box add-padding-24">
-    <h3 class="modal-title set-text-20 text-bold">Delete this project?</h3>
-    <p class="set-text-14 color-text-muted line-height-relaxed">This cannot be undone.</p>
-    <div class="modal-footer make-flex gap-12 justify-end">
+  <div class="modal-box padding-24">
+    <h3 class="modal-title text-size-20 text-bold">Delete this project?</h3>
+    <p class="text-size-14 color-text-muted line-height-relaxed">This cannot be undone.</p>
+    <div class="modal-footer display-flex gap-12 justify-end">
       <button class="btn btn-ghost" data-santy-dismiss>Cancel</button>
       <button class="btn btn-danger" data-santy-autofocus>Delete</button>
     </div>
@@ -369,20 +407,20 @@ Prebuilt themes (santy-themes.css): <html data-theme="ocean|sunset|forest|midnig
 ## Example: Card with blue left border and hover scale
 
 ```html
-<div class="card add-padding-28 background-white round-corners-12 add-shadow-md add-border-left-4 border-color-blue-500 on-hover:scale-105 transition-all cursor-pointer">
-  <h3 class="set-text-20 text-bold color-gray-900 add-margin-bottom-8">Card Title</h3>
-  <p class="set-text-14 color-gray-500 line-height-relaxed">Card description goes here.</p>
+<div class="card padding-28 background-white radius-12 shadow-md border-left-4 border-color-blue-500 on-hover:scale-105 transition-all cursor-pointer">
+  <h3 class="text-size-20 text-bold color-gray-900 margin-bottom-8">Card Title</h3>
+  <p class="text-size-14 color-gray-500 line-height-relaxed">Card description goes here.</p>
 </div>
 ```
 
 ## Example: Responsive flex hero
 
 ```html
-<section class="make-flex flex-column align-center justify-center text-center add-padding-y-80 background-gray-50">
-  <h1 class="set-text-56 text-bold color-gray-900 add-margin-bottom-16 md:set-text-40 on-mobile:set-text-32">
+<section class="display-flex flex-column align-center justify-center text-center padding-y-80 background-gray-50">
+  <h1 class="text-size-56 text-bold color-gray-900 margin-bottom-16 md:text-size-40 on-mobile:text-size-32">
     Build faster
   </h1>
-  <p class="set-text-20 color-gray-500 line-height-relaxed add-margin-bottom-32">
+  <p class="text-size-20 color-gray-500 line-height-relaxed margin-bottom-32">
     Plain-English CSS that reads like you wrote it.
   </p>
   <a href="#" class="btn btn-primary btn-lg on-hover:scale-105 transition-all">Get started →</a>
@@ -392,11 +430,11 @@ Prebuilt themes (santy-themes.css): <html data-theme="ocean|sunset|forest|midnig
 ## Example: Dark-mode card grid
 
 ```html
-<div class="make-grid grid-cols-3 gap-24 on-mobile:grid-cols-1 md:grid-cols-2">
-  <div class="card background-white dark:background-gray-800 add-shadow-sm on-hover:add-shadow-lg transition-all round-corners-16 add-padding-24">
-    <span class="badge badge-primary add-margin-bottom-12">New</span>
-    <h4 class="set-text-18 text-semibold color-gray-900 dark:color-white">Feature</h4>
-    <p class="set-text-14 color-gray-500 dark:color-gray-400 line-height-relaxed">Description.</p>
+<div class="display-grid grid-columns-3 gap-24 on-mobile:grid-columns-1 md:grid-columns-2">
+  <div class="card background-white dark:background-gray-800 shadow-sm on-hover:shadow-lg transition-all radius-16 padding-24">
+    <span class="badge badge-primary margin-bottom-12">New</span>
+    <h4 class="text-size-18 text-semibold color-gray-900 dark:color-white">Feature</h4>
+    <p class="text-size-14 color-gray-500 dark:color-gray-400 line-height-relaxed">Description.</p>
   </div>
 </div>
 ```

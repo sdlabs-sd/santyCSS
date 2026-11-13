@@ -1,6 +1,6 @@
 {
  "name": "santycss",
- "version": "2.9.6",
+ "version": "2.10.0",
  "grammar": "property-[modifier]-value",
  "count": 1632,
  "renames": {

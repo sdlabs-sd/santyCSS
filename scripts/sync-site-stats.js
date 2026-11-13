@@ -30,6 +30,8 @@ const check = process.argv.includes('--check');
 
 const { version } = require(path.join(ROOT, 'package.json'));
 const classmap = require(path.join(DIST, 'santy-classmap.json'));
+const deprecated = classmap.deprecated || {};
+const current = classmap.classes.filter((c) => !Object.prototype.hasOwnProperty.call(deprecated, c.slice(c.lastIndexOf(':') + 1)));
 
 const fmt = (bytes) => bytes >= 1024 * 1024
   ? `${(bytes / 1024 / 1024).toFixed(2)} MB`
@@ -63,8 +65,10 @@ const purgedSize = (gz) => {
 const animationCss = fs.readFileSync(path.join(DIST, 'santy-animations.css'), 'utf8');
 const STATS = {
   version: () => version,
-  classes: () => floorPlus(classmap.count, 100),
-  'base-classes': () => floorPlus(classmap.classes.filter((c) => !c.includes(':')).length, 100),
+  // Deprecated pre-2.10 aliases are the same utilities under old names, so
+  // they are not counted twice.
+  classes: () => floorPlus(current.length, 100),
+  'base-classes': () => floorPlus(current.filter((c) => !c.includes(':')).length, 100),
   animations: () => floorPlus(new Set(animationCss.match(/^\.animate-[a-z0-9-]+/gm)).size, 10),
   purged: () => purgedSize(false),
   'purged-gz': () => purgedSize(true),

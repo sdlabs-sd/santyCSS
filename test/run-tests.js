@@ -39,7 +39,8 @@ const REQUIRED = {
   'santy-reset.css': 500, 'santy-layout.css': 10000, 'santy-flex.css': 1000,
   'santy-grid.css': 1000, 'santy-spacing.css': 10000, 'santy-sizing.css': 3000,
   'santy-typography.css': 3000, 'santy-colors.css': 30000, 'santy-borders.css': 5000,
-  'santy-effects.css': 5000,
+  'santy-effects.css': 5000, 'santy-ui.css': 20000, 'santy-next.css': 200000,
+  'santy-renames.json': 20000,
 };
 for (const [file, minSize] of Object.entries(REQUIRED)) {
   test(`dist/${file} exists and ≥ ${minSize}B`, () => {
@@ -948,6 +949,200 @@ test('site pages load the framework from the npm CDN at the package version', ()
     execFileSync(process.execPath, [path.join(ROOT, 'scripts', 'sync-cdn-version.js'), '--check'], { stdio: 'pipe' });
   } catch (e) {
     assert(false, String(e.stderr || e.message).trim());
+  }
+});
+
+// ── v2.10 naming grammar ─────────────────────────────────────────────────────
+const naming = require(path.join(ROOT, 'lib', 'naming.js'));
+const aliases = require(path.join(ROOT, 'lib', 'aliases.js'));
+const renames = JSON.parse(read('santy-renames.json')).renames;
+
+test('rename table covers the legacy families (≥ 1,600 names)', () => {
+  const n = Object.keys(renames).length;
+  assert(n >= 1600, `only ${n} renames`);
+  for (const [o, want] of [['make-flex', 'display-flex'], ['add-padding-24', 'padding-24'],
+    ['round-corners-12', 'radius-12'], ['set-text-18', 'text-size-18'], ['z-10', 'z-index-10'],
+    ['subtract-margin-top-16', 'margin-top-minus-16'], ['line-height-1-5', 'line-height-150'],
+    ['aspect-ratio-16-9', 'aspect-16-by-9'], ['span-col-2', 'grid-column-span-2'], ['layer-10', 'z-index-10']]) {
+    assert(renames[o] === want, `${o} → ${renames[o]}, expected ${want}`);
+  }
+});
+
+test('every old name still works with byte-identical CSS to its new name', () => {
+  // The core backward-compatibility promise: for each rename, every rule the
+  // old class appears in also lists the new class, with the same body.
+  const idx = aliases.indexClasses(css);
+  const bad = [];
+  for (const [o, n] of Object.entries(renames)) {
+    const a = idx.get(o), b = idx.get(n);
+    if (!a) { bad.push(`${o} missing`); continue; }
+    if (!b) { bad.push(`${n} missing`); continue; }
+    for (const sig of a) if (!b.has(sig)) { bad.push(`${o}/${n}: ${sig.slice(0, 80)}`); break; }
+  }
+  assert(bad.length === 0, `${bad.length} problems: ${bad.slice(0, 5).join(' | ')}`);
+});
+
+test('old names keep their variants (md:, on-hover:, dark:)', () => {
+  for (const sel of ['.md\\:add-padding-24', '.md\\:padding-24', '.on-hover\\:add-shadow-lg', '.on-hover\\:shadow-lg',
+    '.dark\\:background-gray-900', '.on-hover\\:scale-105']) {
+    assert(css.includes(sel), `${sel} missing`);
+  }
+  assert(/\.md\\:padding-24, \.md\\:add-padding-24/.test(css), 'md: twin not adjacent to its alias');
+});
+
+test('legacy aliases ship in every legacy bundle', () => {
+  for (const f of ['santy-start.css', 'santy-core.css', 'santy-spacing.css', 'santy.min.css']) {
+    const c = read(f);
+    assert(c.includes('.add-padding-24') && c.includes('.padding-24'), `${f} lacks old or new name`);
+  }
+});
+
+test('classmap lists grammar names, deprecated map, and no JS identifiers', () => {
+  const map = JSON.parse(read('santy-classmap.json'));
+  const set = new Set(map.classes);
+  for (const c of ['padding-24', 'add-padding-24', 'md:display-flex', 'button-primary', 'pricing-featured']) assert(set.has(c), `${c} missing`);
+  for (const junk of ['forEach', 'getElementById', 'querySelectorAll', 'classList', 'w3', 'org']) assert(!set.has(junk), `junk "${junk}" in classmap`);
+  assert(map.deprecated['make-flex'] === 'display-flex', 'deprecated map missing make-flex');
+  assert(Object.keys(map.deprecated).length === Object.keys(renames).length, 'deprecated map out of sync with santy-renames.json');
+});
+
+test('naming table round-trips for prefix rules', () => {
+  for (const o of ['add-padding-x-32', 'set-width-1-of-3', 'pin-top-0', 'animate-fade-in', 'md:add-margin-top-8']) {
+    assert(naming.toOldAll(naming.toNew(o)).includes(o), `${o} does not round-trip`);
+  }
+  assert(naming.toNew('padding-24') === null, 'grammar names must map to null');
+  assert(naming.toNew('pin-input') === null && naming.toNew('h-scroll') === null, 'component prefixes must not be renamed');
+});
+
+test('standalone scripts carry an identical copy of lib/naming.js', () => {
+  const src = fs.readFileSync(path.join(ROOT, 'lib', 'naming.js'), 'utf8');
+  const block = t => t.slice(t.indexOf('/* @naming:start */'), t.indexOf('/* @naming:end */'));
+  for (const f of ['santy-jit.js', 'packages/merge/santy-merge.js', 'packages/sort/santy-sort.js']) {
+    const t = fs.readFileSync(path.join(ROOT, f), 'utf8');
+    assert(block(t) === block(src), `${f} naming block is stale — run node build.js`);
+  }
+});
+
+test('JIT resolves grammar names, legacy names and arbitrary values', () => {
+  const vm = require('vm');
+  const sheet = { setAttribute() {}, textContent: '' };
+  const ctx = { document: { head: { appendChild() {} }, createElement: () => sheet, body: null, addEventListener() {} }, MutationObserver: function () { this.observe = () => {}; } };
+  ctx.window = ctx;
+  vm.createContext(ctx);
+  vm.runInContext(fs.readFileSync(path.join(ROOT, 'santy-jit.js'), 'utf8'), ctx);
+  const gen = c => { const b = sheet.textContent.length; ctx.SantyJIT.inject(c); return sheet.textContent.slice(b); };
+  assert(gen('padding-137').includes('padding:137px'), 'padding-137');
+  assert(gen('add-padding-139').includes('padding:139px'), 'legacy add-padding-139');
+  assert(gen('md:padding-x-20').includes('@media'), 'md:padding-x-20');
+  assert(gen('line-height-150').includes('line-height:1.5'), 'line-height-150 must be 1.5');
+  assert(gen('z-index-50').includes('z-index:50'), 'z-index-50');
+  assert(gen('margin-top-minus-12').includes('margin-top:-12px'), 'margin-top-minus-12');
+});
+
+test('cn() and sortClasses() treat old and new spellings as one group', () => {
+  const { cn } = require(path.join(ROOT, 'packages', 'merge', 'santy-merge.js'));
+  const { sortClasses } = require(path.join(ROOT, 'packages', 'sort', 'santy-sort.js'));
+  assert(cn('add-padding-24', 'padding-8') === 'padding-8', cn('add-padding-24', 'padding-8'));
+  assert(cn('display-flex', 'make-grid') === 'make-grid', 'display group');
+  assert(cn('align-center', 'align-self-start') === 'align-center align-self-start', 'align-self is not align-items');
+  assert(sortClasses('padding-8 display-flex') === 'display-flex padding-8', sortClasses('padding-8 display-flex'));
+});
+
+test('scripts/migrate.js rewrites HTML, JSX, TSX and Vue', () => {
+  const { migrateSource } = require(path.join(ROOT, 'scripts', 'migrate.js'));
+  const html = migrateSource('<div class="make-flex md:add-padding-x-32 my-own">x</div><p class="{{ a }} round-corners-8">');
+  assert(html.text === '<div class="display-flex md:padding-x-32 my-own">x</div><p class="{{ a }} radius-8">', html.text);
+  const jsx = migrateSource("<b className={cn('make-flex', on && 'set-width-full', { 'make-hidden': x })} />\nconst t = `round-corners-8 add-padding-${n} ${on ? 'add-margin-top-4' : ''}`;\n<i className={`round-corners-8 add-padding-${n}`}/>");
+  assert(jsx.text.includes("cn('display-flex', on && 'width-full', { 'display-none': x })"), jsx.text);
+  assert(jsx.text.includes('`radius-8 add-padding-${n}`'), 'template literal static part');
+  assert(jsx.text.includes('const t = `round-corners-8'), 'plain JS strings outside class contexts must not change');
+  assert(jsx.dynamic.includes('add-padding-${…}'), 'runtime-built names are reported');
+  const vue = migrateSource(`<div class="make-grid" :class="{ 'add-shadow-md': up }" v-bind:class="[a ? 'set-text-24' : 'set-text-16']"></div>`);
+  assert(vue.text === `<div class="display-grid" :class="{ 'shadow-md': up }" v-bind:class="[a ? 'text-size-24' : 'text-size-16']"></div>`, vue.text);
+  const dom = migrateSource(`<script>el.classList.add('make-hidden'); el.className = "pin-top-0"; const s = "add-padding-24";</script>`);
+  assert(dom.text.includes("add('display-none')") && dom.text.includes('"top-0"') && dom.text.includes('"add-padding-24"'), dom.text);
+  const comp = migrateSource('<a class="make-button style-primary size-large shape-pill">', { components: true });
+  assert(comp.text === '<a class="button button-primary button-lg button-pill">', comp.text);
+  const ex = migrateSource('<i class="z-10 truncate">', { exclude: ['z-10'] });
+  assert(ex.text === '<i class="z-10 text-truncate">', ex.text);
+});
+
+test('every migrate output is a class SantyCSS ships', () => {
+  const known = new Set(JSON.parse(read('santy-classmap.json')).classes);
+  const missing = Object.values(renames).filter(n => !known.has(n));
+  assert(missing.length === 0, `renames point at missing classes: ${missing.slice(0, 5).join(', ')}`);
+});
+
+test('`santycss migrate --from=legacy --check` fails on old names and passes after rewrite', () => {
+  const os = require('os');
+  const { spawnSync } = require('child_process');
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'santy-legacy-'));
+  const file = path.join(tmp, 'a.vue');
+  fs.writeFileSync(file, '<template><div class="make-flex add-padding-16"></div></template>');
+  const run = (...a) => spawnSync(process.execPath, [path.join(ROOT, 'cli.js'), 'migrate', '--from=legacy', tmp, ...a], { encoding: 'utf8' });
+  assert(run('--check').status === 1, '--check should exit 1 with legacy names');
+  assert(run().status === 0, 'rewrite failed');
+  assert(fs.readFileSync(file, 'utf8').includes('display-flex padding-16'), 'file not rewritten');
+  assert(run('--check').status === 0, '--check should pass after rewrite');
+  fs.rmSync(tmp, { recursive: true, force: true });
+});
+
+test('legacyNames:false builds grammar names only', () => {
+  const os = require('os');
+  const { execFileSync } = require('child_process');
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'santy-nolegacy-'));
+  const cfg = path.join(tmp, 'santy.config.json');
+  fs.writeFileSync(cfg, JSON.stringify({ legacyNames: false, output: path.join(tmp, 'out') }));
+  execFileSync(process.execPath, [path.join(ROOT, 'build.js')], { env: { ...process.env, SANTY_CONFIG: cfg }, stdio: 'ignore', cwd: tmp });
+  const out = fs.readFileSync(path.join(tmp, 'out', 'santy.css'), 'utf8');
+  fs.rmSync(tmp, { recursive: true, force: true });
+  assert(out.includes('.padding-24') && out.includes('.display-flex'), 'grammar names missing');
+  assert(!/\.add-padding-24[\s,{]/.test(out) && !/\.make-flex[\s,{]/.test(out), 'legacy names still present');
+});
+
+// ── v2.10 theme + component layer ────────────────────────────────────────────
+test('santy-ui.css and santy-next.css exist with the full component matrix', () => {
+  const ui = read('santy-ui.css');
+  const next = read('santy-next.css');
+  assert(ui.length > 20000 && next.length > 200000, 'ui/next too small');
+  const comps = ['button', 'card', 'navbar', 'input', 'badge', 'alert', 'modal', 'tabs', 'pricing'];
+  const missing = [];
+  for (const c of comps) {
+    for (const v of ['', '-primary', '-secondary', '-outline', '-ghost', '-sm', '-md', '-lg']) {
+      const sel = `.${c}${v}`;
+      if (!new RegExp(sel.replace('.', '\\.') + '[\\s,{:.>]').test(ui)) missing.push(sel);
+      if (!next.includes(sel)) missing.push('next:' + sel);
+    }
+  }
+  assert(missing.length === 0, `missing: ${missing.join(' ')}`);
+  for (const t of ['--santy-primary', '--santy-font-display', '--santy-bevel', '--santy-control-md', '[data-theme="dark"]', '[data-theme="auto"]']) {
+    assert(ui.includes(t), `${t} missing from theme`);
+  }
+});
+
+test('santy-next.css: grammar names only, theme after utilities, breakpoints included', () => {
+  const next = read('santy-next.css');
+  const classes = aliases.selectorClasses(next);
+  const legacy = Object.keys(renames).filter(o => classes.has(o));
+  assert(legacy.length === 0, `legacy names in santy-next: ${legacy.slice(0, 5).join(', ')}`);
+  assert(next.lastIndexOf('--santy-primary:            #cc4520') > next.indexOf('.padding-24'), 'theme tokens must come after core :root');
+  assert(next.indexOf('.button {') < next.indexOf('.padding-24'), 'components must come before utilities');
+  for (const c of ['md:grid-columns-3', 'lg:grid-column-span-6', 'md:display-flex', 'sm:grid-columns-2']) assert(classes.has(c), `${c} missing`);
+});
+
+test('the classic bundles do not change look: santy-start has no Persimmon tokens', () => {
+  const start = read('santy-start.css');
+  assert(!start.includes('#cc4520') && start.includes('--santy-primary:        #3b82f6'), 'santy-start theme changed');
+});
+
+test('example pages use only classes SantyCSS ships', () => {
+  const next = aliases.selectorClasses(read('santy-next.css'));
+  for (const f of ['saas-landing.html', 'dashboard.html', 'components.html']) {
+    const html = fs.readFileSync(path.join(ROOT, 'examples', f), 'utf8');
+    const used = new Set([...html.matchAll(/class="([^"]+)"/g)].flatMap(m => m[1].split(/\s+/)).filter(Boolean));
+    const unknown = [...used].filter(c => !next.has(c) && !/^is-/.test(c));
+    assert(unknown.length === 0, `${f}: ${unknown.join(' ')}`);
+    assert(html.includes('dist/santy-next.css'), `${f} should load santy-next.css`);
   }
 });
 

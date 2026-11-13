@@ -1,4 +1,4 @@
-/*! SantyCSS Next v2.9.6 — grammar names only, theme + components + utilities | MIT
+/*! SantyCSS Next v2.10.0 — grammar names only, theme + components + utilities | MIT
    One file for new projects: <link rel="stylesheet" href="…/dist/santy-next.css">
    Legacy names (add-padding-24, make-flex) are NOT included here; use santy-start.css for those. */
 /* ═══ SANTY UI · COMPONENTS ══════════════════════════════════════════════════
@@ -526,7 +526,7 @@ dialog.modal::backdrop { background: transparent; }
 
 /* @SANTYMOD:reset */
 /* ============================================================
-   SantyCSS v2.9.6  —  Plain-English Utility CSS Framework
+   SantyCSS v2.10.0  —  Plain-English Utility CSS Framework
    https://github.com/Santy-Labs/santyCSS
    ============================================================ */
 

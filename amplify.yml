@@ -17,6 +17,7 @@ frontend:
         - cp -r eye-vision site/eye-vision
         - cp -r brewery site/brewery
         - cp -r school site/school
+        - cp -r examples site/examples
   artifacts:
     baseDirectory: site
     files:
