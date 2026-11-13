@@ -1016,7 +1016,7 @@ test('naming table round-trips for prefix rules', () => {
 
 test('standalone scripts carry an identical copy of lib/naming.js', () => {
   const src = fs.readFileSync(path.join(ROOT, 'lib', 'naming.js'), 'utf8');
-  const block = t => t.slice(t.indexOf('/* @naming:start */'), t.indexOf('/* @naming:end */'));
+  const block = t => t.replace(/\r\n/g, '\n').slice(t.replace(/\r\n/g, '\n').indexOf('/* @naming:start */'), t.replace(/\r\n/g, '\n').indexOf('/* @naming:end */'));
   for (const f of ['santy-jit.js', 'packages/merge/santy-merge.js', 'packages/sort/santy-sort.js']) {
     const t = fs.readFileSync(path.join(ROOT, f), 'utf8');
     assert(block(t) === block(src), `${f} naming block is stale — run node build.js`);

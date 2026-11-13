@@ -22,7 +22,9 @@ const gridSystem = require('./lib/grid-system');
     const text = fs.readFileSync(file, 'utf8');
     const a = text.indexOf(START), z = text.indexOf(END);
     if (a === -1 || z < a) continue;
-    const next = text.slice(0, a) + block + text.slice(z + END.length);
+    // Keep the target's line endings (santy-jit.js is CRLF).
+    const eol = text.includes('\r\n') ? block.replace(/\r?\n/g, '\r\n') : block;
+    const next = text.slice(0, a) + eol + text.slice(z + END.length);
     if (next !== text && !userConfigOutputOnly()) fs.writeFileSync(file, next);
   }
   function userConfigOutputOnly() {
