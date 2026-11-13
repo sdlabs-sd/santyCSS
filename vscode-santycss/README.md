@@ -15,22 +15,25 @@ Works in: HTML, JSX, TSX, Vue, Svelte, PHP, ERB.
 Hover over any SantyCSS class to see the CSS it generates.
 
 ```html
-<div class="make-flex align-center gap-16 add-padding-24">
+<div class="display-flex align-center gap-16 padding-24">
   <!-- Hover any class to see its CSS -->
 </div>
 ```
+
+### SantyCSS 2.10 names
+Completions follow the 2.10 grammar (`property-modifier-value`): `padding-24`, `display-flex`, `radius-12`, plus the new components (`button button-primary button-lg`). Pre-2.10 names such as `add-padding-24` still get hover docs, but they are marked deprecated and point to the new name. Run `npx santycss migrate` to update a project.
 
 ### Plain-English class names
 SantyCSS classes read like English — no memorizing cryptic abbreviations:
 
 | SantyCSS | What it does |
 |---|---|
-| `make-flex` | `display: flex` |
-| `add-padding-16` | `padding: 16px` |
-| `set-text-24` | `font-size: 24px` |
+| `display-flex` | `display: flex` |
+| `padding-16` | `padding: 16px` |
+| `text-size-24` | `font-size: 24px` |
 | `background-blue-500` | `background-color: #3b82f6` |
 | `on-hover:scale-110` | Scale up on hover |
-| `md:grid-cols-3` | 3 columns on medium+ screens |
+| `md:grid-columns-3` | 3 columns on medium+ screens |
 
 ## Installation
 

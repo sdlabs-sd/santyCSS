@@ -6,7 +6,7 @@
   <title>Templates — SantyCSS</title>
   <meta name="description" content="Ready-to-use HTML templates built entirely with SantyCSS. Copy the code and use anywhere — no build step required." />
   <link rel="icon" type="image/png" href="assest/santy_css.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css" />
   <style>
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; background:#f8fafc; transition: background .3s, color .3s; overflow-x: hidden; }
@@ -106,23 +106,23 @@
 <body>
 
 <!-- ─── HEADER ─────────────────────────────────────────────────────────────── -->
-<header class="position-sticky pin-top-0 layer-50 background-white add-shadow-sm" style="border-bottom:1px solid #e5e7eb;">
-  <div class="container make-flex align-center justify-between add-padding-y-14">
-    <a href="index.html" class="make-flex align-center gap-10 text-no-decoration">
+<header class="position-sticky top-0 z-index-50 background-white shadow-sm" style="border-bottom:1px solid #e5e7eb;">
+  <div class="container display-flex align-center justify-between padding-y-14">
+    <a href="index.html" class="display-flex align-center gap-10 text-no-decoration">
       <img src="assest/santy_css.png" alt="SantyCSS" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
-      <span class="set-text-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
+      <span class="text-size-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
       <span class="badge background-blue-100 color-blue-700" style="font-size:11px;">v2.8.0</span>
     </a>
     <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
       <svg id="ham-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       <svg id="ham-close" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="display:none"><path d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
-    <nav id="main-nav" class="make-flex align-center gap-20">
-      <a href="classes.html"     class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Classes</a>
-      <a href="components.html"  class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Components</a>
-      <a href="animations.html"  class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Animations</a>
-      <a href="icons.html"       class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Icons</a>
-      <a href="templates.html"   class="nav-link nav-link-active text-no-decoration set-text-14 text-semibold" style="color:#2563eb;">Templates</a>
+    <nav id="main-nav" class="display-flex align-center gap-20">
+      <a href="classes.html"     class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Classes</a>
+      <a href="components.html"  class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Components</a>
+      <a href="animations.html"  class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Animations</a>
+      <a href="icons.html"       class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Icons</a>
+      <a href="templates.html"   class="nav-link nav-link-active text-no-decoration text-size-14 text-semibold" style="color:#2563eb;">Templates</a>
       <div class="nav-resources" id="navResources">
         <button class="nav-resources-btn" id="navResBtn" onclick="toggleResources()" aria-expanded="false">
           Resources
@@ -156,13 +156,13 @@
     <div class="tpl-badge" style="display:inline-flex;margin-bottom:20px;">
       🎨 Ready-to-use HTML Templates
     </div>
-    <h1 class="set-text-48 text-bold color-white add-margin-bottom-16" style="line-height:1.15;letter-spacing:-1.5px;">
+    <h1 class="text-size-48 text-bold color-white margin-bottom-16" style="line-height:1.15;letter-spacing:-1.5px;">
       SantyCSS <span style="color:#f7bf04;">Templates</span>
     </h1>
-    <p class="set-text-16 add-margin-bottom-32" style="color:rgba(255,255,255,.65);max-width:520px;margin-left:auto;margin-right:auto;line-height:1.7;">
+    <p class="text-size-16 margin-bottom-32" style="color:rgba(255,255,255,.65);max-width:520px;margin-left:auto;margin-right:auto;line-height:1.7;">
       Copy-paste full HTML templates powered by SantyCSS. No build step, no dependencies — just paste and go.
     </p>
-    <div class="make-flex justify-center align-center gap-12 flex-wrap">
+    <div class="display-flex justify-center align-center gap-12 flex-wrap">
       <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,.5);">
         <svg width="14" height="14" fill="none" stroke="#22c55e" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 100% SantyCSS
       </span>
@@ -184,7 +184,7 @@
   <div class="container">
 
     <!-- Filter -->
-    <div class="make-flex align-center justify-between flex-wrap gap-16" style="margin-bottom:32px;">
+    <div class="display-flex align-center justify-between flex-wrap gap-16" style="margin-bottom:32px;">
       <div class="tpl-filter" id="tplFilter">
         <button class="tpl-filter-btn active" data-filter="all">All</button>
         <button class="tpl-filter-btn" data-filter="portfolio">Portfolio / CV</button>
@@ -203,7 +203,7 @@
     </div>
 
     <!-- Grid -->
-    <div class="make-grid tpl-grid" style="grid-template-columns:repeat(3,1fr);gap:24px;" id="tplGrid">
+    <div class="display-grid tpl-grid" style="grid-template-columns:repeat(3,1fr);gap:24px;" id="tplGrid">
 
       <!-- ── Template: It's Me ── -->
       <div class="tpl-card" data-category="portfolio">
@@ -1090,47 +1090,47 @@
 </section>
 
 <!-- ─── FOOTER ─────────────────────────────────────────────────────────────── -->
-<footer class="background-gray-900 color-white add-padding-y-48 add-padding-x-16">
+<footer class="background-gray-900 color-white padding-y-48 padding-x-16">
   <div class="container">
-    <div class="make-grid grid-cols-4 gap-32 add-margin-bottom-40" style="grid-template-columns:repeat(4,1fr);">
+    <div class="display-grid grid-columns-4 gap-32 margin-bottom-40" style="grid-template-columns:repeat(4,1fr);">
       <div>
-        <div class="make-flex align-center gap-10 add-margin-bottom-16">
+        <div class="display-flex align-center gap-10 margin-bottom-16">
           <img src="assest/santy_css.png" alt="SantyCSS" style="width:32px;height:32px;border-radius:8px;object-fit:cover;" />
-          <span class="set-text-18 text-bold">Santy<span style="color:#7dd3fc;">CSS</span></span>
+          <span class="text-size-18 text-bold">Santy<span style="color:#7dd3fc;">CSS</span></span>
         </div>
-        <p class="set-text-13 add-margin-bottom-0" style="color:rgba(255,255,255,0.5);line-height:1.6;">CSS that reads like plain English. 5,100+ classes, no build step.</p>
+        <p class="text-size-13 margin-bottom-0" style="color:rgba(255,255,255,0.5);line-height:1.6;">CSS that reads like plain English. 5,100+ classes, no build step.</p>
       </div>
       <div>
-        <p class="set-text-12 text-semibold color-gray-400 text-uppercase add-margin-bottom-12" style="letter-spacing:.06em;">Framework</p>
-        <div class="make-flex flex-column gap-8">
-          <a href="classes.html"    class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Classes Reference</a>
-          <a href="components.html" class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Components</a>
-          <a href="animations.html" class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Animations</a>
-          <a href="icons.html"      class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Icons</a>
-          <a href="templates.html"  class="set-text-13 text-no-decoration" style="color:#7dd3fc;">Templates</a>
-        </div>
-      </div>
-      <div>
-        <p class="set-text-12 text-semibold color-gray-400 text-uppercase add-margin-bottom-12" style="letter-spacing:.06em;">Resources</p>
-        <div class="make-flex flex-column gap-8">
-          <a href="docs.html"       class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">npm Docs</a>
-          <a href="playground.html" class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Playground</a>
-          <a href="webflow.html"    class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Webflow Snippets</a>
-          <a href="changelog.html"  class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Changelog</a>
+        <p class="text-size-12 text-semibold color-gray-400 text-uppercase margin-bottom-12" style="letter-spacing:.06em;">Framework</p>
+        <div class="display-flex flex-column gap-8">
+          <a href="classes.html"    class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Classes Reference</a>
+          <a href="components.html" class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Components</a>
+          <a href="animations.html" class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Animations</a>
+          <a href="icons.html"      class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Icons</a>
+          <a href="templates.html"  class="text-size-13 text-no-decoration" style="color:#7dd3fc;">Templates</a>
         </div>
       </div>
       <div>
-        <p class="set-text-12 text-semibold color-gray-400 text-uppercase add-margin-bottom-12" style="letter-spacing:.06em;">Community</p>
-        <div class="make-flex flex-column gap-8">
-          <a href="https://github.com/Santy-Labs/santyCSS" target="_blank" rel="noopener" class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">GitHub</a>
-          <a href="https://www.npmjs.com/package/santycss"  target="_blank" rel="noopener" class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">npm</a>
-          <a href="https://www.linkedin.com/in/santhosh-prabakar/" target="_blank" rel="noopener" class="set-text-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">LinkedIn</a>
+        <p class="text-size-12 text-semibold color-gray-400 text-uppercase margin-bottom-12" style="letter-spacing:.06em;">Resources</p>
+        <div class="display-flex flex-column gap-8">
+          <a href="docs.html"       class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">npm Docs</a>
+          <a href="playground.html" class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Playground</a>
+          <a href="webflow.html"    class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Webflow Snippets</a>
+          <a href="changelog.html"  class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">Changelog</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-size-12 text-semibold color-gray-400 text-uppercase margin-bottom-12" style="letter-spacing:.06em;">Community</p>
+        <div class="display-flex flex-column gap-8">
+          <a href="https://github.com/Santy-Labs/santyCSS" target="_blank" rel="noopener" class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">GitHub</a>
+          <a href="https://www.npmjs.com/package/santycss"  target="_blank" rel="noopener" class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">npm</a>
+          <a href="https://www.linkedin.com/in/santhosh-prabakar/" target="_blank" rel="noopener" class="text-size-13 text-no-decoration" style="color:rgba(255,255,255,0.65);">LinkedIn</a>
         </div>
       </div>
     </div>
-    <div class="add-border-top-1" style="border-color:rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-      <span class="set-text-13" style="color:rgba(255,255,255,0.4);">© 2025 SantyCSS. MIT Licensed.</span>
-      <span class="set-text-13" style="color:rgba(255,255,255,0.4);">Made with SantyCSS</span>
+    <div class="border-top-1" style="border-color:rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <span class="text-size-13" style="color:rgba(255,255,255,0.4);">© 2025 SantyCSS. MIT Licensed.</span>
+      <span class="text-size-13" style="color:rgba(255,255,255,0.4);">Made with SantyCSS</span>
     </div>
   </div>
 </footer>

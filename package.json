@@ -1,6 +1,6 @@
 {
   "name": "santycss",
-  "version": "2.9.6",
+  "version": "2.10.0",
   "description": "Utility-first CSS with plain-English class names. No build step required (optional build for customization).",
   "main": "index.js",
   "types": "index.d.ts",
@@ -12,6 +12,8 @@
     },
     "./css": "./dist/santy.css",
     "./css/start": "./dist/santy-start.css",
+    "./css/next": "./dist/santy-next.css",
+    "./css/ui": "./dist/santy-ui.css",
     "./css/core": "./dist/santy-core.css",
     "./css/variants": "./dist/santy-variants.css",
     "./css/components": "./dist/santy-components.css",
@@ -47,7 +49,8 @@
     "./prettier": "./packages/prettier/index.js",
     "./bootstrap-map": "./lib/bootstrap-map.js",
     "./dist/*": "./dist/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./renames": "./dist/santy-renames.json"
   },
   "sideEffects": [
     "*.css",
@@ -70,6 +73,7 @@
     "vite-plugin-santycss.js",
     "purge.js",
     "migrate.js",
+    "scripts/migrate.js",
     "README.md",
     "santycss.context.md"
   ],

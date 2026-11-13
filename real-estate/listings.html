@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Listings — Havenly</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy-variants.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy-variants.css" />
 <style>
   :root { --brand:#0f766e; --ink:#0b1220; }
   html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -82,19 +82,19 @@
 
 <!-- NAVBAR -->
 <nav class="site-nav">
-  <div class="make-flex align-center justify-between add-padding-x-32 on-mobile:add-padding-x-20 add-padding-y-16" style="max-width:1280px; margin:0 auto;">
-    <a href="index.html" class="make-flex align-center gap-12" style="text-decoration:none;">
+  <div class="display-flex align-center justify-between padding-x-32 on-mobile:padding-x-20 padding-y-16" style="max-width:1280px; margin:0 auto;">
+    <a href="index.html" class="display-flex align-center gap-12" style="text-decoration:none;">
       <span class="brand-logo">H</span>
-      <span class="set-text-22 text-bold color-gray-900">Havenly</span>
+      <span class="text-size-22 text-bold color-gray-900">Havenly</span>
     </a>
-    <div class="nav-links make-flex align-center gap-32">
+    <div class="nav-links display-flex align-center gap-32">
       <a href="index.html" style="text-decoration:none; color:#475569; font-weight:500;">Home</a>
       <a href="listings.html" style="text-decoration:none; color:#0f766e; font-weight:600;">Listings</a>
       <a href="agents.html" style="text-decoration:none; color:#475569; font-weight:500;">Agents</a>
       <a href="about.html" style="text-decoration:none; color:#475569; font-weight:500;">About</a>
       <a href="contact.html" style="text-decoration:none; color:#475569; font-weight:500;">Contact</a>
     </div>
-    <div class="nav-links make-flex align-center gap-12">
+    <div class="nav-links display-flex align-center gap-12">
       <a href="#" style="text-decoration:none; color:#334155; font-weight:500;">Sign in</a>
       <a href="listings.html" class="btn btn-primary" style="background:var(--brand); border-color:var(--brand);">List Property</a>
     </div>
@@ -113,17 +113,17 @@
 
 <!-- HERO BANNER -->
 <section class="hero-banner">
-  <div class="add-padding-x-32 on-mobile:add-padding-x-20" style="max-width:1280px; margin:0 auto;">
-    <div class="set-text-14 text-semibold letter-space-wide text-uppercase add-margin-bottom-12 animate-fade-in-from-left" style="color:#5eead4;">— 12,480 listings</div>
-    <h1 class="animate-fade-in-from-bottom">Discover your perfect <br/>place to live</h1>
-    <p class="set-text-17 add-margin-top-16 animate-fade-in-from-bottom" style="color:#e2e8f0; max-width:600px; animation-delay:.2s;">Filter by neighborhood, price, property type and more. Updated every minute from verified agents.</p>
+  <div class="padding-x-32 on-mobile:padding-x-20" style="max-width:1280px; margin:0 auto;">
+    <div class="text-size-14 text-semibold letter-spacing-wide text-uppercase margin-bottom-12 animation-fade-in-from-left" style="color:#5eead4;">— 12,480 listings</div>
+    <h1 class="animation-fade-in-from-bottom">Discover your perfect <br/>place to live</h1>
+    <p class="text-size-17 margin-top-16 animation-fade-in-from-bottom" style="color:#e2e8f0; max-width:600px; animation-delay:.2s;">Filter by neighborhood, price, property type and more. Updated every minute from verified agents.</p>
   </div>
 </section>
 
 <!-- FILTER BAR -->
-<section class="add-padding-x-32 on-mobile:add-padding-x-20" style="max-width:1280px; margin:0 auto;">
-  <div class="filter-bar animate-fade-in-from-bottom">
-    <div class="make-grid gap-12" style="grid-template-columns: 1.3fr 1fr 1fr 1fr auto;">
+<section class="padding-x-32 on-mobile:padding-x-20" style="max-width:1280px; margin:0 auto;">
+  <div class="filter-bar animation-fade-in-from-bottom">
+    <div class="display-grid gap-12" style="grid-template-columns: 1.3fr 1fr 1fr 1fr auto;">
       <div>
         <label>Location</label>
         <input type="text" placeholder="City, area, ZIP" value="San Francisco">
@@ -144,7 +144,7 @@
         <button class="search-btn" style="width:100%;">Search</button>
       </div>
     </div>
-    <div class="make-flex gap-8 add-margin-top-16" style="flex-wrap:wrap;">
+    <div class="display-flex gap-8 margin-top-16" style="flex-wrap:wrap;">
       <button class="chip active">All</button>
       <button class="chip">For Sale</button>
       <button class="chip">For Rent</button>
@@ -158,17 +158,17 @@
 </section>
 
 <!-- RESULTS HEADER -->
-<section class="add-padding-x-32 add-padding-y-32 on-mobile:add-padding-x-20" style="max-width:1280px; margin:0 auto;">
-  <div class="make-flex align-center justify-between" style="flex-wrap:wrap; gap:12px;">
+<section class="padding-x-32 padding-y-32 on-mobile:padding-x-20" style="max-width:1280px; margin:0 auto;">
+  <div class="display-flex align-center justify-between" style="flex-wrap:wrap; gap:12px;">
     <div>
-      <div class="set-text-22 text-bold color-gray-900">1,248 homes in San Francisco</div>
-      <div class="set-text-14 color-gray-500">Showing 1 – 9 · Updated 3 min ago</div>
+      <div class="text-size-22 text-bold color-gray-900">1,248 homes in San Francisco</div>
+      <div class="text-size-14 color-gray-500">Showing 1 – 9 · Updated 3 min ago</div>
     </div>
-    <div class="make-flex align-center gap-14">
+    <div class="display-flex align-center gap-14">
       <select style="padding:10px 14px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; font-size:14px;">
         <option>Sort: Recommended</option><option>Price: Low to high</option><option>Price: High to low</option><option>Newest</option><option>Most popular</option>
       </select>
-      <div class="view-toggle make-flex gap-6">
+      <div class="view-toggle display-flex gap-6">
         <button class="active" id="gridBtn" aria-label="Grid view"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></button>
         <button id="listBtn" aria-label="List view"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="4" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r="1" fill="currentColor" stroke="none"/></svg></button>
       </div>
@@ -177,15 +177,15 @@
 </section>
 
 <!-- RESULTS GRID -->
-<section class="add-padding-x-32 on-mobile:add-padding-x-20" style="max-width:1280px; margin:0 auto;">
-  <div id="results" class="make-grid grid-cols-3 md:grid-cols-2 on-mobile:grid-cols-1 gap-24">
+<section class="padding-x-32 on-mobile:padding-x-20" style="max-width:1280px; margin:0 auto;">
+  <div id="results" class="display-grid grid-columns-3 md:grid-columns-2 on-mobile:grid-columns-1 gap-24">
     <!-- generated below via repeated card pattern -->
   </div>
 </section>
 
 <!-- PAGINATION -->
-<section class="add-padding-x-32 add-padding-y-60 on-mobile:add-padding-x-20" style="max-width:1280px; margin:0 auto;">
-  <div class="make-flex justify-center align-center gap-6">
+<section class="padding-x-32 add-padding-y-60 on-mobile:padding-x-20" style="max-width:1280px; margin:0 auto;">
+  <div class="display-flex justify-center align-center gap-6">
     <button class="page-btn">‹</button>
     <button class="page-btn active">1</button>
     <button class="page-btn">2</button>
@@ -199,22 +199,22 @@
 
 <!-- ============ FOOTER ============ -->
 <footer>
-  <div class="add-padding-x-32 add-padding-top-128 add-padding-bottom-64 on-mobile:add-padding-x-20 on-mobile:add-padding-top-80" style="max-width:1280px; margin:0 auto;">
-    <div class="make-grid gap-48 add-margin-bottom-48" style="grid-template-columns: 1.3fr 1fr 1fr 1fr;">
+  <div class="padding-x-32 padding-top-128 padding-bottom-64 on-mobile:padding-x-20 on-mobile:add-padding-top-80" style="max-width:1280px; margin:0 auto;">
+    <div class="display-grid gap-48 margin-bottom-48" style="grid-template-columns: 1.3fr 1fr 1fr 1fr;">
       <div>
-        <div class="make-flex align-center gap-12 add-margin-bottom-16">
+        <div class="display-flex align-center gap-12 margin-bottom-16">
           <span class="brand-logo">H</span>
-          <span class="set-text-22 text-bold color-white">Havenly</span>
+          <span class="text-size-22 text-bold color-white">Havenly</span>
         </div>
-        <p class="set-text-14 line-height-relaxed" style="max-width:320px;">Find the home you deserve. Thousands of verified listings, expert agents, transparent process — all in one place.</p>
-        <div class="make-flex gap-12 add-margin-top-20">
+        <p class="text-size-14 line-height-relaxed" style="max-width:320px;">Find the home you deserve. Thousands of verified listings, expert agents, transparent process — all in one place.</p>
+        <div class="display-flex gap-12 margin-top-20">
           <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 01-1.93.07 4.28 4.28 0 004 2.98 8.521 8.521 0 01-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 011.25 1.25A1.25 1.25 0 0117.25 8 1.25 1.25 0 0116 6.75a1.25 1.25 0 011.25-1.25M12 7a5 5 0 015 5 5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5m0 2a3 3 0 00-3 3 3 3 0 003 3 3 3 0 003-3 3 3 0 00-3-3z"/></svg></a>
           <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 008.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg></a>
         </div>
       </div>
       <div>
-        <div class="set-text-13 text-bold text-uppercase letter-space-wide color-white add-margin-bottom-16">Explore</div>
+        <div class="text-size-13 text-bold text-uppercase letter-spacing-wide color-white margin-bottom-16">Explore</div>
         <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px;">
           <li><a href="listings.html">Buy a home</a></li>
           <li><a href="listings.html">Rent</a></li>
@@ -223,7 +223,7 @@
         </ul>
       </div>
       <div>
-        <div class="set-text-13 text-bold text-uppercase letter-space-wide color-white add-margin-bottom-16">Company</div>
+        <div class="text-size-13 text-bold text-uppercase letter-spacing-wide color-white margin-bottom-16">Company</div>
         <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px;">
           <li><a href="about.html">About us</a></li>
           <li><a href="agents.html">Our agents</a></li>
@@ -232,19 +232,19 @@
         </ul>
       </div>
       <div>
-        <div class="set-text-13 text-bold text-uppercase letter-space-wide color-white add-margin-bottom-16">Get the newsletter</div>
-        <p class="set-text-14 add-margin-bottom-14">New listings & market updates. No spam.</p>
+        <div class="text-size-13 text-bold text-uppercase letter-spacing-wide color-white margin-bottom-16">Get the newsletter</div>
+        <p class="text-size-14 margin-bottom-14">New listings & market updates. No spam.</p>
         <form onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='✓ Subscribed';">
-          <div class="make-flex gap-8">
+          <div class="display-flex gap-8">
             <input type="email" required placeholder="you@email.com" style="flex:1; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.06); color:#fff;">
             <button class="btn" style="background:var(--brand); color:#fff; border:0;">Join</button>
           </div>
         </form>
       </div>
     </div>
-    <div class="make-flex justify-between align-center add-padding-top-24" style="border-top:1px solid rgba(255,255,255,.08); flex-wrap:wrap; gap:10px;">
-      <div class="set-text-13 color-gray-500">© 2026 Havenly Real Estate. All rights reserved.</div>
-      <div class="make-flex gap-20 set-text-13">
+    <div class="display-flex justify-between align-center padding-top-24" style="border-top:1px solid rgba(255,255,255,.08); flex-wrap:wrap; gap:10px;">
+      <div class="text-size-13 color-gray-500">© 2026 Havenly Real Estate. All rights reserved.</div>
+      <div class="display-flex gap-20 text-size-13">
         <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a>
       </div>
     </div>
@@ -287,14 +287,14 @@
         <span class="prop-tag" ${p.tag==='For Rent' ? 'style="background:#fef3c7; color:#b45309;"' : ''}>${p.tag}</span>
         <button class="prop-like" onclick="event.preventDefault(); this.classList.toggle('liked');">${heartSvg}</button>
       </div>
-      <div class="add-padding-24">
-        <div class="make-flex align-center justify-between add-margin-bottom-10">
+      <div class="padding-24">
+        <div class="display-flex align-center justify-between margin-bottom-10">
           <div class="prop-price">${p.price}</div>
           ${p.badge[0] ? `<span class="badge ${p.badge[1] ? 'badge-'+p.badge[1] : ''}">${p.badge[0]}</span>` : ''}
         </div>
-        <div class="set-text-17 text-semibold color-gray-900 add-margin-bottom-6">${p.title}</div>
-        <div class="set-text-14 color-gray-500 add-margin-bottom-16">📍 ${p.loc}</div>
-        <div class="make-flex gap-16 set-text-14 color-gray-500">
+        <div class="text-size-17 text-semibold color-gray-900 margin-bottom-6">${p.title}</div>
+        <div class="text-size-14 color-gray-500 margin-bottom-16">📍 ${p.loc}</div>
+        <div class="display-flex gap-16 text-size-14 color-gray-500">
           <span>🛏 ${p.beds} Beds</span><span>🛁 ${p.baths} Baths</span><span>📐 ${p.sqft} sqft</span>
         </div>
       </div>
@@ -313,13 +313,13 @@
   gridBtn.addEventListener('click', () => {
     gridBtn.classList.add('active'); listBtn.classList.remove('active');
     resultsEl.classList.remove('list');
-    resultsEl.classList.add('grid-cols-3','md:grid-cols-2');
+    resultsEl.classList.add('grid-columns-3','md:grid-columns-2');
   });
   listBtn.addEventListener('click', () => {
     listBtn.classList.add('active'); gridBtn.classList.remove('active');
     resultsEl.classList.add('list');
-    resultsEl.classList.remove('grid-cols-3','md:grid-cols-2');
-    resultsEl.classList.add('grid-cols-1');
+    resultsEl.classList.remove('grid-columns-3','md:grid-columns-2');
+    resultsEl.classList.add('grid-columns-1');
   });
 </script>
 </body>

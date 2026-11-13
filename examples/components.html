@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SantyCSS UI — Components</title>
+  <meta name="description" content="Every SantyCSS v2.10 component and variant, in the Persimmon theme. Plain HTML, no JavaScript.">
+  <link rel="stylesheet" href="../dist/santy-next.css">
+</head>
+<body>
+  <nav class="navbar navbar-sticky">
+    <a class="navbar-brand" href="#">santy<span class="color-primary">/ui</span></a>
+    <input class="navbar-toggle" type="checkbox" aria-label="Menu">
+    <ul class="navbar-links">
+      <li><a class="navbar-link" aria-current="page" href="#buttons">Buttons</a></li>
+      <li><a class="navbar-link" href="#cards">Cards</a></li>
+      <li><a class="navbar-link" href="#forms">Forms</a></li>
+      <li><a class="navbar-link" href="#feedback">Feedback</a></li>
+      <li><a class="navbar-link" href="#pricing">Pricing</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a class="button button-ghost button-sm" href="?theme=light" onclick="document.documentElement.dataset.theme='light';return false">Light</a>
+      <a class="button button-secondary button-sm" href="?theme=dark" onclick="document.documentElement.dataset.theme='dark';return false">Dark</a>
+    </div>
+  </nav>
+
+  <main class="shell padding-y-64">
+    <header class="max-width-512 margin-bottom-48">
+      <span class="eyebrow">SantyCSS v2.10 · Persimmon</span>
+      <h1 class="text-size-48 margin-top-12 margin-bottom-12">Components</h1>
+      <p class="color-text-muted text-size-18">Nine components, four variants each, three sizes. Plain HTML. The two theme buttons above are the only JavaScript on this page.</p>
+    </header>
+
+    <!-- BUTTONS -->
+    <section id="buttons" class="margin-bottom-64">
+      <h2 class="text-size-32 margin-bottom-24">Button</h2>
+      <div class="display-flex flex-wrap align-center gap-12 margin-bottom-16">
+        <button class="button">Default</button>
+        <button class="button button-primary">Primary</button>
+        <button class="button button-secondary">Secondary</button>
+        <button class="button button-outline">Outline</button>
+        <button class="button button-ghost">Ghost</button>
+        <button class="button button-danger">Danger</button>
+        <button class="button button-success">Success</button>
+        <button class="button button-primary" disabled>Disabled</button>
+      </div>
+      <div class="display-flex flex-wrap align-center gap-12">
+        <button class="button button-primary button-sm">Small</button>
+        <button class="button button-primary button-md">Medium</button>
+        <button class="button button-primary button-lg">Large</button>
+        <button class="button button-secondary button-lg button-pill">Pill</button>
+        <button class="button button-outline button-icon" aria-label="Add">+</button>
+      </div>
+    </section>
+
+    <!-- CARDS -->
+    <section id="cards" class="margin-bottom-64">
+      <h2 class="text-size-32 margin-bottom-24">Card</h2>
+      <div class="display-grid gap-20 md:grid-columns-2 lg:grid-columns-4">
+        <article class="card">
+          <span class="badge">Default</span>
+          <h3 class="card-title">Raised on paper</h3>
+          <p class="card-text">A white card with a hairline border and a long soft shadow.</p>
+          <div class="card-footer"><a class="button button-sm" href="#">Open</a></div>
+        </article>
+        <article class="card card-primary">
+          <span class="badge badge-primary">Primary</span>
+          <h3 class="card-title">Accent edge</h3>
+          <p class="card-text">A persimmon top rule marks the card that matters.</p>
+          <div class="card-footer"><a class="button button-primary button-sm" href="#">Upgrade</a></div>
+        </article>
+        <article class="card card-secondary">
+          <span class="badge badge-mono" style="--badge-bg:rgba(255,255,255,.12);--badge-fg:inherit">Secondary</span>
+          <h3 class="card-title">Ink card</h3>
+          <p class="card-text">Inverted, for a single highlight per screen.</p>
+          <div class="card-footer"><a class="button button-primary button-sm" href="#">Try it</a></div>
+        </article>
+        <article class="card card-outline">
+          <span class="badge badge-outline">Outline</span>
+          <h3 class="card-title">Outline</h3>
+          <p class="card-text">No fill and no shadow. Good for dense grids.</p>
+          <div class="card-footer"><a class="button button-ghost button-sm" href="#">Details</a></div>
+        </article>
+      </div>
+      <div class="display-grid gap-20 md:grid-columns-3 margin-top-20">
+        <div class="card card-ghost card-sm"><h3 class="card-title">Ghost · sm</h3><p class="card-text">Sunken fill, 16px padding.</p></div>
+        <div class="card card-md"><h3 class="card-title">Default · md</h3><p class="card-text">24px padding.</p></div>
+        <div class="card card-lg"><h3 class="card-title">Default · lg</h3><p class="card-text">36px padding, a larger radius.</p></div>
+      </div>
+    </section>
+
+    <!-- NAVBARS -->
+    <section class="margin-bottom-64">
+      <h2 class="text-size-32 margin-bottom-24">Navbar</h2>
+      <div class="display-grid gap-16">
+        <nav class="navbar navbar-primary navbar-sm" style="border-radius:var(--santy-radius-md)">
+          <a class="navbar-brand" href="#">Primary</a>
+          <ul class="navbar-links"><li><a class="navbar-link" aria-current="page" href="#">Home</a></li><li><a class="navbar-link" href="#">Docs</a></li></ul>
+        </nav>
+        <nav class="navbar navbar-secondary" style="border-radius:var(--santy-radius-md)">
+          <a class="navbar-brand" href="#">Secondary</a>
+          <ul class="navbar-links"><li><a class="navbar-link" aria-current="page" href="#">Home</a></li><li><a class="navbar-link" href="#">Docs</a></li></ul>
+          <div class="navbar-actions"><a class="button button-primary button-sm" href="#">Sign up</a></div>
+        </nav>
+        <nav class="navbar navbar-outline navbar-lg">
+          <a class="navbar-brand" href="#">Outline · lg</a>
+          <ul class="navbar-links"><li><a class="navbar-link" aria-current="page" href="#">Home</a></li><li><a class="navbar-link" href="#">Docs</a></li></ul>
+        </nav>
+        <nav class="navbar navbar-ghost">
+          <a class="navbar-brand" href="#">Ghost</a>
+          <ul class="navbar-links"><li><a class="navbar-link" href="#">Home</a></li><li><a class="navbar-link" aria-current="page" href="#">Docs</a></li></ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- FORMS -->
+    <section id="forms" class="margin-bottom-64">
+      <h2 class="text-size-32 margin-bottom-24">Input</h2>
+      <div class="display-grid gap-20 md:grid-columns-2">
+        <div><label class="input-label" for="i1">Default</label><input class="input" id="i1" placeholder="you@company.com"><span class="input-hint">We never share it.</span></div>
+        <div><label class="input-label" for="i2">Primary</label><input class="input input-primary" id="i2" value="Highlighted field"></div>
+        <div><label class="input-label" for="i3">Secondary (filled)</label><input class="input input-secondary" id="i3" placeholder="Search…"></div>
+        <div><label class="input-label" for="i4">Outline</label><input class="input input-outline" id="i4" placeholder="Strong border"></div>
+        <div><label class="input-label" for="i5">Ghost</label><input class="input input-ghost" id="i5" placeholder="Underline only"></div>
+        <div><label class="input-label" for="i6">Invalid</label><input class="input" id="i6" aria-invalid="true" value="not-an-email"><span class="input-hint">Enter a valid email.</span></div>
+        <div><label class="input-label" for="i7">Select</label><select class="input" id="i7"><option>Monthly</option><option>Yearly</option></select></div>
+        <div class="display-flex flex-column gap-8"><input class="input input-sm" placeholder="Small"><input class="input input-md" placeholder="Medium"><input class="input input-lg" placeholder="Large"></div>
+        <div class="grid-column-span-full"><label class="input-label" for="i8">Textarea</label><textarea class="input" id="i8" placeholder="Tell us more"></textarea></div>
+      </div>
+    </section>
+
+    <!-- BADGES + ALERTS -->
+    <section id="feedback" class="margin-bottom-64">
+      <h2 class="text-size-32 margin-bottom-24">Badge</h2>
+      <div class="display-flex flex-wrap align-center gap-8 margin-bottom-12">
+        <span class="badge">Default</span>
+        <span class="badge badge-primary">Primary</span>
+        <span class="badge badge-secondary">Secondary</span>
+        <span class="badge badge-outline">Outline</span>
+        <span class="badge badge-ghost">Ghost</span>
+        <span class="badge badge-success badge-dot">Live</span>
+        <span class="badge badge-warning">Pending</span>
+        <span class="badge badge-danger">Failed</span>
+        <span class="badge badge-info">Beta</span>
+        <span class="badge badge-mono badge-primary">New</span>
+      </div>
+      <div class="display-flex flex-wrap align-center gap-8 margin-bottom-48">
+        <span class="badge badge-primary badge-sm">Small</span>
+        <span class="badge badge-primary badge-md">Medium</span>
+        <span class="badge badge-primary badge-lg">Large</span>
+        <span class="badge badge-secondary badge-lg badge-pill">Pill</span>
+      </div>
+
+      <h2 class="text-size-32 margin-bottom-24">Alert</h2>
+      <div class="display-grid gap-12">
+        <div class="alert" role="status"><div><strong class="alert-title">Default</strong><p>Your changes were saved a moment ago.</p></div></div>
+        <div class="alert alert-primary" role="status"><div><strong class="alert-title">Primary</strong><p>New: invite your team from the settings page.</p></div><button class="alert-close" aria-label="Dismiss">×</button></div>
+        <div class="alert alert-secondary" role="status"><div><strong class="alert-title">Secondary</strong><p>Scheduled maintenance on Sunday, 02:00 UTC.</p></div></div>
+        <div class="alert alert-outline" role="status"><div><strong class="alert-title">Outline</strong><p>A quieter notice.</p></div></div>
+        <div class="alert alert-ghost" role="status"><div><strong class="alert-title">Ghost</strong><p>Inline, no box.</p></div></div>
+        <div class="display-grid gap-12 md:grid-columns-2">
+          <div class="alert alert-success alert-sm" role="status"><div><strong class="alert-title">Deployed</strong><p>v2.10.0 is live.</p></div></div>
+          <div class="alert alert-warning alert-sm" role="status"><div><strong class="alert-title">Quota at 90%</strong><p>Upgrade to avoid throttling.</p></div></div>
+          <div class="alert alert-danger" role="alert"><div><strong class="alert-title">Payment failed</strong><p>Your card was declined.</p></div></div>
+          <div class="alert alert-info alert-lg" role="status"><div><strong class="alert-title">Large info</strong><p>More room for longer messages.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <section class="margin-bottom-64">
+      <h2 class="text-size-32 margin-bottom-24">Tabs</h2>
+      <div class="display-grid gap-24">
+        <div class="tabs">
+          <input class="tabs-input" type="radio" name="t1" id="t1a" checked><label class="tabs-item" for="t1a">Overview</label>
+          <div class="tabs-panel">Default tabs switch panels with radio inputs. No JavaScript.</div>
+          <input class="tabs-input" type="radio" name="t1" id="t1b"><label class="tabs-item" for="t1b">Usage</label>
+          <div class="tabs-panel">Second panel.</div>
+          <input class="tabs-input" type="radio" name="t1" id="t1c"><label class="tabs-item" for="t1c">Billing</label>
+          <div class="tabs-panel">Third panel.</div>
+        </div>
+        <nav class="tabs tabs-primary"><a class="tabs-item" aria-current="page" href="#">Primary</a><a class="tabs-item" href="#">Week</a><a class="tabs-item" href="#">Month</a></nav>
+        <nav class="tabs tabs-secondary"><a class="tabs-item" aria-current="page" href="#">Secondary</a><a class="tabs-item" href="#">Week</a><a class="tabs-item" href="#">Month</a></nav>
+        <div class="tabs tabs-outline">
+          <input class="tabs-input" type="radio" name="t2" id="t2a" checked><label class="tabs-item" for="t2a">Outline</label>
+          <div class="tabs-panel">Boxed tabs with a joined panel.</div>
+          <input class="tabs-input" type="radio" name="t2" id="t2b"><label class="tabs-item" for="t2b">Second</label>
+          <div class="tabs-panel">Second panel.</div>
+        </div>
+        <nav class="tabs tabs-ghost"><a class="tabs-item" aria-current="page" href="#">Ghost</a><a class="tabs-item" href="#">Activity</a><a class="tabs-item" href="#">Settings</a></nav>
+        <div class="display-flex flex-wrap gap-16 align-center">
+          <nav class="tabs tabs-sm"><a class="tabs-item" aria-current="page" href="#">Small</a><a class="tabs-item" href="#">Tab</a></nav>
+          <nav class="tabs tabs-lg"><a class="tabs-item" aria-current="page" href="#">Large</a><a class="tabs-item" href="#">Tab</a></nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <section class="margin-bottom-64">
+      <h2 class="text-size-32 margin-bottom-24">Modal</h2>
+      <div class="display-flex flex-wrap gap-12">
+        <button class="button button-primary" popovertarget="m1">Open (popover)</button>
+        <a class="button button-secondary" href="#m2">Open (:target)</a>
+        <a class="button button-outline" href="#m3">Outline modal</a>
+      </div>
+      <div class="modal modal-primary" id="m1" popover>
+        <div class="modal-panel">
+          <div class="modal-header"><h3 class="modal-title">Invite your team</h3><button class="modal-close" popovertarget="m1" popovertargetaction="hide" aria-label="Close">×</button></div>
+          <div class="modal-body"><p>Opened with the <code>popover</code> attribute. No JavaScript.</p><label class="input-label" for="mi">Email</label><input class="input" id="mi" placeholder="teammate@company.com"></div>
+          <div class="modal-footer"><button class="button button-ghost" popovertarget="m1" popovertargetaction="hide">Cancel</button><button class="button button-primary">Send invite</button></div>
+        </div>
+      </div>
+      <div class="modal modal-secondary modal-sm" id="m2">
+        <div class="modal-panel">
+          <div class="modal-header"><h3 class="modal-title">Delete project?</h3><a class="modal-close" href="#" aria-label="Close">×</a></div>
+          <div class="modal-body">This opened with <code>:target</code>. It can't be undone.</div>
+          <div class="modal-footer"><a class="button button-ghost" href="#" style="--button-fg:inherit">Cancel</a><a class="button button-danger" href="#">Delete</a></div>
+        </div>
+      </div>
+      <div class="modal modal-outline modal-lg" id="m3">
+        <div class="modal-panel">
+          <div class="modal-header"><h3 class="modal-title">Outline · lg</h3><a class="modal-close" href="#" aria-label="Close">×</a></div>
+          <div class="modal-body">A 760px panel with a strong border instead of a shadow.</div>
+          <div class="modal-footer"><a class="button" href="#">Close</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <h2 class="text-size-32 margin-bottom-24">Pricing table</h2>
+      <div class="pricing">
+        <div class="pricing-plan">
+          <h3 class="pricing-name">Hobby</h3>
+          <p class="pricing-price">$0<span class="pricing-period">/ month</span></p>
+          <p class="pricing-description">For side projects and trying things out.</p>
+          <ul class="pricing-features"><li>1 project</li><li>Community support</li><li class="is-off">Custom domain</li></ul>
+          <a class="button button-outline button-block" href="#">Start free</a>
+        </div>
+        <div class="pricing-plan pricing-featured">
+          <span class="badge badge-mono" style="--badge-bg:var(--santy-primary);--badge-fg:var(--santy-primary-contrast)">Popular</span>
+          <h3 class="pricing-name">Pro</h3>
+          <p class="pricing-price">$24<span class="pricing-period">/ month</span></p>
+          <p class="pricing-description">For teams shipping every week.</p>
+          <ul class="pricing-features"><li>Unlimited projects</li><li>Priority support</li><li>Custom domain</li></ul>
+          <a class="button button-primary button-block" href="#">Choose Pro</a>
+        </div>
+        <div class="pricing-plan">
+          <h3 class="pricing-name">Scale</h3>
+          <p class="pricing-price">$96<span class="pricing-period">/ month</span></p>
+          <p class="pricing-description">SSO, audit logs and an uptime SLA.</p>
+          <ul class="pricing-features"><li>Everything in Pro</li><li>SAML SSO</li><li>99.99% SLA</li></ul>
+          <a class="button button-block" href="#">Talk to us</a>
+        </div>
+      </div>
+      <h3 class="text-size-20 margin-top-48 margin-bottom-16">pricing-primary · pricing-sm</h3>
+      <div class="pricing pricing-primary pricing-sm">
+        <div class="pricing-plan"><h3 class="pricing-name">Basic</h3><p class="pricing-price">$9</p><ul class="pricing-features"><li>3 projects</li></ul><a class="button button-block" href="#">Pick</a></div>
+        <div class="pricing-plan pricing-featured"><h3 class="pricing-name">Team</h3><p class="pricing-price">$29</p><ul class="pricing-features"><li>10 projects</li></ul><a class="button button-secondary button-block" href="#">Pick</a></div>
+        <div class="pricing-plan"><h3 class="pricing-name">Max</h3><p class="pricing-price">$79</p><ul class="pricing-features"><li>Unlimited</li></ul><a class="button button-block" href="#">Pick</a></div>
+      </div>
+      <h3 class="text-size-20 margin-top-48 margin-bottom-16">pricing-outline · pricing-ghost</h3>
+      <div class="display-grid gap-32">
+        <div class="pricing pricing-outline">
+          <div class="pricing-plan"><h3 class="pricing-name">Basic</h3><p class="pricing-price">$9</p><a class="button button-block" href="#">Pick</a></div>
+          <div class="pricing-plan pricing-featured"><h3 class="pricing-name">Team</h3><p class="pricing-price">$29</p><a class="button button-primary button-block" href="#">Pick</a></div>
+          <div class="pricing-plan"><h3 class="pricing-name">Max</h3><p class="pricing-price">$79</p><a class="button button-block" href="#">Pick</a></div>
+        </div>
+        <div class="pricing pricing-ghost pricing-lg">
+          <div class="pricing-plan"><h3 class="pricing-name">Basic</h3><p class="pricing-price">$9</p><a class="button button-ghost button-block" href="#">Pick</a></div>
+          <div class="pricing-plan pricing-featured"><h3 class="pricing-name">Team</h3><p class="pricing-price">$29</p><a class="button button-primary button-block" href="#">Pick</a></div>
+          <div class="pricing-plan"><h3 class="pricing-name">Max</h3><p class="pricing-price">$79</p><a class="button button-ghost button-block" href="#">Pick</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

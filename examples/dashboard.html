@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fernhill — Dashboard</title>
+  <meta name="description" content="Example dashboard built only with SantyCSS v2.10 (santy-next.css): Persimmon theme, components and grammar-named utilities.">
+  <link rel="stylesheet" href="../dist/santy-next.css">
+</head>
+<body class="background-surface-alt">
+<div class="display-flex min-height-screen">
+
+  <!-- ═════════ SIDEBAR ═════════ -->
+  <aside class="display-none lg:display-flex flex-column width-256 flex-shrink-none padding-20 gap-24 background-surface border-right-1 border-color-default position-sticky top-0 height-screen">
+    <a class="navbar-brand text-size-20 color-text" href="saas-landing.html" style="text-decoration:none">
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="7" fill="var(--santy-primary)"/><path d="M8 18V8h10M8 13h7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+      Fernhill
+    </a>
+    <label class="input-label margin-0 sr-only" for="ws">Workspace</label>
+    <select class="input input-sm input-secondary" id="ws"><option>Kestrel · Production</option><option>Kestrel · Staging</option></select>
+    <nav class="display-flex flex-column gap-4">
+      <span class="eyebrow margin-bottom-8">Workspace</span>
+      <a class="button button-secondary button-block justify-start" href="#">Overview</a>
+      <a class="button button-ghost button-block justify-start" href="#">Reports <span class="badge badge-primary badge-sm margin-left-auto">3</span></a>
+      <a class="button button-ghost button-block justify-start" href="#">Funnels</a>
+      <a class="button button-ghost button-block justify-start" href="#">Cohorts</a>
+      <a class="button button-ghost button-block justify-start" href="#">Alerts</a>
+      <span class="eyebrow margin-top-24 margin-bottom-8">Settings</span>
+      <a class="button button-ghost button-block justify-start" href="#">Sources</a>
+      <a class="button button-ghost button-block justify-start" href="#">Team</a>
+      <a class="button button-ghost button-block justify-start" href="#">Billing</a>
+    </nav>
+    <div class="card card-sm card-primary margin-top-auto">
+      <strong class="text-size-14">Growth trial · 9 days left</strong>
+      <p class="card-text text-size-13">You've used 1.2M of 2M events this month.</p>
+      <div class="height-8 radius-pill background-surface-alt overflow-hidden"><div class="height-8 background-primary radius-pill width-3-of-5"></div></div>
+      <a class="button button-primary button-sm button-block" href="#">Upgrade</a>
+    </div>
+  </aside>
+
+  <!-- ═════════ MAIN ═════════ -->
+  <div class="flex-equal min-width-0 display-flex flex-column">
+    <header class="navbar navbar-sticky navbar-sm background-surface">
+      <span class="navbar-brand lg:display-none">Fernhill</span>
+      <input class="input input-sm input-secondary display-none md:display-block" type="search" placeholder="Search reports, events, people…" aria-label="Search" style="max-width:340px">
+      <div class="navbar-actions margin-left-auto">
+        <span class="badge badge-success badge-dot display-none md:display-flex">All sources healthy</span>
+        <a class="button button-ghost button-sm" href="#">Share</a>
+        <a class="button button-primary button-sm" href="#">New report</a>
+        <span class="display-inline-flex align-center justify-center width-32 height-32 radius-pill background-secondary color-secondary-contrast text-size-12 text-bold" aria-label="Signed in as Priya Raman">PR</span>
+      </div>
+    </header>
+
+    <main class="padding-20 md:padding-32 display-grid gap-24">
+      <!-- title -->
+      <div class="display-flex flex-wrap align-end justify-between gap-16">
+        <div>
+          <span class="eyebrow">Week 46 · Nov 10 – 16</span>
+          <h1 class="text-size-32 margin-top-8 margin-bottom-0">Good morning, Priya.</h1>
+        </div>
+        <nav class="tabs tabs-sm" aria-label="Range"><a class="tabs-item" href="#">Day</a><a class="tabs-item" aria-current="page" href="#">Week</a><a class="tabs-item" href="#">Month</a><a class="tabs-item" href="#">Quarter</a></nav>
+      </div>
+
+      <div class="alert alert-primary" role="status">
+        <div><strong class="alert-title">This week's headline</strong><p>Activation rose 3.1 pts after the new onboarding checklist shipped Tuesday. The lift is concentrated in the Growth plan (+6.4 pts).</p></div>
+        <a class="button button-sm button-primary" href="#">Read report</a>
+      </div>
+
+      <!-- KPIs -->
+      <section class="display-grid gap-16 sm:grid-columns-2 xl:grid-columns-4" aria-label="Key metrics">
+        <div class="card card-sm">
+          <div class="display-flex justify-between align-center"><span class="text-size-13 color-text-muted">Active users</span><span class="badge badge-success badge-sm">▲ 12.4%</span></div>
+          <strong class="text-size-32" style="font-family:var(--santy-font-display)">18,402</strong>
+          <div class="display-flex align-end gap-4 height-32"><span class="flex-equal height-12 background-surface-alt radius-2"></span><span class="flex-equal height-16 background-surface-alt radius-2"></span><span class="flex-equal height-14 background-surface-alt radius-2"></span><span class="flex-equal height-20 background-surface-alt radius-2"></span><span class="flex-equal height-24 background-surface-alt radius-2"></span><span class="flex-equal height-28 background-surface-alt radius-2"></span><span class="flex-equal height-32 background-primary radius-2"></span></div>
+        </div>
+        <div class="card card-sm">
+          <div class="display-flex justify-between align-center"><span class="text-size-13 color-text-muted">Activation rate</span><span class="badge badge-success badge-sm">▲ 3.1 pts</span></div>
+          <strong class="text-size-32" style="font-family:var(--santy-font-display)">41.8%</strong>
+          <div class="display-flex align-end gap-4 height-32"><span class="flex-equal height-16 background-surface-alt radius-2"></span><span class="flex-equal height-16 background-surface-alt radius-2"></span><span class="flex-equal height-18 background-surface-alt radius-2"></span><span class="flex-equal height-20 background-surface-alt radius-2"></span><span class="flex-equal height-24 background-surface-alt radius-2"></span><span class="flex-equal height-28 background-surface-alt radius-2"></span><span class="flex-equal height-32 background-primary radius-2"></span></div>
+        </div>
+        <div class="card card-sm">
+          <div class="display-flex justify-between align-center"><span class="text-size-13 color-text-muted">MRR</span><span class="badge badge-success badge-sm">▲ $4.2k</span></div>
+          <strong class="text-size-32" style="font-family:var(--santy-font-display)">$128,940</strong>
+          <div class="display-flex align-end gap-4 height-32"><span class="flex-equal height-20 background-surface-alt radius-2"></span><span class="flex-equal height-20 background-surface-alt radius-2"></span><span class="flex-equal height-24 background-surface-alt radius-2"></span><span class="flex-equal height-24 background-surface-alt radius-2"></span><span class="flex-equal height-28 background-surface-alt radius-2"></span><span class="flex-equal height-28 background-surface-alt radius-2"></span><span class="flex-equal height-32 background-primary radius-2"></span></div>
+        </div>
+        <div class="card card-sm">
+          <div class="display-flex justify-between align-center"><span class="text-size-13 color-text-muted">Logo churn</span><span class="badge badge-danger badge-sm">▲ 0.4 pts</span></div>
+          <strong class="text-size-32" style="font-family:var(--santy-font-display)">2.3%</strong>
+          <div class="display-flex align-end gap-4 height-32"><span class="flex-equal height-24 background-surface-alt radius-2"></span><span class="flex-equal height-20 background-surface-alt radius-2"></span><span class="flex-equal height-16 background-surface-alt radius-2"></span><span class="flex-equal height-18 background-surface-alt radius-2"></span><span class="flex-equal height-16 background-surface-alt radius-2"></span><span class="flex-equal height-20 background-surface-alt radius-2"></span><span class="flex-equal height-28 background-secondary radius-2"></span></div>
+        </div>
+      </section>
+
+      <!-- chart + funnel -->
+      <section class="display-grid gap-16 lg:grid-columns-3">
+        <div class="card lg:grid-column-span-2">
+          <div class="card-header">
+            <div><h2 class="card-title">Signups by day</h2><p class="card-text">Last 14 days · persimmon = this week</p></div>
+            <nav class="tabs tabs-ghost tabs-sm"><a class="tabs-item" aria-current="page" href="#">Signups</a><a class="tabs-item" href="#">Activations</a></nav>
+          </div>
+          <div class="display-flex align-end gap-8 height-192 padding-top-16 border-bottom-1 border-color-default">
+            <span class="flex-equal height-80 background-surface-alt radius-top-4"></span>
+            <span class="flex-equal height-96 background-surface-alt radius-top-4"></span>
+            <span class="flex-equal height-80 background-surface-alt radius-top-4"></span>
+            <span class="flex-equal height-96 background-surface-alt radius-top-4"></span>
+            <span class="flex-equal height-128 background-surface-alt radius-top-4"></span>
+            <span class="flex-equal height-64 background-surface-alt radius-top-4"></span>
+            <span class="flex-equal height-56 background-surface-alt radius-top-4"></span>
+            <span class="flex-equal height-96 background-primary radius-top-4 opacity-70"></span>
+            <span class="flex-equal height-128 background-primary radius-top-4 opacity-70"></span>
+            <span class="flex-equal height-128 background-primary radius-top-4 opacity-70"></span>
+            <span class="flex-equal height-160 background-primary radius-top-4 opacity-70"></span>
+            <span class="flex-equal height-128 background-primary radius-top-4 opacity-70"></span>
+            <span class="flex-equal height-192 background-primary radius-top-4"></span>
+            <span class="flex-equal height-96 background-primary radius-top-4 opacity-70"></span>
+          </div>
+          <div class="display-flex justify-between text-size-12 color-text-muted margin-top-8"><span>Nov 3</span><span>Nov 10</span><span>Nov 16</span></div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Activation funnel</h2>
+          <p class="card-text">Signup → first report read</p>
+          <div class="display-grid gap-12 margin-top-8">
+            <div><div class="display-flex justify-between text-size-13"><span>Signed up</span><strong>2,140</strong></div><div class="height-8 radius-pill background-surface-alt margin-top-4"><div class="height-8 radius-pill background-secondary width-full"></div></div></div>
+            <div><div class="display-flex justify-between text-size-13"><span>Connected source</span><strong>1,498</strong></div><div class="height-8 radius-pill background-surface-alt margin-top-4"><div class="height-8 radius-pill background-secondary width-7-of-12"></div></div></div>
+            <div><div class="display-flex justify-between text-size-13"><span>Picked goals</span><strong>1,177</strong></div><div class="height-8 radius-pill background-surface-alt margin-top-4"><div class="height-8 radius-pill background-secondary width-1-of-2"></div></div></div>
+            <div><div class="display-flex justify-between text-size-13"><span>Read first report</span><strong>895</strong></div><div class="height-8 radius-pill background-surface-alt margin-top-4"><div class="height-8 radius-pill background-primary width-2-of-5"></div></div></div>
+          </div>
+          <div class="card-footer"><span class="text-size-13 color-text-muted">Biggest drop: connecting a source (−30%)</span></div>
+        </div>
+      </section>
+
+      <!-- table + activity -->
+      <section class="display-grid gap-16 lg:grid-columns-3">
+        <div class="card padding-0 lg:grid-column-span-2 overflow-hidden">
+          <div class="card-header padding-x-24 padding-top-20 padding-bottom-16">
+            <h2 class="card-title">Recent accounts</h2>
+            <a class="button button-outline button-sm" href="#">Export CSV</a>
+          </div>
+          <div class="overflow-x-auto margin-0">
+            <table class="width-full text-size-14" style="border-collapse:collapse">
+              <thead class="background-surface-alt text-size-12 color-text-muted text-uppercase letter-spacing-wide">
+                <tr><th class="text-left padding-x-24 padding-y-12">Account</th><th class="text-left padding-x-16 padding-y-12">Plan</th><th class="text-left padding-x-16 padding-y-12">Status</th><th class="text-right padding-x-24 padding-y-12">MRR</th></tr>
+              </thead>
+              <tbody>
+                <tr class="border-top-1 border-color-default"><td class="padding-x-24 padding-y-12"><strong>Oakline</strong><div class="text-size-12 color-text-muted">oakline.io</div></td><td class="padding-x-16"><span class="badge badge-secondary">Scale</span></td><td class="padding-x-16"><span class="badge badge-success badge-dot">Active</span></td><td class="padding-x-24 text-right text-semibold">$349</td></tr>
+                <tr class="border-top-1 border-color-default"><td class="padding-x-24 padding-y-12"><strong>Briar &amp; Co</strong><div class="text-size-12 color-text-muted">briar.co</div></td><td class="padding-x-16"><span class="badge badge-primary">Growth</span></td><td class="padding-x-16"><span class="badge badge-info badge-dot">Trial · 4d</span></td><td class="padding-x-24 text-right text-semibold">$79</td></tr>
+                <tr class="border-top-1 border-color-default"><td class="padding-x-24 padding-y-12"><strong>Halfmoon</strong><div class="text-size-12 color-text-muted">halfmoon.app</div></td><td class="padding-x-16"><span class="badge badge-primary">Growth</span></td><td class="padding-x-16"><span class="badge badge-warning badge-dot">Past due</span></td><td class="padding-x-24 text-right text-semibold">$79</td></tr>
+                <tr class="border-top-1 border-color-default"><td class="padding-x-24 padding-y-12"><strong>Lumen Labs</strong><div class="text-size-12 color-text-muted">lumenlabs.dev</div></td><td class="padding-x-16"><span class="badge">Starter</span></td><td class="padding-x-16"><span class="badge badge-success badge-dot">Active</span></td><td class="padding-x-24 text-right text-semibold">$0</td></tr>
+                <tr class="border-top-1 border-color-default"><td class="padding-x-24 padding-y-12"><strong>Northgate</strong><div class="text-size-12 color-text-muted">northgate.example</div></td><td class="padding-x-16"><span class="badge badge-primary">Growth</span></td><td class="padding-x-16"><span class="badge badge-danger badge-dot">Churned</span></td><td class="padding-x-24 text-right text-semibold color-text-muted">—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Activity</h2>
+          <ol class="list-none padding-0 margin-0 display-grid gap-16 margin-top-8">
+            <li class="display-flex gap-12"><span class="badge badge-mono badge-primary badge-sm flex-shrink-none width-64 justify-center">Alert</span><div class="text-size-14">Checkout conversion fell 18% on iOS 18.2.<div class="text-size-12 color-text-muted">12 min ago</div></div></li>
+            <li class="display-flex gap-12"><span class="badge badge-mono badge-sm flex-shrink-none width-64 justify-center">Report</span><div class="text-size-14">Week 46 report is ready to read.<div class="text-size-12 color-text-muted">2 h ago</div></div></li>
+            <li class="display-flex gap-12"><span class="badge badge-mono badge-success badge-sm flex-shrink-none width-64 justify-center">Deal</span><div class="text-size-14">Oakline upgraded to Scale.<div class="text-size-12 color-text-muted">Yesterday</div></div></li>
+            <li class="display-flex gap-12"><span class="badge badge-mono badge-info badge-sm flex-shrink-none width-64 justify-center">Team</span><div class="text-size-14">Sam joined the workspace.<div class="text-size-12 color-text-muted">Mon</div></div></li>
+          </ol>
+          <div class="card-footer"><a class="button button-ghost button-sm" href="#">View all activity →</a></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+</body>
+</html>

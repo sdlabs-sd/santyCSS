@@ -82,163 +82,163 @@
    ATTENTION SEEKERS
    Keep looping or use once (add animation-loop-1)
    ════════════════════════════════════════════════════ */
-.animate-flash       { animation: santy-flash       1s   ease         both; }
-.animate-rubber-band { animation: santy-rubber-band 1s   ease         both; }
-.animate-shake-x     { animation: santy-shake-x     1s   ease         both; }
-.animate-shake-y     { animation: santy-shake-y     1s   ease         both; }
-.animate-shake-head  { animation: santy-shake-head  1s   ease-in-out  both; }
-.animate-swing       { animation: santy-swing       1s   ease         both; transform-origin: top center; }
-.animate-tada        { animation: santy-tada        1s   ease         both; }
-.animate-wobble      { animation: santy-wobble      1s   ease         both; }
-.animate-jelly       { animation: santy-jelly       1s   ease         both; }
-.animate-heartbeat   { animation: santy-heartbeat   1.3s ease-in-out  both; }
+.animation-flash, .animate-flash       { animation: santy-flash       1s   ease         both; }
+.animation-rubber-band, .animate-rubber-band { animation: santy-rubber-band 1s   ease         both; }
+.animation-shake-x, .animate-shake-x     { animation: santy-shake-x     1s   ease         both; }
+.animation-shake-y, .animate-shake-y     { animation: santy-shake-y     1s   ease         both; }
+.animation-shake-head, .animate-shake-head  { animation: santy-shake-head  1s   ease-in-out  both; }
+.animation-swing, .animate-swing       { animation: santy-swing       1s   ease         both; transform-origin: top center; }
+.animation-tada, .animate-tada        { animation: santy-tada        1s   ease         both; }
+.animation-wobble, .animate-wobble      { animation: santy-wobble      1s   ease         both; }
+.animation-jelly, .animate-jelly       { animation: santy-jelly       1s   ease         both; }
+.animation-heartbeat, .animate-heartbeat   { animation: santy-heartbeat   1.3s ease-in-out  both; }
 
 /* ════════════════════════════════════════════════════
    FADING ENTRANCES
    ════════════════════════════════════════════════════ */
-.animate-fade-in              { animation: santy-fade-in              0.5s ease both; }
-.animate-fade-in-from-top     { animation: santy-fade-in-from-top     0.5s ease both; }
-.animate-fade-in-from-bottom  { animation: santy-fade-in-from-bottom  0.5s ease both; }
-.animate-fade-in-from-left    { animation: santy-fade-in-from-left    0.5s ease both; }
-.animate-fade-in-from-right   { animation: santy-fade-in-from-right   0.5s ease both; }
-.animate-fade-in-top-left     { animation: santy-fade-in-top-left     0.5s ease both; }
-.animate-fade-in-top-right    { animation: santy-fade-in-top-right    0.5s ease both; }
-.animate-fade-in-bottom-left  { animation: santy-fade-in-bottom-left  0.5s ease both; }
-.animate-fade-in-bottom-right { animation: santy-fade-in-bottom-right 0.5s ease both; }
+.animation-fade-in, .animate-fade-in              { animation: santy-fade-in              0.5s ease both; }
+.animation-fade-in-from-top, .animate-fade-in-from-top     { animation: santy-fade-in-from-top     0.5s ease both; }
+.animation-fade-in-from-bottom, .animate-fade-in-from-bottom  { animation: santy-fade-in-from-bottom  0.5s ease both; }
+.animation-fade-in-from-left, .animate-fade-in-from-left    { animation: santy-fade-in-from-left    0.5s ease both; }
+.animation-fade-in-from-right, .animate-fade-in-from-right   { animation: santy-fade-in-from-right   0.5s ease both; }
+.animation-fade-in-top-left, .animate-fade-in-top-left     { animation: santy-fade-in-top-left     0.5s ease both; }
+.animation-fade-in-top-right, .animate-fade-in-top-right    { animation: santy-fade-in-top-right    0.5s ease both; }
+.animation-fade-in-bottom-left, .animate-fade-in-bottom-left  { animation: santy-fade-in-bottom-left  0.5s ease both; }
+.animation-fade-in-bottom-right, .animate-fade-in-bottom-right { animation: santy-fade-in-bottom-right 0.5s ease both; }
 
 /* ════════════════════════════════════════════════════
    FADING EXITS
    ════════════════════════════════════════════════════ */
-.animate-fade-out              { animation: santy-fade-out              0.5s ease both; }
-.animate-fade-out-to-top       { animation: santy-fade-out-to-top       0.5s ease both; }
-.animate-fade-out-to-bottom    { animation: santy-fade-out-to-bottom    0.5s ease both; }
-.animate-fade-out-to-left      { animation: santy-fade-out-to-left      0.5s ease both; }
-.animate-fade-out-to-right     { animation: santy-fade-out-to-right     0.5s ease both; }
-.animate-fade-out-top-left     { animation: santy-fade-out-top-left     0.5s ease both; }
-.animate-fade-out-top-right    { animation: santy-fade-out-top-right    0.5s ease both; }
-.animate-fade-out-bottom-left  { animation: santy-fade-out-bottom-left  0.5s ease both; }
-.animate-fade-out-bottom-right { animation: santy-fade-out-bottom-right 0.5s ease both; }
+.animation-fade-out, .animate-fade-out              { animation: santy-fade-out              0.5s ease both; }
+.animation-fade-out-to-top, .animate-fade-out-to-top       { animation: santy-fade-out-to-top       0.5s ease both; }
+.animation-fade-out-to-bottom, .animate-fade-out-to-bottom    { animation: santy-fade-out-to-bottom    0.5s ease both; }
+.animation-fade-out-to-left, .animate-fade-out-to-left      { animation: santy-fade-out-to-left      0.5s ease both; }
+.animation-fade-out-to-right, .animate-fade-out-to-right     { animation: santy-fade-out-to-right     0.5s ease both; }
+.animation-fade-out-top-left, .animate-fade-out-top-left     { animation: santy-fade-out-top-left     0.5s ease both; }
+.animation-fade-out-top-right, .animate-fade-out-top-right    { animation: santy-fade-out-top-right    0.5s ease both; }
+.animation-fade-out-bottom-left, .animate-fade-out-bottom-left  { animation: santy-fade-out-bottom-left  0.5s ease both; }
+.animation-fade-out-bottom-right, .animate-fade-out-bottom-right { animation: santy-fade-out-bottom-right 0.5s ease both; }
 
 /* ════════════════════════════════════════════════════
    BOUNCING ENTRANCES
    ════════════════════════════════════════════════════ */
-.animate-bounce-in             { animation: santy-bounce-in             0.75s ease both; }
-.animate-bounce-in-from-top    { animation: santy-bounce-in-from-top    0.75s ease both; }
-.animate-bounce-in-from-bottom { animation: santy-bounce-in-from-bottom 0.75s ease both; }
-.animate-bounce-in-from-left   { animation: santy-bounce-in-from-left   0.75s ease both; }
-.animate-bounce-in-from-right  { animation: santy-bounce-in-from-right  0.75s ease both; }
+.animation-bounce-in, .animate-bounce-in             { animation: santy-bounce-in             0.75s ease both; }
+.animation-bounce-in-from-top, .animate-bounce-in-from-top    { animation: santy-bounce-in-from-top    0.75s ease both; }
+.animation-bounce-in-from-bottom, .animate-bounce-in-from-bottom { animation: santy-bounce-in-from-bottom 0.75s ease both; }
+.animation-bounce-in-from-left, .animate-bounce-in-from-left   { animation: santy-bounce-in-from-left   0.75s ease both; }
+.animation-bounce-in-from-right, .animate-bounce-in-from-right  { animation: santy-bounce-in-from-right  0.75s ease both; }
 
 /* ════════════════════════════════════════════════════
    BOUNCING EXITS
    ════════════════════════════════════════════════════ */
-.animate-bounce-out             { animation: santy-bounce-out             0.75s ease both; }
-.animate-bounce-out-to-top      { animation: santy-bounce-out-to-top      0.75s ease both; }
-.animate-bounce-out-to-bottom   { animation: santy-bounce-out-to-bottom   0.75s ease both; }
-.animate-bounce-out-to-left     { animation: santy-bounce-out-to-left     0.75s ease both; }
-.animate-bounce-out-to-right    { animation: santy-bounce-out-to-right    0.75s ease both; }
+.animation-bounce-out, .animate-bounce-out             { animation: santy-bounce-out             0.75s ease both; }
+.animation-bounce-out-to-top, .animate-bounce-out-to-top      { animation: santy-bounce-out-to-top      0.75s ease both; }
+.animation-bounce-out-to-bottom, .animate-bounce-out-to-bottom   { animation: santy-bounce-out-to-bottom   0.75s ease both; }
+.animation-bounce-out-to-left, .animate-bounce-out-to-left     { animation: santy-bounce-out-to-left     0.75s ease both; }
+.animation-bounce-out-to-right, .animate-bounce-out-to-right    { animation: santy-bounce-out-to-right    0.75s ease both; }
 
 /* ════════════════════════════════════════════════════
    SLIDING ENTRANCES
    ════════════════════════════════════════════════════ */
-.animate-slide-in-from-top    { animation: santy-slide-in-from-top    0.4s ease both; }
-.animate-slide-in-from-bottom { animation: santy-slide-in-from-bottom 0.4s ease both; }
-.animate-slide-in-from-left   { animation: santy-slide-in-from-left   0.4s ease both; }
-.animate-slide-in-from-right  { animation: santy-slide-in-from-right  0.4s ease both; }
+.animation-slide-in-from-top, .animate-slide-in-from-top    { animation: santy-slide-in-from-top    0.4s ease both; }
+.animation-slide-in-from-bottom, .animate-slide-in-from-bottom { animation: santy-slide-in-from-bottom 0.4s ease both; }
+.animation-slide-in-from-left, .animate-slide-in-from-left   { animation: santy-slide-in-from-left   0.4s ease both; }
+.animation-slide-in-from-right, .animate-slide-in-from-right  { animation: santy-slide-in-from-right  0.4s ease both; }
 
 /* ════════════════════════════════════════════════════
    SLIDING EXITS
    ════════════════════════════════════════════════════ */
-.animate-slide-out-to-top    { animation: santy-slide-out-to-top    0.4s ease both; }
-.animate-slide-out-to-bottom { animation: santy-slide-out-to-bottom 0.4s ease both; }
-.animate-slide-out-to-left   { animation: santy-slide-out-to-left   0.4s ease both; }
-.animate-slide-out-to-right  { animation: santy-slide-out-to-right  0.4s ease both; }
+.animation-slide-out-to-top, .animate-slide-out-to-top    { animation: santy-slide-out-to-top    0.4s ease both; }
+.animation-slide-out-to-bottom, .animate-slide-out-to-bottom { animation: santy-slide-out-to-bottom 0.4s ease both; }
+.animation-slide-out-to-left, .animate-slide-out-to-left   { animation: santy-slide-out-to-left   0.4s ease both; }
+.animation-slide-out-to-right, .animate-slide-out-to-right  { animation: santy-slide-out-to-right  0.4s ease both; }
 
 /* ════════════════════════════════════════════════════
    ZOOMING ENTRANCES
    ════════════════════════════════════════════════════ */
-.animate-zoom-in             { animation: santy-zoom-in             0.3s ease both; }
-.animate-zoom-in-from-top    { animation: santy-zoom-in-from-top    0.5s ease both; }
-.animate-zoom-in-from-bottom { animation: santy-zoom-in-from-bottom 0.5s ease both; }
-.animate-zoom-in-from-left   { animation: santy-zoom-in-from-left   0.5s ease both; }
-.animate-zoom-in-from-right  { animation: santy-zoom-in-from-right  0.5s ease both; }
+.animation-zoom-in, .animate-zoom-in             { animation: santy-zoom-in             0.3s ease both; }
+.animation-zoom-in-from-top, .animate-zoom-in-from-top    { animation: santy-zoom-in-from-top    0.5s ease both; }
+.animation-zoom-in-from-bottom, .animate-zoom-in-from-bottom { animation: santy-zoom-in-from-bottom 0.5s ease both; }
+.animation-zoom-in-from-left, .animate-zoom-in-from-left   { animation: santy-zoom-in-from-left   0.5s ease both; }
+.animation-zoom-in-from-right, .animate-zoom-in-from-right  { animation: santy-zoom-in-from-right  0.5s ease both; }
 
 /* ════════════════════════════════════════════════════
    ZOOMING EXITS
    ════════════════════════════════════════════════════ */
-.animate-zoom-out             { animation: santy-zoom-out             0.3s ease both; }
-.animate-zoom-out-to-top      { animation: santy-zoom-out-to-top      0.5s ease both; }
-.animate-zoom-out-to-bottom   { animation: santy-zoom-out-to-bottom   0.5s ease both; }
-.animate-zoom-out-to-left     { animation: santy-zoom-out-to-left     0.5s ease both; }
-.animate-zoom-out-to-right    { animation: santy-zoom-out-to-right    0.5s ease both; }
+.animation-zoom-out, .animate-zoom-out             { animation: santy-zoom-out             0.3s ease both; }
+.animation-zoom-out-to-top, .animate-zoom-out-to-top      { animation: santy-zoom-out-to-top      0.5s ease both; }
+.animation-zoom-out-to-bottom, .animate-zoom-out-to-bottom   { animation: santy-zoom-out-to-bottom   0.5s ease both; }
+.animation-zoom-out-to-left, .animate-zoom-out-to-left     { animation: santy-zoom-out-to-left     0.5s ease both; }
+.animation-zoom-out-to-right, .animate-zoom-out-to-right    { animation: santy-zoom-out-to-right    0.5s ease both; }
 
 /* ════════════════════════════════════════════════════
    FLIPPING
    ════════════════════════════════════════════════════ */
-.animate-flip       { animation: santy-flip       1s   ease both; backface-visibility: visible !important; }
-.animate-flip-in-x  { animation: santy-flip-in-x  0.75s ease both; backface-visibility: visible !important; }
-.animate-flip-in-y  { animation: santy-flip-in-y  0.75s ease both; backface-visibility: visible !important; }
-.animate-flip-out-x { animation: santy-flip-out-x 0.75s ease both; backface-visibility: visible !important; }
-.animate-flip-out-y { animation: santy-flip-out-y 0.75s ease both; backface-visibility: visible !important; }
+.animation-flip, .animate-flip       { animation: santy-flip       1s   ease both; backface-visibility: visible !important; }
+.animation-flip-in-x, .animate-flip-in-x  { animation: santy-flip-in-x  0.75s ease both; backface-visibility: visible !important; }
+.animation-flip-in-y, .animate-flip-in-y  { animation: santy-flip-in-y  0.75s ease both; backface-visibility: visible !important; }
+.animation-flip-out-x, .animate-flip-out-x { animation: santy-flip-out-x 0.75s ease both; backface-visibility: visible !important; }
+.animation-flip-out-y, .animate-flip-out-y { animation: santy-flip-out-y 0.75s ease both; backface-visibility: visible !important; }
 
 /* ════════════════════════════════════════════════════
    ROTATING ENTRANCES
    ════════════════════════════════════════════════════ */
-.animate-rotate-in                   { animation: santy-rotate-in                   0.6s ease both; }
-.animate-rotate-in-from-top-left     { animation: santy-rotate-in-from-top-left     0.6s ease both; transform-origin: left top;     }
-.animate-rotate-in-from-top-right    { animation: santy-rotate-in-from-top-right    0.6s ease both; transform-origin: right top;    }
-.animate-rotate-in-from-bottom-left  { animation: santy-rotate-in-from-bottom-left  0.6s ease both; transform-origin: left bottom;  }
-.animate-rotate-in-from-bottom-right { animation: santy-rotate-in-from-bottom-right 0.6s ease both; transform-origin: right bottom; }
+.animation-rotate-in, .animate-rotate-in                   { animation: santy-rotate-in                   0.6s ease both; }
+.animation-rotate-in-from-top-left, .animate-rotate-in-from-top-left     { animation: santy-rotate-in-from-top-left     0.6s ease both; transform-origin: left top;     }
+.animation-rotate-in-from-top-right, .animate-rotate-in-from-top-right    { animation: santy-rotate-in-from-top-right    0.6s ease both; transform-origin: right top;    }
+.animation-rotate-in-from-bottom-left, .animate-rotate-in-from-bottom-left  { animation: santy-rotate-in-from-bottom-left  0.6s ease both; transform-origin: left bottom;  }
+.animation-rotate-in-from-bottom-right, .animate-rotate-in-from-bottom-right { animation: santy-rotate-in-from-bottom-right 0.6s ease both; transform-origin: right bottom; }
 
 /* ════════════════════════════════════════════════════
    ROTATING EXITS
    ════════════════════════════════════════════════════ */
-.animate-rotate-out                   { animation: santy-rotate-out                   0.6s ease both; }
-.animate-rotate-out-to-top-left       { animation: santy-rotate-out-to-top-left       0.6s ease both; transform-origin: left top;     }
-.animate-rotate-out-to-top-right      { animation: santy-rotate-out-to-top-right      0.6s ease both; transform-origin: right top;    }
-.animate-rotate-out-to-bottom-left    { animation: santy-rotate-out-to-bottom-left    0.6s ease both; transform-origin: left bottom;  }
-.animate-rotate-out-to-bottom-right   { animation: santy-rotate-out-to-bottom-right   0.6s ease both; transform-origin: right bottom; }
+.animation-rotate-out, .animate-rotate-out                   { animation: santy-rotate-out                   0.6s ease both; }
+.animation-rotate-out-to-top-left, .animate-rotate-out-to-top-left       { animation: santy-rotate-out-to-top-left       0.6s ease both; transform-origin: left top;     }
+.animation-rotate-out-to-top-right, .animate-rotate-out-to-top-right      { animation: santy-rotate-out-to-top-right      0.6s ease both; transform-origin: right top;    }
+.animation-rotate-out-to-bottom-left, .animate-rotate-out-to-bottom-left    { animation: santy-rotate-out-to-bottom-left    0.6s ease both; transform-origin: left bottom;  }
+.animation-rotate-out-to-bottom-right, .animate-rotate-out-to-bottom-right   { animation: santy-rotate-out-to-bottom-right   0.6s ease both; transform-origin: right bottom; }
 
 /* ════════════════════════════════════════════════════
    BACK ENTRANCES (scale from afar)
    ════════════════════════════════════════════════════ */
-.animate-back-in-from-top    { animation: santy-back-in-from-top    0.7s ease both; }
-.animate-back-in-from-bottom { animation: santy-back-in-from-bottom 0.7s ease both; }
-.animate-back-in-from-left   { animation: santy-back-in-from-left   0.7s ease both; }
-.animate-back-in-from-right  { animation: santy-back-in-from-right  0.7s ease both; }
+.animation-back-in-from-top, .animate-back-in-from-top    { animation: santy-back-in-from-top    0.7s ease both; }
+.animation-back-in-from-bottom, .animate-back-in-from-bottom { animation: santy-back-in-from-bottom 0.7s ease both; }
+.animation-back-in-from-left, .animate-back-in-from-left   { animation: santy-back-in-from-left   0.7s ease both; }
+.animation-back-in-from-right, .animate-back-in-from-right  { animation: santy-back-in-from-right  0.7s ease both; }
 
 /* ════════════════════════════════════════════════════
    BACK EXITS
    ════════════════════════════════════════════════════ */
-.animate-back-out-to-top    { animation: santy-back-out-to-top    0.7s ease both; }
-.animate-back-out-to-bottom { animation: santy-back-out-to-bottom 0.7s ease both; }
-.animate-back-out-to-left   { animation: santy-back-out-to-left   0.7s ease both; }
-.animate-back-out-to-right  { animation: santy-back-out-to-right  0.7s ease both; }
+.animation-back-out-to-top, .animate-back-out-to-top    { animation: santy-back-out-to-top    0.7s ease both; }
+.animation-back-out-to-bottom, .animate-back-out-to-bottom { animation: santy-back-out-to-bottom 0.7s ease both; }
+.animation-back-out-to-left, .animate-back-out-to-left   { animation: santy-back-out-to-left   0.7s ease both; }
+.animation-back-out-to-right, .animate-back-out-to-right  { animation: santy-back-out-to-right  0.7s ease both; }
 
 /* ════════════════════════════════════════════════════
    LIGHT SPEED (skew + slide)
    ════════════════════════════════════════════════════ */
-.animate-speed-in-from-left  { animation: santy-speed-in-from-left  0.5s ease-out both; }
-.animate-speed-in-from-right { animation: santy-speed-in-from-right 0.5s ease-out both; }
-.animate-speed-out-to-left   { animation: santy-speed-out-to-left   0.5s ease-in  both; }
-.animate-speed-out-to-right  { animation: santy-speed-out-to-right  0.5s ease-in  both; }
+.animation-speed-in-from-left, .animate-speed-in-from-left  { animation: santy-speed-in-from-left  0.5s ease-out both; }
+.animation-speed-in-from-right, .animate-speed-in-from-right { animation: santy-speed-in-from-right 0.5s ease-out both; }
+.animation-speed-out-to-left, .animate-speed-out-to-left   { animation: santy-speed-out-to-left   0.5s ease-in  both; }
+.animation-speed-out-to-right, .animate-speed-out-to-right  { animation: santy-speed-out-to-right  0.5s ease-in  both; }
 
 /* ════════════════════════════════════════════════════
    SPECIALS
    ════════════════════════════════════════════════════ */
-.animate-hinge       { animation: santy-hinge       2s   ease both; transform-origin: top left; }
-.animate-jack-in-box { animation: santy-jack-in-box 1s   ease both; transform-origin: center bottom; }
-.animate-roll-in     { animation: santy-roll-in     0.6s ease both; }
-.animate-roll-out    { animation: santy-roll-out    0.6s ease both; }
+.animation-hinge, .animate-hinge       { animation: santy-hinge       2s   ease both; transform-origin: top left; }
+.animation-jack-in-box, .animate-jack-in-box { animation: santy-jack-in-box 1s   ease both; transform-origin: center bottom; }
+.animation-roll-in, .animate-roll-in     { animation: santy-roll-in     0.6s ease both; }
+.animation-roll-out, .animate-roll-out    { animation: santy-roll-out    0.6s ease both; }
 
 /* ── Original utilities (kept for backwards compat) ── */
-.animate-spin        { animation: santy-spin  1s linear infinite; }
-.animate-ping        { animation: santy-ping  1s cubic-bezier(0,0,.2,1) infinite; }
-.animate-pulse       { animation: santy-pulse 2s cubic-bezier(.4,0,.6,1) infinite; }
-.animate-bounce      { animation: santy-bounce 1s infinite; }
-.animate-slide-up    { animation: santy-slide-in-from-bottom 0.4s ease both; }
-.animate-slide-down  { animation: santy-slide-in-from-top    0.4s ease both; }
-.animate-zoom-in     { animation: santy-zoom-in  0.3s ease both; }
-.animate-zoom-out    { animation: santy-zoom-out 0.3s ease both; }
+.animation-spin, .animate-spin        { animation: santy-spin  1s linear infinite; }
+.animation-ping, .animate-ping        { animation: santy-ping  1s cubic-bezier(0,0,.2,1) infinite; }
+.animation-pulse, .animate-pulse       { animation: santy-pulse 2s cubic-bezier(.4,0,.6,1) infinite; }
+.animation-bounce, .animate-bounce      { animation: santy-bounce 1s infinite; }
+.animation-slide-up, .animate-slide-up    { animation: santy-slide-in-from-bottom 0.4s ease both; }
+.animation-slide-down, .animate-slide-down  { animation: santy-slide-in-from-top    0.4s ease both; }
+.animation-zoom-in, .animate-zoom-in     { animation: santy-zoom-in  0.3s ease both; }
+.animation-zoom-out, .animate-zoom-out    { animation: santy-zoom-out 0.3s ease both; }
 
 /* ═══════════════════════════════════════════════════════════════════════
    KEYFRAMES
@@ -553,22 +553,16 @@
    ═══════════════════════════════════════════════════════════════════════ */
 
 /* Base: elements are hidden until .is-visible is toggled by JS */
-.animate-on-scroll-fade-in    { opacity: 0; transition: opacity 0.6s ease, transform 0.6s ease; }
-.animate-on-scroll-slide-up   { opacity: 0; transform: translateY(40px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.animate-on-scroll-slide-down { opacity: 0; transform: translateY(-40px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.animate-on-scroll-zoom-in    { opacity: 0; transform: scale(0.85); transition: opacity 0.6s ease, transform 0.6s ease; }
-.animate-on-scroll-from-left  { opacity: 0; transform: translateX(-60px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.animate-on-scroll-from-right { opacity: 0; transform: translateX(60px);  transition: opacity 0.6s ease, transform 0.6s ease; }
-.animate-on-scroll-flip-up    { opacity: 0; transform: rotateX(30deg); transition: opacity 0.6s ease, transform 0.6s ease; }
+.animation-on-scroll-fade-in, .animate-on-scroll-fade-in    { opacity: 0; transition: opacity 0.6s ease, transform 0.6s ease; }
+.animation-on-scroll-slide-up, .animate-on-scroll-slide-up   { opacity: 0; transform: translateY(40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.animation-on-scroll-slide-down, .animate-on-scroll-slide-down { opacity: 0; transform: translateY(-40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.animation-on-scroll-zoom-in, .animate-on-scroll-zoom-in    { opacity: 0; transform: scale(0.85); transition: opacity 0.6s ease, transform 0.6s ease; }
+.animation-on-scroll-from-left, .animate-on-scroll-from-left  { opacity: 0; transform: translateX(-60px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.animation-on-scroll-from-right, .animate-on-scroll-from-right { opacity: 0; transform: translateX(60px);  transition: opacity 0.6s ease, transform 0.6s ease; }
+.animation-on-scroll-flip-up, .animate-on-scroll-flip-up    { opacity: 0; transform: rotateX(30deg); transition: opacity 0.6s ease, transform 0.6s ease; }
 
 /* Triggered state — add .is-visible via IntersectionObserver */
-.animate-on-scroll-fade-in.is-visible,
-.animate-on-scroll-slide-up.is-visible,
-.animate-on-scroll-slide-down.is-visible,
-.animate-on-scroll-zoom-in.is-visible,
-.animate-on-scroll-from-left.is-visible,
-.animate-on-scroll-from-right.is-visible,
-.animate-on-scroll-flip-up.is-visible { opacity: 1; transform: none; }
+.animation-on-scroll-fade-in.is-visible, .animation-on-scroll-slide-up.is-visible, .animation-on-scroll-slide-down.is-visible, .animation-on-scroll-zoom-in.is-visible, .animation-on-scroll-from-left.is-visible, .animation-on-scroll-from-right.is-visible, .animation-on-scroll-flip-up.is-visible, .animate-on-scroll-fade-in.is-visible, .animate-on-scroll-slide-up.is-visible, .animate-on-scroll-slide-down.is-visible, .animate-on-scroll-zoom-in.is-visible, .animate-on-scroll-from-left.is-visible, .animate-on-scroll-from-right.is-visible, .animate-on-scroll-flip-up.is-visible { opacity: 1; transform: none; }
 
 /* scroll-reveal-once / scroll-reveal-repeat — same trigger, different JS behaviour */
 .scroll-reveal-once,
@@ -606,7 +600,7 @@
    ═══════════════════════════════════════════════════════════════════════ */
 
 /* Typewriter — pure CSS using steps() */
-.animate-typewriter {
+.animation-typewriter, .animate-typewriter {
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid currentColor;
@@ -614,11 +608,11 @@
   animation: santy-typewriter 2.5s steps(30,end) forwards, santy-blink-caret 0.75s step-end infinite;
 }
 /* Blur-in entrance */
-.animate-text-blur-in   { animation: santy-text-blur-in  0.8s ease both; }
+.animation-text-blur-in, .animate-text-blur-in   { animation: santy-text-blur-in  0.8s ease both; }
 /* Slide up per-word (apply to the text container) */
-.animate-text-slide-up  { animation: santy-slide-up      0.5s ease both; }
+.animation-text-slide-up, .animate-text-slide-up  { animation: santy-slide-up      0.5s ease both; }
 /* Gradient flow — animated gradient on text */
-.animate-text-gradient-flow {
+.animation-text-gradient-flow, .animate-text-gradient-flow {
   background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
   background-size: 300% 100%;
   -webkit-background-clip: text;
@@ -627,19 +621,19 @@
   animation: santy-gradient-shift 3s linear infinite;
 }
 /* Letter wave — each letter must be wrapped in a span via JS */
-.animate-text-wave span { display: inline-block; animation: santy-text-wave 1s ease infinite; }
-.animate-text-wave span:nth-child(1)  { animation-delay: 0s; }
-.animate-text-wave span:nth-child(2)  { animation-delay: 0.08s; }
-.animate-text-wave span:nth-child(3)  { animation-delay: 0.16s; }
-.animate-text-wave span:nth-child(4)  { animation-delay: 0.24s; }
-.animate-text-wave span:nth-child(5)  { animation-delay: 0.32s; }
-.animate-text-wave span:nth-child(6)  { animation-delay: 0.40s; }
-.animate-text-wave span:nth-child(7)  { animation-delay: 0.48s; }
-.animate-text-wave span:nth-child(8)  { animation-delay: 0.56s; }
+.animation-text-wave span, .animate-text-wave span { display: inline-block; animation: santy-text-wave 1s ease infinite; }
+.animation-text-wave span:nth-child(1), .animate-text-wave span:nth-child(1)  { animation-delay: 0s; }
+.animation-text-wave span:nth-child(2), .animate-text-wave span:nth-child(2)  { animation-delay: 0.08s; }
+.animation-text-wave span:nth-child(3), .animate-text-wave span:nth-child(3)  { animation-delay: 0.16s; }
+.animation-text-wave span:nth-child(4), .animate-text-wave span:nth-child(4)  { animation-delay: 0.24s; }
+.animation-text-wave span:nth-child(5), .animate-text-wave span:nth-child(5)  { animation-delay: 0.32s; }
+.animation-text-wave span:nth-child(6), .animate-text-wave span:nth-child(6)  { animation-delay: 0.40s; }
+.animation-text-wave span:nth-child(7), .animate-text-wave span:nth-child(7)  { animation-delay: 0.48s; }
+.animation-text-wave span:nth-child(8), .animate-text-wave span:nth-child(8)  { animation-delay: 0.56s; }
 /* Glitch */
-.animate-text-glitch { animation: santy-text-glitch 0.5s linear infinite; }
+.animation-text-glitch, .animate-text-glitch { animation: santy-text-glitch 0.5s linear infinite; }
 /* Neon pulse */
-.animate-text-neon-pulse { animation: santy-neon-pulse 1.5s ease-in-out infinite alternate; }
+.animation-text-neon-pulse, .animate-text-neon-pulse { animation: santy-neon-pulse 1.5s ease-in-out infinite alternate; }
 
 @keyframes santy-typewriter      { to { width: 100%; } }
 @keyframes santy-blink-caret     { 50% { border-color: transparent; } }
@@ -661,56 +655,56 @@
    STAGGERED ENTRANCE SEQUENCES
    Apply parent class; children get incremental delays via nth-child.
    ═══════════════════════════════════════════════════════════════════════ */
-.animate-stagger-fade-in    > * { animation: santy-fade-in  0.5s ease both; }
-.animate-stagger-slide-up   > * { animation: santy-slide-up 0.5s ease both; }
-.animate-stagger-zoom-in    > * { animation: santy-zoom-in  0.4s ease both; }
-.animate-stagger-from-left  > * { animation: santy-fade-in-from-left  0.5s ease both; }
-.animate-stagger-from-right > * { animation: santy-fade-in-from-right 0.5s ease both; }
+.animation-stagger-fade-in    > *, .animate-stagger-fade-in    > * { animation: santy-fade-in  0.5s ease both; }
+.animation-stagger-slide-up   > *, .animate-stagger-slide-up   > * { animation: santy-slide-up 0.5s ease both; }
+.animation-stagger-zoom-in    > *, .animate-stagger-zoom-in    > * { animation: santy-zoom-in  0.4s ease both; }
+.animation-stagger-from-left  > *, .animate-stagger-from-left  > * { animation: santy-fade-in-from-left  0.5s ease both; }
+.animation-stagger-from-right > *, .animate-stagger-from-right > * { animation: santy-fade-in-from-right 0.5s ease both; }
 
 /* Delay each child — 100ms steps */
-.animate-stagger-children-100 > *:nth-child(1)  { animation-delay: 0.0s; }
-.animate-stagger-children-100 > *:nth-child(2)  { animation-delay: 0.1s; }
-.animate-stagger-children-100 > *:nth-child(3)  { animation-delay: 0.2s; }
-.animate-stagger-children-100 > *:nth-child(4)  { animation-delay: 0.3s; }
-.animate-stagger-children-100 > *:nth-child(5)  { animation-delay: 0.4s; }
-.animate-stagger-children-100 > *:nth-child(6)  { animation-delay: 0.5s; }
-.animate-stagger-children-100 > *:nth-child(7)  { animation-delay: 0.6s; }
-.animate-stagger-children-100 > *:nth-child(8)  { animation-delay: 0.7s; }
-.animate-stagger-children-100 > *:nth-child(9)  { animation-delay: 0.8s; }
-.animate-stagger-children-100 > *:nth-child(10) { animation-delay: 0.9s; }
+.animation-stagger-children-100 > *:nth-child(1), .animate-stagger-children-100 > *:nth-child(1)  { animation-delay: 0.0s; }
+.animation-stagger-children-100 > *:nth-child(2), .animate-stagger-children-100 > *:nth-child(2)  { animation-delay: 0.1s; }
+.animation-stagger-children-100 > *:nth-child(3), .animate-stagger-children-100 > *:nth-child(3)  { animation-delay: 0.2s; }
+.animation-stagger-children-100 > *:nth-child(4), .animate-stagger-children-100 > *:nth-child(4)  { animation-delay: 0.3s; }
+.animation-stagger-children-100 > *:nth-child(5), .animate-stagger-children-100 > *:nth-child(5)  { animation-delay: 0.4s; }
+.animation-stagger-children-100 > *:nth-child(6), .animate-stagger-children-100 > *:nth-child(6)  { animation-delay: 0.5s; }
+.animation-stagger-children-100 > *:nth-child(7), .animate-stagger-children-100 > *:nth-child(7)  { animation-delay: 0.6s; }
+.animation-stagger-children-100 > *:nth-child(8), .animate-stagger-children-100 > *:nth-child(8)  { animation-delay: 0.7s; }
+.animation-stagger-children-100 > *:nth-child(9), .animate-stagger-children-100 > *:nth-child(9)  { animation-delay: 0.8s; }
+.animation-stagger-children-100 > *:nth-child(10), .animate-stagger-children-100 > *:nth-child(10) { animation-delay: 0.9s; }
 /* 200ms steps */
-.animate-stagger-children-200 > *:nth-child(1)  { animation-delay: 0.0s; }
-.animate-stagger-children-200 > *:nth-child(2)  { animation-delay: 0.2s; }
-.animate-stagger-children-200 > *:nth-child(3)  { animation-delay: 0.4s; }
-.animate-stagger-children-200 > *:nth-child(4)  { animation-delay: 0.6s; }
-.animate-stagger-children-200 > *:nth-child(5)  { animation-delay: 0.8s; }
-.animate-stagger-children-200 > *:nth-child(6)  { animation-delay: 1.0s; }
-.animate-stagger-children-200 > *:nth-child(7)  { animation-delay: 1.2s; }
-.animate-stagger-children-200 > *:nth-child(8)  { animation-delay: 1.4s; }
+.animation-stagger-children-200 > *:nth-child(1), .animate-stagger-children-200 > *:nth-child(1)  { animation-delay: 0.0s; }
+.animation-stagger-children-200 > *:nth-child(2), .animate-stagger-children-200 > *:nth-child(2)  { animation-delay: 0.2s; }
+.animation-stagger-children-200 > *:nth-child(3), .animate-stagger-children-200 > *:nth-child(3)  { animation-delay: 0.4s; }
+.animation-stagger-children-200 > *:nth-child(4), .animate-stagger-children-200 > *:nth-child(4)  { animation-delay: 0.6s; }
+.animation-stagger-children-200 > *:nth-child(5), .animate-stagger-children-200 > *:nth-child(5)  { animation-delay: 0.8s; }
+.animation-stagger-children-200 > *:nth-child(6), .animate-stagger-children-200 > *:nth-child(6)  { animation-delay: 1.0s; }
+.animation-stagger-children-200 > *:nth-child(7), .animate-stagger-children-200 > *:nth-child(7)  { animation-delay: 1.2s; }
+.animation-stagger-children-200 > *:nth-child(8), .animate-stagger-children-200 > *:nth-child(8)  { animation-delay: 1.4s; }
 /* 300ms steps */
-.animate-stagger-children-300 > *:nth-child(1)  { animation-delay: 0.0s; }
-.animate-stagger-children-300 > *:nth-child(2)  { animation-delay: 0.3s; }
-.animate-stagger-children-300 > *:nth-child(3)  { animation-delay: 0.6s; }
-.animate-stagger-children-300 > *:nth-child(4)  { animation-delay: 0.9s; }
-.animate-stagger-children-300 > *:nth-child(5)  { animation-delay: 1.2s; }
-.animate-stagger-children-300 > *:nth-child(6)  { animation-delay: 1.5s; }
+.animation-stagger-children-300 > *:nth-child(1), .animate-stagger-children-300 > *:nth-child(1)  { animation-delay: 0.0s; }
+.animation-stagger-children-300 > *:nth-child(2), .animate-stagger-children-300 > *:nth-child(2)  { animation-delay: 0.3s; }
+.animation-stagger-children-300 > *:nth-child(3), .animate-stagger-children-300 > *:nth-child(3)  { animation-delay: 0.6s; }
+.animation-stagger-children-300 > *:nth-child(4), .animate-stagger-children-300 > *:nth-child(4)  { animation-delay: 0.9s; }
+.animation-stagger-children-300 > *:nth-child(5), .animate-stagger-children-300 > *:nth-child(5)  { animation-delay: 1.2s; }
+.animation-stagger-children-300 > *:nth-child(6), .animate-stagger-children-300 > *:nth-child(6)  { animation-delay: 1.5s; }
 
 /* ═══════════════════════════════════════════════════════════════════════
    MORPHING & SHAPE ANIMATIONS
    ═══════════════════════════════════════════════════════════════════════ */
-.animate-morph-blob       { animation: santy-morph-blob      6s ease-in-out infinite; }
-.animate-border-spin      { animation: santy-border-spin     2s linear infinite; background: conic-gradient(from 0deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6); }
-.animate-shimmer          { overflow: hidden; position: relative; background: #f0f0f0; }
-.animate-shimmer::after   {
+.animation-morph-blob, .animate-morph-blob       { animation: santy-morph-blob      6s ease-in-out infinite; }
+.animation-border-spin, .animate-border-spin      { animation: santy-border-spin     2s linear infinite; background: conic-gradient(from 0deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6); }
+.animation-shimmer, .animate-shimmer          { overflow: hidden; position: relative; background: #f0f0f0; }
+.animation-shimmer::after, .animate-shimmer::after   {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.7) 50%, transparent 100%);
   animation: santy-shimmer 1.5s ease-in-out infinite;
 }
-.animate-gradient-shift   { background-size: 200% 200%; animation: santy-gradient-shift 3s ease infinite; }
-.animate-morph-circle-to-square { animation: santy-morph-circle-to-square 1.5s ease-in-out infinite alternate; }
-.animate-liquid           { animation: santy-liquid 3s ease-in-out infinite; }
+.animation-gradient-shift, .animate-gradient-shift   { background-size: 200% 200%; animation: santy-gradient-shift 3s ease infinite; }
+.animation-morph-circle-to-square, .animate-morph-circle-to-square { animation: santy-morph-circle-to-square 1.5s ease-in-out infinite alternate; }
+.animation-liquid, .animate-liquid           { animation: santy-liquid 3s ease-in-out infinite; }
 
 @keyframes santy-morph-blob {
   0%,100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
@@ -730,14 +724,14 @@
 /* ═══════════════════════════════════════════════════════════════════════
    3D ANIMATIONS
    ═══════════════════════════════════════════════════════════════════════ */
-.animate-flip-3d-x    { animation: santy-flip-3d-x    0.7s ease both; }
-.animate-flip-3d-y    { animation: santy-flip-3d-y    0.7s ease both; }
-.animate-rotate-3d    { animation: santy-rotate-3d    1.2s linear infinite; }
-.animate-tilt-left    { animation: santy-tilt-left    0.4s ease both; }
-.animate-tilt-right   { animation: santy-tilt-right   0.4s ease both; }
-.animate-depth-in     { animation: santy-depth-in     0.5s ease both; }
-.animate-depth-out    { animation: santy-depth-out    0.5s ease both; }
-.animate-swing-3d     { animation: santy-swing-3d     1s ease-in-out infinite; transform-origin: top center; perspective: 400px; }
+.animation-flip-3d-x, .animate-flip-3d-x    { animation: santy-flip-3d-x    0.7s ease both; }
+.animation-flip-3d-y, .animate-flip-3d-y    { animation: santy-flip-3d-y    0.7s ease both; }
+.animation-rotate-3d, .animate-rotate-3d    { animation: santy-rotate-3d    1.2s linear infinite; }
+.animation-tilt-left, .animate-tilt-left    { animation: santy-tilt-left    0.4s ease both; }
+.animation-tilt-right, .animate-tilt-right   { animation: santy-tilt-right   0.4s ease both; }
+.animation-depth-in, .animate-depth-in     { animation: santy-depth-in     0.5s ease both; }
+.animation-depth-out, .animate-depth-out    { animation: santy-depth-out    0.5s ease both; }
+.animation-swing-3d, .animate-swing-3d     { animation: santy-swing-3d     1s ease-in-out infinite; transform-origin: top center; perspective: 400px; }
 
 @keyframes santy-flip-3d-x    { from { transform: perspective(400px) rotateX(90deg); opacity: 0; } to { transform: perspective(400px) rotateX(0deg); opacity: 1; } }
 @keyframes santy-flip-3d-y    { from { transform: perspective(400px) rotateY(90deg); opacity: 0; } to { transform: perspective(400px) rotateY(0deg); opacity: 1; } }
@@ -755,15 +749,15 @@
 /* ═══════════════════════════════════════════════════════════════════════
    EXIT + PAGE TRANSITION ANIMATIONS
    ═══════════════════════════════════════════════════════════════════════ */
-.animate-exit-fade-out    { animation: santy-fade-out    0.4s ease both; }
-.animate-exit-slide-left  { animation: santy-exit-slide-left  0.4s ease both; }
-.animate-exit-slide-right { animation: santy-exit-slide-right 0.4s ease both; }
-.animate-exit-scale-down  { animation: santy-exit-scale-down  0.35s ease both; }
-.animate-exit-flip-out    { animation: santy-flip-out    0.5s ease both; }
-.animate-page-in-from-right { animation: santy-page-in-right  0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
-.animate-page-in-from-left  { animation: santy-page-in-left   0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
-.animate-page-out-to-left   { animation: santy-page-out-left  0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
-.animate-page-out-to-right  { animation: santy-page-out-right 0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+.animation-exit-fade-out, .animate-exit-fade-out    { animation: santy-fade-out    0.4s ease both; }
+.animation-exit-slide-left, .animate-exit-slide-left  { animation: santy-exit-slide-left  0.4s ease both; }
+.animation-exit-slide-right, .animate-exit-slide-right { animation: santy-exit-slide-right 0.4s ease both; }
+.animation-exit-scale-down, .animate-exit-scale-down  { animation: santy-exit-scale-down  0.35s ease both; }
+.animation-exit-flip-out, .animate-exit-flip-out    { animation: santy-flip-out    0.5s ease both; }
+.animation-page-in-from-right, .animate-page-in-from-right { animation: santy-page-in-right  0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+.animation-page-in-from-left, .animate-page-in-from-left  { animation: santy-page-in-left   0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+.animation-page-out-to-left, .animate-page-out-to-left   { animation: santy-page-out-left  0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+.animation-page-out-to-right, .animate-page-out-to-right  { animation: santy-page-out-right 0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
 
 @keyframes santy-exit-slide-left  { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(-60px); } }
 @keyframes santy-exit-slide-right { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(60px); } }
@@ -786,19 +780,19 @@
 /* ═══════════════════════════════════════════════════════════════════════
    NOTIFICATION & UI FEEDBACK ANIMATIONS
    ═══════════════════════════════════════════════════════════════════════ */
-.animate-toast-in         { animation: santy-toast-in        0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
-.animate-toast-out        { animation: santy-toast-out       0.3s ease both; }
-.animate-modal-in         { animation: santy-modal-in        0.3s cubic-bezier(0.34,1.56,0.64,1) both; }
-.animate-modal-out        { animation: santy-modal-out       0.25s ease both; }
-.animate-drawer-in-right  { animation: santy-drawer-in-right  0.35s cubic-bezier(0.25,0.46,0.45,0.94) both; }
-.animate-drawer-out-right { animation: santy-drawer-out-right 0.3s ease both; }
-.animate-drawer-in-bottom { animation: santy-drawer-in-bottom 0.35s cubic-bezier(0.25,0.46,0.45,0.94) both; }
-.animate-dropdown-in      { animation: santy-dropdown-in     0.2s cubic-bezier(0.34,1.56,0.64,1) both; transform-origin: top center; }
-.animate-dropdown-out     { animation: santy-dropdown-out    0.15s ease both; transform-origin: top center; }
-.animate-tooltip-in       { animation: santy-zoom-in         0.15s ease both; }
-.animate-badge-pop        { animation: santy-badge-pop       0.4s cubic-bezier(0.34,1.56,0.64,1) both; }
-.animate-success-checkmark { animation: santy-checkmark      0.6s ease both; stroke-dasharray: 50; stroke-dashoffset: 50; }
-.animate-error-shake      { animation: santy-shake-x         0.5s ease both; }
+.animation-toast-in, .animate-toast-in         { animation: santy-toast-in        0.4s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+.animation-toast-out, .animate-toast-out        { animation: santy-toast-out       0.3s ease both; }
+.animation-modal-in, .animate-modal-in         { animation: santy-modal-in        0.3s cubic-bezier(0.34,1.56,0.64,1) both; }
+.animation-modal-out, .animate-modal-out        { animation: santy-modal-out       0.25s ease both; }
+.animation-drawer-in-right, .animate-drawer-in-right  { animation: santy-drawer-in-right  0.35s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+.animation-drawer-out-right, .animate-drawer-out-right { animation: santy-drawer-out-right 0.3s ease both; }
+.animation-drawer-in-bottom, .animate-drawer-in-bottom { animation: santy-drawer-in-bottom 0.35s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+.animation-dropdown-in, .animate-dropdown-in      { animation: santy-dropdown-in     0.2s cubic-bezier(0.34,1.56,0.64,1) both; transform-origin: top center; }
+.animation-dropdown-out, .animate-dropdown-out     { animation: santy-dropdown-out    0.15s ease both; transform-origin: top center; }
+.animation-tooltip-in, .animate-tooltip-in       { animation: santy-zoom-in         0.15s ease both; }
+.animation-badge-pop, .animate-badge-pop        { animation: santy-badge-pop       0.4s cubic-bezier(0.34,1.56,0.64,1) both; }
+.animation-success-checkmark, .animate-success-checkmark { animation: santy-checkmark      0.6s ease both; stroke-dasharray: 50; stroke-dashoffset: 50; }
+.animation-error-shake, .animate-error-shake      { animation: santy-shake-x         0.5s ease both; }
 
 @keyframes santy-toast-in         { from { opacity: 0; transform: translateY(100%) scale(0.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
 @keyframes santy-toast-out        { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(20px); } }
@@ -860,30 +854,30 @@
 
 /* ── when-visible: — viewport-entry animations ── */
 /* Requires santy-scroll.js observer. Classes activate via .is-visible. */
-.when-visible\:animate-fade-in { animation:none; animation-fill-mode:both; }
-.when-visible\:animate-fade-in.is-visible { animation-name:wv-fade-in; animation-duration:0.6s; animation-timing-function:ease-out; }
-.when-visible\:animate-slide-up { animation:none; animation-fill-mode:both; }
-.when-visible\:animate-slide-up.is-visible { animation-name:wv-slide-up; animation-duration:0.5s; animation-timing-function:ease-out; }
-.when-visible\:animate-slide-in-from-left { animation:none; animation-fill-mode:both; }
-.when-visible\:animate-slide-in-from-left.is-visible { animation-name:wv-slide-in-left; animation-duration:0.5s; animation-timing-function:ease-out; }
-.when-visible\:animate-slide-in-from-right { animation:none; animation-fill-mode:both; }
-.when-visible\:animate-slide-in-from-right.is-visible { animation-name:wv-slide-in-right; animation-duration:0.5s; animation-timing-function:ease-out; }
-.when-visible\:animate-slide-in-from-bottom { animation:none; animation-fill-mode:both; }
-.when-visible\:animate-slide-in-from-bottom.is-visible { animation-name:wv-slide-in-bottom; animation-duration:0.5s; animation-timing-function:ease-out; }
-.when-visible\:animate-zoom-in { animation:none; animation-fill-mode:both; }
-.when-visible\:animate-zoom-in.is-visible { animation-name:wv-zoom-in; animation-duration:0.5s; animation-timing-function:ease-out; }
+.when-visible\:animation-fade-in, .when-visible\:animate-fade-in { animation:none; animation-fill-mode:both; }
+.when-visible\:animation-fade-in.is-visible, .when-visible\:animate-fade-in.is-visible { animation-name:wv-fade-in; animation-duration:0.6s; animation-timing-function:ease-out; }
+.when-visible\:animation-slide-up, .when-visible\:animate-slide-up { animation:none; animation-fill-mode:both; }
+.when-visible\:animation-slide-up.is-visible, .when-visible\:animate-slide-up.is-visible { animation-name:wv-slide-up; animation-duration:0.5s; animation-timing-function:ease-out; }
+.when-visible\:animation-slide-in-from-left, .when-visible\:animate-slide-in-from-left { animation:none; animation-fill-mode:both; }
+.when-visible\:animation-slide-in-from-left.is-visible, .when-visible\:animate-slide-in-from-left.is-visible { animation-name:wv-slide-in-left; animation-duration:0.5s; animation-timing-function:ease-out; }
+.when-visible\:animation-slide-in-from-right, .when-visible\:animate-slide-in-from-right { animation:none; animation-fill-mode:both; }
+.when-visible\:animation-slide-in-from-right.is-visible, .when-visible\:animate-slide-in-from-right.is-visible { animation-name:wv-slide-in-right; animation-duration:0.5s; animation-timing-function:ease-out; }
+.when-visible\:animation-slide-in-from-bottom, .when-visible\:animate-slide-in-from-bottom { animation:none; animation-fill-mode:both; }
+.when-visible\:animation-slide-in-from-bottom.is-visible, .when-visible\:animate-slide-in-from-bottom.is-visible { animation-name:wv-slide-in-bottom; animation-duration:0.5s; animation-timing-function:ease-out; }
+.when-visible\:animation-zoom-in, .when-visible\:animate-zoom-in { animation:none; animation-fill-mode:both; }
+.when-visible\:animation-zoom-in.is-visible, .when-visible\:animate-zoom-in.is-visible { animation-name:wv-zoom-in; animation-duration:0.5s; animation-timing-function:ease-out; }
 .when-visible\:animate-zoom-in-up { animation:none; animation-fill-mode:both; }
 .when-visible\:animate-zoom-in-up.is-visible { animation-name:wv-zoom-in-up; animation-duration:0.5s; animation-timing-function:ease-out; }
 .when-visible\:animate-zoom-bounce { animation:none; animation-fill-mode:both; }
 .when-visible\:animate-zoom-bounce.is-visible { animation-name:wv-zoom-bounce; animation-duration:0.5s; animation-timing-function:cubic-bezier(0.34,1.56,0.64,1); }
-.when-visible\:animate-bounce-in-from-bottom { animation:none; animation-fill-mode:both; }
-.when-visible\:animate-bounce-in-from-bottom.is-visible { animation-name:wv-bounce-in-bottom; animation-duration:0.7s; animation-timing-function:ease-out; }
+.when-visible\:animation-bounce-in-from-bottom, .when-visible\:animate-bounce-in-from-bottom { animation:none; animation-fill-mode:both; }
+.when-visible\:animation-bounce-in-from-bottom.is-visible, .when-visible\:animate-bounce-in-from-bottom.is-visible { animation-name:wv-bounce-in-bottom; animation-duration:0.7s; animation-timing-function:ease-out; }
 .when-visible\:animate-flip-in { animation:none; animation-fill-mode:both; }
 .when-visible\:animate-flip-in.is-visible { animation-name:wv-flip-in; animation-duration:0.6s; animation-timing-function:ease-out; }
-.when-visible\:animate-bounce { animation:none; animation-fill-mode:both; }
-.when-visible\:animate-bounce.is-visible { animation-name:santy-bounce; animation-duration:1s; animation-timing-function:ease; }
-.when-visible\:animate-pulse { animation:none; animation-fill-mode:both; }
-.when-visible\:animate-pulse.is-visible { animation-name:santy-pulse; animation-duration:2s; animation-timing-function:cubic-bezier(0.4,0,0.6,1); }
+.when-visible\:animation-bounce, .when-visible\:animate-bounce { animation:none; animation-fill-mode:both; }
+.when-visible\:animation-bounce.is-visible, .when-visible\:animate-bounce.is-visible { animation-name:santy-bounce; animation-duration:1s; animation-timing-function:ease; }
+.when-visible\:animation-pulse, .when-visible\:animate-pulse { animation:none; animation-fill-mode:both; }
+.when-visible\:animation-pulse.is-visible, .when-visible\:animate-pulse.is-visible { animation-name:santy-pulse; animation-duration:2s; animation-timing-function:cubic-bezier(0.4,0,0.6,1); }
 
 /* ── enter-at-{n} — how much of element must be visible before triggering ── */
 .enter-at-15 { --santy-enter-threshold:0.15; }

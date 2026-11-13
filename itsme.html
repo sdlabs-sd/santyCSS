@@ -8,11 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy-variants.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy-components.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy-animations.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.9.6/dist/santy-icons.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy-variants.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy-components.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy-animations.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy-icons.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -104,7 +104,7 @@
       <li><button class="itsme-nav-link" onclick="navTo('contact')">Contact</button></li>
     </ul>
 
-    <div class="make-flex align-center gap-14">
+    <div class="display-flex align-center gap-14">
       <a href="https://santycss.santy.in/docs" class="santycss-badge" target="_blank" title="Built with SantyCSS">
         ⚡ SantyCSS
       </a>
@@ -126,22 +126,22 @@
     <div class="itsme-dot-deco" style="width:240px;height:240px;bottom:40px;left:-60px;"></div>
 
     <!-- Profile ring with real photo -->
-    <div class="itsme-profile-ring animate-zoom-in animation-fill-forwards">
+    <div class="itsme-profile-ring animation-zoom-in animation-fill-forwards">
       <div class="itsme-hero-photo-ring">
         <img src="assest/Santy.png" alt="Santhosh Prabakar" onerror="this.parentElement.style.background='linear-gradient(135deg,#fde68a 0%,#f97316 50%,#dc2626 100%)';this.style.display='none';" />
       </div>
     </div>
 
     <!-- Name & intro -->
-    <div class="animate-fade-in-from-bottom animation-delay-200 animation-fill-forwards" style="text-align:center;">
-      <p class="itsme-eyebrow add-margin-bottom-8">Hello, I'm</p>
+    <div class="animation-fade-in-from-bottom animation-delay-200 animation-fill-forwards" style="text-align:center;">
+      <p class="itsme-eyebrow margin-bottom-8">Hello, I'm</p>
       <h1 class="itsme-hero-name">Santhosh Prabakar</h1>
       <p class="itsme-hero-tagline">
         UI/UX Lead &amp; Developer based in Hyderabad — 12+ years crafting
         beautiful, accessible digital products across design &amp; front-end.
       </p>
 
-      <div class="make-flex gap-14 justify-center flex-wrap">
+      <div class="display-flex gap-14 justify-center flex-wrap">
         <button class="itsme-btn" onclick="navTo('contact')">
           <span class="icon icon-chat-dots icon-16" style="background-color:#fff;"></span>
           Hire Me
@@ -154,7 +154,7 @@
     </div>
 
     <!-- Social links -->
-    <div class="itsme-social-row animate-fade-in-from-bottom animation-delay-400 animation-fill-forwards">
+    <div class="itsme-social-row animation-fade-in-from-bottom animation-delay-400 animation-fill-forwards">
       <a href="https://www.linkedin.com/in/santhosh-prabakar-8a05b0aa/" class="itsme-social-btn" aria-label="LinkedIn" target="_blank">
         <span class="icon icon-linkedin icon-16" style="background-color:#888;"></span>
       </a>
@@ -178,14 +178,14 @@
     <div class="itsme-section-inner">
 
       <!-- ── Personal Info ── -->
-      <div class="add-margin-bottom-64">
+      <div class="margin-bottom-64">
         <div class="itsme-eyebrow">About</div>
-        <h2 class="itsme-title add-margin-top-4">Know Me More</h2>
+        <h2 class="itsme-title margin-top-4">Know Me More</h2>
         <div class="itsme-divider"></div>
 
         <div class="grid-2 gap-48 align-start" style="gap:48px;">
           <!-- Left: photo + CTA -->
-          <div class="animate-fade-in-from-left animation-fill-forwards">
+          <div class="animation-fade-in-from-left animation-fill-forwards">
             <div class="itsme-profile-photo-wrap">
               <img
                 src="assest/Santy.png"
@@ -194,15 +194,15 @@
                 onerror="this.parentElement.style.background='linear-gradient(135deg,#fde68a 0%,#f97316 50%,#dc2626 100%)';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';this.parentElement.style.minHeight='320px';this.style.display='none';this.parentElement.innerHTML+='<span style=\'font-size:64px;font-weight:900;color:rgba(255,255,255,0.9)\'>SP</span>';"
               />
             </div>
-            <div class="make-flex gap-12 flex-wrap">
+            <div class="display-flex gap-12 flex-wrap">
               <button class="itsme-btn" onclick="navTo('contact')">Hire Me</button>
               <a href="mailto:hello@santy.in" class="itsme-btn itsme-btn-ghost">Get In Touch</a>
             </div>
           </div>
 
           <!-- Right: info + description -->
-          <div class="animate-fade-in-from-bottom animation-delay-200 animation-fill-forwards">
-            <p class="set-text-15 line-height-relaxed add-margin-bottom-28" style="color:#666;">
+          <div class="animation-fade-in-from-bottom animation-delay-200 animation-fill-forwards">
+            <p class="text-size-15 line-height-relaxed margin-bottom-28" style="color:#666;">
               I'm a passionate <strong style="color:#1a1a2e;">UI/UX Lead</strong> and Front-End Developer
               with over <strong style="color:#f97316;">12 years of experience</strong> designing, developing, and
               optimizing digital products. I specialize in front-end development (ReactJS, Tailwind, Bootstrap),
@@ -243,51 +243,51 @@
       </div>
 
       <!-- ── Services ── -->
-      <div class="add-margin-bottom-64">
-        <div class="text-center add-margin-bottom-40">
+      <div class="margin-bottom-64">
+        <div class="text-center margin-bottom-40">
           <div class="itsme-eyebrow">What I Offer</div>
-          <h2 class="itsme-title add-margin-top-4">Services</h2>
+          <h2 class="itsme-title margin-top-4">Services</h2>
           <div class="itsme-divider" style="margin:10px auto 0;"></div>
         </div>
 
         <div class="grid-4 gap-20" style="gap:20px;">
 
-          <div class="itsme-service-card animate-fade-in-from-bottom animation-delay-100 animation-fill-forwards on-hover:scale-105 transition-all">
+          <div class="itsme-service-card animation-fade-in-from-bottom animation-delay-100 animation-fill-forwards on-hover:scale-105 transition-all">
             <div class="itsme-service-icon">
               <span class="icon icon-layout-wtf icon-24" style="background-color:#f97316;width:24px;height:24px;"></span>
             </div>
-            <div class="set-text-16 text-bold add-margin-bottom-10" style="color:#1a1a2e;">UI/UX Design</div>
-            <p class="set-text-13 line-height-relaxed add-margin-0" style="color:#777;">
+            <div class="text-size-16 text-bold margin-bottom-10" style="color:#1a1a2e;">UI/UX Design</div>
+            <p class="text-size-13 line-height-relaxed margin-0" style="color:#777;">
               Figma, Adobe XD, user research, wireframing, prototyping and accessible design systems that scale.
             </p>
           </div>
 
-          <div class="itsme-service-card animate-fade-in-from-bottom animation-delay-200 animation-fill-forwards on-hover:scale-105 transition-all">
+          <div class="itsme-service-card animation-fade-in-from-bottom animation-delay-200 animation-fill-forwards on-hover:scale-105 transition-all">
             <div class="itsme-service-icon">
               <span class="icon icon-code-slash icon-24" style="background-color:#3b82f6;width:24px;height:24px;"></span>
             </div>
-            <div class="set-text-16 text-bold add-margin-bottom-10" style="color:#1a1a2e;">Web Development</div>
-            <p class="set-text-13 line-height-relaxed add-margin-0" style="color:#777;">
+            <div class="text-size-16 text-bold margin-bottom-10" style="color:#1a1a2e;">Web Development</div>
+            <p class="text-size-13 line-height-relaxed margin-0" style="color:#777;">
               ReactJS, HTML/CSS, JavaScript — clean, responsive and performant front-end builds from design to deploy.
             </p>
           </div>
 
-          <div class="itsme-service-card animate-fade-in-from-bottom animation-delay-300 animation-fill-forwards on-hover:scale-105 transition-all">
+          <div class="itsme-service-card animation-fade-in-from-bottom animation-delay-300 animation-fill-forwards on-hover:scale-105 transition-all">
             <div class="itsme-service-icon">
               <span class="icon icon-cloud-arrow-up icon-24" style="background-color:#8b5cf6;width:24px;height:24px;"></span>
             </div>
-            <div class="set-text-16 text-bold add-margin-bottom-10" style="color:#1a1a2e;">Cloud &amp; DevOps</div>
-            <p class="set-text-13 line-height-relaxed add-margin-0" style="color:#777;">
+            <div class="text-size-16 text-bold margin-bottom-10" style="color:#1a1a2e;">Cloud &amp; DevOps</div>
+            <p class="text-size-13 line-height-relaxed margin-0" style="color:#777;">
               AWS, Firebase, Google Cloud and Digital Ocean deployments with CI/CD pipelines for front-end teams.
             </p>
           </div>
 
-          <div class="itsme-service-card animate-fade-in-from-bottom animation-delay-400 animation-fill-forwards on-hover:scale-105 transition-all">
+          <div class="itsme-service-card animation-fade-in-from-bottom animation-delay-400 animation-fill-forwards on-hover:scale-105 transition-all">
             <div class="itsme-service-icon">
               <span class="icon icon-megaphone icon-24" style="background-color:#22c55e;width:24px;height:24px;"></span>
             </div>
-            <div class="set-text-16 text-bold add-margin-bottom-10" style="color:#1a1a2e;">Digital Marketing</div>
-            <p class="set-text-13 line-height-relaxed add-margin-0" style="color:#777;">
+            <div class="text-size-16 text-bold margin-bottom-10" style="color:#1a1a2e;">Digital Marketing</div>
+            <p class="text-size-13 line-height-relaxed margin-0" style="color:#777;">
               SEO, SEM, social media marketing, Google Ads and email campaigns that drive real engagement.
             </p>
           </div>
@@ -296,10 +296,10 @@
       </div>
 
       <!-- ── Resume: Education + Experience ── -->
-      <div class="add-margin-bottom-64">
-        <div class="text-center add-margin-bottom-40">
+      <div class="margin-bottom-64">
+        <div class="text-center margin-bottom-40">
           <div class="itsme-eyebrow">My Story</div>
-          <h2 class="itsme-title add-margin-top-4">Experience &amp; Education</h2>
+          <h2 class="itsme-title margin-top-4">Experience &amp; Education</h2>
           <div class="itsme-divider" style="margin:10px auto 0;"></div>
         </div>
 
@@ -307,8 +307,8 @@
 
           <!-- Education -->
           <div>
-            <h3 class="set-text-18 text-bold add-margin-bottom-28" style="color:#1a1a2e;">
-              <span class="icon icon-mortarboard icon-20 add-margin-right-8" style="background-color:#f97316;"></span>
+            <h3 class="text-size-18 text-bold margin-bottom-28" style="color:#1a1a2e;">
+              <span class="icon icon-mortarboard icon-20 margin-right-8" style="background-color:#f97316;"></span>
               Education
             </h3>
             <div class="itsme-timeline">
@@ -334,8 +334,8 @@
 
           <!-- Experience -->
           <div>
-            <h3 class="set-text-18 text-bold add-margin-bottom-28" style="color:#1a1a2e;">
-              <span class="icon icon-briefcase icon-20 add-margin-right-8" style="background-color:#f97316;"></span>
+            <h3 class="text-size-18 text-bold margin-bottom-28" style="color:#1a1a2e;">
+              <span class="icon icon-briefcase icon-20 margin-right-8" style="background-color:#f97316;"></span>
               Experience
             </h3>
             <div class="itsme-timeline">
@@ -387,10 +387,10 @@
       </div>
 
       <!-- ── Skills (Tag Cloud) ── -->
-      <div class="add-margin-bottom-64">
-        <div class="text-center add-margin-bottom-40">
+      <div class="margin-bottom-64">
+        <div class="text-center margin-bottom-40">
           <div class="itsme-eyebrow">Competencies</div>
-          <h2 class="itsme-title add-margin-top-4">My Skills</h2>
+          <h2 class="itsme-title margin-top-4">My Skills</h2>
           <div class="itsme-divider" style="margin:10px auto 0;"></div>
         </div>
 
@@ -398,7 +398,7 @@
 
           <!-- Design skills -->
           <div>
-            <div class="set-text-12 text-bold add-margin-bottom-20"
+            <div class="text-size-12 text-bold margin-bottom-20"
                  style="color:#aaa;text-transform:uppercase;letter-spacing:0.1em;">Design &amp; UX</div>
             <div class="skill-tag-grid">
               <span class="skill-tag skill-tag-orange">
@@ -420,7 +420,7 @@
 
           <!-- Dev skills -->
           <div>
-            <div class="set-text-12 text-bold add-margin-bottom-20"
+            <div class="text-size-12 text-bold margin-bottom-20"
                  style="color:#aaa;text-transform:uppercase;letter-spacing:0.1em;">Development &amp; Cloud</div>
             <div class="skill-tag-grid">
               <span class="skill-tag skill-tag-blue">
@@ -448,66 +448,66 @@
 
       <!-- ── Testimonials ── -->
       <div>
-        <div class="text-center add-margin-bottom-40">
+        <div class="text-center margin-bottom-40">
           <div class="itsme-eyebrow">Kind Words</div>
-          <h2 class="itsme-title add-margin-top-4">Testimonials</h2>
+          <h2 class="itsme-title margin-top-4">Testimonials</h2>
           <div class="itsme-divider" style="margin:10px auto 0;"></div>
         </div>
 
         <div class="grid-2 gap-20" style="gap:20px;">
 
-          <div class="itsme-testimonial animate-fade-in-from-bottom animation-delay-100 animation-fill-forwards">
+          <div class="itsme-testimonial animation-fade-in-from-bottom animation-delay-100 animation-fill-forwards">
             <div class="itsme-testimonial-quote">"</div>
-            <p class="set-text-14 line-height-relaxed add-margin-bottom-20" style="color:#666;">
+            <p class="text-size-14 line-height-relaxed margin-bottom-20" style="color:#666;">
               Santhosh has an exceptional eye for detail and consistently delivers work that bridges design and engineering beautifully. His ability to lead cross-functional teams while maintaining design quality is remarkable.
             </p>
-            <div class="make-flex align-center gap-12">
-              <div class="make-avatar make-circle" style="width:42px;height:42px;background:linear-gradient(135deg,#fde68a,#f97316);color:#fff;font-size:14px;font-weight:800;">RK</div>
+            <div class="display-flex align-center gap-12">
+              <div class="make-avatar radius-circle" style="width:42px;height:42px;background:linear-gradient(135deg,#fde68a,#f97316);color:#fff;font-size:14px;font-weight:800;">RK</div>
               <div>
-                <div class="set-text-14 text-bold" style="color:#1a1a2e;">Rajesh Kumar</div>
-                <div class="set-text-12" style="color:#aaa;">Engineering Manager, HSBC</div>
+                <div class="text-size-14 text-bold" style="color:#1a1a2e;">Rajesh Kumar</div>
+                <div class="text-size-12" style="color:#aaa;">Engineering Manager, HSBC</div>
               </div>
             </div>
           </div>
 
-          <div class="itsme-testimonial animate-fade-in-from-bottom animation-delay-200 animation-fill-forwards">
+          <div class="itsme-testimonial animation-fade-in-from-bottom animation-delay-200 animation-fill-forwards">
             <div class="itsme-testimonial-quote">"</div>
-            <p class="set-text-14 line-height-relaxed add-margin-bottom-20" style="color:#666;">
+            <p class="text-size-14 line-height-relaxed margin-bottom-20" style="color:#666;">
               Working with Santhosh transformed how we think about our digital presence. He's not just a designer — he's a strategic partner who understands both users and business goals.
             </p>
-            <div class="make-flex align-center gap-12">
-              <div class="make-avatar make-circle" style="width:42px;height:42px;background:linear-gradient(135deg,#93c5fd,#3b82f6);color:#fff;font-size:14px;font-weight:800;">PM</div>
+            <div class="display-flex align-center gap-12">
+              <div class="make-avatar radius-circle" style="width:42px;height:42px;background:linear-gradient(135deg,#93c5fd,#3b82f6);color:#fff;font-size:14px;font-weight:800;">PM</div>
               <div>
-                <div class="set-text-14 text-bold" style="color:#1a1a2e;">Priya Mehta</div>
-                <div class="set-text-12" style="color:#aaa;">Product Director, Cleartelligence</div>
+                <div class="text-size-14 text-bold" style="color:#1a1a2e;">Priya Mehta</div>
+                <div class="text-size-12" style="color:#aaa;">Product Director, Cleartelligence</div>
               </div>
             </div>
           </div>
 
-          <div class="itsme-testimonial animate-fade-in-from-bottom animation-delay-300 animation-fill-forwards">
+          <div class="itsme-testimonial animation-fade-in-from-bottom animation-delay-300 animation-fill-forwards">
             <div class="itsme-testimonial-quote">"</div>
-            <p class="set-text-14 line-height-relaxed add-margin-bottom-20" style="color:#666;">
+            <p class="text-size-14 line-height-relaxed margin-bottom-20" style="color:#666;">
               Santhosh's ReactJS components reduced our dev time by 40%. His deep understanding of both design and code makes him uniquely valuable in any team. Highly recommend.
             </p>
-            <div class="make-flex align-center gap-12">
-              <div class="make-avatar make-circle" style="width:42px;height:42px;background:linear-gradient(135deg,#86efac,#22c55e);color:#fff;font-size:14px;font-weight:800;">AV</div>
+            <div class="display-flex align-center gap-12">
+              <div class="make-avatar radius-circle" style="width:42px;height:42px;background:linear-gradient(135deg,#86efac,#22c55e);color:#fff;font-size:14px;font-weight:800;">AV</div>
               <div>
-                <div class="set-text-14 text-bold" style="color:#1a1a2e;">Arun Varma</div>
-                <div class="set-text-12" style="color:#aaa;">Tech Lead, Systemsoft</div>
+                <div class="text-size-14 text-bold" style="color:#1a1a2e;">Arun Varma</div>
+                <div class="text-size-12" style="color:#aaa;">Tech Lead, Systemsoft</div>
               </div>
             </div>
           </div>
 
-          <div class="itsme-testimonial animate-fade-in-from-bottom animation-delay-400 animation-fill-forwards">
+          <div class="itsme-testimonial animation-fade-in-from-bottom animation-delay-400 animation-fill-forwards">
             <div class="itsme-testimonial-quote">"</div>
-            <p class="set-text-14 line-height-relaxed add-margin-bottom-20" style="color:#666;">
+            <p class="text-size-14 line-height-relaxed margin-bottom-20" style="color:#666;">
               From wireframes to final delivery, Santhosh is calm, precise, and always one step ahead. He mentored our junior designers and elevated the whole team's output.
             </p>
-            <div class="make-flex align-center gap-12">
-              <div class="make-avatar make-circle" style="width:42px;height:42px;background:linear-gradient(135deg,#d8b4fe,#8b5cf6);color:#fff;font-size:14px;font-weight:800;">SD</div>
+            <div class="display-flex align-center gap-12">
+              <div class="make-avatar radius-circle" style="width:42px;height:42px;background:linear-gradient(135deg,#d8b4fe,#8b5cf6);color:#fff;font-size:14px;font-weight:800;">SD</div>
               <div>
-                <div class="set-text-14 text-bold" style="color:#1a1a2e;">Sneha Das</div>
-                <div class="set-text-12" style="color:#aaa;">Design Manager, Skuad</div>
+                <div class="text-size-14 text-bold" style="color:#1a1a2e;">Sneha Das</div>
+                <div class="text-size-12" style="color:#aaa;">Design Manager, Skuad</div>
               </div>
             </div>
           </div>
@@ -524,9 +524,9 @@
   <section id="works" class="itsme-section">
     <div class="itsme-section-inner">
 
-      <div class="text-center add-margin-bottom-40">
+      <div class="text-center margin-bottom-40">
         <div class="itsme-eyebrow">My Work</div>
-        <h2 class="itsme-title add-margin-top-4">Portfolio</h2>
+        <h2 class="itsme-title margin-top-4">Portfolio</h2>
         <div class="itsme-divider" style="margin:10px auto 0;"></div>
       </div>
 
@@ -541,112 +541,112 @@
       <!-- Grid -->
       <div class="grid-3 gap-24" style="gap:24px;" id="works-grid">
 
-        <div class="itsme-work-card animate-zoom-in animation-fill-forwards" data-cat="ux">
+        <div class="itsme-work-card animation-zoom-in animation-fill-forwards" data-cat="ux">
           <div class="itsme-work-thumb">
             <div class="itsme-work-thumb-bg" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe,#93c5fd);">
               <span class="icon icon-layout-wtf icon-48" style="background-color:rgba(59,130,246,0.5);width:48px;height:48px;"></span>
             </div>
             <div class="itsme-work-overlay">
               <span class="icon icon-eye icon-28" style="background-color:#fff;width:28px;height:28px;"></span>
-              <div class="set-text-13 text-bold" style="color:#fff;">View Project</div>
+              <div class="text-size-13 text-bold" style="color:#fff;">View Project</div>
             </div>
           </div>
-          <div class="add-padding-18">
+          <div class="padding-18">
             <div class="itsme-work-cat">UX / Product</div>
-            <div class="set-text-15 text-bold" style="color:#1a1a2e;">HSBC Internal Portal</div>
-            <div class="set-text-12 add-margin-top-4" style="color:#aaa;">ReactJS · Figma · Usability Testing</div>
+            <div class="text-size-15 text-bold" style="color:#1a1a2e;">HSBC Internal Portal</div>
+            <div class="text-size-12 margin-top-4" style="color:#aaa;">ReactJS · Figma · Usability Testing</div>
           </div>
         </div>
 
-        <div class="itsme-work-card animate-zoom-in animation-delay-100 animation-fill-forwards" data-cat="web">
+        <div class="itsme-work-card animation-zoom-in animation-delay-100 animation-fill-forwards" data-cat="web">
           <div class="itsme-work-thumb">
             <div class="itsme-work-thumb-bg" style="background:linear-gradient(135deg,#fef3c7,#fde68a,#fbbf24);">
               <span class="icon icon-cart icon-48" style="background-color:rgba(245,158,11,0.5);width:48px;height:48px;"></span>
             </div>
             <div class="itsme-work-overlay">
               <span class="icon icon-eye icon-28" style="background-color:#fff;width:28px;height:28px;"></span>
-              <div class="set-text-13 text-bold" style="color:#fff;">View Project</div>
+              <div class="text-size-13 text-bold" style="color:#fff;">View Project</div>
             </div>
           </div>
-          <div class="add-padding-18">
+          <div class="padding-18">
             <div class="itsme-work-cat">Web Design</div>
-            <div class="set-text-15 text-bold" style="color:#1a1a2e;">SAP eCommerce — Callaway Golf</div>
-            <div class="set-text-12 add-margin-top-4" style="color:#aaa;">SAP Hybris · Performance · +25% Engagement</div>
+            <div class="text-size-15 text-bold" style="color:#1a1a2e;">SAP eCommerce — Callaway Golf</div>
+            <div class="text-size-12 margin-top-4" style="color:#aaa;">SAP Hybris · Performance · +25% Engagement</div>
           </div>
         </div>
 
-        <div class="itsme-work-card animate-zoom-in animation-delay-200 animation-fill-forwards" data-cat="graphic">
+        <div class="itsme-work-card animation-zoom-in animation-delay-200 animation-fill-forwards" data-cat="graphic">
           <div class="itsme-work-thumb">
             <div class="itsme-work-thumb-bg" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe,#c4b5fd);">
               <span class="icon icon-palette icon-48" style="background-color:rgba(139,92,246,0.5);width:48px;height:48px;"></span>
             </div>
             <div class="itsme-work-overlay">
               <span class="icon icon-eye icon-28" style="background-color:#fff;width:28px;height:28px;"></span>
-              <div class="set-text-13 text-bold" style="color:#fff;">View Project</div>
+              <div class="text-size-13 text-bold" style="color:#fff;">View Project</div>
             </div>
           </div>
-          <div class="add-padding-18">
+          <div class="padding-18">
             <div class="itsme-work-cat">Graphic Design</div>
-            <div class="set-text-15 text-bold" style="color:#1a1a2e;">Brand Identity Systems</div>
-            <div class="set-text-12 add-margin-top-4" style="color:#aaa;">Logo · Guidelines · Print Collateral</div>
+            <div class="text-size-15 text-bold" style="color:#1a1a2e;">Brand Identity Systems</div>
+            <div class="text-size-12 margin-top-4" style="color:#aaa;">Logo · Guidelines · Print Collateral</div>
           </div>
         </div>
 
-        <div class="itsme-work-card animate-zoom-in animation-delay-100 animation-fill-forwards" data-cat="ux">
+        <div class="itsme-work-card animation-zoom-in animation-delay-100 animation-fill-forwards" data-cat="ux">
           <div class="itsme-work-thumb">
             <div class="itsme-work-thumb-bg" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0,#6ee7b7);">
               <span class="icon icon-phone icon-48" style="background-color:rgba(34,197,94,0.5);width:48px;height:48px;"></span>
             </div>
             <div class="itsme-work-overlay">
               <span class="icon icon-eye icon-28" style="background-color:#fff;width:28px;height:28px;"></span>
-              <div class="set-text-13 text-bold" style="color:#fff;">View Project</div>
+              <div class="text-size-13 text-bold" style="color:#fff;">View Project</div>
             </div>
           </div>
-          <div class="add-padding-18">
+          <div class="padding-18">
             <div class="itsme-work-cat">UX / Product</div>
-            <div class="set-text-15 text-bold" style="color:#1a1a2e;">Mobile App UI — React Native</div>
-            <div class="set-text-12 add-margin-top-4" style="color:#aaa;">Figma · Prototyping · 10X Incubator</div>
+            <div class="text-size-15 text-bold" style="color:#1a1a2e;">Mobile App UI — React Native</div>
+            <div class="text-size-12 margin-top-4" style="color:#aaa;">Figma · Prototyping · 10X Incubator</div>
           </div>
         </div>
 
-        <div class="itsme-work-card animate-zoom-in animation-delay-200 animation-fill-forwards" data-cat="web">
+        <div class="itsme-work-card animation-zoom-in animation-delay-200 animation-fill-forwards" data-cat="web">
           <div class="itsme-work-thumb">
             <div class="itsme-work-thumb-bg" style="background:linear-gradient(135deg,#fee2e2,#fecaca,#fca5a5);">
               <span class="icon icon-globe icon-48" style="background-color:rgba(239,68,68,0.4);width:48px;height:48px;"></span>
             </div>
             <div class="itsme-work-overlay">
               <span class="icon icon-eye icon-28" style="background-color:#fff;width:28px;height:28px;"></span>
-              <div class="set-text-13 text-bold" style="color:#fff;">View Project</div>
+              <div class="text-size-13 text-bold" style="color:#fff;">View Project</div>
             </div>
           </div>
-          <div class="add-padding-18">
+          <div class="padding-18">
             <div class="itsme-work-cat">Web Design</div>
-            <div class="set-text-15 text-bold" style="color:#1a1a2e;">WordPress &amp; Marketing Sites</div>
-            <div class="set-text-12 add-margin-top-4" style="color:#aaa;">WordPress · SEO · +20% Organic Traffic</div>
+            <div class="text-size-15 text-bold" style="color:#1a1a2e;">WordPress &amp; Marketing Sites</div>
+            <div class="text-size-12 margin-top-4" style="color:#aaa;">WordPress · SEO · +20% Organic Traffic</div>
           </div>
         </div>
 
-        <div class="itsme-work-card animate-zoom-in animation-delay-300 animation-fill-forwards" data-cat="graphic">
+        <div class="itsme-work-card animation-zoom-in animation-delay-300 animation-fill-forwards" data-cat="graphic">
           <div class="itsme-work-thumb">
             <div class="itsme-work-thumb-bg" style="background:linear-gradient(135deg,#fef9c3,#fef08a,#fde047);">
               <span class="icon icon-type-bold icon-48" style="background-color:rgba(234,179,8,0.5);width:48px;height:48px;"></span>
             </div>
             <div class="itsme-work-overlay">
               <span class="icon icon-eye icon-28" style="background-color:#fff;width:28px;height:28px;"></span>
-              <div class="set-text-13 text-bold" style="color:#fff;">View Project</div>
+              <div class="text-size-13 text-bold" style="color:#fff;">View Project</div>
             </div>
           </div>
-          <div class="add-padding-18">
+          <div class="padding-18">
             <div class="itsme-work-cat">Graphic Design</div>
-            <div class="set-text-15 text-bold" style="color:#1a1a2e;">Digital Marketing Campaigns</div>
-            <div class="set-text-12 add-margin-top-4" style="color:#aaa;">Social Media · Google Ads · Email</div>
+            <div class="text-size-15 text-bold" style="color:#1a1a2e;">Digital Marketing Campaigns</div>
+            <div class="text-size-12 margin-top-4" style="color:#aaa;">Social Media · Google Ads · Email</div>
           </div>
         </div>
 
       </div>
 
       <!-- View all -->
-      <div class="text-center add-margin-top-40">
+      <div class="text-center margin-top-40">
         <button class="itsme-btn itsme-btn-ghost">
           <span class="icon icon-grid icon-16" style="background-color:#f97316;"></span>
           View All Projects
@@ -662,15 +662,15 @@
   <section id="blog" class="itsme-section itsme-section-alt">
     <div class="itsme-section-inner">
 
-      <div class="text-center add-margin-bottom-40">
+      <div class="text-center margin-bottom-40">
         <div class="itsme-eyebrow">Latest Posts</div>
-        <h2 class="itsme-title add-margin-top-4">My Blog</h2>
+        <h2 class="itsme-title margin-top-4">My Blog</h2>
         <div class="itsme-divider" style="margin:10px auto 0;"></div>
       </div>
 
       <div class="grid-3 gap-24" style="gap:24px;">
 
-        <div class="itsme-blog-card animate-fade-in-from-bottom animation-delay-100 animation-fill-forwards">
+        <div class="itsme-blog-card animation-fade-in-from-bottom animation-delay-100 animation-fill-forwards">
           <div class="itsme-blog-thumb">
             <div class="itsme-blog-thumb-inner" style="background:linear-gradient(135deg,#fde68a,#f97316);">
               <span class="icon icon-layout-wtf icon-44" style="background-color:rgba(255,255,255,0.4);width:44px;height:44px;"></span>
@@ -678,20 +678,20 @@
           </div>
           <div class="add-padding-22">
             <div class="itsme-blog-tag itsme-tag-web">UX</div>
-            <a href="#" class="set-text-16 text-bold add-margin-bottom-10 make-block" style="color:#1a1a2e;">
+            <a href="#" class="text-size-16 text-bold margin-bottom-10 display-block" style="color:#1a1a2e;">
               Building Design Systems that Scale
             </a>
-            <p class="set-text-13 line-height-relaxed add-margin-bottom-16" style="color:#888;">
+            <p class="text-size-13 line-height-relaxed margin-bottom-16" style="color:#888;">
               Design systems are the backbone of consistent UX. Here's how to build one that actually gets adopted by your team.
             </p>
-            <div class="make-flex align-center gap-10">
-              <div class="make-avatar make-circle" style="width:28px;height:28px;background:linear-gradient(135deg,#fde68a,#f97316);color:#fff;font-size:10px;font-weight:800;">SP</div>
-              <span class="set-text-12" style="color:#aaa;">Santhosh · March 2025</span>
+            <div class="display-flex align-center gap-10">
+              <div class="make-avatar radius-circle" style="width:28px;height:28px;background:linear-gradient(135deg,#fde68a,#f97316);color:#fff;font-size:10px;font-weight:800;">SP</div>
+              <span class="text-size-12" style="color:#aaa;">Santhosh · March 2025</span>
             </div>
           </div>
         </div>
 
-        <div class="itsme-blog-card animate-fade-in-from-bottom animation-delay-200 animation-fill-forwards">
+        <div class="itsme-blog-card animation-fade-in-from-bottom animation-delay-200 animation-fill-forwards">
           <div class="itsme-blog-thumb">
             <div class="itsme-blog-thumb-inner" style="background:linear-gradient(135deg,#bfdbfe,#3b82f6);">
               <span class="icon icon-code-slash icon-44" style="background-color:rgba(255,255,255,0.4);width:44px;height:44px;"></span>
@@ -699,20 +699,20 @@
           </div>
           <div class="add-padding-22">
             <div class="itsme-blog-tag itsme-tag-web">Dev</div>
-            <a href="#" class="set-text-16 text-bold add-margin-bottom-10 make-block" style="color:#1a1a2e;">
+            <a href="#" class="text-size-16 text-bold margin-bottom-10 display-block" style="color:#1a1a2e;">
               Why I Built My Own CSS Framework
             </a>
-            <p class="set-text-13 line-height-relaxed add-margin-bottom-16" style="color:#888;">
+            <p class="text-size-13 line-height-relaxed margin-bottom-16" style="color:#888;">
               SantyCSS was born from frustration with Tailwind's syntax. Plain-English utility classes that read like you wrote them.
             </p>
-            <div class="make-flex align-center gap-10">
-              <div class="make-avatar make-circle" style="width:28px;height:28px;background:linear-gradient(135deg,#bfdbfe,#3b82f6);color:#fff;font-size:10px;font-weight:800;">SP</div>
-              <span class="set-text-12" style="color:#aaa;">Santhosh · Jan 2025</span>
+            <div class="display-flex align-center gap-10">
+              <div class="make-avatar radius-circle" style="width:28px;height:28px;background:linear-gradient(135deg,#bfdbfe,#3b82f6);color:#fff;font-size:10px;font-weight:800;">SP</div>
+              <span class="text-size-12" style="color:#aaa;">Santhosh · Jan 2025</span>
             </div>
           </div>
         </div>
 
-        <div class="itsme-blog-card animate-fade-in-from-bottom animation-delay-300 animation-fill-forwards">
+        <div class="itsme-blog-card animation-fade-in-from-bottom animation-delay-300 animation-fill-forwards">
           <div class="itsme-blog-thumb">
             <div class="itsme-blog-thumb-inner" style="background:linear-gradient(135deg,#ddd6fe,#8b5cf6);">
               <span class="icon icon-cloud-arrow-up icon-44" style="background-color:rgba(255,255,255,0.4);width:44px;height:44px;"></span>
@@ -720,22 +720,22 @@
           </div>
           <div class="add-padding-22">
             <div class="itsme-blog-tag itsme-tag-motion">Cloud</div>
-            <a href="#" class="set-text-16 text-bold add-margin-bottom-10 make-block" style="color:#1a1a2e;">
+            <a href="#" class="text-size-16 text-bold margin-bottom-10 display-block" style="color:#1a1a2e;">
               Front-End Deployment with AWS for Designers
             </a>
-            <p class="set-text-13 line-height-relaxed add-margin-bottom-16" style="color:#888;">
+            <p class="text-size-13 line-height-relaxed margin-bottom-16" style="color:#888;">
               You don't need a DevOps background to ship your own projects. Here's the minimal AWS setup I use for every personal project.
             </p>
-            <div class="make-flex align-center gap-10">
-              <div class="make-avatar make-circle" style="width:28px;height:28px;background:linear-gradient(135deg,#ddd6fe,#8b5cf6);color:#fff;font-size:10px;font-weight:800;">SP</div>
-              <span class="set-text-12" style="color:#aaa;">Santhosh · Nov 2024</span>
+            <div class="display-flex align-center gap-10">
+              <div class="make-avatar radius-circle" style="width:28px;height:28px;background:linear-gradient(135deg,#ddd6fe,#8b5cf6);color:#fff;font-size:10px;font-weight:800;">SP</div>
+              <span class="text-size-12" style="color:#aaa;">Santhosh · Nov 2024</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <div class="text-center add-margin-top-40">
+      <div class="text-center margin-top-40">
         <button class="itsme-btn itsme-btn-ghost">
           <span class="icon icon-journal-richtext icon-16" style="background-color:#f97316;"></span>
           View All Posts
@@ -751,17 +751,17 @@
   <section id="contact" class="itsme-section">
     <div class="itsme-section-inner">
 
-      <div class="text-center add-margin-bottom-40">
+      <div class="text-center margin-bottom-40">
         <div class="itsme-eyebrow">Get In Touch</div>
-        <h2 class="itsme-title add-margin-top-4">Contact Me</h2>
+        <h2 class="itsme-title margin-top-4">Contact Me</h2>
         <div class="itsme-divider" style="margin:10px auto 0;"></div>
       </div>
 
       <div class="grid-2 gap-56 align-start" style="gap:56px;">
 
         <!-- Contact info -->
-        <div class="animate-fade-in-from-left animation-fill-forwards">
-          <p class="set-text-15 line-height-relaxed add-margin-bottom-32" style="color:#666;">
+        <div class="animation-fade-in-from-left animation-fill-forwards">
+          <p class="text-size-15 line-height-relaxed margin-bottom-32" style="color:#666;">
             I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
             Feel free to reach out — I'll get back to you within 24 hours.
           </p>
@@ -771,9 +771,9 @@
               <span class="icon icon-geo-alt icon-20" style="background-color:#f97316;width:20px;height:20px;"></span>
             </div>
             <div>
-              <div class="set-text-11 text-bold add-margin-bottom-4" style="color:#aaa;text-transform:uppercase;letter-spacing:0.06em;">Location</div>
-              <div class="set-text-14 text-semibold" style="color:#333;">Vidyanagar, Hyderabad, India</div>
-              <div class="set-text-12" style="color:#aaa;">Open to Remote Worldwide</div>
+              <div class="text-size-11 text-bold margin-bottom-4" style="color:#aaa;text-transform:uppercase;letter-spacing:0.06em;">Location</div>
+              <div class="text-size-14 text-semibold" style="color:#333;">Vidyanagar, Hyderabad, India</div>
+              <div class="text-size-12" style="color:#aaa;">Open to Remote Worldwide</div>
             </div>
           </div>
 
@@ -782,8 +782,8 @@
               <span class="icon icon-envelope icon-20" style="background-color:#f97316;width:20px;height:20px;"></span>
             </div>
             <div>
-              <div class="set-text-11 text-bold add-margin-bottom-4" style="color:#aaa;text-transform:uppercase;letter-spacing:0.06em;">Email</div>
-              <a href="mailto:hello@santy.in" class="set-text-14 text-semibold" style="color:#f97316;">hello@santy.in</a>
+              <div class="text-size-11 text-bold margin-bottom-4" style="color:#aaa;text-transform:uppercase;letter-spacing:0.06em;">Email</div>
+              <a href="mailto:hello@santy.in" class="text-size-14 text-semibold" style="color:#f97316;">hello@santy.in</a>
             </div>
           </div>
 
@@ -792,8 +792,8 @@
               <span class="icon icon-telephone icon-20" style="background-color:#f97316;width:20px;height:20px;"></span>
             </div>
             <div>
-              <div class="set-text-11 text-bold add-margin-bottom-4" style="color:#aaa;text-transform:uppercase;letter-spacing:0.06em;">Phone</div>
-              <div class="set-text-14 text-semibold" style="color:#333;">+91 814 254 6693</div>
+              <div class="text-size-11 text-bold margin-bottom-4" style="color:#aaa;text-transform:uppercase;letter-spacing:0.06em;">Phone</div>
+              <div class="text-size-14 text-semibold" style="color:#333;">+91 814 254 6693</div>
             </div>
           </div>
 
@@ -802,13 +802,13 @@
               <span class="icon icon-person-check icon-20" style="background-color:#22c55e;width:20px;height:20px;"></span>
             </div>
             <div>
-              <div class="set-text-11 text-bold add-margin-bottom-4" style="color:#aaa;text-transform:uppercase;letter-spacing:0.06em;">Freelance</div>
-              <div class="set-text-14 text-semibold" style="color:#22c55e;">● Currently Available</div>
+              <div class="text-size-11 text-bold margin-bottom-4" style="color:#aaa;text-transform:uppercase;letter-spacing:0.06em;">Freelance</div>
+              <div class="text-size-14 text-semibold" style="color:#22c55e;">● Currently Available</div>
             </div>
           </div>
 
           <!-- Social -->
-          <div class="make-flex gap-10 add-margin-top-24">
+          <div class="display-flex gap-10 margin-top-24">
             <a href="https://www.linkedin.com/in/santhosh-prabakar-8a05b0aa/" class="itsme-social-btn" aria-label="LinkedIn" target="_blank">
               <span class="icon icon-linkedin icon-16" style="background-color:#888;"></span>
             </a>
@@ -822,28 +822,28 @@
         </div>
 
         <!-- Contact form -->
-        <div class="animate-fade-in-from-bottom animation-delay-200 animation-fill-forwards">
-          <form onsubmit="submitForm(event)" class="make-flex flex-column gap-16">
+        <div class="animation-fade-in-from-bottom animation-delay-200 animation-fill-forwards">
+          <form onsubmit="submitForm(event)" class="display-flex flex-column gap-16">
             <div class="grid-2 gap-14 sm-stack" style="gap:14px;">
               <div>
-                <label class="set-text-12 text-bold make-block add-margin-bottom-6" style="color:#666;letter-spacing:0.04em;">First Name</label>
+                <label class="text-size-12 text-bold display-block margin-bottom-6" style="color:#666;letter-spacing:0.04em;">First Name</label>
                 <input type="text" class="itsme-input" placeholder="John" required />
               </div>
               <div>
-                <label class="set-text-12 text-bold make-block add-margin-bottom-6" style="color:#666;letter-spacing:0.04em;">Last Name</label>
+                <label class="text-size-12 text-bold display-block margin-bottom-6" style="color:#666;letter-spacing:0.04em;">Last Name</label>
                 <input type="text" class="itsme-input" placeholder="Doe" required />
               </div>
             </div>
             <div>
-              <label class="set-text-12 text-bold make-block add-margin-bottom-6" style="color:#666;letter-spacing:0.04em;">Company</label>
+              <label class="text-size-12 text-bold display-block margin-bottom-6" style="color:#666;letter-spacing:0.04em;">Company</label>
               <input type="text" class="itsme-input" placeholder="Your Company" />
             </div>
             <div>
-              <label class="set-text-12 text-bold make-block add-margin-bottom-6" style="color:#666;letter-spacing:0.04em;">Work Email</label>
+              <label class="text-size-12 text-bold display-block margin-bottom-6" style="color:#666;letter-spacing:0.04em;">Work Email</label>
               <input type="email" class="itsme-input" placeholder="john@company.com" required />
             </div>
             <div>
-              <label class="set-text-12 text-bold make-block add-margin-bottom-6" style="color:#666;letter-spacing:0.04em;">Message</label>
+              <label class="text-size-12 text-bold display-block margin-bottom-6" style="color:#666;letter-spacing:0.04em;">Message</label>
               <textarea class="itsme-input itsme-textarea" placeholder="Tell me about your project, goals, and timeline…"></textarea>
             </div>
             <div>
@@ -865,8 +865,8 @@
        ════════════════════════════════════ -->
   <footer style="background:#1a1a2e;padding:32px 40px;text-align:center;">
     <div style="max-width:1100px;margin:0 auto;">
-      <a href="#home" class="itsme-brand add-margin-bottom-16 make-block" style="color:#fff;">It's <span style="color:#f97316;">me</span></a>
-      <div class="make-flex gap-8 justify-center add-margin-bottom-20">
+      <a href="#home" class="itsme-brand margin-bottom-16 display-block" style="color:#fff;">It's <span style="color:#f97316;">me</span></a>
+      <div class="display-flex gap-8 justify-center margin-bottom-20">
         <button class="itsme-nav-link" onclick="navTo('home')" style="color:#aaa;font-size:11px;">Home</button>
         <span style="color:#444;">·</span>
         <button class="itsme-nav-link" onclick="navTo('resume')" style="color:#aaa;font-size:11px;">Resume</button>
@@ -877,7 +877,7 @@
         <span style="color:#444;">·</span>
         <button class="itsme-nav-link" onclick="navTo('contact')" style="color:#aaa;font-size:11px;">Contact</button>
       </div>
-      <div class="make-flex justify-center align-center gap-12 add-margin-bottom-16">
+      <div class="display-flex justify-center align-center gap-12 margin-bottom-16">
         <a href="https://santycss.santy.in" class="santycss-badge" target="_blank">
           ⚡ Built with SantyCSS
         </a>
@@ -885,10 +885,10 @@
           &lt;/&gt; View Source
         </a>
       </div>
-      <p class="set-text-12" style="color:#555;margin:0;">
+      <p class="text-size-12" style="color:#555;margin:0;">
         © 2025 Santhosh Prabakar Badhri — <a href="https://santy.in" style="color:#f97316;font-weight:700;">santy.in</a>
       </p>
-      <p class="set-text-11 add-margin-top-4" style="color:#444;">
+      <p class="text-size-11 margin-top-4" style="color:#444;">
         E: hello@santy.in &nbsp;·&nbsp; T: +91 814 254 6693
       </p>
     </div>

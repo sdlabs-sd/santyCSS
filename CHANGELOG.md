@@ -3,6 +3,100 @@
 All notable changes to SantyCSS are documented here.
 The full illustrated changelog lives at [santycss.santy.in/changelog.html](https://santycss.santy.in/changelog.html).
 
+## [2.10.0] — 2026-11-13
+
+One naming grammar, and a look of its own. Fully backward compatible: every
+pre-2.10 class name still works, with byte-identical CSS.
+
+### Changed — naming grammar
+- **Every utility now reads `property-[modifier]-value`, with no verbs.** 1,632
+  classes have a new name: `make-flex` → `display-flex`, `add-padding-24` →
+  `padding-24`, `set-text-18` → `text-size-18`, `round-corners-12` →
+  `radius-12`, `add-shadow-md` → `shadow-md`, `pin-top-0` → `top-0`, `z-10` /
+  `layer-10` → `z-index-10`, `span-col-2` → `grid-column-span-2`,
+  `animate-fade-in` → `animation-fade-in`. The rules, the scoring of the
+  alternatives and 15 before/after examples are in [NAMING.md](NAMING.md). The
+  audit that led to them is in [AUDIT.md](AUDIT.md).
+- **One number format.** Lengths are whole pixels and unitless ratios are
+  percentages (`line-height-1-5` → `line-height-150`). Negatives use `minus-N`
+  (`subtract-margin-top-16` → `margin-top-minus-16`), fractions `N-of-M`, and
+  aspect ratios `N-by-M` (`aspect-ratio-16-9`, `ratio-16-9` and `aspect-16-9`
+  all become `aspect-16-by-9`).
+- **Duplicates collapse.** `fit-*` / `object-fit-*`, `h-*` / `set-height-*`,
+  `ps-*` / `add-padding-start-*`, `truncate` / `text-truncate`, `no-shadow` /
+  `add-shadow-none`, `center-margin` / `add-margin-x-auto` and `layer-*` /
+  `z-*` each now have a single grammar name.
+
+### Deprecated
+- The old names are aliases. Each selector lists the new name first and the old
+  one second (`.padding-24, .add-padding-24 { … }`). They ship in every classic
+  bundle until v3. The full map is in `dist/santy-renames.json`
+  (`santycss/renames`) and under `deprecated` in `santy-classmap.json`.
+- The classic component starters (`make-button style-primary size-large`) are
+  deprecated in favour of the new component layer.
+
+### Added
+- **Persimmon theme** (`santy-ui.css`): warm paper, ink type, serif display
+  headlines, a persimmon accent, tactile bevelled buttons and squared badge
+  tags. Light and dark (`data-theme="dark"` / `"auto"` / `.dark`). Every value
+  is a `--santy-*` variable. See [THEME.md](THEME.md).
+- **Component layer**: button, card, navbar, input, badge, alert, modal, tabs,
+  pricing table and shell. Each has `primary` / `secondary` / `outline` /
+  `ghost` variants and `sm` / `md` / `lg` sizes. No JavaScript: the modal opens
+  through `popover`, `<dialog open>` or `:target`, tabs switch through radio
+  inputs, and the mobile navbar toggles with a checkbox.
+- **`santy-next.css`**: one file for new projects. It holds the components, the
+  grammar-only utilities with `sm:` `md:` `lg:` `xl:` breakpoints, and the
+  theme, with no legacy aliases (65 KB gzipped).
+- **`npx santycss migrate`** (`scripts/migrate.js`) now updates SantyCSS's own
+  pre-2.10 names by default. Converting another framework needs
+  `--from=tailwind` or `--from=bootstrap` (Tailwind used to be the default). It rewrites old
+  names in HTML, JSX, TSX and Vue: attributes, `className={…}`, `:class`,
+  `cn()` / `clsx()`, `classList.*()` and `el.className`. `--dry-run`,
+  `--diff`, `--check` (for CI), `--exclude=` and `--components` (moves the
+  classic components to the new layer).
+- `"legacyNames": false` in `santy.config.json` builds grammar names only.
+- Example pages: [SaaS landing](examples/saas-landing.html),
+  [dashboard](examples/dashboard.html) and
+  [component gallery](examples/components.html), built with nothing but
+  `santy-next.css`.
+- The JIT, `santycss/merge` and `santycss/sort` understand both spellings, so
+  `cn('add-padding-24', 'padding-8')` → `'padding-8'`. The JIT also gained
+  `z-index-*`.
+- Theme-aware colour utilities: `color-primary-contrast`,
+  `color-secondary-contrast`, `color-primary-dark`, `background-primary-light`.
+
+### Site and tooling
+- **Every site page uses the 2.10 names**: the homepage, docs, class reference,
+  snippets, playground, components, animations, templates and demo sites
+  (about 7,300 class names). Each page was checked before and after against
+  the same build and renders identically. Spots that teach the migration still
+  show the old names on purpose.
+- **Homepage** presents SantyCSS on its own terms. A "A look of its own"
+  showcase of the Persimmon examples and a "What's in the box" section replace
+  the framework-comparison matrix, and the upgrade section walks through
+  `npx santycss migrate`.
+- **VS Code extension 1.1.0** suggests the 2.10 names and the new components
+  first. Old names stay, tagged deprecated with a pointer to the replacement.
+  It also fixes packaging: `.vscodeignore` excluded `src/`, which the
+  extension needs in order to load.
+
+### Fixed
+- `santy-classmap.json` listed JavaScript identifiers and URL fragments
+  (`forEach`, `getElementById`, `w3`, `org`, …) as classes. It now scans
+  selectors only.
+- `santycss.context.md` advertised six animation classes that never existed
+  (`animate-jello`, `animate-shake`, `animate-slide-left`, …). It now lists
+  real ones and teaches the v2.10 grammar.
+- The Tailwind and Bootstrap migrators emit grammar names.
+
+### Unchanged
+- `santy.css`, `santy-start.css` and every module look exactly as before. The
+  new theme only applies through `santy-ui.css` / `santy-next.css`. The
+  Bootstrap grid (`row`, `col-md-6`, `g-3`) keeps its Bootstrap names.
+- `santy.css` grows from 1.62 MB to 1.83 MB raw because of the alias selectors
+  (`legacyNames: false` removes them).
+
 ## [2.9.6] — 2026-10-14
 
 ### Fixed

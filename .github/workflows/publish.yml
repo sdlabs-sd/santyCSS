@@ -56,7 +56,10 @@ jobs:
         run: |
           V=${{ steps.check.outputs.version }}
           for f in dist/santy.css dist/santy.min.css dist/santy-variants.css dist/santy-components.css \
-                   dist/santy-animations.css dist/santy-icons.css dist/santy-scroll.js santy-jit.js; do
+                   dist/santy-animations.css dist/santy-icons.css dist/santy-scroll.js santy-jit.js \
+                   dist/santy-next.css dist/santy-ui.css dist/santy-start.css; do
             curl -fsS -o /dev/null "https://cdn.jsdelivr.net/npm/santycss@$V/$f" || echo "warn: $f not yet on CDN"
           done
-          curl -fsS -o /dev/null "https://purge.jsdelivr.net/npm/santycss@2/dist/santy.min.css" || true
+          for f in santy.min.css santy-start.css santy-next.css santy-ui.css; do
+            curl -fsS -o /dev/null "https://purge.jsdelivr.net/npm/santycss@2/dist/$f" || true
+          done

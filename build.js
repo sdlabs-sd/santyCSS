@@ -10,6 +10,33 @@ const { runPlugins } = require('./lib/plugin-api');
 const { buildIndex } = require('./lib/apply');
 const gridSystem = require('./lib/grid-system');
 
+// ─── SYNC NAMING TABLE INTO STANDALONE SCRIPTS ───────────────────────────────
+// The JIT, merge and sort helpers ship as standalone browser scripts, so each
+// carries a copy of lib/naming.js between @naming markers. Keep them identical.
+{
+  const START = '/* @naming:start */', END = '/* @naming:end */';
+  const src = fs.readFileSync(path.join(__dirname, 'lib', 'naming.js'), 'utf8');
+  const block = src.slice(src.indexOf(START), src.indexOf(END) + END.length);
+  for (const rel of ['santy-jit.js', 'packages/merge/santy-merge.js', 'packages/sort/santy-sort.js', 'vscode-santycss/src/naming.js']) {
+    const file = path.join(__dirname, rel);
+    // The npm package ships without vscode-santycss/, so skip missing targets.
+    if (!fs.existsSync(file)) continue;
+    const text = fs.readFileSync(file, 'utf8');
+    const a = text.indexOf(START), z = text.indexOf(END);
+    if (a === -1 || z < a) continue;
+    // Keep the target's line endings (santy-jit.js is CRLF).
+    const eol = text.includes('\r\n') ? block.replace(/\r?\n/g, '\r\n') : block;
+    const next = text.slice(0, a) + eol + text.slice(z + END.length);
+    if (next !== text && !userConfigOutputOnly()) fs.writeFileSync(file, next);
+  }
+  function userConfigOutputOnly() {
+    try {
+      const p = process.env.SANTY_CONFIG ? path.resolve(process.env.SANTY_CONFIG) : path.join(process.cwd(), 'santy.config.json');
+      return fs.existsSync(p) && !!JSON.parse(fs.readFileSync(p, 'utf8')).output;
+    } catch (e) { return false; }
+  }
+}
+
 // ─── VALUE RANGES ───────────────────────────────────────────────────────────
 // T-shirt spacing scale — 32 values covering all real-world design needs.
 // Migration: add-padding-7 → add-padding-8, add-padding-9 → add-padding-10, etc.
@@ -55,6 +82,7 @@ const namedColors = { white: '#ffffff', black: '#000000', transparent: 'transpar
 //   fontSizes   [numbers]                                — extra font-size px values
 //   breakpoints { prefix: '(min-width: 900px)' }         — extend/override breakpoints
 //   prefix      'sty-'                                   — prefix every class name
+//   legacyNames false                                    — drop pre-2.10 aliases (smaller CSS)
 //   output      './my-css'                               — write files to this dir only
 const configPath = process.env.SANTY_CONFIG
   ? path.resolve(process.env.SANTY_CONFIG)
@@ -5624,6 +5652,84 @@ const THEMES_CSS = `/* SantyCSS Themes — prebuilt design-token presets (v2.7.0
 }
 `;
 
+// ─── NAMING GRAMMAR (v2.10) ──────────────────────────────────────────────────
+// lib/naming.js maps every pre-2.10 utility name to its grammar name
+// (add-padding-24 → padding-24). Each selector that uses an old name gains a
+// twin with the new name; declarations are untouched, so values never change.
+// A new name that already exists with different CSS is a collision: it is
+// skipped and reported, never merged.
+const naming = require('./lib/naming');
+const { aliasCSS, indexClasses, selectorClasses } = require('./lib/aliases');
+const UNALIASED_ALL = fullCSS + EXTENDED_COMPONENTS_CSS + GRID_CSS + PLUGIN_CSS + BEHAVIOR_CSS + '\n' + THEMES_CSS + '\n' + EMAIL_CSS;
+const RENAME_MAP = new Map();
+const RENAME_COLLISIONS = [];
+{
+  const idx = indexClasses(UNALIASED_ALL);
+  for (const cls of [...selectorClasses(UNALIASED_ALL)].sort()) {
+    if (cls.includes(':')) continue;
+    const next = naming.toNew(cls);
+    if (!next || next === cls) continue;
+    if (idx.has(next)) {
+      const mine = idx.get(cls);
+      if (![...idx.get(next)].every(sig => mine.has(sig))) { RENAME_COLLISIONS.push(`${cls} → ${next}`); continue; }
+    }
+    RENAME_MAP.set(cls, next);
+  }
+  if (RENAME_COLLISIONS.length) {
+    console.warn(`⚠️  ${RENAME_COLLISIONS.length} rename collision(s) skipped:\n   ` + RENAME_COLLISIONS.join('\n   '));
+  }
+}
+const aliasMode = userConfig.legacyNames === false ? 'replace' : 'alias';
+const withNames = css => aliasCSS(css, RENAME_MAP, aliasMode);
+
+// ─── SANTY UI: THEME + COMPONENT LAYER (v2.10) ───────────────────────────────
+// lib/ui/theme.css      design tokens (light/dark), base type, .eyebrow
+// lib/ui/components.css button, card, navbar, input, badge, alert, modal,
+//                       tabs, pricing — written in the grammar, no aliases.
+//
+// santy-ui.css   = theme + components. Pairs with santy-core.css, or works
+//                  alone for components-only use.
+// santy-next.css = components → grammar-only utilities → theme. Utilities
+//                  come after components so `padding-8` on a .button wins; the
+//                  theme comes last so its tokens beat core's :root defaults.
+//                  No classic components, so .card/.badge never collide.
+const UI_THEME_CSS = fs.readFileSync(path.join(__dirname, 'lib', 'ui', 'theme.css'), 'utf8');
+const UI_COMPONENTS_CSS = fs.readFileSync(path.join(__dirname, 'lib', 'ui', 'components.css'), 'utf8');
+const pkgVer = require('./package.json').version;
+const UI_HEADER = `/*! SantyCSS UI v${pkgVer} — theme "Persimmon" + components | MIT | https://santycss.santy.in */\n`;
+const UI_CSS = UI_HEADER + UI_THEME_CSS + '\n' + UI_COMPONENTS_CSS;
+const NEXT_CSS = `/*! SantyCSS Next v${pkgVer} — grammar names only, theme + components + utilities | MIT
+   One file for new projects: <link rel="stylesheet" href="…/dist/santy-next.css">
+   Legacy names (add-padding-24, make-flex) are NOT included here; use santy-start.css for those. */\n`
+  + UI_COMPONENTS_CSS + '\n' + aliasCSS(slimmedCoreCSS, RENAME_MAP, 'replace') + '\n' + nextResponsiveCSS() + '\n' + UI_THEME_CSS;
+
+// santy-core.css ships no breakpoint variants (they live in santy-variants.css).
+// A one-file bundle needs them, so santy-next carries sm/md/lg/xl for the
+// responsive set (display, flex, spacing, grid, type, width) plus column spans,
+// all in grammar names.
+function nextResponsiveCSS() {
+  const extra = [];
+  for (let n = 1; n <= 12; n++) extra.push([`span-col-${n}`, `grid-column:span ${n} / span ${n}`]);
+  extra.push(['span-col-full', 'grid-column:1 / -1']);
+  [44, 52, 60, 72].forEach(v => extra.push([`set-text-${v}`, `font-size:${v}px`]));
+  [80, 96, 128].forEach(v => extra.push([`add-padding-y-${v}`, `padding-top:${v}px;padding-bottom:${v}px`]));
+  extra.push(['make-inline-flex', 'display:inline-flex'], ['flex-equal', 'flex:1 1 0%'], ['text-left', 'text-align:left']);
+  const all = responsiveClasses.concat(extra);
+  const seen = new Set();
+  let out = '/* ── Responsive variants (sm 640 · md 768 · lg 1024 · xl 1280) ── */\n';
+  for (const bp of ['sm', 'md', 'lg', 'xl']) {
+    out += `@media ${breakpoints[bp]} {\n`;
+    for (const [cls, props] of all) {
+      const name = naming.toNew(cls) || cls;
+      if (seen.has(bp + name)) continue;
+      seen.add(bp + name);
+      out += `  .${bp}\\:${name} { ${props.split(';').map(p => p.trim() + ';').join(' ')} }\n`;
+    }
+    out += '}\n';
+  }
+  return out;
+}
+
 // ─── APPLY OPTIONAL CLASS PREFIX (santy.config.json → "prefix") ──────────────
 const OUT_CSS = {
   // Extended components, grid and plugin CSS sit past the component marker, so
@@ -5633,28 +5739,36 @@ const OUT_CSS = {
   // The motion guard is then appended to every bundle that can ship a keyframe,
   // so no entry point serves animation a reader is unable to switch off.
   // It is intentionally NOT prefixed: it targets `*`, never a class.
-  'santy.css': applyPrefix(fullCSS + EXTENDED_COMPONENTS_CSS + GRID_CSS + PLUGIN_CSS + BEHAVIOR_CSS) + MOTION_GUARD_CSS,
-  'santy-core.css': applyPrefix(slimmedCoreCSS) + MOTION_GUARD_CSS,
-  'santy-variants.css': applyPrefix(variantsCSS) + MOTION_GUARD_CSS,
-  'santy-start.css': applyPrefix(startCSS) + MOTION_GUARD_CSS,
-  'santy-components.css': applyPrefix(compCSS) + MOTION_GUARD_CSS,
-  'santy-animations.css': applyPrefix(animCSS) + MOTION_GUARD_CSS,
-  'santy-email.css': applyPrefix(EMAIL_CSS.trim()),
-  'santy-themes.css': applyPrefix(THEMES_CSS),
+  'santy.css': applyPrefix(withNames(fullCSS + EXTENDED_COMPONENTS_CSS + GRID_CSS + PLUGIN_CSS + BEHAVIOR_CSS)) + MOTION_GUARD_CSS,
+  'santy-core.css': applyPrefix(withNames(slimmedCoreCSS)) + MOTION_GUARD_CSS,
+  'santy-variants.css': applyPrefix(withNames(variantsCSS)) + MOTION_GUARD_CSS,
+  'santy-start.css': applyPrefix(withNames(startCSS)) + MOTION_GUARD_CSS,
+  'santy-components.css': applyPrefix(withNames(compCSS)) + MOTION_GUARD_CSS,
+  'santy-animations.css': applyPrefix(withNames(animCSS)) + MOTION_GUARD_CSS,
+  'santy-email.css': applyPrefix(withNames(EMAIL_CSS.trim())),
+  'santy-themes.css': applyPrefix(withNames(THEMES_CSS)),
+  'santy-ui.css': applyPrefix(UI_CSS),
+  'santy-next.css': applyPrefix(NEXT_CSS) + MOTION_GUARD_CSS,
 };
 for (const name of MODULE_NAMES) {
-  OUT_CSS[`santy-${name}.css`] = applyPrefix(moduleCSS[name]);
+  OUT_CSS[`santy-${name}.css`] = applyPrefix(withNames(moduleCSS[name]));
 }
 
 // ─── CLASSMAP / INTELLISENSE DATA (v2.7.0) ───────────────────────────────────
 // Every generated class name — powers editor IntelliSense, AI tooling, linters.
 const pkgVersion = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8')).version;
 const classSet = new Set();
-const allGeneratedCSS = OUT_CSS['santy.css'] + '\n' + OUT_CSS['santy-themes.css'];
-for (const m of allGeneratedCSS.matchAll(/\.((?:[a-zA-Z0-9_-]+|\\:)+)/g)) {
-  const cls = m[1].replace(/\\:/g, ':').replace(/\\/g, '');
+const allGeneratedCSS = OUT_CSS['santy.css'] + '\n' + OUT_CSS['santy-themes.css'] + '\n' + OUT_CSS['santy-ui.css'];
+// Selectors only: scanning raw text used to pick up comments, URLs and JS
+// identifiers (forEach, w3.org, …) as if they were classes.
+for (const cls of selectorClasses(allGeneratedCSS)) {
   if (/^[0-9]/.test(cls)) continue;
   classSet.add(cls);
+}
+const prefixOut = userConfig.prefix || '';
+const DEPRECATED = {};
+if (aliasMode === 'alias') {
+  for (const [o, n] of [...RENAME_MAP].sort()) DEPRECATED[prefixOut + o] = prefixOut + n;
 }
 const CLASSMAP_JSON = JSON.stringify({
   name: 'santycss',
@@ -5662,7 +5776,16 @@ const CLASSMAP_JSON = JSON.stringify({
   generated: new Date().toISOString().slice(0, 10),
   count: classSet.size,
   classes: [...classSet].sort(),
+  // Pre-2.10 names that still work, mapped to their grammar names.
+  deprecated: DEPRECATED,
 });
+const RENAMES_JSON = JSON.stringify({
+  name: 'santycss',
+  version: pkgVersion,
+  grammar: 'property-[modifier]-value',
+  count: RENAME_MAP.size,
+  renames: Object.fromEntries([...RENAME_MAP].sort()),
+}, null, 1);
 
 // Generate minified version
 const minCSS = OUT_CSS['santy.css']
@@ -5692,6 +5815,7 @@ const OUT_FILES = {
   // verbatim in the docs anyway, so they stay unprefixed.
   'santy-icons.css': ICONS_CSS,
   'santy-classmap.json': CLASSMAP_JSON,
+  'santy-renames.json': RENAMES_JSON,
 };
 
 // ─── WRITE OUTPUT FILES ──────────────────────────────────────────────────────
@@ -5733,6 +5857,8 @@ console.log(`✅ santy-merge.js     — ${kb(MERGE_JS.length)} (cn() conflict-aw
 console.log(`✅ grid system        — ${kb(GRID_CSS.length)} (Bootstrap-compatible .row / .col-md-6)`);
 console.log(`✅ santy-icons.css    — ${kb(ICONS_CSS.length)} (2,100+ icons — brand, business, communication, essential UI)`);
 console.log(`✅ santy-themes.css   — ${kb(THEMES_CSS.length)} (5 prebuilt data-theme presets)`);
+console.log(`✅ santy-ui.css       — ${kb(OUT_CSS['santy-ui.css'].length)} (theme "Persimmon" + 9 components, grammar names)`);
+console.log(`✅ santy-next.css     — ${kb(OUT_CSS['santy-next.css'].length)} (new projects: theme + components + grammar-only utilities)`);
 console.log(`✅ santy-classmap.json — ${kb(CLASSMAP_JSON.length)} (${classSet.size.toLocaleString()} class names for IntelliSense/AI)`);
 console.log(`✅ dist/              — mirrored for NPM package`);
 console.log('');

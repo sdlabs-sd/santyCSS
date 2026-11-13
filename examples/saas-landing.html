@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fernhill — Product analytics you can read in a minute</title>
+  <meta name="description" content="Example SaaS landing page built only with SantyCSS v2.10 (santy-next.css): Persimmon theme, components and grammar-named utilities.">
+  <link rel="stylesheet" href="../dist/santy-next.css">
+</head>
+<body>
+
+<!-- ═════════ NAV ═════════ -->
+<nav class="navbar navbar-sticky padding-x-0">
+  <div class="shell display-flex align-center flex-wrap gap-16">
+    <a class="navbar-brand" href="#">
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="7" fill="var(--santy-primary)"/><path d="M8 18V8h10M8 13h7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+      Fernhill
+    </a>
+    <input class="navbar-toggle" type="checkbox" aria-label="Open menu">
+    <ul class="navbar-links">
+      <li><a class="navbar-link" href="#features">Product</a></li>
+      <li><a class="navbar-link" href="#how">How it works</a></li>
+      <li><a class="navbar-link" href="#pricing">Pricing</a></li>
+      <li><a class="navbar-link" href="#faq">FAQ</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a class="button button-ghost" href="#">Sign in</a>
+      <a class="button button-primary" href="#pricing">Start free</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═════════ HERO ═════════ -->
+<header class="shell padding-top-80 padding-bottom-64 md:padding-y-96">
+  <div class="display-grid gap-48 lg:grid-columns-12 align-center">
+    <div class="lg:grid-column-span-6">
+      <span class="badge badge-primary badge-lg badge-dot margin-bottom-24">New · Weekly digest emails</span>
+      <h1 class="text-size-44 md:text-size-60 margin-0">Product analytics you can read in a minute.</h1>
+      <p class="text-size-18 md:text-size-20 color-text-muted margin-top-24 margin-bottom-32 max-width-512">
+        Fernhill turns raw events into one plain-English page: what changed this week, why, and what to look at next. No dashboards to build. No SQL.
+      </p>
+      <div class="display-flex flex-wrap gap-12">
+        <a class="button button-primary button-lg" href="#pricing">Start free for 14 days</a>
+        <a class="button button-outline button-lg" href="#how">See a sample report</a>
+      </div>
+      <p class="text-size-14 color-text-muted margin-top-20">No credit card · Works with Segment, Rudder and plain HTTP</p>
+    </div>
+
+    <!-- product mock -->
+    <div class="lg:grid-column-span-6 position-relative">
+      <div class="card card-lg shadow-xl padding-0 overflow-hidden">
+        <div class="display-flex align-center justify-between padding-x-24 padding-y-16 border-bottom-1 border-color-default background-surface-alt">
+          <div class="display-flex gap-6"><span class="width-12 height-12 radius-pill background-surface border-1 border-color-default"></span><span class="width-12 height-12 radius-pill background-surface border-1 border-color-default"></span><span class="width-12 height-12 radius-pill background-surface border-1 border-color-default"></span></div>
+          <span class="eyebrow">Week 46 report</span>
+        </div>
+        <div class="padding-24 display-grid gap-20">
+          <div class="display-grid grid-columns-3 gap-12">
+            <div class="card card-ghost card-sm"><span class="text-size-12 color-text-muted">Active users</span><strong class="text-size-24 margin-top-4">18,402</strong><span class="badge badge-success badge-sm margin-top-8">▲ 12.4%</span></div>
+            <div class="card card-ghost card-sm"><span class="text-size-12 color-text-muted">Activation</span><strong class="text-size-24 margin-top-4">41.8%</strong><span class="badge badge-success badge-sm margin-top-8">▲ 3.1 pts</span></div>
+            <div class="card card-ghost card-sm"><span class="text-size-12 color-text-muted">Churn</span><strong class="text-size-24 margin-top-4">2.3%</strong><span class="badge badge-danger badge-sm margin-top-8">▲ 0.4 pts</span></div>
+          </div>
+          <div>
+            <div class="display-flex justify-between align-end margin-bottom-12"><strong class="text-size-14">Signups by day</strong><span class="text-size-12 color-text-muted">Mon – Sun</span></div>
+            <div class="display-flex align-end gap-8 height-128 border-bottom-1 border-color-default">
+              <span class="flex-equal height-56 background-surface-alt radius-top-4"></span>
+              <span class="flex-equal height-64 background-surface-alt radius-top-4"></span>
+              <span class="flex-equal height-48 background-surface-alt radius-top-4"></span>
+              <span class="flex-equal height-80 background-surface-alt radius-top-4"></span>
+              <span class="flex-equal height-96 background-surface-alt radius-top-4"></span>
+              <span class="flex-equal height-128 background-primary radius-top-4"></span>
+              <span class="flex-equal height-64 background-surface-alt radius-top-4"></span>
+            </div>
+          </div>
+          <div class="alert alert-primary alert-sm"><div><strong class="alert-title">Why Saturday spiked</strong><p>62% of new signups came from one Hacker News thread. Activation for that cohort is 9 pts below average. Worth a look.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═════════ LOGOS ═════════ -->
+<section class="border-top-1 border-bottom-1 border-color-default background-surface-alt">
+  <div class="shell padding-y-32 display-flex flex-wrap align-center justify-between gap-24">
+    <span class="eyebrow">Read every Monday by teams at</span>
+    <div class="display-flex flex-wrap align-center gap-32 color-text-muted text-size-20 text-bold">
+      <span>Oakline</span><span>Briar&amp;Co</span><span>Kestrel</span><span>Halfmoon</span><span>Lumen&nbsp;Labs</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ FEATURES ═════════ -->
+<section id="features" class="shell padding-y-96">
+  <div class="max-width-512 margin-bottom-48">
+    <span class="eyebrow">Product</span>
+    <h2 class="text-size-40 margin-top-16 margin-bottom-16">Everything a dashboard does, written down.</h2>
+    <p class="text-size-18 color-text-muted margin-0">Fernhill watches your events around the clock and writes up what matters, the way a good analyst would.</p>
+  </div>
+  <div class="display-grid gap-20 md:grid-columns-2 lg:grid-columns-3">
+    <article class="card">
+      <span class="display-inline-flex align-center justify-center width-40 height-40 radius-12 background-primary color-primary-contrast"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/></svg></span>
+      <h3 class="card-title">Plain-English reports</h3>
+      <p class="card-text">A weekly page your whole team understands: changes, causes and next steps, ranked by impact.</p>
+    </article>
+    <article class="card">
+      <span class="display-inline-flex align-center justify-center width-40 height-40 radius-12 background-secondary color-secondary-contrast"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>
+      <h3 class="card-title">Automatic root cause</h3>
+      <p class="card-text">Every spike is broken down by source, plan, device and cohort before you even ask.</p>
+    </article>
+    <article class="card">
+      <span class="display-inline-flex align-center justify-center width-40 height-40 radius-12 background-secondary color-secondary-contrast"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span>
+      <h3 class="card-title">Alerts that explain</h3>
+      <p class="card-text">"Checkout conversion fell 18% on iOS 18.2" beats "metric below threshold".</p>
+    </article>
+    <article class="card">
+      <span class="display-inline-flex align-center justify-center width-40 height-40 radius-12 background-secondary color-secondary-contrast"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg></span>
+      <h3 class="card-title">Digest in your inbox</h3>
+      <p class="card-text">Monday 8am, in Slack or email. Most teams stop opening dashboards within a month.</p>
+    </article>
+    <article class="card">
+      <span class="display-inline-flex align-center justify-center width-40 height-40 radius-12 background-secondary color-secondary-contrast"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></span>
+      <h3 class="card-title">Private by default</h3>
+      <p class="card-text">EU or US hosting, no third-party cookies, and raw events deleted after 90 days.</p>
+    </article>
+    <article class="card card-primary">
+      <span class="badge badge-mono badge-primary">Beta</span>
+      <h3 class="card-title">Ask follow-up questions</h3>
+      <p class="card-text">"Which plan drove the drop?" Get an answer with the numbers to back it.</p>
+      <div class="card-footer"><a class="button button-primary button-sm" href="#">Join the beta</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ═════════ HOW IT WORKS ═════════ -->
+<section id="how" class="background-secondary color-secondary-contrast">
+  <div class="shell padding-y-96">
+    <div class="display-grid gap-48 lg:grid-columns-12">
+      <div class="lg:grid-column-span-4">
+        <span class="eyebrow">How it works</span>
+        <h2 class="text-size-40 margin-top-16 margin-bottom-16">Live in an afternoon.</h2>
+        <p class="text-size-18 opacity-70 margin-0">Three steps, no data team. Your first report lands the next Monday.</p>
+      </div>
+      <ol class="lg:grid-column-span-8 display-grid gap-16 md:grid-columns-3 padding-0 margin-0 list-none">
+        <li class="card card-secondary border-1" style="--card-border:rgba(255,255,255,.12)">
+          <span class="font-mono text-size-14 color-primary">01</span>
+          <h3 class="card-title">Send events</h3>
+          <p class="card-text">Point Segment or our 2&nbsp;KB script at Fernhill. Existing events just work.</p>
+        </li>
+        <li class="card card-secondary border-1" style="--card-border:rgba(255,255,255,.12)">
+          <span class="font-mono text-size-14 color-primary">02</span>
+          <h3 class="card-title">Pick goals</h3>
+          <p class="card-text">Tell us what success means: signup, activation, upgrade. We infer the funnel.</p>
+        </li>
+        <li class="card card-secondary border-1" style="--card-border:rgba(255,255,255,.12)">
+          <span class="font-mono text-size-14 color-primary">03</span>
+          <h3 class="card-title">Read Monday</h3>
+          <p class="card-text">A one-page report, in your inbox and Slack, every week.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ TESTIMONIAL ═════════ -->
+<section class="shell shell-md padding-y-96 text-center">
+  <span class="eyebrow">Customer story</span>
+  <blockquote class="margin-y-24">
+    <p class="text-size-28 md:text-size-36 line-height-125 text-balance" style="font-family:var(--santy-font-display)">“We deleted eleven dashboards in the first month. Now the whole company reads one page on Monday and actually talks about it.”</p>
+  </blockquote>
+  <p class="text-size-14 color-text-muted margin-0"><strong class="color-text">Priya Raman</strong> · Head of Product, Kestrel</p>
+</section>
+
+<!-- ═════════ PRICING ═════════ -->
+<section id="pricing" class="background-surface-alt border-top-1 border-bottom-1 border-color-default">
+  <div class="shell padding-y-96">
+    <div class="text-center max-width-512 margin-x-auto margin-bottom-48">
+      <span class="eyebrow">Pricing</span>
+      <h2 class="text-size-40 margin-top-16 margin-bottom-16">Priced per report, not per seat.</h2>
+      <p class="text-size-18 color-text-muted margin-0">Invite the whole company. Every plan includes a 14-day trial.</p>
+    </div>
+    <div class="pricing pricing-lg">
+      <div class="pricing-plan">
+        <h3 class="pricing-name">Starter</h3>
+        <p class="pricing-price">$0<span class="pricing-period">/ month</span></p>
+        <p class="pricing-description">For one product finding its first users.</p>
+        <ul class="pricing-features"><li>1 weekly report</li><li>Up to 10k events / month</li><li>Email digest</li><li class="is-off">Slack digest</li><li class="is-off">Root-cause breakdowns</li></ul>
+        <a class="button button-outline button-lg button-block" href="#">Start free</a>
+      </div>
+      <div class="pricing-plan pricing-featured">
+        <span class="badge badge-mono" style="--badge-bg:var(--santy-primary);--badge-fg:var(--santy-primary-contrast)">Most teams</span>
+        <h3 class="pricing-name">Growth</h3>
+        <p class="pricing-price">$79<span class="pricing-period">/ month</span></p>
+        <p class="pricing-description">For teams shipping weekly who want answers, not charts.</p>
+        <ul class="pricing-features"><li>Unlimited reports</li><li>Up to 2M events / month</li><li>Slack &amp; email digests</li><li>Root-cause breakdowns</li><li>Explaining alerts</li></ul>
+        <a class="button button-primary button-lg button-block" href="#">Start 14-day trial</a>
+      </div>
+      <div class="pricing-plan">
+        <h3 class="pricing-name">Scale</h3>
+        <p class="pricing-price">$349<span class="pricing-period">/ month</span></p>
+        <p class="pricing-description">For companies with several products and compliance needs.</p>
+        <ul class="pricing-features"><li>Everything in Growth</li><li>50M events / month</li><li>SAML SSO &amp; audit log</li><li>EU data residency</li><li>Dedicated analyst hours</li></ul>
+        <a class="button button-lg button-block" href="#">Talk to sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ FAQ ═════════ -->
+<section id="faq" class="shell shell-md padding-y-96">
+  <h2 class="text-size-40 margin-bottom-32 text-center">Questions</h2>
+  <div class="display-grid gap-12">
+    <details class="card card-sm" open>
+      <summary class="text-semibold cursor-pointer">Do I need to change my tracking?</summary>
+      <p class="card-text">No. Fernhill reads the events you already send through Segment, RudderStack or our HTTP API.</p>
+    </details>
+    <details class="card card-sm">
+      <summary class="text-semibold cursor-pointer">How is this different from a dashboard tool?</summary>
+      <p class="card-text">Dashboards show numbers and leave the reading to you. Fernhill reads them for you and writes down what changed and why.</p>
+    </details>
+    <details class="card card-sm">
+      <summary class="text-semibold cursor-pointer">Where is my data stored?</summary>
+      <p class="card-text">In the EU (Frankfurt) or the US (Virginia), whichever you choose. Raw events are deleted after 90 days.</p>
+    </details>
+    <details class="card card-sm">
+      <summary class="text-semibold cursor-pointer">Can I cancel anytime?</summary>
+      <p class="card-text">Yes. Monthly plans stop at the end of the period, and you can export every report as Markdown.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ═════════ CTA ═════════ -->
+<section class="shell padding-bottom-96">
+  <div class="card card-secondary card-lg display-grid gap-24 md:grid-columns-2 align-center">
+    <div>
+      <h2 class="text-size-36 margin-0">Your first report, next Monday.</h2>
+      <p class="card-text text-size-18 margin-top-12">Set up in an afternoon. Free for 14 days.</p>
+    </div>
+    <form class="display-flex flex-wrap gap-12 md:justify-end margin-0" onsubmit="return false">
+      <label class="sr-only" for="cta-email">Work email</label>
+      <input class="input input-lg flex-equal min-width-0" id="cta-email" type="email" placeholder="you@company.com" style="max-width:300px">
+      <button class="button button-primary button-lg">Get started</button>
+    </form>
+  </div>
+</section>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer class="border-top-1 border-color-default">
+  <div class="shell padding-y-48 display-flex flex-wrap justify-between gap-24 text-size-14 color-text-muted">
+    <span>© 2026 Fernhill Analytics · A SantyCSS example page</span>
+    <div class="display-flex gap-24"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Status</a><a href="dashboard.html">Dashboard demo →</a></div>
+  </div>
+</footer>
+</body>
+</html>
