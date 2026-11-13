@@ -197,6 +197,13 @@ hr { border: 0; border-top: 1px solid var(--santy-border-color); }
 }
 .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; border-radius: 2px; }
 
+/* Theme-aware colour utilities the core palette doesn't cover. Use these
+   instead of color-white on brand backgrounds so dark mode keeps contrast. */
+.color-primary-contrast   { color: var(--santy-primary-contrast); }
+.color-secondary-contrast { color: var(--santy-secondary-contrast); }
+.color-primary-dark       { color: var(--santy-primary-dark); }
+.background-primary-light { background-color: var(--santy-primary-light); }
+
 /* ═══ SANTY UI · COMPONENTS ══════════════════════════════════════════════════
    Grammar: component  component-variant  component-size
      <button class="button button-primary button-lg">
@@ -287,6 +294,7 @@ hr { border: 0; border-top: 1px solid var(--santy-border-color); }
   --card-fg: var(--santy-text);
   --card-border: var(--santy-border-color);
   --card-muted: var(--santy-text-muted);
+  --card-rule: var(--santy-border-color);
   position: relative;
   display: flex; flex-direction: column;
   box-sizing: border-box;
@@ -305,6 +313,7 @@ a.card:hover { box-shadow: var(--santy-shadow-md); transform: translateY(-2px); 
 .card-secondary {
   --card-bg: var(--santy-secondary); --card-fg: var(--santy-secondary-contrast);
   --card-border: var(--santy-secondary); --card-muted: color-mix(in srgb, var(--santy-secondary-contrast) 68%, transparent);
+  --card-rule: color-mix(in srgb, var(--santy-secondary-contrast) 14%, transparent);
 }
 .card-outline { --card-bg: transparent; box-shadow: none; }
 .card-ghost { --card-bg: var(--santy-surface-alt); --card-border: transparent; box-shadow: none; }
@@ -326,7 +335,7 @@ a.card:hover { box-shadow: var(--santy-shadow-md); transform: translateY(-2px); 
 .card-text { margin: 0; color: var(--card-muted); font-size: var(--santy-text-sm); line-height: 1.6; }
 .card-footer {
   display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-  margin-top: auto; padding-top: 16px; border-top: 1px solid var(--card-border);
+  margin-top: auto; padding-top: 16px; border-top: 1px solid var(--card-rule);
 }
 .card > .card-footer { margin-top: auto; }
 .card-body + .card-footer, .card-text + .card-footer { margin-top: 20px; }

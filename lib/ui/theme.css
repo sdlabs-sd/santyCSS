@@ -195,3 +195,10 @@ hr { border: 0; border-top: 1px solid var(--santy-border-color); }
   color: var(--santy-primary-dark);
 }
 .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; border-radius: 2px; }
+
+/* Theme-aware colour utilities the core palette doesn't cover. Use these
+   instead of color-white on brand backgrounds so dark mode keeps contrast. */
+.color-primary-contrast   { color: var(--santy-primary-contrast); }
+.color-secondary-contrast { color: var(--santy-secondary-contrast); }
+.color-primary-dark       { color: var(--santy-primary-dark); }
+.background-primary-light { background-color: var(--santy-primary-light); }
