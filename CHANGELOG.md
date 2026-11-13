@@ -3,6 +3,42 @@
 All notable changes to SantyCSS are documented here.
 The full illustrated changelog lives at [santycss.santy.in/changelog.html](https://santycss.santy.in/changelog.html).
 
+## [2.11.0] — 2026-11-13
+
+Smaller production CSS. Nothing in the classic bundles changes behaviour.
+
+### Added
+- **A minified twin for every bundle**: `santy-start.min.css`,
+  `santy-next.min.css`, `santy-core.min.css`, `santy-ui.min.css`,
+  `santy-variants.min.css`, `santy-components.min.css`,
+  `santy-animations.min.css`, `santy-themes.min.css` and `santy-has.min.css`.
+  Before this only the full bundle had one, so the recommended CDN file
+  (`santy-start.css`) shipped with all its whitespace and comments: **115 KB →
+  100 KB gzipped**.
+- **`lib/minify.js`**, a structure-aware minifier. It never touches strings,
+  `url()`, `calc()` spacing, selector whitespace, or values that use `var()` /
+  `env()`. `scripts/verify-minify.js` parses each bundle and its `.min` twin in
+  Chromium and compares every rule; all 10 match (13,520 rules for the full
+  bundle). The test suite runs a Node-only structural version of the check.
+- **`santy-has.css`**: the `:has()` parent variants (`has-checked:`,
+  `has-focus-within:`, `group-has-invalid:`, …) as an opt-in companion to
+  `santy-next`.
+- **The JIT generates `has-*` and `group-has-*` variants on demand.**
+
+### Changed
+- **`santy-next.min.css` is 39 KB gzipped (was 65 KB for `santy-next.css`,
+  −40%).** The `:has()` variants repeated about 300 utilities eleven times and
+  were over half of the file, and nothing on the site, the examples or the
+  templates used them. They now live in `santy-has.css` (or come from the
+  JIT). `santy-start.css`, `santy-core.css` and `santy.css` still include them.
+- `santy.min.css` is built with the new minifier. It is the same size, but the
+  old regex minifier could break `var()` fallbacks and selector whitespace.
+- Docs, README and the AI prompt file point at the `.min.css` files.
+- **Site:** pages load `santy.min.css` instead of the unminified
+  `santy.css`, and no longer also load `santy-variants.css` /
+  `santy-animations.css`, which `santy.css` already contains. Computed styles
+  were compared before and after on every page.
+
 ## [2.10.0] — 2026-11-13
 
 One naming grammar, and a look of its own. Fully backward compatible: every

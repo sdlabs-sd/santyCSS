@@ -40,6 +40,8 @@ const REQUIRED = {
   'santy-grid.css': 1000, 'santy-spacing.css': 10000, 'santy-sizing.css': 3000,
   'santy-typography.css': 3000, 'santy-colors.css': 30000, 'santy-borders.css': 5000,
   'santy-effects.css': 5000, 'santy-ui.css': 20000, 'santy-next.css': 200000,
+  'santy-has.css': 100000, 'santy-start.min.css': 200000, 'santy-next.min.css': 150000,
+  'santy-core.min.css': 100000, 'santy-ui.min.css': 20000,
   'santy-renames.json': 20000,
 };
 for (const [file, minSize] of Object.entries(REQUIRED)) {
@@ -1168,8 +1170,74 @@ test('example pages use only classes SantyCSS ships', () => {
     const used = new Set([...html.matchAll(/class="([^"]+)"/g)].flatMap(m => m[1].split(/\s+/)).filter(Boolean));
     const unknown = [...used].filter(c => !next.has(c) && !/^is-/.test(c));
     assert(unknown.length === 0, `${f}: ${unknown.join(' ')}`);
-    assert(html.includes('dist/santy-next.css'), `${f} should load santy-next.css`);
+    assert(/dist\/santy-next(\.min)?\.css/.test(html), `${f} should load santy-next`);
   }
+});
+
+// ── Production size (v2.11) ──────────────────────────────────────────────────
+const { minify } = require(path.join(ROOT, 'lib', 'minify.js'));
+
+test('minifier keeps what must not change', () => {
+  const cases = [
+    ['.a :hover { color : red; }', '.a :hover{color :red}'],                 // descendant space before ':' kept
+    ['.b { width: calc(100% - 8px + 2px); }', '.b{width:calc(100% - 8px + 2px)}'],
+    ['.c::before { content: "  a ;} b  "; }', '.c::before{content:"  a ;} b  "}'],
+    ['.d { --x:  0 1px  2px ; color: var(--y,  red); }', '.d{--x:0 1px  2px;color:var(--y,  red)}'],
+    ['.e { background: url(data:image/svg+xml;utf8,<svg a="1"> </svg>); }', '.e{background:url(data:image/svg+xml;utf8,<svg a="1"> </svg>)}'],
+    ['@media (min-width: 640px) { .f , .g > .h { margin: 0 auto; } }', '@media (min-width: 640px){.f,.g>.h{margin:0 auto}}'],
+    ['/*! keep */\n/* drop */ .i { top: 0 }', '/*! keep */\n.i{top:0}'],
+    ['@keyframes k { from { opacity: 0; } to { opacity: 1; } }', '@keyframes k{from{opacity:0}to{opacity:1}}'],
+  ];
+  for (const [src, want] of cases) {
+    const got = minify(src).trim();
+    assert(got === want, `minify(${JSON.stringify(src)})\n      got  ${JSON.stringify(got)}\n      want ${JSON.stringify(want)}`);
+  }
+});
+
+test('every .min.css matches its source rule for rule', () => {
+  // Node-only structural check; scripts/verify-minify.js does the same in a
+  // real browser (rule-by-rule cssText) when Playwright is available.
+  const rulesOf = c => {
+    const out = [];
+    const norm = t => t.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, '');
+    aliases.walk(c, (pre, body, ctx) => { out.push(norm(ctx.join('|')) + '§' + norm(pre) + '{' + norm(body).replace(/;$/, '')); return null; });
+    return out;
+  };
+  const mins = fs.readdirSync(DIST).filter(f => f.endsWith('.min.css'));
+  assert(mins.length >= 10, `only ${mins.length} minified bundles`);
+  for (const m of mins) {
+    const a = rulesOf(read(m.replace('.min.css', '.css')));
+    const b = rulesOf(read(m));
+    assert(a.length === b.length, `${m}: ${a.length} vs ${b.length} rules`);
+    const i = a.findIndex((r, k) => r !== b[k]);
+    assert(i === -1, `${m}: rule ${i} differs\n      ${a[i] && a[i].slice(0, 120)}\n      ${b[i] && b[i].slice(0, 120)}`);
+    assert(read(m).length < read(m.replace('.min.css', '.css')).length, `${m} is not smaller`);
+  }
+});
+
+test('santy-next leaves :has() variants to santy-has.css; classic bundles keep them', () => {
+  const hasRule = /\.(?:group-)?has-[a-z-]+\\:/;
+  assert(!hasRule.test(read('santy-next.css')), 'santy-next.css still contains has-* variants');
+  const has = read('santy-has.css');
+  assert(has.includes('.has-checked\\:background-red-300') && has.includes('group-has-'), 'santy-has.css incomplete');
+  const hasClasses = [...aliases.selectorClasses(has)].filter(c => !c.startsWith('group'));
+  assert(hasClasses.every(c => /^(?:group-)?has-[a-z-]+:/.test(c)), 'santy-has.css contains non-has rules');
+  for (const f of ['santy-start.css', 'santy-core.css', 'santy.css']) assert(hasRule.test(read(f)), `${f} lost its has-* variants`);
+  const next = read('santy-next.min.css');
+  assert(require('zlib').gzipSync(next).length < 45 * 1024, 'santy-next.min.css grew past 45KB gzipped');
+});
+
+test('JIT generates :has() variants on demand', () => {
+  const vm = require('vm');
+  const sheet = { setAttribute() {}, textContent: '' };
+  const ctx = { document: { head: { appendChild() {} }, createElement: () => sheet, body: null, addEventListener() {} }, MutationObserver: function () { this.observe = () => {}; } };
+  ctx.window = ctx;
+  vm.createContext(ctx);
+  vm.runInContext(fs.readFileSync(path.join(ROOT, 'santy-jit.js'), 'utf8'), ctx);
+  ctx.SantyJIT.inject('has-checked:background-blue-500');
+  ctx.SantyJIT.inject('group-has-invalid:border-color-red-500');
+  assert(sheet.textContent.includes('.has-checked\\:background-blue-500:has(:checked){background-color:#3b82f6}'), 'has-checked missing');
+  assert(sheet.textContent.includes('.group:has(:invalid) .group-has-invalid\\:border-color-red-500'), 'group-has-invalid missing');
 });
 
 // ── Report ───────────────────────────────────────────────────────────────────

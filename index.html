@@ -39,7 +39,7 @@
   </script>
 
   <link rel="icon" type="image/png" href="assest/santy_css.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.11.0/dist/santy.min.css" />
   <style>
     /* Tiny extras for the docs page only */
     html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -256,7 +256,7 @@
     <a href="index.html" class="display-flex align-center gap-10 text-no-decoration">
       <img src="assest/santy_css.png" alt="SantyCSS" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
       <span class="text-size-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
-      <span class="badge background-blue-100 color-blue-700" style="font-size:11px;">v<span data-stat="version">2.10.0</span></span>
+      <span class="badge background-blue-100 color-blue-700" style="font-size:11px;">v<span data-stat="version">2.11.0</span></span>
     </a>
     <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
       <svg id="ham-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -426,7 +426,7 @@
 <!-- ─── WHAT'S NEW BANNER ─────────────────────────────────────────────────── -->
 <section style="background:#f0f9ff;border-top:1px solid #bae6fd;border-bottom:1px solid #bae6fd;padding:12px 24px;">
   <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-    <span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:9999px;white-space:nowrap;">NEW v<span data-stat="version">2.10.0</span></span>
+    <span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:9999px;white-space:nowrap;">NEW v<span data-stat="version">2.11.0</span></span>
     <span style="font-size:13.5px;color:#0c4a6e;font-weight:500;flex:1;min-width:200px;">One naming grammar (padding-24, display-flex) · Persimmon theme · 9 no-JS components · npx santycss migrate</span>
     <a href="https://github.com/Santy-Labs/santyCSS/blob/main/CHANGELOG.md" style="font-size:12px;font-weight:600;color:#2563eb;text-decoration:none;white-space:nowrap;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">See all changes →</a>
   </div>
@@ -718,7 +718,7 @@ const santy = require('santycss');
           <a href="https://www.npmjs.com/package/santycss" target="_blank" rel="noopener" class="chip" style="background:#cb3837;color:#fff;text-decoration:none;">npm ↗</a>
           <a href="https://github.com/Santy-Labs/santyCSS" target="_blank" rel="noopener" class="chip chip-blue">GitHub ↗</a>
           <span class="chip chip-green">MIT License</span>
-          <span class="chip">v<span data-stat="version">2.10.0</span></span>
+          <span class="chip">v<span data-stat="version">2.11.0</span></span>
         </div>
       </div>
 
@@ -733,7 +733,7 @@ const santy = require('santycss');
         <!-- Recommended -->
         <div style="border:2px solid #2563eb;border-radius:10px;overflow:hidden;margin-bottom:10px;">
           <div style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;letter-spacing:.05em;display:flex;align-items:center;gap:8px;">
-            FULL — Everything, minified <span style="font-weight:400;opacity:.85;">(<span data-stat="size:santy.min.css">1.60 MB</span> · <span data-stat="gz:santy.min.css">191 KB</span> gzipped)</span>
+            FULL — Everything, minified <span style="font-weight:400;opacity:.85;">(<span data-stat="size:santy.min.css">1.57 MB</span> · <span data-stat="gz:santy.min.css">191 KB</span> gzipped)</span>
           </div>
           <div class="code-block" style="border-radius:0;border:none;margin:0;">
 <pre><span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span>
@@ -1094,7 +1094,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
       <h3 class="text-size-18 text-semibold color-white margin-bottom-24">Production Size Summary</h3>
       <div class="display-grid grid-columns-4 gap-20">
         <div class="text-center">
-          <div class="text-size-32 text-bold color-red-400" style="line-height:1;"><span data-stat="size:santy.min.css">1.60 MB</span></div>
+          <div class="text-size-32 text-bold color-red-400" style="line-height:1;"><span data-stat="size:santy.min.css">1.57 MB</span></div>
           <div class="text-size-12 margin-top-6" style="color:#64748b;">Full (raw, minified)</div>
         </div>
         <div class="text-center">
@@ -2946,7 +2946,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
           <li><a href="animations.html" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Animations Showcase</a></li>
           <li><a href="playground.html" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Playground</a></li>
           <li><a href="changelog.html" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Changelog</a></li>
-          <li><a href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Download CSS</a></li>
+          <li><a href="https://cdn.jsdelivr.net/npm/santycss@2.11.0/dist/santy.css" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Download CSS</a></li>
         </ul>
       </div>
       <div>
@@ -2978,7 +2978,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
 // ─── Download CSS ──────────────────────────────────────────────────────────
 // Framework files are served from npm via jsDelivr. The version is kept in
 // sync with package.json by scripts/sync-cdn-version.js.
-var SANTY_CDN = 'https://cdn.jsdelivr.net/npm/santycss@2.10.0/';
+var SANTY_CDN = 'https://cdn.jsdelivr.net/npm/santycss@2.11.0/';
 function santyCdnUrl(filename) {
   return SANTY_CDN + (filename === 'santy-jit.js' ? '' : 'dist/') + filename;
 }
@@ -3220,7 +3220,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
       <svg width="16" height="16" fill="none" stroke="#22c55e" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
       <span>
         <span style="display:block;">santy.min.css</span>
-        <span style="font-size:11px;color:#64748b;font-weight:400;">Minified, everything · <span data-stat="size:santy.min.css">1.60 MB</span></span>
+        <span style="font-size:11px;color:#64748b;font-weight:400;">Minified, everything · <span data-stat="size:santy.min.css">1.57 MB</span></span>
       </span>
     </button>
 
@@ -3228,7 +3228,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
       <svg width="16" height="16" fill="none" stroke="#a855f7" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
       <span>
         <span style="display:block;">santy-jit.js</span>
-        <span style="font-size:11px;color:#64748b;font-weight:400;">JIT runtime · <span data-stat="size:santy-jit.js">76 KB</span></span>
+        <span style="font-size:11px;color:#64748b;font-weight:400;">JIT runtime · <span data-stat="size:santy-jit.js">77 KB</span></span>
       </span>
     </button>
 

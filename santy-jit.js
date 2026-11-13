@@ -784,6 +784,14 @@ var SantyNaming = (function () {
     'on-focus-visible':function(sel,props){ return '.'+sel+':focus-visible{'+props+'}'; },
     'group-hover':     function(sel,props){ return '.group:hover .'+sel+'{'+props+'}'; },
   };
+  // :has() parent variants (has-checked:, group-has-invalid:, …). santy-next.css
+  // leaves them out to stay small, so the JIT generates them on demand.
+  [['checked',':checked'],['focus',':focus'],['focus-within',':focus-within'],['hover',':hover'],
+   ['invalid',':invalid'],['valid',':valid'],['disabled',':disabled'],['required',':required'],
+   ['open','[open]'],['placeholder-shown',':placeholder-shown']].forEach(function (h) {
+    STATES['has-' + h[0]] = function(sel,props){ return '.'+sel+':has('+h[1]+'){'+props+'}'; };
+    STATES['group-has-' + h[0]] = function(sel,props){ return '.group:has('+h[1]+') .'+sel+'{'+props+'}'; };
+  });
 
   // ─── Responsive variant map ───────────────────────────────────────────────
   var RESPONSIVE = {

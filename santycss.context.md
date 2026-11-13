@@ -7,8 +7,8 @@
 SantyCSS is a utility-first CSS framework whose classes are whole words with literal pixel values, plus its own theme ("Persimmon") and components. No build step is needed: link the CSS and use the classes.
 
 Install: `npm install santycss`
-CDN (new projects): `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-next.css">`
-CDN (classic build, old + new names): `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-start.css">`
+CDN (new projects): `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-next.min.css">`
+CDN (classic build, old + new names): `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-start.min.css">`
 
 ---
 

@@ -27,7 +27,7 @@ const cdnUrl = (name) => `${CDN}/${ROOT_FILES.has(name) ? '' : 'dist/'}${name}`;
 const PATTERN = new RegExp(
   '((?:href|src)=")' +
   '(?:(?:\\.\\./)*|https://cdn\\.jsdelivr\\.net/npm/santycss@\\d+\\.\\d+\\.\\d+/(?:dist/)?)' +
-  '(santy(?:-[a-z]+)*\\.(?:css|js))"',
+  '(santy(?:-[a-z]+)*(?:\\.min)?\\.(?:css|js))"',
   'g'
 );
 

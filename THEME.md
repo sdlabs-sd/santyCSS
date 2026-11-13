@@ -87,8 +87,11 @@ Light is the default when no attribute is set, so a page never flips to dark une
 
 | File | Contents | Use with |
 |---|---|---|
-| `santy-next.css` | components → grammar-only utilities (with sm/md/lg/xl) → theme | nothing else; this is the one file for new projects |
-| `santy-ui.css` | theme + components only | `santy-core.css`, or on its own |
-| `santy-start.css`, `santy.css` | unchanged v2.9 look, with legacy and grammar names | existing sites |
+| `santy-next.min.css` | components → grammar-only utilities (with sm/md/lg/xl) → theme, 39 KB gzipped | nothing else; this is the one file for new projects |
+| `santy-has.min.css` | the `:has()` parent variants (`has-checked:`, `group-has-invalid:`, …) | `santy-next.min.css`, only if you use them (the JIT also generates them on demand) |
+| `santy-ui.min.css` | theme + components only | `santy-core.min.css`, or on its own |
+| `santy-start.min.css`, `santy.min.css` | unchanged v2.9 look, with legacy and grammar names | existing sites |
+
+Every file also ships unminified (drop `.min`) for reading.
 
 `santy-ui.css` should not be combined with `santy-start.css` or `santy.css`. Those bundles still carry the classic `.card`, `.badge`, `.alert`, `.navbar`, `.input` and `.tabs`, whose rules would mix with the new ones. v3 will make Persimmon the default and drop the classic components.

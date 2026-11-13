@@ -5659,7 +5659,8 @@ const THEMES_CSS = `/* SantyCSS Themes — prebuilt design-token presets (v2.7.0
 // A new name that already exists with different CSS is a collision: it is
 // skipped and reported, never merged.
 const naming = require('./lib/naming');
-const { aliasCSS, indexClasses, selectorClasses } = require('./lib/aliases');
+const { aliasCSS, indexClasses, selectorClasses, filterRules } = require('./lib/aliases');
+const { minify } = require('./lib/minify');
 const UNALIASED_ALL = fullCSS + EXTENDED_COMPONENTS_CSS + GRID_CSS + PLUGIN_CSS + BEHAVIOR_CSS + '\n' + THEMES_CSS + '\n' + EMAIL_CSS;
 const RENAME_MAP = new Map();
 const RENAME_COLLISIONS = [];
@@ -5698,10 +5699,19 @@ const UI_COMPONENTS_CSS = fs.readFileSync(path.join(__dirname, 'lib', 'ui', 'com
 const pkgVer = require('./package.json').version;
 const UI_HEADER = `/*! SantyCSS UI v${pkgVer} — theme "Persimmon" + components | MIT | https://santycss.santy.in */\n`;
 const UI_CSS = UI_HEADER + UI_THEME_CSS + '\n' + UI_COMPONENTS_CSS;
+// The :has() parent variants (has-checked:, has-focus-within:, … ×11) repeat
+// ~300 utilities each and were over half of santy-next.css, so they live in
+// their own opt-in file. santy-start.css and santy-core.css keep them.
+const GRAMMAR_CORE_CSS = aliasCSS(slimmedCoreCSS, RENAME_MAP, 'replace');
+const isHasVariant = prelude => /\.(?:group-)?has-[a-z-]+\\:/.test(prelude);
+const HAS_CSS = `/*! SantyCSS :has() variants v${pkgVer} — has-checked:, has-focus-within:, group-has-invalid:, … | MIT
+   Opt-in companion to santy-next.css (santy-start.css and santy-core.css already include them). */\n`
+  + filterRules(GRAMMAR_CORE_CSS, isHasVariant).replace(/\n{3,}/g, '\n\n');
 const NEXT_CSS = `/*! SantyCSS Next v${pkgVer} — grammar names only, theme + components + utilities | MIT
-   One file for new projects: <link rel="stylesheet" href="…/dist/santy-next.css">
-   Legacy names (add-padding-24, make-flex) are NOT included here; use santy-start.css for those. */\n`
-  + UI_COMPONENTS_CSS + '\n' + aliasCSS(slimmedCoreCSS, RENAME_MAP, 'replace') + '\n' + nextResponsiveCSS() + '\n' + UI_THEME_CSS;
+   One file for new projects: <link rel="stylesheet" href="…/dist/santy-next.min.css">
+   Legacy names (add-padding-24, make-flex) are NOT included here; use santy-start.css for those.
+   :has() parent variants (has-checked:, …) are in santy-has.css. */\n`
+  + UI_COMPONENTS_CSS + '\n' + filterRules(GRAMMAR_CORE_CSS, p => !isHasVariant(p)).replace(/\n{3,}/g, '\n\n') + '\n' + nextResponsiveCSS() + '\n' + UI_THEME_CSS;
 
 // santy-core.css ships no breakpoint variants (they live in santy-variants.css).
 // A one-file bundle needs them, so santy-next carries sm/md/lg/xl for the
@@ -5749,6 +5759,7 @@ const OUT_CSS = {
   'santy-themes.css': applyPrefix(withNames(THEMES_CSS)),
   'santy-ui.css': applyPrefix(UI_CSS),
   'santy-next.css': applyPrefix(NEXT_CSS) + MOTION_GUARD_CSS,
+  'santy-has.css': applyPrefix(HAS_CSS),
 };
 for (const name of MODULE_NAMES) {
   OUT_CSS[`santy-${name}.css`] = applyPrefix(withNames(moduleCSS[name]));
@@ -5787,18 +5798,15 @@ const RENAMES_JSON = JSON.stringify({
   renames: Object.fromEntries([...RENAME_MAP].sort()),
 }, null, 1);
 
-// Generate minified version
-const minCSS = OUT_CSS['santy.css']
-  .replace(/\/\*[\s\S]*?\*\//g, '')
-  .replace(/\s*\{\s*/g, '{')
-  .replace(/\s*\}\s*/g, '}')
-  .replace(/\s*:\s*/g, ':')
-  .replace(/\s*;\s*/g, ';')
-  .replace(/\s*,\s*/g, ',')
-  .replace(/\n+/g, '')
-  .replace(/\s{2,}/g, ' ')
-  .trim();
+// Minified builds. lib/minify.js is structure-aware (strings, url(), var()
+// and selector whitespace are safe) and is checked rule-for-rule against the
+// source in a real browser by the test suite.
+const minCSS = minify(OUT_CSS['santy.css']);
 OUT_CSS['santy.min.css'] = minCSS;
+for (const name of ['santy-start', 'santy-core', 'santy-next', 'santy-ui', 'santy-has', 'santy-variants',
+  'santy-components', 'santy-animations', 'santy-themes']) {
+  OUT_CSS[`${name}.min.css`] = minify(OUT_CSS[`${name}.css`]);
+}
 
 const OUT_FILES = {
   ...OUT_CSS,

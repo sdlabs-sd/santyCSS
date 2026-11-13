@@ -29,10 +29,10 @@ Class names follow one grammar, `property-[modifier]-value`: `padding-24`, `radi
 **CDN:** paste this into `<head>`:
 
 ```html
-<!-- New projects: Persimmon theme + components + utilities, one file -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-next.css">
+<!-- New projects: Persimmon theme + components + utilities, one file (39KB gzipped) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-next.min.css">
 <!-- Existing sites: the classic build, old and new class names -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-start.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-start.min.css">
 ```
 
 **npm:**
@@ -115,12 +115,12 @@ The number in a class is the pixel value, so there's no scale to memorise and no
 | JS behaviour | Optional `santy.js` for focus traps, Esc-to-close and ARIA. The new components need no JS |
 | Icons | 2,100+ included |
 | AI tools | Readable without a lookup table; [`santycss.context.md`](santycss.context.md) is a ready-made prompt |
-| CSS shipped | 65KB gz for `santy-next.css`, ~15KB gz purged on a real page |
+| CSS shipped | 39KB gz for `santy-next.min.css`, ~15KB gz purged on a real page |
 
 ### Trade-offs
 
 - **Longer class names mean larger HTML.** Gzip removes most of the difference, but the source is wordier.
-- **The full bundles are large.** Use `santy-next.css`, `santy-start.css` or `santy-core.css`, or purge (see below).
+- **The full bundles are large.** Use a minified entry point (`santy-next.min.css`, `santy-start.min.css`, `santy-core.min.css`), or purge (see below).
 - **Not the best fit** if most of your styling is one-off arbitrary values (the JIT, `santy-jit.js`, covers occasional ones), or if your design system needs a Sass pipeline.
 
 ---
@@ -129,9 +129,11 @@ The number in a class is the pixel value, so there's no scale to memorise and no
 
 ```html
 <!-- Drop-in: base utilities + components -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-start.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-start.min.css">
 <!-- Extended variants: xl:, peer-*, group-*, print:, motion-*, RTL -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-variants.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-variants.min.css">
+<!-- With santy-next: :has() parent variants (has-checked:, group-has-invalid:, …), only if you use them -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-has.min.css">
 <!-- Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-icons.css">
 <!-- Behaviour layer -->
@@ -144,16 +146,17 @@ With npm: `import 'santycss/css'` (everything), `'santycss/css/core'`, `'santycs
 
 | File | Raw | Gzipped |
 |---|---|---|
-| `santy-next.css` (new projects: theme + components + utilities) | 494KB | 65KB |
-| `santy-ui.css` (theme + components only) | 45KB | 9KB |
-| `santy-core.css` | 445KB | 56KB |
-| `santy-start.css` | 805KB | 115KB |
+| `santy-next.min.css` (new projects: theme + components + utilities) | 224KB | **39KB** |
+| `santy-has.min.css` (optional `:has()` variants for santy-next) | 204KB | 20KB |
+| `santy-ui.min.css` (theme + components only) | 33KB | 7KB |
+| `santy-core.min.css` | 393KB | 52KB |
+| `santy-start.min.css` | 674KB | 100KB |
 | `santy.min.css` (everything) | 1.6MB | 192KB |
 | `santy-icons.css` | 1.3MB | 247KB |
 | `santy.js` | 71KB | 18KB |
 | Purged, real page ([portfolio template](https://santycss.santy.in/template-portfolio.html)) | 102KB | **15KB** |
 
-The classic bundles carry both old and new class names until v3. Set `"legacyNames": false` in `santy.config.json` to build them with new names only.
+Every bundle has a `.min.css` twin; the unminified files are for reading. The classic bundles carry both old and new class names until v3. Set `"legacyNames": false` in `santy.config.json` to build them with new names only.
 
 Purge to the classes you use:
 

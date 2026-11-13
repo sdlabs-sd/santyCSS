@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SantyCSS Playground — Try it live</title>
   <link rel="icon" type="image/png" href="assest/santy_css.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.11.0/dist/santy.min.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1250,7 +1250,7 @@ function updatePreview() {
   frame.srcdoc = `<!DOCTYPE html><html><head>
   <base href="${base}">
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.11.0/dist/santy.min.css">
   <style>*{box-sizing:border-box;}body{margin:0;padding:0;background:${bg};font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;}</style>
 </head><body>${html}
 <script>
@@ -1320,7 +1320,7 @@ function copyHTML() {
 }
 function downloadHTML() {
   const base = location.href.replace(/[^/]*/,'');
-  const full = `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>SantyCSS Component</title>\n  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy.css">\n</head>\n<body style="font-family:ui-sans-serif,system-ui,sans-serif;">\n${editor.value}\n</body>\n</html>`;
+  const full = `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>SantyCSS Component</title>\n  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy.min.css">\n</head>\n<body style="font-family:ui-sans-serif,system-ui,sans-serif;">\n${editor.value}\n</body>\n</html>`;
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([full],{type:'text/html'}));
   a.download = 'santycss-component.html';
