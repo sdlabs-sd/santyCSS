@@ -1101,6 +1101,31 @@ test('legacyNames:false builds grammar names only', () => {
   assert(!/\.add-padding-24[\s,{]/.test(out) && !/\.make-flex[\s,{]/.test(out), 'legacy names still present');
 });
 
+test('the published package can run `santycss build` and `santycss migrate`', () => {
+  // Build-time files must ship: a missing one (e.g. a sync target outside
+  // "files") crashes `npx santycss build` for every npm user.
+  const os = require('os');
+  const { execFileSync } = require('child_process');
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'santy-pack-'));
+  try {
+    const tgz = execFileSync('npm', ['pack', ROOT, '--silent', '--pack-destination', tmp], { encoding: 'utf8', cwd: tmp }).trim().split('\n').pop();
+    execFileSync('tar', ['xzf', path.join(tmp, tgz)], { cwd: tmp });
+    const app = path.join(tmp, 'app');
+    fs.mkdirSync(app);
+    fs.writeFileSync(path.join(app, 'santy.config.json'), JSON.stringify({ legacyNames: false }));
+    fs.writeFileSync(path.join(app, 'a.html'), '<i class="make-flex add-padding-8"></i>');
+    const cli = path.join(tmp, 'package', 'cli.js');
+    execFileSync(process.execPath, [cli, 'build'], { cwd: app, stdio: 'pipe' });
+    const built = fs.readFileSync(path.join(app, 'santy-dist', 'santy.css'), 'utf8');
+    assert(built.includes('.padding-24') && !built.includes('.add-padding-24'), 'packaged build output wrong');
+    assert(fs.existsSync(path.join(app, 'santy-dist', 'santy-next.css')), 'packaged build lacks santy-next.css');
+    execFileSync(process.execPath, [cli, 'migrate', app], { cwd: app, stdio: 'pipe' });
+    assert(fs.readFileSync(path.join(app, 'a.html'), 'utf8').includes('display-flex padding-8'), 'packaged migrate failed');
+  } finally {
+    fs.rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
 // ── v2.10 theme + component layer ────────────────────────────────────────────
 test('santy-ui.css and santy-next.css exist with the full component matrix', () => {
   const ui = read('santy-ui.css');

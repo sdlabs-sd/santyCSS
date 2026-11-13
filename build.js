@@ -19,6 +19,8 @@ const gridSystem = require('./lib/grid-system');
   const block = src.slice(src.indexOf(START), src.indexOf(END) + END.length);
   for (const rel of ['santy-jit.js', 'packages/merge/santy-merge.js', 'packages/sort/santy-sort.js', 'vscode-santycss/src/naming.js']) {
     const file = path.join(__dirname, rel);
+    // The npm package ships without vscode-santycss/, so skip missing targets.
+    if (!fs.existsSync(file)) continue;
     const text = fs.readFileSync(file, 'utf8');
     const a = text.indexOf(START), z = text.indexOf(END);
     if (a === -1 || z < a) continue;
