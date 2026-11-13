@@ -25,7 +25,7 @@ None of this is broken CSS. It is the cost of growing one family at a time. Each
 | 5 | `verb-name` (animation) | `animate-fade-in` | 179 | next to `animation-delay-100` |
 | 6 | `property-value` | `gap-16`, `opacity-50`, `cursor-pointer` | 1,800 | the majority shape |
 | 7 | `property-modifier-value` | `border-color-red-500`, `gap-x-8`, `overflow-x-auto` | 900 | |
-| 8 | Abbreviation | `z-10`, `h-dvh`, `ps-16`, `bg-cover`, `g-3` | 120 | Tailwind or Bootstrap leftovers |
+| 8 | Abbreviation | `z-10`, `h-dvh`, `ps-16`, `bg-cover`, `g-3` | 120 | short codes that break the whole-word style |
 | 9 | Abbreviated property | `self-center`, `content-between`, `fit-cover` | 25 | the property word is missing |
 | 10 | `component` / `component-part` / `component-variant` | `toast-success`, `card-header`, `btn-lg` | 640 | already noun-first |
 | 11 | Component + generic modifiers | `make-button style-primary size-large shape-pill` | 50 | modifiers only work as compound selectors |
@@ -66,7 +66,7 @@ None of this is broken CSS. It is the cost of growing one family at a time. Each
 ### 3. Number formats
 | Format | Example | Problem |
 |---|---|---|
-| px integer | `add-padding-24`, `set-text-16` | fine, and the strongest difference from Tailwind (`p-24` there is 96px) |
+| px integer | `add-padding-24`, `set-text-16` | fine, and SantyCSS's strongest trait: the number is the pixel value |
 | hyphen decimal | `line-height-1-5` (= 1.5) | reads like a range or a ratio |
 | hyphen ratio | `aspect-ratio-16-9`, `aspect-4-3` | looks the same as a hyphen decimal |
 | fraction | `set-width-1-of-3` | fine, but `set-width-half` / `third` / `quarter` also exist, and `half` is `calc(50% - 8px)`, not 50% |
@@ -101,7 +101,7 @@ The `style-*`, `size-*` and `shape-*` modifiers only exist as compound selectors
 - `text-primary` is the theme's *text* color, while `color-primary` is the *brand* color.
 
 ### 7. Look and feel
-The default palette, radii and shadows match Tailwind's defaults value for value (`#3b82f6`, `0 10px 15px -3px rgba(0,0,0,.1)`, …). The second piece of Reddit feedback was "it has no look of its own", and that is correct too. Part 4 of the v2.10 work (THEME.md) covers it.
+The default palette, radii and shadows are generic: a stock blue primary (`#3b82f6`), cool grays and neutral shadows (`0 10px 15px -3px rgba(0,0,0,.1)`). The second piece of Reddit feedback was "it has no look of its own", and that is correct too. Part 4 of the v2.10 work (THEME.md) covers it.
 
 ## What v2.10 does about it
 

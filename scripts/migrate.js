@@ -12,7 +12,7 @@
  *
  * Usage:
  *   node scripts/migrate.js [paths…]          files or folders (default: .)
- *   npx santycss migrate --from=legacy [paths…]
+ *   npx santycss migrate [paths…]          (the default migrate mode)
  *
  * Flags:
  *   --dry-run        show what would change, write nothing
@@ -254,7 +254,7 @@ function walk(target, exts, out) {
 function main(argv) {
   const flags = new Set(argv.filter(a => a.startsWith('--') && !a.includes('=')));
   const val = k => { const a = argv.find(x => x.startsWith(`--${k}=`)); return a ? a.slice(k.length + 3) : null; };
-  // --input= / --file= keep parity with the Tailwind/Bootstrap migrator.
+  // --input= / --file= keep parity with the --from=tailwind/bootstrap modes.
   const paths = argv.filter(a => !a.startsWith('--'));
   if (val('input')) paths.push(val('input'));
   if (val('file')) paths.push(val('file'));

@@ -2,16 +2,17 @@
 /**
  * SantyCSS Migration Tool  —  npx santycss migrate
  *
- * Converts Tailwind CSS class names to SantyCSS equivalents.
- * To rewrite pre-2.10 SantyCSS names instead, use --from=legacy
- * (scripts/migrate.js).
+ * By default, rewrites pre-2.10 SantyCSS class names to the v2.10 grammar
+ * (add-padding-24 → padding-24); that work lives in scripts/migrate.js.
+ * --from=tailwind or --from=bootstrap converts another framework instead.
  *
  * Usage:
- *   npx santycss migrate --input=src/          # convert all HTML/JSX/TSX/Vue in src/
- *   npx santycss migrate --file=index.html     # single file
- *   npx santycss migrate --dry-run             # preview only, no writes
- *   npx santycss migrate --report              # print unmapped classes
- *   npx santycss migrate --from=bootstrap      # migrate Bootstrap 5 instead
+ *   npx santycss migrate src/                         # update old SantyCSS names
+ *   npx santycss migrate src/ --dry-run --diff        # preview every rename
+ *   npx santycss migrate src/ --check                 # CI: fail if old names remain
+ *   npx santycss migrate --from=tailwind --input=src/ # convert Tailwind classes
+ *   npx santycss migrate --from=bootstrap --file=a.html
+ *   npx santycss migrate --from=tailwind --report     # print unmapped classes
  */
 
 'use strict';
@@ -422,13 +423,13 @@ const getArg    = (k, def) => { const m = args.find(a => a.startsWith(`--${k}=`)
 const hasFlag   = k => args.includes(`--${k}`);
 const isDryRun  = hasFlag('dry-run');
 const isReport  = hasFlag('report');
-SOURCE = (getArg('from', 'tailwind') || 'tailwind').toLowerCase();
+SOURCE = (getArg('from', 'santycss') || 'santycss').toLowerCase();
 if (SOURCE !== 'tailwind' && SOURCE !== 'bootstrap') {
   if (SOURCE === 'legacy' || SOURCE === 'santy' || SOURCE === 'santycss') {
     process.exitCode = require('./scripts/migrate.js').main(args.filter(a => !a.startsWith('--from=')));
     return;
   }
-  console.error('Unknown --from=' + SOURCE + '. Use tailwind, bootstrap or legacy.');
+  console.error('Unknown --from=' + SOURCE + '. Leave it out to update SantyCSS names, or use --from=tailwind / --from=bootstrap.');
   process.exit(1);
 }
 

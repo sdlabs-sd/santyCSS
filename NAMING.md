@@ -9,7 +9,7 @@
 <div class="display-flex align-center gap-16 padding-24 radius-12 shadow-md">
 ```
 
-The old names still work. They are deprecated aliases with byte-identical CSS, and they stay until v3. To move a project over, run `npx santycss migrate --from=legacy` (see [Migrating](#migrating)).
+The old names still work. They are deprecated aliases with byte-identical CSS, and they stay until v3. To move a project over, run `npx santycss migrate` (see [Migrating](#migrating)).
 
 ---
 
@@ -30,7 +30,7 @@ The four grammars were scored on the same 17 everyday utilities (display, paddin
 | Negative margin | `subtract-margin-top-8` | `margin-top-minus-8` | `margin-top-minus-8` | `-mt-8` |
 | Avg. length (17 classes) | 16.4 chars | 15.5 chars | **12.5 chars** | 7.9 chars |
 
-For reference, the v2.9 names average 13.7 characters on the same set and Tailwind's average 8.1.
+For reference, the v2.9 names average 13.7 characters on the same set.
 
 ### Scores (1 = poor, 5 = best)
 
@@ -39,8 +39,8 @@ For reference, the v2.9 names average 13.7 characters on the same set and Tailwi
 | **Consistency.** One shape, no judgement calls | 3. One shape, but every class needs a verb and the choice is arbitrary (is it `set-gap` or `add-gap`?) | 5. Mechanical: it's the CSS property name | 4. Mechanical, with one small vocabulary table of short words (`text`, `radius`, `shadow`) | 2. Each abbreviation has to be learned on its own (`p`, `pt`, `mx`, `leading`) |
 | **Beginner readability** | 4. Reads like an instruction, but the verb adds no information | 3. Clear if you know CSS, and long (`justify-content-space-between`) | 5. Plain words, short, no CSS jargon needed | 2. Needs a cheat sheet |
 | **Typing length** | 2 (16.4) | 2 (15.5) | 4 (12.5, shorter than today) | 5 (7.9) |
-| **AI tools generate it correctly** | 2. Models guess the verb and get it wrong (`set-padding`, `add-gap`) | 5. Models already know every CSS property | 4. Close to CSS. The few short words are listed in the vocabulary below and in `santycss.context.md` | 2. Models slide into Tailwind meanings, and `p-24` means 96px there but 24px here |
-| **Clearly differs from Tailwind** | 5 | 4 | 4. Whole words and literal pixels (`padding-24` = 24px; Tailwind's `p-24` = 96px) | 1. Looks like Tailwind with different numbers, the worst of both |
+| **AI tools generate it correctly** | 2. Models guess the verb and get it wrong (`set-padding`, `add-gap`) | 5. Models already know every CSS property | 4. Close to CSS. The few short words are listed in the vocabulary below and in `santycss.context.md` | 2. Two-letter codes are guesswork: is `p-24` 24px, or a step on some scale? |
+| **Distinct identity.** Reads as SantyCSS, not as another framework's dialect | 5 | 4 | 4. Whole words and literal pixels: `padding-24` is exactly 24px | 1. Short codes look like every other utility framework |
 | **Migration effort from v2.9** | 2. About 3,000 renames, because every noun-led class gains a verb | 2. About 2,300 renames (all of C's, plus every `background-{color}`, `justify-*` and `align-*`) | 4. **1,632 renames** (32% of base classes). The other 68% already fit | 1. About 4,100 renames, nearly everything |
 | **Total** | **18** | **21** | **25** | **13** |
 
@@ -125,10 +125,10 @@ The full list of 1,632 renames is in [`dist/santy-renames.json`](dist/santy-rena
 ## Migrating
 
 ```bash
-npx santycss migrate --from=legacy src/ --dry-run --diff   # preview every rename
-npx santycss migrate --from=legacy src/                    # rewrite in place
-npx santycss migrate --from=legacy src/ --check            # CI: fail if old names remain
-npx santycss migrate --from=legacy src/ --components       # also move classic components
+npx santycss migrate src/ --dry-run --diff   # preview every rename
+npx santycss migrate src/                    # rewrite in place
+npx santycss migrate src/ --check            # CI: fail if old names remain
+npx santycss migrate src/ --components       # also move classic components
 ```
 
 The migrator reads HTML, JSX, TSX and Vue (add more with `--ext=.svelte,.astro`). It rewrites `class` and `className` attributes, string literals inside `className={…}` and `:class="…"`, `cn()` / `clsx()` / `classList.*()` calls, and `el.className = …`. Class names built at runtime (`add-padding-${n}`) are listed for you to fix by hand.

@@ -48,7 +48,9 @@ pre-2.10 class name still works, with byte-identical CSS.
 - **`santy-next.css`**: one file for new projects. It holds the components, the
   grammar-only utilities with `sm:` `md:` `lg:` `xl:` breakpoints, and the
   theme, with no legacy aliases (63 KB gzipped).
-- **`npx santycss migrate --from=legacy`** (`scripts/migrate.js`) rewrites old
+- **`npx santycss migrate`** (`scripts/migrate.js`) now updates SantyCSS's own
+  pre-2.10 names by default. Converting another framework needs
+  `--from=tailwind` or `--from=bootstrap` (Tailwind used to be the default). It rewrites old
   names in HTML, JSX, TSX and Vue: attributes, `className={…}`, `:class`,
   `cn()` / `clsx()`, `classList.*()` and `el.className`. `--dry-run`,
   `--diff`, `--check` (for CI), `--exclude=` and `--components` (moves the

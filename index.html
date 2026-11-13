@@ -314,7 +314,7 @@
       🤖 AI-first — plain English = no lookup table
     </div>
     <div style="display:inline-flex;align-items:center;gap:6px;background:#dcfce7;color:#166534;padding:4px 14px;border-radius:9999px;font-size:12.5px;font-weight:600;">
-      ⚡ npx santycss migrate — switch from Tailwind in seconds
+      ⚡ npx santycss migrate --from=tailwind — switch from Tailwind in seconds
     </div>
   </div>
   <!-- H1 -->
@@ -325,7 +325,7 @@
   <p style="font-size:16px;color:#6b7280;margin:0 auto 32px;max-width:520px;line-height:1.6;">
     Write <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;font-size:14px;color:#374151;">add-padding-24</code> instead of <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;font-size:14px;color:#374151;">p-6</code>.
     Class names AI tools understand instantly — no abbreviations, no lookup tables.
-    Already on Tailwind? Run <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;font-size:14px;color:#166534;">npx santycss migrate</code> to convert your project.
+    Already on Tailwind? Run <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;font-size:14px;color:#166534;">npx santycss migrate --from=tailwind</code> to convert your project.
   </p>
 
   <!-- ── INLINE EDITOR SHELL ── -->
@@ -1482,7 +1482,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
         <div style="width:36px;height:36px;background:#3b82f6;border-radius:9999px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;margin-bottom:16px;">1</div>
         <h3 class="set-text-16 text-semibold color-white add-margin-bottom-8">Run the migrate command</h3>
         <div class="code-block" style="background:#0f172a;border:1px solid #334155;font-size:13px;">
-          <span style="color:#86efac;">npx santycss migrate</span> <span style="color:#64748b;">--input=src/</span>
+          <span style="color:#86efac;">npx santycss migrate</span> <span style="color:#64748b;">--from=tailwind --input=src/</span>
         </div>
         <p class="set-text-13 add-margin-top-12 add-margin-bottom-0" style="color:#94a3b8;">Scans your source directory and converts all Tailwind class names in-place.</p>
       </div>
@@ -1491,7 +1491,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
         <div style="width:36px;height:36px;background:#8b5cf6;border-radius:9999px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;margin-bottom:16px;">2</div>
         <h3 class="set-text-16 text-semibold color-white add-margin-bottom-8">Preview with dry-run</h3>
         <div class="code-block" style="background:#0f172a;border:1px solid #334155;font-size:13px;">
-          <span style="color:#c4b5fd;">npx santycss migrate</span> <span style="color:#64748b;">--dry-run --report</span>
+          <span style="color:#c4b5fd;">npx santycss migrate</span> <span style="color:#64748b;">--from=tailwind --dry-run --report</span>
         </div>
         <p class="set-text-13 add-margin-top-12 add-margin-bottom-0" style="color:#94a3b8;">See every replacement before writing. <code style="color:#fbbf24;">--report</code> lists any unmapped classes.</p>
       </div>
@@ -3621,7 +3621,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
       <svg width="16" height="16" fill="none" stroke="#a855f7" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
       <span>
         <span style="display:block;">santy-jit.js</span>
-        <span style="font-size:11px;color:#64748b;font-weight:400;">JIT runtime · <span data-stat="size:santy-jit.js">75 KB</span></span>
+        <span style="font-size:11px;color:#64748b;font-weight:400;">JIT runtime · <span data-stat="size:santy-jit.js">76 KB</span></span>
       </span>
     </button>
 

@@ -10,21 +10,21 @@ SantyCSS v2.10 ships its own look. It's called **Persimmon**, and it lives in `s
 
 **Warm paper, ink type, one persimmon accent. It's tactile, editorial and calm.**
 
-Tailwind's defaults are cool and neutral: slate grays, a blue-500 primary, an 8px radius and soft gray shadows, with sans-serif everywhere. daisyUI's defaults are playful: saturated purple, pink and teal, big round pills and bouncy states. Persimmon takes neither route. It is modelled on a well-made notebook or a printed annual report, which is a good fit for products people use to do serious work.
+Generic utility defaults are cool and neutral: a stock blue, cool grays, and sans-serif everywhere. Persimmon is modelled on a well-made notebook or a printed annual report instead, which suits products people use to do serious work.
 
-| Decision | Persimmon | Tailwind default | daisyUI default |
-|---|---|---|---|
-| Page background | Warm paper `#faf7f2` | White | White / base-100 |
-| Text | Warm ink `#1d1a16` | Gray-900, cool | base-content |
-| Primary | Persimmon `#cc4520` | Blue-500 `#3b82f6` | Purple / indigo |
-| Secondary | Ink, so the second action is black, not gray | Gray | Pink |
-| Headings | Serif display (Iowan, Palatino, Georgia) | Sans | Sans |
-| Labels | Tracked uppercase mono "eyebrows" | None | None |
-| Buttons | 10px radius, a 2px bottom bevel, pressing moves it down 1px | No component; usually `rounded-md`, flat | Rounded, scale on press |
-| Badges | Squared 6px "tags" | No component; usually `rounded-full` | Full pill |
-| Cards | 16px radius, hairline warm border, long low shadow | No component; usually `rounded-lg shadow` | 16px radius, no border |
-| Shadows | Warm-tinted brown with a 1px key line on top | Neutral black | Minimal |
-| Dark mode | Warm charcoal `#15120f` with a brighter persimmon and ink text on it | Slate-900, blue-black | Dark gray |
+| Decision | Persimmon | Why |
+|---|---|---|
+| Page background | Warm paper `#faf7f2` | Softer than pure white over long sessions, and it gives raised white cards something to sit on |
+| Text | Warm ink `#1d1a16` | A slightly brown black that belongs on paper |
+| Primary | Persimmon `#cc4520` | Warm and confident, and easy to tell apart from link blue and error red |
+| Secondary | Ink | The second action is black, not a washed-out gray |
+| Headings | Serif display (Iowan, Palatino, Georgia) | Gives the page a voice while the UI stays plain |
+| Labels | Tracked uppercase mono "eyebrows" | A recognisable SantyCSS detail above headings and plan names |
+| Buttons | 10px radius, 2px bottom bevel, presses down 1px | Feels physical without being skeuomorphic |
+| Badges | Squared 6px "tags" | Reads as a label, not a candy pill |
+| Cards | 16px radius, hairline warm border, long low shadow | Radius grows with element size: 6 → 10 → 16 → 22px |
+| Shadows | Warm-tinted brown, with a 1px key line on top | Depth that matches the paper instead of a gray smudge |
+| Dark mode | Warm charcoal `#15120f`, brighter persimmon with ink text on it | Same warmth at night, not blue-black |
 
 ### The five signatures
 1. **Serif headlines on a sans UI.** `h1`–`h3`, card titles, modal titles and prices use `--santy-font-display`. Body text and controls use the system sans, so the UI stays legible and the headlines carry the voice. There are no web fonts to load: the stack picks up Iowan Old Style on Apple devices, Palatino Linotype on Windows and Georgia everywhere else.

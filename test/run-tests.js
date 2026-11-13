@@ -789,7 +789,7 @@ test('`npx santycss migrate` runs the migrator and radius classes exist', () => 
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'santy-tw-'));
   const file = path.join(tmp, 'page.html');
   fs.writeFileSync(file, '<div class="rounded rounded-lg rounded-t-xl rounded-full hidden"></div>');
-  execFileSync('node', [path.join(ROOT, 'cli.js'), 'migrate', `--file=${file}`], { stdio: 'ignore' });
+  execFileSync('node', [path.join(ROOT, 'cli.js'), 'migrate', '--from=tailwind', `--file=${file}`], { stdio: 'ignore' });
   const out = fs.readFileSync(file, 'utf8').match(/class="([^"]+)"/)[1].split(' ');
   fs.rmSync(tmp, { recursive: true, force: true });
   assert(out.join(' ') === 'radius-4 radius-8 radius-top-12 radius-pill display-none',
@@ -839,7 +839,7 @@ test('Tailwind dynamic patterns convert to real classes or stay unmapped', () =>
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'santy-tw-dyn-'));
   const file = path.join(tmp, 'page.html');
   fs.writeFileSync(file, Object.keys(input).map(c => `<i class="${c}"></i>`).join('\n'));
-  execFileSync('node', [path.join(ROOT, 'migrate.js'), `--file=${file}`], { stdio: 'ignore' });
+  execFileSync('node', [path.join(ROOT, 'migrate.js'), '--from=tailwind', `--file=${file}`], { stdio: 'ignore' });
   const out = [...fs.readFileSync(file, 'utf8').matchAll(/class="([^"]+)"/g)].map(m => m[1]);
   fs.rmSync(tmp, { recursive: true, force: true });
   // The table lists pre-2.10 names; the migrator emits their grammar names.
@@ -1073,13 +1073,14 @@ test('every migrate output is a class SantyCSS ships', () => {
   assert(missing.length === 0, `renames point at missing classes: ${missing.slice(0, 5).join(', ')}`);
 });
 
-test('`santycss migrate --from=legacy --check` fails on old names and passes after rewrite', () => {
+test('plain `santycss migrate` updates SantyCSS names (and --check gates CI)', () => {
   const os = require('os');
   const { spawnSync } = require('child_process');
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'santy-legacy-'));
   const file = path.join(tmp, 'a.vue');
   fs.writeFileSync(file, '<template><div class="make-flex add-padding-16"></div></template>');
-  const run = (...a) => spawnSync(process.execPath, [path.join(ROOT, 'cli.js'), 'migrate', '--from=legacy', tmp, ...a], { encoding: 'utf8' });
+  // No --from: the default mode is SantyCSS's own rename, not Tailwind.
+  const run = (...a) => spawnSync(process.execPath, [path.join(ROOT, 'cli.js'), 'migrate', tmp, ...a], { encoding: 'utf8' });
   assert(run('--check').status === 1, '--check should exit 1 with legacy names');
   assert(run().status === 0, 'rewrite failed');
   assert(fs.readFileSync(file, 'utf8').includes('display-flex padding-16'), 'file not rewritten');

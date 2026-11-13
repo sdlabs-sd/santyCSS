@@ -350,8 +350,8 @@
       </div>
       <p class="text-size-15 color-gray-500 margin-bottom-12 line-height-relaxed"><b>Migrate a project</b> (HTML, JSX, TSX, Vue):</p>
       <div class="install-box margin-bottom-12">
-        <code>npx santycss migrate --from=legacy src/ --dry-run --diff</code>
-        <button class="copy-btn" onclick="copyText('npx santycss migrate --from=legacy src/ --dry-run --diff', this)">Copy</button>
+        <code>npx santycss migrate src/ --dry-run --diff</code>
+        <button class="copy-btn" onclick="copyText('npx santycss migrate src/ --dry-run --diff', this)">Copy</button>
       </div>
       <p class="text-size-13 color-gray-500 line-height-relaxed">Drop <code class="chip">--dry-run</code> to rewrite files, or add <code class="chip">--check</code> in CI. The full map of 1,600+ renames is in <code class="chip">santycss/renames</code> (<code class="chip">dist/santy-renames.json</code>). For slimmer CSS without aliases, set <code class="chip">"legacyNames": false</code> in <code class="chip">santy.config.json</code>.</p>
     </section>
@@ -1915,7 +1915,7 @@ npm install santycss
 
     <section id="deprecated-names" class="doc-section">
       <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">Deprecated names</h2>
-      <p class="set-text-15 color-gray-500 add-margin-bottom-24 line-height-relaxed">Older docs and posts used these spellings. Use the current name in new code. <code class="chip">bg-surface</code>, <code class="chip">text-primary</code> and <code class="chip">text-muted</code> still work; the others were documented but never shipped, and <code class="chip">npx santycss migrate</code> now emits the current names.</p>
+      <p class="set-text-15 color-gray-500 add-margin-bottom-24 line-height-relaxed">Older docs and posts used these spellings. Use the current name in new code. <code class="chip">bg-surface</code>, <code class="chip">text-primary</code> and <code class="chip">text-muted</code> still work; the others were documented but never shipped, and <code class="chip">npx santycss migrate --from=tailwind</code> now emits the current names.</p>
       <div class="table-wrap add-margin-bottom-24">
         <table>
           <thead><tr><th>Old</th><th>Current</th></tr></thead>

@@ -9,7 +9,7 @@
 [![license](https://img.shields.io/npm/l/santycss.svg?style=flat-square)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Santy-Labs/santyCSS?style=flat-square)](https://github.com/Santy-Labs/santyCSS)
 
-**Why SantyCSS:** for people who want to read their markup without a cheat sheet. Unlike Tailwind, every class is whole words and literal pixels (`padding-24` is 24px, Tailwind's `p-24` is 96px), and it ships with its own opinionated look and components instead of leaving design to you.
+**Why SantyCSS:** for people who want to read their markup without a cheat sheet and get a finished design without building one. Every class is whole words and literal pixels (`padding-24` is 24px), and it ships with its own look, Persimmon, plus components that work in plain HTML.
 
 Class names follow one grammar, `property-[modifier]-value`: `padding-24`, `radius-12`, `display-flex`. You can read the markup without a cheat sheet, and so can AI tools.
 
@@ -18,7 +18,7 @@ Class names follow one grammar, `property-[modifier]-value`: `padding-24`, `radi
 > **New in v2.10**
 > - **One naming grammar.** `property-[modifier]-value`, with no verbs: `make-flex` → `display-flex`, `add-padding-24` → `padding-24`. The old names still work. See [NAMING.md](NAMING.md).
 > - **A look of its own.** The Persimmon theme and nine components (button, card, navbar, input, badge, alert, modal, tabs, pricing), in `santy-next.css`. See [THEME.md](THEME.md).
-> - `npx santycss migrate --from=legacy` rewrites old class names in HTML, JSX, TSX and Vue.
+> - `npx santycss migrate` rewrites old class names in HTML, JSX, TSX and Vue.
 >
 > [Full changelog →](CHANGELOG.md)
 
@@ -93,7 +93,7 @@ Numbers are pixels (`gap-16` = 16px), so there's no spacing scale to memorise.
 - **Animations.** 120+, including scroll-triggered effects and creature animations (`animate-butterfly`). [See them →](https://santycss.santy.in/animations.html)
 - **Themes.** Persimmon by default (warm paper, ink, serif headlines), with light and dark modes. Every value is a `--santy-*` variable, and there are 5 prebuilt presets.
 - **Config and plugins.** `santy.config.json` for colours, spacing, breakpoints and a prefix; a plugin API; `@apply` via `santycss/postcss`.
-- **Migrators.** `npx santycss migrate` converts Tailwind. Add `--from=bootstrap` for Bootstrap 5, or `--from=legacy` to update pre-2.10 SantyCSS names.
+- **Migrator.** `npx santycss migrate` updates pre-2.10 SantyCSS names to the current grammar. `--from=tailwind` and `--from=bootstrap` convert other frameworks.
 - **Tooling.** Prettier class sorting (`santycss/prettier`), a [VS Code extension](vscode-santycss/) and a Figma plugin.
 
 ---
@@ -168,7 +168,7 @@ Every class reads `property-[modifier]-value`. The full rationale and the scorin
 
 ### Deprecated names
 
-**v2.10 renamed 1,632 classes** to fit the grammar (`make-flex` → `display-flex`, `add-padding-24` → `padding-24`, `round-corners-12` → `radius-12`, and so on). The old names are aliases with identical CSS in every classic bundle and stay until v3. They are left out of `santy-next.css`. `npx santycss migrate --from=legacy src/` rewrites them for you, and the full map is in [`dist/santy-renames.json`](dist/santy-renames.json).
+**v2.10 renamed 1,632 classes** to fit the grammar (`make-flex` → `display-flex`, `add-padding-24` → `padding-24`, `round-corners-12` → `radius-12`, and so on). The old names are aliases with identical CSS in every classic bundle and stay until v3. They are left out of `santy-next.css`. `npx santycss migrate src/` rewrites them for you, and the full map is in [`dist/santy-renames.json`](dist/santy-renames.json).
 
 Older docs also used these spellings:
 
@@ -182,7 +182,7 @@ Older docs also used these spellings:
 | `text-muted` | `color-text-muted` |
 | `npx santycss-migrate` | `npx santycss migrate` |
 
-`bg-surface`, `text-primary` and `text-muted` still work. The others were documented but never shipped; `npx santycss migrate` now outputs the current names.
+`bg-surface`, `text-primary` and `text-muted` still work. The others were documented but never shipped; `npx santycss migrate --from=tailwind` now outputs the current names.
 
 ---
 

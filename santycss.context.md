@@ -1,5 +1,5 @@
 # SantyCSS — LLM System Prompt Reference
-> Paste this into Claude / ChatGPT / Cursor to make AI generate SantyCSS instead of Tailwind.
+> Paste this into Claude, ChatGPT or Cursor so your AI tool writes SantyCSS with the current class names.
 
 ---
 
@@ -18,24 +18,24 @@ Every class is `property-[modifier]-value`.
 
 1. **Property first, then modifier, then value. No verbs.** `padding-top-24`, `border-left-2`, `md:display-flex`, `on-hover:shadow-lg`.
 2. **Properties are whole words**: the CSS name or `display`, `text`, `font`, `radius`, `shadow`, `background`, `color`, `align`, `justify`, `inset`, `aspect`, `animation`. Never `p-`, `w-`, `bg-`, `z-`.
-3. **Numbers are literal and whole.** Lengths are px (`gap-16` = 16px, NOT Tailwind's ×4 scale). Unitless ratios are %: `opacity-50`, `scale-105`, `line-height-150` (= 1.5). Negatives are `minus-N` (`margin-top-minus-8`), fractions `N-of-M` (`width-1-of-3`), ratios `N-by-M` (`aspect-16-by-9`).
+3. **Numbers are literal and whole.** Lengths are px: `gap-16` is exactly 16px, and there's no spacing scale to multiply. Unitless ratios are %: `opacity-50`, `scale-105`, `line-height-150` (= 1.5). Negatives are `minus-N` (`margin-top-minus-8`), fractions `N-of-M` (`width-1-of-3`), ratios `N-by-M` (`aspect-16-by-9`).
 4. **A word means one thing.** Sizes are `xs sm md lg xl 2xl`. Keywords drop the modifier (`text-bold`, `text-center`, `text-uppercase`); numbers keep it (`text-size-18`, `text-weight-600`).
 5. **Components are nouns, and their options are suffixes:** `button button-primary button-lg`.
 
-| Tailwind | SantyCSS |
+| You want | Write |
 |---|---|
-| `flex` / `hidden` | `display-flex` / `display-none` |
-| `p-6` / `px-4` / `-mt-2` | `padding-24` / `padding-x-16` / `margin-top-minus-8` |
-| `w-80` / `w-1/3` | `width-320` / `width-1-of-3` |
-| `text-lg font-semibold` | `text-size-18 text-weight-600` (or `text-semibold`) |
-| `rounded-xl` / `rounded-full` | `radius-12` / `radius-pill` |
-| `shadow-md` / `z-10` | `shadow-md` / `z-index-10` |
-| `items-center justify-between` | `align-center justify-between` |
-| `grid-cols-3 col-span-2` | `grid-columns-3 grid-column-span-2` |
-| `bg-blue-500 text-gray-900` | `background-blue-500 color-gray-900` |
-| `hover:` / `md:` | `on-hover:` / `md:` |
+| flex / grid / hide | `display-flex` / `display-grid` / `display-none` |
+| padding 24, side padding 16, nudge up 8 | `padding-24` / `padding-x-16` / `margin-top-minus-8` |
+| width 320px / a third | `width-320` / `width-1-of-3` |
+| 18px semibold text | `text-size-18 text-weight-600` (or `text-semibold`) |
+| 12px corners / pill | `radius-12` / `radius-pill` |
+| medium shadow / stack on top | `shadow-md` / `z-index-10` |
+| centre vertically, space apart | `align-center justify-between` |
+| 3 columns, item spans 2 | `grid-columns-3 grid-column-span-2` |
+| blue background, dark text | `background-blue-500 color-gray-900` |
+| on hover / at 768px+ | `on-hover:…` / `md:…` |
 
-**Legacy names.** Code written before v2.10 uses `make-flex`, `add-padding-24`, `set-width-320`, `round-corners-12` and `pin-top-0`. Those still work in `santy-start.css` and `santy.css`, but never generate them in new code. `npx santycss migrate --from=legacy` rewrites them.
+**Legacy names.** Code written before v2.10 uses `make-flex`, `add-padding-24`, `set-width-320`, `round-corners-12` and `pin-top-0`. Those still work in `santy-start.css` and `santy.css`, but never generate them in new code. `npx santycss migrate` rewrites them.
 
 ---
 
