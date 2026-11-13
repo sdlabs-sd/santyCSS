@@ -427,8 +427,8 @@
 <section style="background:#f0f9ff;border-top:1px solid #bae6fd;border-bottom:1px solid #bae6fd;padding:12px 24px;">
   <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
     <span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:9999px;white-space:nowrap;">NEW v<span data-stat="version">2.10.0</span></span>
-    <span style="font-size:13.5px;color:#0c4a6e;font-weight:500;flex:1;min-width:200px;">Class search widget · Dark mode playground · Dismissible banner · Navbar &amp; Table presets · npm download badge · What's new section</span>
-    <a href="#changelog-248" style="font-size:12px;font-weight:600;color:#2563eb;text-decoration:none;white-space:nowrap;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">See all changes →</a>
+    <span style="font-size:13.5px;color:#0c4a6e;font-weight:500;flex:1;min-width:200px;">One naming grammar (padding-24, display-flex) · Persimmon theme · 9 no-JS components · npx santycss migrate</span>
+    <a href="https://github.com/Santy-Labs/santyCSS/blob/main/CHANGELOG.md" style="font-size:12px;font-weight:600;color:#2563eb;text-decoration:none;white-space:nowrap;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">See all changes →</a>
   </div>
 </section>
 
@@ -443,7 +443,7 @@
     <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:20px 22px;">
       <div style="width:36px;height:36px;background:#dcfce7;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:12px;">✏️</div>
       <h3 style="font-size:15px;font-weight:700;color:#111827;margin:0 0 6px;">Plain English names</h3>
-      <p style="font-size:13.5px;color:#6b7280;margin:0;line-height:1.55;"><code style="background:#e5e7eb;padding:1px 5px;border-radius:3px;font-size:12px;">add-padding-24</code> not <code style="background:#e5e7eb;padding:1px 5px;border-radius:3px;font-size:12px;">p-6</code>. Read it, remember it.</p>
+      <p style="font-size:13.5px;color:#6b7280;margin:0;line-height:1.55;"><code style="background:#e5e7eb;padding:1px 5px;border-radius:3px;font-size:12px;">padding-24</code> is 24px of padding. Read it, remember it.</p>
     </div>
     <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:20px 22px;">
       <div style="width:36px;height:36px;background:#fef3c7;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:12px;">🖥</div>
@@ -529,39 +529,25 @@
   </div>
 </section>
 
-<!-- ─── VS TAILWIND COMPARISON ─────────────────────────────────────────────── -->
-<section class="background-white add-padding-y-64">
+<!-- ─── A LOOK OF ITS OWN (v2.10) ─────────────────────────────────────────── -->
+<section id="showcase" class="background-white padding-y-64">
   <div class="container">
-    <div class="text-center add-margin-bottom-48">
-      <h2 class="set-text-40 text-bold color-gray-900 add-margin-bottom-12" style="letter-spacing:-1px;">SantyCSS vs Tailwind</h2>
-      <p class="set-text-18 color-gray-500">Same power. Human-readable names.</p>
+    <div class="text-center margin-bottom-40">
+      <span style="display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#b03a17;margin-bottom:12px;">New in v2.10 · Persimmon theme</span>
+      <h2 class="text-size-40 text-bold color-gray-900 margin-bottom-12" style="letter-spacing:-1px;">A look of its own</h2>
+      <p class="text-size-18 color-gray-500" style="max-width:620px;margin:0 auto;">Warm paper, ink type, serif headlines and one persimmon accent. Nine components with primary, secondary, outline and ghost variants. Both pages below use nothing but <code class="chip">santy-next.css</code>, with no JavaScript for the components.</p>
     </div>
-    <div class="make-grid grid-cols-2 gap-32" style="max-width:900px;margin:0 auto;">
-      <div>
-        <div class="make-flex align-center gap-10 add-margin-bottom-16">
-          <span class="set-text-13 text-semibold color-gray-400 text-uppercase letter-space-wide">Tailwind CSS</span>
-        </div>
-        <div class="code-block">
-<pre><span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"p-6 mt-4 flex items-center
-      justify-between border-l-4 border-blue-500
-      rounded-xl shadow-lg text-xl font-semibold
-      hover:scale-105 transition-all"</span><span class="c-tag">&gt;</span></pre>
-        </div>
-      </div>
-      <div>
-        <div class="make-flex align-center gap-10 add-margin-bottom-16">
-          <span class="set-text-13 text-semibold color-blue-600 text-uppercase letter-space-wide">SantyCSS ✦</span>
-        </div>
-        <div class="code-block">
-<pre><span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"add-padding-24 add-margin-top-16
-      make-flex align-center justify-between
-      add-border-left-4 border-color-blue-500
-      round-corners-12 add-shadow-lg set-text-20
-      text-semibold on-hover:scale-105
-      transition-normal"</span><span class="c-tag">&gt;</span></pre>
-        </div>
-      </div>
+    <div class="display-grid gap-24 md:grid-columns-2">
+      <a href="examples/saas-landing.html" class="display-block radius-16 overflow-hidden shadow-lg" style="border:1px solid #e7dfd3;text-decoration:none;">
+        <img src="assest/example-saas-landing.jpg" alt="SaaS landing page built with SantyCSS: serif headline, persimmon buttons and a product report card" width="1280" height="800" loading="lazy" style="display:block;width:100%;height:auto;">
+        <div class="padding-x-20 padding-y-16 display-flex justify-between align-center" style="background:#faf7f2;color:#1d1a16;"><strong>SaaS landing page</strong><span style="color:#b03a17;">Open →</span></div>
+      </a>
+      <a href="examples/dashboard.html" class="display-block radius-16 overflow-hidden shadow-lg" style="border:1px solid #e7dfd3;text-decoration:none;">
+        <img src="assest/example-dashboard.jpg" alt="Analytics dashboard built with SantyCSS: sidebar, KPI cards, bar chart, funnel and accounts table" width="1440" height="900" loading="lazy" style="display:block;width:100%;height:auto;">
+        <div class="padding-x-20 padding-y-16 display-flex justify-between align-center" style="background:#faf7f2;color:#1d1a16;"><strong>Dashboard</strong><span style="color:#b03a17;">Open →</span></div>
+      </a>
     </div>
+    <p class="text-center margin-top-24 text-size-15 color-gray-500"><a href="examples/components.html">Every component and variant →</a> · <a href="https://github.com/Santy-Labs/santyCSS/blob/main/THEME.md">How the theme works →</a></p>
   </div>
 </section>
 
@@ -572,7 +558,7 @@
       <span class="chip add-margin-bottom-16" style="display:inline-block;background:#f3e8ff;color:#7c3aed;border-color:#ddd6fe;">🤖 Built for the AI Era</span>
       <h2 class="set-text-40 text-bold color-gray-900 add-margin-bottom-16" style="letter-spacing:-1px;">Why SantyCSS in the Age of AI?</h2>
       <p class="set-text-18 color-gray-500 line-height-relaxed" style="max-width:640px;margin:0 auto;">
-        AI tools like Claude, ChatGPT, and Copilot write CSS every day — but they default to Tailwind or Bootstrap. SantyCSS is different: its class names <em>are</em> the documentation.
+        AI tools like Claude, ChatGPT and Copilot write CSS every day. With SantyCSS, the class names <em>are</em> the documentation, so a model can predict them from what it already knows about CSS.
       </p>
     </div>
 
@@ -587,7 +573,7 @@
       <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #bbf7d0;border-radius:20px;padding:32px;">
         <div style="font-size:32px;margin-bottom:16px;">📋</div>
         <h3 class="set-text-18 text-semibold color-gray-900 add-margin-bottom-10">One context file, any AI tool</h3>
-        <p class="set-text-14 color-gray-600 line-height-relaxed">Paste <code style="background:#dcfce7;color:#166534;padding:2px 6px;border-radius:4px;">santycss.context.md</code> into Claude, GPT-4, or Cursor system prompt and the AI generates SantyCSS instead of Tailwind — every time.</p>
+        <p class="set-text-14 color-gray-600 line-height-relaxed">Paste <code style="background:#dcfce7;color:#166534;padding:2px 6px;border-radius:4px;">santycss.context.md</code> into a Claude, ChatGPT or Cursor system prompt, and the AI writes SantyCSS with the current class names, every time.</p>
         <a href="santycss.context.md" download class="set-text-13 color-green-700 text-semibold text-no-decoration" style="display:inline-block;margin-top:14px;">↓ Download context file</a>
       </div>
 
@@ -858,7 +844,7 @@ const santy = require('santycss');
   <div class="container">
     <div class="text-center add-margin-bottom-56">
       <h2 class="set-text-40 text-bold color-white add-margin-bottom-12" style="letter-spacing:-1px;">Framework Integration</h2>
-      <p class="set-text-18" style="color:rgba(255,255,255,0.6);">Drop-in for every major JS framework. Purge works exactly like Tailwind.</p>
+      <p class="set-text-18" style="color:rgba(255,255,255,0.6);">Drop-in for every major JS framework. Purge keeps only the classes your pages use.</p>
     </div>
 
     <!-- Framework tabs -->
@@ -1125,343 +1111,74 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
         </div>
       </div>
       <div class="add-margin-top-20 add-padding-16 round-corners-8" style="background:#1e293b;">
-        <p class="set-text-13" style="color:#94a3b8;">✦ Typical real-world page using 50–150 classes. Actual size varies by usage. Same order of magnitude as Tailwind's purged output.</p>
+        <p class="set-text-13" style="color:#94a3b8;">✦ Typical real-world page using 50–150 classes. Actual size varies by usage.</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ─── VS TAILWIND DEEP DIVE ──────────────────────────────────────────────── -->
-<section id="vs-tailwind" class="section background-white add-padding-y-80">
+<!-- ─── WHAT'S IN THE BOX ────────────────────────────────────────────────── -->
+<section id="whats-included" class="section background-white padding-y-80">
   <div class="container">
-    <div class="text-center add-margin-bottom-56">
-      <h2 class="set-text-40 text-bold color-gray-900 add-margin-bottom-12" style="letter-spacing:-1px;">SantyCSS vs Every Major Framework</h2>
-      <p class="set-text-18 color-gray-500 add-margin-bottom-24">A complete, honest breakdown across Tailwind, Bootstrap, Material UI, Bulma &amp; Foundation.</p>
-      <div class="make-flex gap-10 justify-center flex-wrap">
-        <span class="badge" style="background:#fef3c7;color:#92400e;">Bootstrap 5</span>
-        <span class="badge" style="background:#e0e7ff;color:#3730a3;">Material UI</span>
-        <span class="badge" style="background:#dcfce7;color:#166534;">Tailwind CSS</span>
-        <span class="badge" style="background:#fce7f3;color:#9d174d;">Bulma</span>
-        <span class="badge" style="background:#f3f4f6;color:#374151;">Foundation</span>
-      </div>
+    <div class="text-center margin-bottom-48">
+      <h2 class="text-size-40 text-bold color-gray-900 margin-bottom-12" style="letter-spacing:-1px;">What's in the box</h2>
+      <p class="text-size-18 color-gray-500">Everything below ships in the npm package and on the CDN. There are no plugins to install.</p>
     </div>
-
-    <!-- Tabs to switch views -->
-    <div class="add-margin-bottom-40" style="max-width:960px;margin-left:auto;margin-right:auto;">
-      <ul class="tabs tabs-pill add-margin-bottom-28" id="compare-tabs">
-        <li class="tabs-item active" onclick="switchCompare('all',this)">Full Table</li>
-        <li class="tabs-item" onclick="switchCompare('tw',this)">vs Tailwind</li>
-        <li class="tabs-item" onclick="switchCompare('bs',this)">vs Bootstrap</li>
-        <li class="tabs-item" onclick="switchCompare('mui',this)">vs Material UI</li>
-        <li class="tabs-item" onclick="switchCompare('bulma',this)">vs Bulma</li>
-      </ul>
-
-      <!-- Full comparison table -->
-      <div id="cmp-all" style="overflow-x:auto;">
-        <table class="table table-bordered" id="full-table" style="font-size:13px;min-width:700px;">
-          <thead>
-            <tr style="background:#f8fafc;">
-              <th style="width:22%;">Feature</th>
-              <th style="text-align:center;color:#3b82f6;">SantyCSS</th>
-              <th style="text-align:center;">Tailwind</th>
-              <th style="text-align:center;">Bootstrap</th>
-              <th style="text-align:center;">Material UI</th>
-              <th style="text-align:center;">Bulma</th>
-              <th style="text-align:center;">Foundation</th>
-            </tr>
-          </thead>
-          <tbody id="full-table-body"><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Plain-English class names</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Utility-first approach</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Arbitrary px values</td>
-      <td style="text-align:center;font-size:13px;color:#374151;font-weight:600;">✅ (JIT)</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:11px;color:#d1d5db;">N/A</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">No build step (CDN drop-in)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Production purge / tree-shake</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">JIT / runtime generation</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Component library (CSS-only)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Button components</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Card component</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Modal (CSS-only)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Drawer / Off-canvas</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Accordion (CSS-only)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Tabs component</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Tooltip (CSS-only)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Table utilities</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Breadcrumb</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Pagination</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Form controls (select/textarea)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Toggle / Switch</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Chip / Tag component</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Stepper / Steps</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Skeleton loader</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Progress bar</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Spinner / Loader</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Navbar component</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Hero section component</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">FAB (floating action button)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">App Bar</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Material elevation shadows</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">120+ animations built-in</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Text shadow utilities</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:11px;color:#d1d5db;">N/A</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Dark mode prefix</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Responsive utilities</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Hover / focus / active states</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;font-size:11px;color:#d1d5db;">N/A</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Screen reader (sr-only)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Print utilities</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">CSS custom properties theming</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">PostCSS plugin</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td><td style="text-align:center;font-size:11px;color:#d1d5db;">N/A</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Vite plugin</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;font-size:11px;color:#d1d5db;">N/A</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Modular CSS split files</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Centering shortcut (1 class)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">JS-free (pure CSS)</td>
-      <td style="text-align:center;font-size:16px;color:#15803d;font-weight:600;">✅</td>
-      <td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td><td style="text-align:center;color:#15803d;font-size:16px;">✅</td><td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>
-    </tr><tr style="background:#f8fafc">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">File size (unminified)</td>
-      <td style="text-align:center;font-size:13px;color:#374151;font-weight:600;">445 KB (core)</td>
-      <td style="text-align:center;font-size:12px;color:#374151;">N/A (JIT)</td><td style="text-align:center;font-size:12px;color:#374151;">232KB</td><td style="text-align:center;font-size:12px;color:#374151;">JS bundle</td><td style="text-align:center;font-size:12px;color:#374151;">205KB</td><td style="text-align:center;font-size:12px;color:#374151;">212KB</td>
-    </tr><tr style="background:#fff">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">Purged production size (gzip)</td>
-      <td style="text-align:center;font-size:13px;color:#374151;font-weight:600;">~15 KB</td>
-      <td style="text-align:center;font-size:12px;color:#374151;">~3KB</td><td style="text-align:center;font-size:12px;color:#374151;">~20KB</td><td style="text-align:center;font-size:12px;color:#374151;">~80KB</td><td style="text-align:center;font-size:12px;color:#374151;">~15KB</td><td style="text-align:center;font-size:12px;color:#374151;">~20KB</td>
-    </tr></tbody>
-        </table>
+    <div class="display-grid gap-20 md:grid-columns-2 lg:grid-columns-3">
+      <div class="background-white radius-16 padding-28 shadow-sm" style="border:1px solid #e5e7eb;">
+        <div class="text-size-32 margin-bottom-12">🔤</div>
+        <h3 class="text-size-16 text-semibold color-gray-900 margin-bottom-8">Class names you can read</h3>
+        <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-12">One shape, <code class="chip">property-modifier-value</code>, with whole words and no abbreviations.</p>
+        <div class="code-block" style="padding:8px 12px;font-size:12px;"><span style="color:#86efac;">display-flex padding-24 radius-12</span></div>
       </div>
-
-      <!-- 2-col comparison tables (hidden by default) -->
-      <div id="cmp-tw" style="display:none;"><div class="make-flex flex-column gap-16" style="max-width:800px;margin:0 auto;"><div class="make-grid add-padding-x-20" style="grid-template-columns:2fr 1fr 1fr;"><span class="set-text-13 text-semibold color-gray-400 text-uppercase">Feature</span><span class="set-text-13 text-semibold color-gray-400 text-uppercase text-center">Tailwind</span><span class="set-text-13 text-semibold color-blue-600 text-uppercase text-center">SantyCSS</span></div><div id="cmp-tw-rows"></div></div></div>
-      <div id="cmp-bs" style="display:none;"><div class="make-flex flex-column gap-16" style="max-width:800px;margin:0 auto;"><div class="make-grid add-padding-x-20" style="grid-template-columns:2fr 1fr 1fr;"><span class="set-text-13 text-semibold color-gray-400 text-uppercase">Feature</span><span class="set-text-13 text-semibold color-gray-400 text-uppercase text-center">Bootstrap</span><span class="set-text-13 text-semibold color-blue-600 text-uppercase text-center">SantyCSS</span></div><div id="cmp-bs-rows"></div></div></div>
-      <div id="cmp-mui" style="display:none;"><div class="make-flex flex-column gap-16" style="max-width:800px;margin:0 auto;"><div class="make-grid add-padding-x-20" style="grid-template-columns:2fr 1fr 1fr;"><span class="set-text-13 text-semibold color-gray-400 text-uppercase">Feature</span><span class="set-text-13 text-semibold color-gray-400 text-uppercase text-center">Material UI</span><span class="set-text-13 text-semibold color-blue-600 text-uppercase text-center">SantyCSS</span></div><div id="cmp-mui-rows"></div></div></div>
-      <div id="cmp-bulma" style="display:none;"><div class="make-flex flex-column gap-16" style="max-width:800px;margin:0 auto;"><div class="make-grid add-padding-x-20" style="grid-template-columns:2fr 1fr 1fr;"><span class="set-text-13 text-semibold color-gray-400 text-uppercase">Feature</span><span class="set-text-13 text-semibold color-gray-400 text-uppercase text-center">Bulma</span><span class="set-text-13 text-semibold color-blue-600 text-uppercase text-center">SantyCSS</span></div><div id="cmp-bulma-rows"></div></div></div>
-    </div>
-
-    <!-- What SantyCSS uniquely covers -->
-    <div class="text-center add-margin-bottom-40 add-margin-top-64">
-      <h3 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8" style="letter-spacing:-0.5px;">Exclusive to SantyCSS</h3>
-      <p class="set-text-16 color-gray-500">Not available out-of-the-box in any other framework.</p>
-    </div>
-    <div class="make-grid grid-cols-3 gap-20" id="unique-cards">
-      <!-- filled below --></div>
-
-    <!-- Unique to SantyCSS -->
-    <div class="text-center add-margin-bottom-40">
-      <h3 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8" style="letter-spacing:-0.5px;">Features unique to SantyCSS</h3>
-      <p class="set-text-16 color-gray-500">Not available in Tailwind without plugins or custom config.</p>
-    </div>
-    <div class="make-grid grid-cols-3 gap-20">
-
-      <div class="background-blue-50 round-corners-16 add-padding-28 add-border-1 border-color-blue-200">
-        <h4 class="set-text-16 text-semibold color-blue-800 add-margin-bottom-10">Plain-English class names</h4>
-        <p class="set-text-13 color-blue-700 line-height-relaxed add-margin-bottom-12">All other frameworks use abbreviated or cryptic names. SantyCSS reads like English — no memorising abbreviations.</p>
-        <div class="make-flex flex-column gap-4">
-          <div class="code-block" style="padding:8px 12px;font-size:11px;"><span style="color:#94a3b8;">Bootstrap: border-start-5 me-4 p-3</span></div>
-          <div class="code-block" style="padding:8px 12px;font-size:11px;"><span style="color:#94a3b8;">Tailwind:  border-l-5 mr-4 p-3</span></div>
-          <div class="code-block" style="padding:8px 12px;font-size:11px;"><span style="color:#86efac;">Santy:    add-border-left-5 add-margin-right-16 add-padding-12</span></div>
-        </div>
+      <div class="background-white radius-16 padding-28 shadow-sm" style="border:1px solid #e5e7eb;">
+        <div class="text-size-32 margin-bottom-12">📐</div>
+        <h3 class="text-size-16 text-semibold color-gray-900 margin-bottom-8">The number is the pixel value</h3>
+        <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-12">A ready-made pixel scale, and <code class="chip">santy-jit.js</code> generates any other value under the same name. No bracket syntax.</p>
+        <div class="code-block" style="padding:8px 12px;font-size:12px;"><span style="color:#86efac;">width-137  ← generated on demand</span></div>
       </div>
-
-      <div class="background-green-50 round-corners-16 add-padding-28 add-border-1 border-color-green-200">
-        <h4 class="set-text-16 text-semibold color-green-800 add-margin-bottom-10">Pixel values — no bracket syntax</h4>
-        <p class="set-text-13 color-green-700 line-height-relaxed add-margin-bottom-12">The stylesheet ships a fixed pixel scale (0–6, 8, 10, 12, 16, 20, 24, 32, 48, 64…). Any other value works through <code style="background:#bbf7d0;padding:1px 4px;border-radius:3px;">santy-jit.js</code>, using the same name — no <code style="background:#bbf7d0;padding:1px 4px;border-radius:3px;">[137px]</code> brackets.</p>
-        <div class="make-flex flex-column gap-4">
-          <div class="code-block" style="padding:8px 12px;font-size:11px;"><span style="color:#94a3b8;">Tailwind: w-[137px]  ← arbitrary syntax</span></div>
-          <div class="code-block" style="padding:8px 12px;font-size:11px;"><span style="color:#86efac;">Santy:   set-width-137  ← generated by santy-jit.js</span></div>
-        </div>
+      <div class="background-white radius-16 padding-28 shadow-sm" style="border:1px solid #e5e7eb;">
+        <div class="text-size-32 margin-bottom-12">🎨</div>
+        <h3 class="text-size-16 text-semibold color-gray-900 margin-bottom-8">Its own theme</h3>
+        <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-12">Persimmon in light and dark. Every colour, radius, shadow and font is a <code class="chip">--santy-*</code> variable you can override.</p>
+        <div class="code-block" style="padding:8px 12px;font-size:12px;"><span style="color:#86efac;">--santy-primary: #cc4520;</span></div>
       </div>
-
-      <div class="background-purple-50 round-corners-16 add-padding-28 add-border-1 border-color-purple-200">
-        <h4 class="set-text-16 text-semibold color-purple-800 add-margin-bottom-10">120+ animations built-in</h4>
-        <p class="set-text-13 color-purple-700 line-height-relaxed add-margin-bottom-12">Bootstrap has 0, Tailwind has 4, Bulma has 0. SantyCSS ships <strong>120+</strong> — fades, bounces, slides, zooms, flips, scroll-triggered, stagger, and more.</p>
-        <div class="make-flex flex-wrap gap-4">
-          <span style="background:#ede9fe;color:#6d28d9;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:600;font-family:monospace;">animate-bounce-in-from-left</span>
-          <span style="background:#ede9fe;color:#6d28d9;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:600;font-family:monospace;">animate-flip-in-x</span>
-          <span style="background:#ede9fe;color:#6d28d9;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:600;font-family:monospace;">animate-rubber-band</span>
-        </div>
-        <p class="set-text-11 color-purple-500 add-margin-top-8"><a href="animations.html" style="color:#7c3aed;font-weight:600;text-decoration:none;">View all 120+ animations →</a></p>
+      <div class="background-white radius-16 padding-28 shadow-sm" style="border:1px solid #e5e7eb;">
+        <div class="text-size-32 margin-bottom-12">🧩</div>
+        <h3 class="text-size-16 text-semibold color-gray-900 margin-bottom-8">Components without JavaScript</h3>
+        <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-12">Button, card, navbar, input, badge, alert, modal, tabs and pricing. The modal opens with <code class="chip">popover</code> and the tabs with radio inputs.</p>
+        <div class="code-block" style="padding:8px 12px;font-size:12px;"><span style="color:#86efac;">button button-primary button-lg</span></div>
       </div>
-
-      <div class="background-orange-50 round-corners-16 add-padding-28 add-border-1 border-color-orange-200">
-        <h4 class="set-text-16 text-semibold color-orange-800 add-margin-bottom-10">No build step — drop-in CDN</h4>
-        <p class="set-text-13 color-orange-700 line-height-relaxed add-margin-bottom-12">Tailwind's Play CDN is meant for development, and production use needs its CLI or a bundler. SantyCSS's CDN files are production builds.</p>
-        <div class="code-block" style="padding:10px 14px;font-size:12px;"><span style="color:#86efac;">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css"&gt;</span><br><span style="color:#64748b;">// All <span data-stat="classes">22,700+</span> class names ready — no build needed.</span></div>
+      <div class="background-white radius-16 padding-28 shadow-sm" style="border:1px solid #e5e7eb;">
+        <div class="text-size-32 margin-bottom-12">🎬</div>
+        <h3 class="text-size-16 text-semibold color-gray-900 margin-bottom-8">120+ animations</h3>
+        <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-12">Fades, slides, zooms, flips, scroll-triggered entrances and staggered lists, named like everything else.</p>
+        <div class="code-block" style="padding:8px 12px;font-size:12px;"><span style="color:#86efac;">animation-fade-in-from-bottom</span></div>
       </div>
-
-      <div class="background-pink-50 round-corners-16 add-padding-28 add-border-1 border-color-pink-200">
-        <h4 class="set-text-16 text-semibold color-pink-800 add-margin-bottom-10">Modular loading — load only what you need</h4>
-        <p class="set-text-13 color-pink-700 line-height-relaxed add-margin-bottom-12">Split CSS into separate files so you can load only what a page needs, like Bootstrap’s grid/utilities/reboot bundles.</p>
-        <div class="make-flex flex-column gap-4">
-          <div class="code-block" style="padding:8px 12px;font-size:11px;"><span style="color:#60a5fa;">santy-core.css</span><span style="color:#64748b;"> — utilities only</span></div>
-          <div class="code-block" style="padding:8px 12px;font-size:11px;"><span style="color:#60a5fa;">santy-components.css</span><span style="color:#64748b;"> — components only</span></div>
-          <div class="code-block" style="padding:8px 12px;font-size:11px;"><span style="color:#60a5fa;">santy-animations.css</span><span style="color:#64748b;"> — animations only</span></div>
-        </div>
+      <div class="background-white radius-16 padding-28 shadow-sm" style="border:1px solid #e5e7eb;">
+        <div class="text-size-32 margin-bottom-12">⚡</div>
+        <h3 class="text-size-16 text-semibold color-gray-900 margin-bottom-8">Works in every setup</h3>
+        <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-12">A CDN link, the JIT runtime, PostCSS, Vite or the CLI purge. Every mode uses the same class names.</p>
+        <div class="code-block" style="padding:8px 12px;font-size:12px;"><span style="color:#86efac;">npx santycss purge --input=src</span></div>
       </div>
-
-      <div class="background-teal-50 round-corners-16 add-padding-28 add-border-1 border-color-teal-200">
-        <h4 class="set-text-16 text-semibold color-teal-800 add-margin-bottom-10">Skeleton, Spinner, Progress — built-in</h4>
-        <p class="set-text-13 color-teal-700 line-height-relaxed add-margin-bottom-12">Bootstrap ships spinners. Tailwind, Bulma, Foundation ship nothing. SantyCSS ships skeleton loaders, spinners, and progress bars.</p>
-        <div class="make-flex align-center gap-16">
-          <div class="make-flex flex-column gap-6">
-            <div class="set-width-120 set-height-12 skeleton round-corners-4"></div>
-            <div class="set-width-80 set-height-12 skeleton round-corners-4"></div>
-            <div class="set-width-100 set-height-12 skeleton round-corners-4"></div>
-          </div>
-          <div class="spinner spinner-lg" style="border-color:rgba(0,0,0,0.1);border-top-color:#0d9488;"></div>
-        </div>
+      <div class="background-white radius-16 padding-28 shadow-sm" style="border:1px solid #e5e7eb;">
+        <div class="text-size-32 margin-bottom-12">🌗</div>
+        <h3 class="text-size-16 text-semibold color-gray-900 margin-bottom-8">Variants that read like words</h3>
+        <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-12">State, screen, dark, group and peer prefixes go in front of any class.</p>
+        <div class="code-block" style="padding:8px 12px;font-size:12px;"><span style="color:#86efac;">on-hover:shadow-lg md:display-grid</span></div>
       </div>
-
-      <div class="background-indigo-50 round-corners-16 add-padding-28 add-border-1 border-color-indigo-200">
-        <h4 class="set-text-16 text-semibold color-indigo-800 add-margin-bottom-10">Human state prefixes + readable responsiveness</h4>
-        <p class="set-text-13 color-indigo-700 line-height-relaxed add-margin-bottom-12">State prefixes read like English. Responsive prefixes describe the viewport in words, not breakpoint codes.</p>
-        <div class="make-flex flex-column gap-4">
-          <div style="font-size:12px;font-family:monospace;background:#e0e7ff;padding:8px 12px;border-radius:6px;color:#312e81;"><span style="color:#4f46e5;">on-hover:</span>scale-110</div>
-          <div style="font-size:12px;font-family:monospace;background:#e0e7ff;padding:8px 12px;border-radius:6px;color:#312e81;"><span style="color:#4f46e5;">on-mobile:</span>make-hidden</div>
-          <div style="font-size:12px;font-family:monospace;background:#e0e7ff;padding:8px 12px;border-radius:6px;color:#312e81;"><span style="color:#4f46e5;">on-focus:</span>add-shadow-md</div>
-        </div>
+      <div class="background-white radius-16 padding-28 shadow-sm" style="border:1px solid #e5e7eb;">
+        <div class="text-size-32 margin-bottom-12">🤖</div>
+        <h3 class="text-size-16 text-semibold color-gray-900 margin-bottom-8">Made for AI tools</h3>
+        <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-12">Names are predictable from CSS knowledge, and <code class="chip">santycss.context.md</code> is a ready-made prompt.</p>
+        <div class="code-block" style="padding:8px 12px;font-size:12px;"><span style="color:#86efac;">santy-classmap.json → every class</span></div>
       </div>
-
-      <div class="background-amber-50 round-corners-16 add-padding-28 add-border-1 border-color-amber-200">
-        <h4 class="set-text-16 text-semibold color-amber-800 add-margin-bottom-10">JIT runtime + PostCSS + Vite + CLI</h4>
-        <p class="set-text-13 color-amber-700 line-height-relaxed add-margin-bottom-12">SantyCSS works in every mode — CDN link, JIT runtime, PostCSS plugin, Vite plugin, or CLI purge. Every mode uses the same class names.</p>
-        <div class="make-flex flex-wrap gap-6">
-          <span class="chip chip-blue">CDN</span>
-          <span class="chip chip-green">JIT</span>
-          <span class="chip" style="background:#dcfce7;color:#15803d;">PostCSS</span>
-          <span class="chip" style="background:#fef9c3;color:#854d0e;">Vite</span>
-          <span class="chip" style="background:#f3f4f6;color:#374151;">CLI</span>
-        </div>
-      </div>
-
-      <div class="background-rose-50 round-corners-16 add-padding-28 add-border-1 border-color-rose-200">
-        <h4 class="set-text-16 text-semibold color-rose-800 add-margin-bottom-10">Text shadow, elevation, centering shortcuts</h4>
-        <p class="set-text-13 color-rose-700 line-height-relaxed add-margin-bottom-12">All missing from Tailwind and most others. SantyCSS ships text-shadow, Material elevation levels, and single-class absolute centering.</p>
-        <div class="make-flex flex-column gap-4">
-          <p class="set-text-16 text-bold text-shadow color-gray-700 add-margin-0">text-shadow</p>
-          <div class="code-block" style="padding:7px 10px;font-size:11px;"><span style="color:#86efac;">pin-center</span><span style="color:#64748b;"> → absolute center in 1 class</span></div>
-          <div class="code-block" style="padding:7px 10px;font-size:11px;"><span style="color:#86efac;">elevation-3</span><span style="color:#64748b;"> → Material Design shadow</span></div>
-        </div>
+      <div class="background-white radius-16 padding-28 shadow-sm" style="border:1px solid #e5e7eb;">
+        <div class="text-size-32 margin-bottom-12">🔁</div>
+        <h3 class="text-size-16 text-semibold color-gray-900 margin-bottom-8">Upgrades that don't break</h3>
+        <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-12">Old class names stay as aliases with identical CSS, and one command moves a project to the new ones.</p>
+        <div class="code-block" style="padding:8px 12px;font-size:12px;"><span style="color:#86efac;">npx santycss migrate src/</span></div>
       </div>
     </div>
   </div>
@@ -3088,7 +2805,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
             <p class="set-text-13 color-gray-500" style="margin:4px 0 0;">Hover any class → see the raw CSS it generates</p>
           </div>
         </div>
-        <p class="set-text-13 color-gray-400">Flip the AI script — SantyCSS explains itself instead of you explaining Tailwind to AI.</p>
+        <p class="set-text-13 color-gray-400">Class names that explain themselves, so you don't have to explain them to your AI.</p>
       </div>
 
       <!-- 8 CLI -->
@@ -3160,7 +2877,7 @@ node purge.js --input=./src --safelist=safelist.json</pre></div>
               <h3 class="set-text-16 text-semibold color-gray-900" style="margin:0;">SantyCSS for LLMs</h3>
               <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:9999px;background:#dcfce7;color:#16a34a;">LIVE</span>
             </div>
-            <p class="set-text-13 color-gray-500" style="margin:4px 0 0;">Paste into Claude / ChatGPT / Cursor — AI generates SantyCSS instead of Tailwind</p>
+            <p class="set-text-13 color-gray-500" style="margin:4px 0 0;">Paste into Claude / ChatGPT / Cursor and the AI writes SantyCSS with current class names</p>
           </div>
         </div>
         <a href="santycss.context.md" target="_blank" class="set-text-13 color-orange-600 text-no-decoration text-semibold">Download santycss.context.md →</a>
@@ -3419,104 +3136,6 @@ function openFwTab(e, tabId) {
   document.getElementById(tabId).style.display = 'block';
 }
 
-// ── Multi-framework comparison data ─────────────────────────────────────────
-// s=SantyCSS, tw=Tailwind, bs=Bootstrap, mui=MaterialUI, bu=Bulma, fo=Foundation
-// ✅ = yes, ⚠️ = partial/plugin, ❌ = no
-const FULL = [
-  { feature:'Plain-English class names',      s:'✅',  tw:'❌', bs:'❌', mui:'❌', bu:'⚠️', fo:'❌' },
-  { feature:'Utility-first approach',         s:'✅',  tw:'✅', bs:'⚠️', mui:'⚠️', bu:'⚠️', fo:'⚠️' },
-  { feature:'Arbitrary px values',             s:'✅ (JIT)', tw:'✅', bs:'❌', mui:'N/A',bu:'❌', fo:'❌' },
-  { feature:'No build step (CDN drop-in)',     s:'✅',  tw:'⚠️', bs:'✅', mui:'❌', bu:'✅', fo:'✅' },
-  { feature:'Production purge / tree-shake',  s:'✅',  tw:'✅', bs:'⚠️', mui:'✅', bu:'⚠️', fo:'⚠️' },
-  { feature:'JIT / runtime generation',       s:'✅',  tw:'✅', bs:'❌', mui:'❌', bu:'❌', fo:'❌' },
-  { feature:'Component library (CSS-only)',   s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'✅', fo:'✅' },
-  { feature:'Button components',              s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'✅', fo:'✅' },
-  { feature:'Card component',                 s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'✅', fo:'✅' },
-  { feature:'Modal (CSS-only)',               s:'✅',  tw:'❌', bs:'⚠️', mui:'❌', bu:'❌', fo:'⚠️' },
-  { feature:'Drawer / Off-canvas',            s:'✅',  tw:'❌', bs:'✅', mui:'❌', bu:'❌', fo:'✅' },
-  { feature:'Accordion (CSS-only)',           s:'✅',  tw:'❌', bs:'✅', mui:'❌', bu:'❌', fo:'✅' },
-  { feature:'Tabs component',                 s:'✅',  tw:'❌', bs:'✅', mui:'❌', bu:'✅', fo:'✅' },
-  { feature:'Tooltip (CSS-only)',             s:'✅',  tw:'❌', bs:'✅', mui:'❌', bu:'❌', fo:'✅' },
-  { feature:'Table utilities',                s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'✅', fo:'✅' },
-  { feature:'Breadcrumb',                     s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'❌', fo:'✅' },
-  { feature:'Pagination',                     s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'✅', fo:'✅' },
-  { feature:'Form controls (select/textarea)',s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'✅', fo:'✅' },
-  { feature:'Toggle / Switch',                s:'✅',  tw:'❌', bs:'❌', mui:'✅', bu:'❌', fo:'❌' },
-  { feature:'Chip / Tag component',           s:'✅',  tw:'❌', bs:'❌', mui:'✅', bu:'✅', fo:'❌' },
-  { feature:'Stepper / Steps',               s:'✅',  tw:'❌', bs:'❌', mui:'✅', bu:'❌', fo:'❌' },
-  { feature:'Skeleton loader',                s:'✅',  tw:'❌', bs:'❌', mui:'✅', bu:'❌', fo:'❌' },
-  { feature:'Progress bar',                   s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'✅', fo:'✅' },
-  { feature:'Spinner / Loader',               s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'✅', fo:'❌' },
-  { feature:'Navbar component',               s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'✅', fo:'✅' },
-  { feature:'Hero section component',         s:'✅',  tw:'❌', bs:'⚠️', mui:'❌', bu:'✅', fo:'❌' },
-  { feature:'FAB (floating action button)',    s:'✅',  tw:'❌', bs:'❌', mui:'✅', bu:'❌', fo:'❌' },
-  { feature:'App Bar',                        s:'✅',  tw:'❌', bs:'⚠️', mui:'✅', bu:'❌', fo:'❌' },
-  { feature:'Material elevation shadows',     s:'✅',  tw:'❌', bs:'❌', mui:'✅', bu:'❌', fo:'❌' },
-  { feature:'120+ animations built-in',        s:'✅',  tw:'❌', bs:'⚠️', mui:'❌', bu:'❌', fo:'❌' },
-  { feature:'Text shadow utilities',          s:'✅',  tw:'❌', bs:'❌', mui:'N/A',bu:'❌', fo:'❌' },
-  { feature:'Dark mode prefix',               s:'✅',  tw:'✅', bs:'✅', mui:'✅', bu:'❌', fo:'❌' },
-  { feature:'Responsive utilities',           s:'✅',  tw:'✅', bs:'✅', mui:'✅', bu:'✅', fo:'✅' },
-  { feature:'Hover / focus / active states',  s:'✅',  tw:'✅', bs:'⚠️', mui:'N/A',bu:'⚠️', fo:'⚠️' },
-  { feature:'Screen reader (sr-only)',        s:'✅',  tw:'✅', bs:'✅', mui:'✅', bu:'❌', fo:'⚠️' },
-  { feature:'Print utilities',               s:'✅',  tw:'✅', bs:'✅', mui:'❌', bu:'❌', fo:'⚠️' },
-  { feature:'CSS custom properties theming', s:'✅',  tw:'✅', bs:'✅', mui:'✅', bu:'✅', fo:'⚠️' },
-  { feature:'PostCSS plugin',                s:'✅',  tw:'✅', bs:'⚠️', mui:'N/A',bu:'❌', fo:'❌' },
-  { feature:'Vite plugin',                   s:'✅',  tw:'✅', bs:'❌', mui:'N/A',bu:'❌', fo:'❌' },
-  { feature:'Modular CSS split files',        s:'✅',  tw:'❌', bs:'✅', mui:'✅', bu:'❌', fo:'❌' },
-  { feature:'Centering shortcut (1 class)',   s:'✅',  tw:'❌', bs:'❌', mui:'❌', bu:'❌', fo:'❌' },
-  { feature:'JS-free (pure CSS)',             s:'✅',  tw:'✅', bs:'❌', mui:'❌', bu:'✅', fo:'⚠️' },
-  { feature:'File size (unminified)',         s:/*stat:size:santy-core.css*/'445 KB' + ' (core)',tw:'N/A (JIT)',bs:'232KB',mui:'JS bundle',bu:'205KB',fo:'212KB' },
-  { feature:'Purged production size (gzip)', s:'~' + /*stat:purged-gz*/'15 KB', tw:'~3KB',bs:'~20KB',mui:'~80KB',bu:'~15KB',fo:'~20KB' },
-];
-
-function cell(v) {
-  if (v==='✅') return `<td style="text-align:center;color:#15803d;font-size:16px;">✅</td>`;
-  if (v==='❌') return `<td style="text-align:center;color:#9ca3af;font-size:16px;">❌</td>`;
-  if (v==='⚠️') return `<td style="text-align:center;font-size:13px;color:#b45309;">⚠️</td>`;
-  if (v==='N/A') return `<td style="text-align:center;font-size:11px;color:#d1d5db;">N/A</td>`;
-  return `<td style="text-align:center;font-size:12px;color:#374151;">${v}</td>`;
-}
-
-const ftb = document.getElementById('full-table-body');
-if (ftb) {
-  ftb.innerHTML = FULL.map((row, i) => `<tr style="background:${i%2===0?'#f8fafc':'#fff'}">
-      <td style="font-size:13px;font-weight:500;color:#374151;padding:9px 12px;">${row.feature}</td>
-      <td style="text-align:center;font-size:${row.s==='✅'?'16':'13'}px;color:${row.s==='✅'?'#15803d':row.s==='❌'?'#9ca3af':'#374151'};font-weight:600;">${row.s}</td>
-      ${cell(row.tw)}${cell(row.bs)}${cell(row.mui)}${cell(row.bu)}${cell(row.fo)}
-    </tr>`).join('');
-}
-make2col('cmp-tw-rows',   'tw');
-make2col('cmp-bs-rows',   'bs');
-make2col('cmp-mui-rows',  'mui');
-make2col('cmp-bulma-rows','bu');
-
-// 2-col comparison generators
-function make2col(containerId, key) {
-  const el = document.getElementById(containerId);
-  if (!el) return;
-  const EMOJI = new Set(['✅','❌','⚠️','N/A']);
-  FULL.filter(row => EMOJI.has(row.s) && EMOJI.has(row[key])).forEach((row, i) => {
-    const rival = row[key];
-    const santyBetter = row.s === '✅' && (rival === '❌' || rival === '⚠️');
-    const div = document.createElement('div');
-    div.style.cssText = `display:grid;grid-template-columns:2fr 1fr 1fr;align-items:center;padding:10px 20px;border-radius:10px;background:${i%2===0?'#f8fafc':'#fff'};`;
-    div.innerHTML = `
-      <span style="font-size:13px;color:#374151;font-weight:500;">${row.feature}</span>
-      <span style="font-size:14px;text-align:center;color:${rival==='✅'?'#15803d':rival==='❌'?'#d1d5db':'#b45309'};">${rival}</span>
-      <span style="font-size:14px;text-align:center;color:${row.s==='✅'?'#15803d':'#9ca3af'};font-weight:${santyBetter?700:400};">${row.s}</span>
-    `;
-    el.appendChild(div);
-  });
-}
-// Tab switcher for comparison
-function switchCompare(view, btn) {
-  ['all','tw','bs','mui','bulma'].forEach(v => {
-    document.getElementById('cmp-' + v).style.display = v === view ? 'block' : 'none';
-  });
-  document.querySelectorAll('#compare-tabs .tabs-item').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-}
-
 // Color palette display
 const palette = {
   red:['#fef2f2','#fee2e2','#fecaca','#fca5a5','#f87171','#ef4444','#dc2626','#b91c1c','#991b1b','#7f1d1d'],
@@ -3675,28 +3294,6 @@ document.addEventListener('click', function(e) {
     document.getElementById('search-results').style.display = 'none';
   }
 });
-
-// ── Populate unique-cards ────────────────────────────────────────────────────
-var UNIQUE = [
-  { icon:'🔤', title:'Plain-English class names', desc:'add-padding-24, make-flex, round-corners-8 — reads like English, not abbreviations.' },
-  { icon:'📐', title:'Any pixel value', desc:'A pre-built px scale, plus any value (set-width-137) via santy-jit.js. No w-[137px] bracket syntax.' },
-  { icon:'⚡', title:'JIT runtime mode', desc:'santy-jit.js generates CSS on-demand at runtime — zero build step, zero file size.' },
-  { icon:'🎬', title:'120+ animations', desc:'Full animate.css library with SantyCSS naming: fade-in-from-top, bounce-in-from-left.' },
-  { icon:'🧩', title:'Modular CSS split', desc:'Load only core, components, or animations independently for optimal performance.' },
-  { icon:'🌗', title:'Dark mode via .dark class', desc:'Toggle dark: on any element — card, modal, table, accordion all adapt automatically.' },
-  { icon:'🌐', title:'RTL logical properties', desc:'ps-*, pe-*, border-start-*, inset-inline-* for full right-to-left layout support.' },
-  { icon:'🎨', title:'CSS design tokens', desc:'--santy-primary, --santy-radius, --santy-font — override once to brand the whole framework.' },
-  { icon:'🔗', title:'Peer & group variants', desc:'peer-hover:, peer-checked:, group-hover: — powerful inter-element state targeting.' },
-];
-var uc = document.getElementById('unique-cards');
-if (uc) {
-  UNIQUE.forEach(function(u) {
-    var d = document.createElement('div');
-    d.className = 'background-white round-corners-16 add-padding-28 add-shadow-sm add-border-1 border-color-gray-200';
-    d.innerHTML = '<div class="set-text-32 add-margin-bottom-12">'+u.icon+'</div><h4 class="set-text-15 text-semibold color-gray-900 add-margin-bottom-8">'+u.title+'</h4><p class="set-text-13 color-gray-500 line-height-relaxed">'+u.desc+'</p>';
-    uc.appendChild(d);
-  });
-}
 
 function toggleAccordion(btn) {
   var body = btn.nextElementSibling;

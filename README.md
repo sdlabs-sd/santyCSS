@@ -62,9 +62,9 @@ import 'santycss/css/next';   // or 'santycss/css/start' for the classic build
 
 That's it. `npx santycss init` scaffolds a starter page. For full pages, see the [SaaS landing](examples/saas-landing.html) and [dashboard](examples/dashboard.html) examples, which are built with nothing but `santy-next.css`.
 
-![Portfolio template built with SantyCSS](https://raw.githubusercontent.com/Santy-Labs/santyCSS/main/assest/screenshot-portfolio-template.png)
+![SaaS landing page built with SantyCSS in the Persimmon theme](https://raw.githubusercontent.com/Santy-Labs/santyCSS/main/assest/example-saas-landing.jpg)
 
-*The [portfolio template](https://santycss.santy.in/template-portfolio.html), built with SantyCSS. More in the [gallery](https://santycss.santy.in/templates.html).*
+*A [SaaS landing page](https://santycss.santy.in/examples/saas-landing.html) built with nothing but `santy-next.css`. See also the [dashboard](https://santycss.santy.in/examples/dashboard.html), [every component](https://santycss.santy.in/examples/components.html) and the [template gallery](https://santycss.santy.in/templates.html).*
 
 ---
 
