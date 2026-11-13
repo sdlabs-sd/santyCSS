@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/santycss.svg?style=flat-square)](https://www.npmjs.com/package/santycss)
 [![weekly downloads](https://img.shields.io/npm/dw/santycss.svg?style=flat-square)](https://www.npmjs.com/package/santycss)
-[![core size](https://img.shields.io/badge/core-53KB_gzipped-blue?style=flat-square)](#sizes)
+[![core size](https://img.shields.io/badge/core-56KB_gzipped-blue?style=flat-square)](#sizes)
 [![CI](https://img.shields.io/github/actions/workflow/status/Santy-Labs/santyCSS/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/Santy-Labs/santyCSS/actions/workflows/ci.yml)
 [![license](https://img.shields.io/npm/l/santycss.svg?style=flat-square)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Santy-Labs/santyCSS?style=flat-square)](https://github.com/Santy-Labs/santyCSS)
@@ -68,18 +68,24 @@ That's it. `npx santycss init` scaffolds a starter page. For full pages, see the
 
 ---
 
-## The same card in three frameworks
+## Read it like a sentence
 
 ```html
-<!-- Tailwind -->
-<div class="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md hover:scale-105 transition">
-<!-- Bootstrap -->
-<div class="d-flex align-items-center gap-3 p-4 bg-white rounded-3 shadow">
-<!-- SantyCSS -->
-<div class="display-flex align-center gap-16 padding-24 background-white radius-12 shadow-md on-hover:scale-105 transition-all">
+<div class="display-flex align-center gap-16 padding-24 background-white radius-12 shadow-md on-hover:scale-105">
 ```
 
-Numbers are pixels (`gap-16` = 16px), so there's no spacing scale to memorise.
+| Class | Says |
+|---|---|
+| `display-flex` | display: flex |
+| `align-center` | align items to the centre |
+| `gap-16` | 16px gap |
+| `padding-24` | 24px padding |
+| `background-white` | white background |
+| `radius-12` | 12px corner radius |
+| `shadow-md` | medium shadow |
+| `on-hover:scale-105` | grow to 105% on hover |
+
+The number in a class is the pixel value, so there's no scale to memorise and no cheat sheet to keep open.
 
 ---
 
@@ -90,7 +96,7 @@ Numbers are pixels (`gap-16` = 16px), so there's no spacing scale to memorise.
 - **santy.js.** A dependency-free behaviour layer. `data-santy-toggle="modal"` gives you focus trapping, Esc to close, scroll lock and ARIA wiring.
 - **Framework adapters.** Custom elements (`<santy-modal>`), React hooks (`santycss/react`), Vue composables (`santycss/vue`).
 - **Icons.** 2,100+ SVG icons as CSS classes: `<span class="icon icon-house"></span>`. [Browse them →](https://santycss.santy.in/icons.html)
-- **Animations.** 120+, including scroll-triggered effects and creature animations (`animate-butterfly`). [See them →](https://santycss.santy.in/animations.html)
+- **Animations.** 120+, including scroll-triggered effects and creature animations (`animation-butterfly`). [See them →](https://santycss.santy.in/animations.html)
 - **Themes.** Persimmon by default (warm paper, ink, serif headlines), with light and dark modes. Every value is a `--santy-*` variable, and there are 5 prebuilt presets.
 - **Config and plugins.** `santy.config.json` for colours, spacing, breakpoints and a prefix; a plugin API; `@apply` via `santycss/postcss`.
 - **Migrator.** `npx santycss migrate` updates pre-2.10 SantyCSS names to the current grammar. `--from=tailwind` and `--from=bootstrap` convert other frameworks.
@@ -98,25 +104,24 @@ Numbers are pixels (`gap-16` = 16px), so there's no spacing scale to memorise.
 
 ---
 
-## How it compares
+## At a glance
 
-| | SantyCSS | Tailwind CSS | Bootstrap |
-|---|---|---|---|
-| Build step | Optional (CDN works in production) | Required for production | Optional |
-| Class style | Plain English, pixel values | Abbreviated, spacing scale | Abbreviated + component classes |
-| Ready-made components | ✅ | ❌ (separate products) | ✅ |
-| JS behaviour (modals, tabs…) | ✅ `santy.js` | ❌ | ✅ `bootstrap.bundle.js` |
-| Icons included | ✅ 2,100+ | ❌ | Separate package |
-| Theming | CSS variables + 5 themes | Config / CSS variables | Sass + CSS variables |
-| Readable by AI without a lookup table | ✅ | Partly | Partly |
-| CSS shipped | 53KB gz core, ~15KB gz purged | Only what you use | ~30KB gz |
+| | SantyCSS |
+|---|---|
+| Build step | None needed. The CDN file works in production; a build is only for customising |
+| Class names | Whole words, `property-modifier-value`, literal pixels |
+| Look | Its own theme (Persimmon), light and dark, all CSS variables |
+| Components | Button, card, navbar, input, badge, alert, modal, tabs, pricing, plus the classic set |
+| JS behaviour | Optional `santy.js` for focus traps, Esc-to-close and ARIA. The new components need no JS |
+| Icons | 2,100+ included |
+| AI tools | Readable without a lookup table; [`santycss.context.md`](santycss.context.md) is a ready-made prompt |
+| CSS shipped | 65KB gz for `santy-next.css`, ~15KB gz purged on a real page |
 
 ### Trade-offs
 
 - **Longer class names mean larger HTML.** Gzip removes most of the difference, but the source is wordier.
-- **The full bundles are large.** Use `santy-start.css` or `santy-core.css`, or purge (see below).
-- **Choose Tailwind** if your team knows it, you rely on its ecosystem, or you need arbitrary values like `w-[37px]`.
-- **Choose Bootstrap** if you want its Sass pipeline and long track record.
+- **The full bundles are large.** Use `santy-next.css`, `santy-start.css` or `santy-core.css`, or purge (see below).
+- **Not the best fit** if most of your styling is one-off arbitrary values (the JIT, `santy-jit.js`, covers occasional ones), or if your design system needs a Sass pipeline.
 
 ---
 
@@ -139,12 +144,16 @@ With npm: `import 'santycss/css'` (everything), `'santycss/css/core'`, `'santycs
 
 | File | Raw | Gzipped |
 |---|---|---|
-| `santy-core.css` | 420KB | 53KB |
-| `santy-start.css` | 774KB | 111KB |
-| `santy.min.css` (everything) | 1.4MB | 163KB |
+| `santy-next.css` (new projects: theme + components + utilities) | 494KB | 65KB |
+| `santy-ui.css` (theme + components only) | 45KB | 9KB |
+| `santy-core.css` | 445KB | 56KB |
+| `santy-start.css` | 805KB | 115KB |
+| `santy.min.css` (everything) | 1.6MB | 192KB |
 | `santy-icons.css` | 1.3MB | 247KB |
 | `santy.js` | 71KB | 18KB |
-| Purged, real page ([portfolio template](https://santycss.santy.in/template-portfolio.html)) | 101KB | **15KB** |
+| Purged, real page ([portfolio template](https://santycss.santy.in/template-portfolio.html)) | 102KB | **15KB** |
+
+The classic bundles carry both old and new class names until v3. Set `"legacyNames": false` in `santy.config.json` to build them with new names only.
 
 Purge to the classes you use:
 
@@ -174,9 +183,9 @@ Older docs also used these spellings:
 
 | Old | Current |
 |---|---|
-| `make-rounded-lg`, `make-rounded-*` | `round-corners-8` (Tailwind `rounded-lg` = 8px), `round-corners-{n}` |
-| `make-rounded-full` | `make-pill` |
-| `tablet:make-block` | `md:make-block` (768px+) or `on-tablet:make-block` (640–1023px) |
+| `make-rounded-lg`, `make-rounded-*` | `radius-8`, `radius-{n}` |
+| `make-rounded-full` | `radius-pill` |
+| `tablet:make-block` | `md:display-block` (768px+) or `on-tablet:display-block` (640–1023px) |
 | `bg-surface` | `background-surface` |
 | `text-primary` (semantic) | `color-text` |
 | `text-muted` | `color-text-muted` |
@@ -188,7 +197,7 @@ Older docs also used these spellings:
 
 ## AI integration
 
-- **[`santycss.context.md`](https://cdn.jsdelivr.net/npm/santycss@2/santycss.context.md)** is a ready-made system prompt. Paste it into your AI tool and it writes SantyCSS instead of Tailwind.
+- **[`santycss.context.md`](https://cdn.jsdelivr.net/npm/santycss@2/santycss.context.md)** is a ready-made system prompt. Paste it into your AI tool and it writes SantyCSS with the current class names.
 - **[`santy-classmap.json`](https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-classmap.json)** lists every class name. It's also importable as `santycss/classmap`, for linters, autocomplete and validating AI output.
 
 ---

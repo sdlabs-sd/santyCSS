@@ -47,7 +47,7 @@ pre-2.10 class name still works, with byte-identical CSS.
   inputs, and the mobile navbar toggles with a checkbox.
 - **`santy-next.css`**: one file for new projects. It holds the components, the
   grammar-only utilities with `sm:` `md:` `lg:` `xl:` breakpoints, and the
-  theme, with no legacy aliases (63 KB gzipped).
+  theme, with no legacy aliases (65 KB gzipped).
 - **`npx santycss migrate`** (`scripts/migrate.js`) now updates SantyCSS's own
   pre-2.10 names by default. Converting another framework needs
   `--from=tailwind` or `--from=bootstrap` (Tailwind used to be the default). It rewrites old
