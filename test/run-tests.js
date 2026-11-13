@@ -760,8 +760,9 @@ test('migrate --from=bootstrap converts a real file', () => {
     '<div class="container"><div class="row g-3"><div class="col-md-6 d-flex p-4 fw-bold">x</div></div></div>');
   execFileSync('node', [path.join(ROOT, 'migrate.js'), `--file=${file}`, '--from=bootstrap'], { stdio: 'ignore' });
   const out = fs.readFileSync(file, 'utf8');
-  assert(out.includes('make-flex'), 'd-flex not converted');
-  assert(out.includes('add-padding-24'), 'p-4 not converted');
+  // Migrators emit v2.10 grammar names.
+  assert(out.includes('display-flex'), 'd-flex not converted');
+  assert(out.includes('padding-24') && !out.includes('add-padding-24'), 'p-4 not converted');
   assert(out.includes('text-bold'), 'fw-bold not converted');
   assert(out.includes('col-md-6') && out.includes('row') && out.includes('container'),
     'grid classes should survive untouched');
@@ -790,7 +791,7 @@ test('`npx santycss migrate` runs the migrator and radius classes exist', () => 
   execFileSync('node', [path.join(ROOT, 'cli.js'), 'migrate', `--file=${file}`], { stdio: 'ignore' });
   const out = fs.readFileSync(file, 'utf8').match(/class="([^"]+)"/)[1].split(' ');
   fs.rmSync(tmp, { recursive: true, force: true });
-  assert(out.join(' ') === 'round-corners-4 round-corners-8 round-top-12 make-pill make-hidden',
+  assert(out.join(' ') === 'radius-4 radius-8 radius-top-12 radius-pill display-none',
     `unexpected output: ${out.join(' ')}`);
   const known = new Set(JSON.parse(read('santy-classmap.json')).classes);
   const missing = out.filter(c => !known.has(c));
@@ -840,7 +841,10 @@ test('Tailwind dynamic patterns convert to real classes or stay unmapped', () =>
   execFileSync('node', [path.join(ROOT, 'migrate.js'), `--file=${file}`], { stdio: 'ignore' });
   const out = [...fs.readFileSync(file, 'utf8').matchAll(/class="([^"]+)"/g)].map(m => m[1]);
   fs.rmSync(tmp, { recursive: true, force: true });
-  Object.entries(input).forEach(([from, want], i) => {
+  // The table lists pre-2.10 names; the migrator emits their grammar names.
+  const naming = require(path.join(ROOT, 'lib', 'naming.js'));
+  Object.entries(input).forEach(([from, legacy], i) => {
+    const want = legacy.split(' ').map(c => naming.toNew(c) || c).join(' ');
     assert(out[i] === want, `${from} → "${out[i]}", expected "${want}"`);
     if (want !== from) {
       const missing = want.split(' ').filter(c => !known.has(c));

@@ -124,6 +124,7 @@ var SantyNaming = (function () {
     ['pin-left-', 'left-', '(?:' + N + '|auto|full|safe)'],
     ['pin-right-', 'right-', '(?:' + N + '|auto|full|safe)'],
     ['z-minus-', 'z-index-minus-', N],
+    ['layer-', 'z-index-', '(?:' + N + '|auto)'],
     ['z-', 'z-index-', '(?:' + N + '|auto|base|raised|dropdown|sticky|overlay|modal|popover|toast|tooltip|top|negative)'],
     ['self-', 'align-self-', '(?:auto|start|end|center|baseline|stretch)'],
     ['content-', 'align-content-', '(?:around|between|center|end|evenly|start|stretch)'],
