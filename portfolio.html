@@ -92,28 +92,28 @@
       <div class="position-absolute pointer-none" style="top:-80px;right:-80px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(247,191,4,0.07) 0%,transparent 70%);z-index:0;"></div>
       <div class="position-absolute pointer-none" style="bottom:-120px;left:-60px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,0.05) 0%,transparent 70%);z-index:0;"></div>
 
-      <div class="make-flex align-center set-height-screen about-grid position-relative"
+      <div class="display-flex align-center height-screen about-grid position-relative"
            style="padding:48px 80px 48px 64px;gap:48px;z-index:1;">
 
         <!-- Left: text -->
-        <div class="make-flex flex-column gap-20 flex-equal about-text animate-fade-in-from-left animation-fill-forwards animation-speed-normal">
+        <div class="display-flex flex-column gap-20 flex-equal about-text animation-fade-in-from-left animation-fill-forwards animation-speed-normal">
           <span class="section-badge">
             <span class="icon icon-16 icon-emoji-smile" style="background-color:#f7bf04;"></span>
             Hello World
           </span>
 
           <div>
-            <div class="set-text-18 color-slate-400 text-normal add-margin-bottom-8">Hi, I'm</div>
-            <h1 class="add-margin-0 text-extra-bold text-gradient-amber-to-yellow line-height-none section-h1" style="font-size:60px;">Alex Rivera</h1>
-            <div class="set-text-22 text-medium color-slate-300 add-margin-top-12" id="typewriter" style="min-height:32px;">Full-Stack Developer</div>
+            <div class="text-size-18 color-slate-400 text-normal margin-bottom-8">Hi, I'm</div>
+            <h1 class="margin-0 text-extra-bold text-gradient-amber-to-yellow line-height-none section-h1" style="font-size:60px;">Alex Rivera</h1>
+            <div class="text-size-22 text-medium color-slate-300 margin-top-12" id="typewriter" style="min-height:32px;">Full-Stack Developer</div>
           </div>
 
-          <p class="set-text-15 color-slate-400 line-height-relaxed add-margin-0" style="max-width:480px;">
+          <p class="text-size-15 color-slate-400 line-height-relaxed margin-0" style="max-width:480px;">
             I craft high-performance web experiences with clean code and creative design.
             Passionate about turning complex problems into elegant, user-centric solutions.
           </p>
 
-          <div class="make-flex flex-wrap gap-8">
+          <div class="display-flex flex-wrap gap-8">
             <span class="chip chip-sm" style="background:rgba(255,255,255,0.05);color:#94a3b8;border:1px solid rgba(255,255,255,0.08);">
               <span class="icon icon-14 icon-geo-alt" style="background-color:#f7bf04;width:14px;height:14px;"></span>
               San Francisco, CA
@@ -125,9 +125,9 @@
           </div>
 
           <!-- Social icons -->
-          <div class="make-flex gap-10 align-center">
+          <div class="display-flex gap-10 align-center">
             <a href="#" aria-label="GitHub"
-               class="make-flex align-center justify-center make-circle set-width-40 set-height-40 transition-normal"
+               class="display-flex align-center justify-center radius-circle width-40 height-40 transition-normal"
                style="border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);"
                onmouseover="this.style.borderColor='#f7bf04';this.style.background='rgba(247,191,4,0.1)'"
                onmouseout="this.style.borderColor='rgba(255,255,255,0.12)';this.style.background='rgba(255,255,255,0.04)'">
@@ -136,21 +136,21 @@
               </span>
             </a>
             <a href="#" aria-label="LinkedIn"
-               class="make-flex align-center justify-center make-circle set-width-40 set-height-40 transition-normal"
+               class="display-flex align-center justify-center radius-circle width-40 height-40 transition-normal"
                style="border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);"
                onmouseover="this.style.borderColor='#f7bf04';this.style.background='rgba(247,191,4,0.1)'"
                onmouseout="this.style.borderColor='rgba(255,255,255,0.12)';this.style.background='rgba(255,255,255,0.04)'">
               <span class="icon icon-linkedin icon-20" style="background-color:#e2e8f0;"></span>
             </a>
             <a href="#" aria-label="Twitter/X"
-               class="make-flex align-center justify-center make-circle set-width-40 set-height-40 transition-normal"
+               class="display-flex align-center justify-center radius-circle width-40 height-40 transition-normal"
                style="border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);"
                onmouseover="this.style.borderColor='#f7bf04';this.style.background='rgba(247,191,4,0.1)'"
                onmouseout="this.style.borderColor='rgba(255,255,255,0.12)';this.style.background='rgba(255,255,255,0.04)'">
               <span class="icon icon-twitter-x icon-20" style="background-color:#e2e8f0;"></span>
             </a>
             <a href="mailto:alex@example.com" aria-label="Email"
-               class="make-flex align-center justify-center make-circle set-width-40 set-height-40 transition-normal"
+               class="display-flex align-center justify-center radius-circle width-40 height-40 transition-normal"
                style="border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);"
                onmouseover="this.style.borderColor='#f7bf04';this.style.background='rgba(247,191,4,0.1)'"
                onmouseout="this.style.borderColor='rgba(255,255,255,0.12)';this.style.background='rgba(255,255,255,0.04)'">
@@ -159,15 +159,15 @@
           </div>
 
           <!-- CTA buttons -->
-          <div class="make-flex gap-12 flex-wrap">
-            <a href="#" class="make-flex align-center gap-8 add-padding-x-24 add-padding-y-12 make-pill text-semibold set-text-14 cursor-pointer transition-normal"
+          <div class="display-flex gap-12 flex-wrap">
+            <a href="#" class="display-flex align-center gap-8 padding-x-24 padding-y-12 radius-pill text-semibold text-size-14 cursor-pointer transition-normal"
                style="background:#f7bf04;color:#111;"
                onmouseover="this.style.background='#e0ac00';this.style.transform='translateY(-2px)'"
                onmouseout="this.style.background='#f7bf04';this.style.transform='translateY(0)'">
               <span class="icon icon-download icon-16" style="background-color:#111;"></span>
               Download CV
             </a>
-            <a href="#projects" class="make-flex align-center gap-8 add-padding-x-24 add-padding-y-12 make-pill text-semibold set-text-14 cursor-pointer transition-normal"
+            <a href="#projects" class="display-flex align-center gap-8 padding-x-24 padding-y-12 radius-pill text-semibold text-size-14 cursor-pointer transition-normal"
                style="border:1px solid rgba(255,255,255,0.18);color:#e2e8f0;background:transparent;"
                onclick="event.preventDefault();scrollToSection('projects')"
                onmouseover="this.style.borderColor='#f7bf04';this.style.color='#f7bf04'"
@@ -179,25 +179,25 @@
         </div>
 
         <!-- Right: avatar + stats -->
-        <div class="make-flex flex-column align-center gap-28 flex-shrink-none animate-zoom-in animation-delay-300 animation-fill-forwards on-mobile\:make-hidden">
+        <div class="display-flex flex-column align-center gap-28 flex-shrink-none animation-zoom-in animation-delay-300 animation-fill-forwards on-mobile\:display-none">
           <div class="avatar-ring-lg">
-            <div class="avatar-photo make-flex align-center justify-center"
+            <div class="avatar-photo display-flex align-center justify-center"
                  style="background:linear-gradient(135deg,#1e1e2e 0%,#2d2d42 100%);border-radius:50%;border:4px solid #09090b;">
-              <span class="set-text-40 text-extra-bold text-gradient-amber-to-yellow">AR</span>
+              <span class="text-size-40 text-extra-bold text-gradient-amber-to-yellow">AR</span>
             </div>
           </div>
-          <div class="make-flex gap-24 about-stat">
+          <div class="display-flex gap-24 about-stat">
             <div class="text-center">
-              <div class="set-text-32 text-extra-bold text-gradient-amber-to-yellow">5+</div>
-              <div class="set-text-11 color-slate-400 text-semibold" style="letter-spacing:0.06em;">YEARS</div>
+              <div class="text-size-32 text-extra-bold text-gradient-amber-to-yellow">5+</div>
+              <div class="text-size-11 color-slate-400 text-semibold" style="letter-spacing:0.06em;">YEARS</div>
             </div>
             <div class="text-center" style="border-left:1px solid rgba(255,255,255,0.08);padding-left:24px;">
-              <div class="set-text-32 text-extra-bold text-gradient-amber-to-yellow">40+</div>
-              <div class="set-text-11 color-slate-400 text-semibold" style="letter-spacing:0.06em;">PROJECTS</div>
+              <div class="text-size-32 text-extra-bold text-gradient-amber-to-yellow">40+</div>
+              <div class="text-size-11 color-slate-400 text-semibold" style="letter-spacing:0.06em;">PROJECTS</div>
             </div>
             <div class="text-center" style="border-left:1px solid rgba(255,255,255,0.08);padding-left:24px;">
-              <div class="set-text-32 text-extra-bold text-gradient-amber-to-yellow">15+</div>
-              <div class="set-text-11 color-slate-400 text-semibold" style="letter-spacing:0.06em;">CLIENTS</div>
+              <div class="text-size-32 text-extra-bold text-gradient-amber-to-yellow">15+</div>
+              <div class="text-size-11 color-slate-400 text-semibold" style="letter-spacing:0.06em;">CLIENTS</div>
             </div>
           </div>
         </div>
@@ -209,30 +209,30 @@
          § 2 · EXPERIENCE
          ───────────────────────────────────── -->
     <section class="snap-section-scrollable" id="experience">
-      <div class="add-padding-y-48 exp-pad" style="max-width:800px;margin:0 auto;padding-left:64px;padding-right:80px;">
+      <div class="padding-y-48 exp-pad" style="max-width:800px;margin:0 auto;padding-left:64px;padding-right:80px;">
 
-        <div class="add-margin-bottom-36 animate-fade-in-from-bottom animation-fill-forwards">
+        <div class="add-margin-bottom-36 animation-fade-in-from-bottom animation-fill-forwards">
           <span class="section-badge">
             <span class="icon icon-briefcase icon-16" style="background-color:#f7bf04;"></span>
             Career Journey
           </span>
-          <h2 class="set-text-40 text-extra-bold add-margin-top-12 add-margin-bottom-4 color-slate-50">Work Experience</h2>
-          <p class="set-text-14 color-slate-400 add-margin-0">My professional journey and key milestones</p>
+          <h2 class="text-size-40 text-extra-bold margin-top-12 margin-bottom-4 color-slate-50">Work Experience</h2>
+          <p class="text-size-14 color-slate-400 margin-0">My professional journey and key milestones</p>
         </div>
 
         <div class="timeline">
 
           <!-- Job 1 -->
-          <div class="timeline-item animate-fade-in-from-left animation-delay-100 animation-fill-forwards">
+          <div class="timeline-item animation-fade-in-from-left animation-delay-100 animation-fill-forwards">
             <div class="timeline-dot timeline-dot-yellow">
               <span class="icon icon-building icon-16" style="background-color:#111;"></span>
             </div>
             <div class="timeline-body">
               <span class="timeline-time">2022 — Present</span>
-              <div class="timeline-title set-text-16 text-semibold" style="color:#f1f5f9;">Senior Full-Stack Engineer</div>
-              <div class="set-text-13 add-margin-bottom-8" style="color:#f7bf04;">TechCorp Inc. · San Francisco, CA</div>
+              <div class="timeline-title text-size-16 text-semibold" style="color:#f1f5f9;">Senior Full-Stack Engineer</div>
+              <div class="text-size-13 margin-bottom-8" style="color:#f7bf04;">TechCorp Inc. · San Francisco, CA</div>
               <p class="timeline-desc" style="color:#94a3b8;">Led development of a SaaS platform serving 500k+ users. Architected microservices with Node.js and React. Reduced load times by 60% through advanced caching strategies and CDN optimisation.</p>
-              <div class="make-flex flex-wrap gap-6 add-margin-top-10">
+              <div class="display-flex flex-wrap gap-6 margin-top-10">
                 <span class="chip chip-sm" style="background:rgba(59,130,246,0.1);color:#60a5fa;border:1px solid rgba(59,130,246,0.2);">React</span>
                 <span class="chip chip-sm" style="background:rgba(59,130,246,0.1);color:#60a5fa;border:1px solid rgba(59,130,246,0.2);">Node.js</span>
                 <span class="chip chip-sm" style="background:rgba(59,130,246,0.1);color:#60a5fa;border:1px solid rgba(59,130,246,0.2);">AWS</span>
@@ -242,16 +242,16 @@
           </div>
 
           <!-- Job 2 -->
-          <div class="timeline-item animate-fade-in-from-left animation-delay-200 animation-fill-forwards">
+          <div class="timeline-item animation-fade-in-from-left animation-delay-200 animation-fill-forwards">
             <div class="timeline-dot timeline-dot-blue">
               <span class="icon icon-building icon-16" style="background-color:#fff;"></span>
             </div>
             <div class="timeline-body">
               <span class="timeline-time">2020 — 2022</span>
-              <div class="timeline-title set-text-16 text-semibold" style="color:#f1f5f9;">Full-Stack Developer</div>
-              <div class="set-text-13 add-margin-bottom-8" style="color:#60a5fa;">StartupX · Remote</div>
+              <div class="timeline-title text-size-16 text-semibold" style="color:#f1f5f9;">Full-Stack Developer</div>
+              <div class="text-size-13 margin-bottom-8" style="color:#60a5fa;">StartupX · Remote</div>
               <p class="timeline-desc" style="color:#94a3b8;">Built and shipped 3 product MVPs from zero. Implemented real-time features using WebSockets. Mentored 2 junior developers and introduced code review best practices.</p>
-              <div class="make-flex flex-wrap gap-6 add-margin-top-10">
+              <div class="display-flex flex-wrap gap-6 margin-top-10">
                 <span class="chip chip-sm" style="background:rgba(139,92,246,0.1);color:#a78bfa;border:1px solid rgba(139,92,246,0.2);">Vue.js</span>
                 <span class="chip chip-sm" style="background:rgba(139,92,246,0.1);color:#a78bfa;border:1px solid rgba(139,92,246,0.2);">Python</span>
                 <span class="chip chip-sm" style="background:rgba(139,92,246,0.1);color:#a78bfa;border:1px solid rgba(139,92,246,0.2);">Django</span>
@@ -261,16 +261,16 @@
           </div>
 
           <!-- Job 3 -->
-          <div class="timeline-item animate-fade-in-from-left animation-delay-300 animation-fill-forwards">
+          <div class="timeline-item animation-fade-in-from-left animation-delay-300 animation-fill-forwards">
             <div class="timeline-dot timeline-dot-green">
               <span class="icon icon-laptop icon-16" style="background-color:#fff;"></span>
             </div>
             <div class="timeline-body">
               <span class="timeline-time">2018 — 2020</span>
-              <div class="timeline-title set-text-16 text-semibold" style="color:#f1f5f9;">Junior Front-End Developer</div>
-              <div class="set-text-13 add-margin-bottom-8" style="color:#4ade80;">DigitalAgency · New York, NY</div>
+              <div class="timeline-title text-size-16 text-semibold" style="color:#f1f5f9;">Junior Front-End Developer</div>
+              <div class="text-size-13 margin-bottom-8" style="color:#4ade80;">DigitalAgency · New York, NY</div>
               <p class="timeline-desc" style="color:#94a3b8;">Developed responsive web interfaces for 20+ client projects. Collaborated closely with UX designers to deliver pixel-perfect, accessible experiences.</p>
-              <div class="make-flex flex-wrap gap-6 add-margin-top-10">
+              <div class="display-flex flex-wrap gap-6 margin-top-10">
                 <span class="chip chip-sm" style="background:rgba(34,197,94,0.1);color:#4ade80;border:1px solid rgba(34,197,94,0.2);">HTML/CSS</span>
                 <span class="chip chip-sm" style="background:rgba(34,197,94,0.1);color:#4ade80;border:1px solid rgba(34,197,94,0.2);">JavaScript</span>
                 <span class="chip chip-sm" style="background:rgba(34,197,94,0.1);color:#4ade80;border:1px solid rgba(34,197,94,0.2);">WordPress</span>
@@ -279,14 +279,14 @@
           </div>
 
           <!-- Education -->
-          <div class="timeline-item animate-fade-in-from-left animation-delay-400 animation-fill-forwards">
+          <div class="timeline-item animation-fade-in-from-left animation-delay-400 animation-fill-forwards">
             <div class="timeline-dot" style="background:#f59e0b;box-shadow:0 0 0 2px rgba(245,158,11,0.25);color:#fff;">
               <span class="icon icon-mortarboard icon-16" style="background-color:#fff;"></span>
             </div>
             <div class="timeline-body">
               <span class="timeline-time">2014 — 2018</span>
-              <div class="timeline-title set-text-16 text-semibold" style="color:#f1f5f9;">B.Sc. Computer Science</div>
-              <div class="set-text-13 add-margin-bottom-8" style="color:#fcd34d;">State University · GPA 3.8 / 4.0</div>
+              <div class="timeline-title text-size-16 text-semibold" style="color:#f1f5f9;">B.Sc. Computer Science</div>
+              <div class="text-size-13 margin-bottom-8" style="color:#fcd34d;">State University · GPA 3.8 / 4.0</div>
               <p class="timeline-desc" style="color:#94a3b8;">Majored in Computer Science with focus on software engineering and algorithms. Final-year capstone: ML-powered automated code-review system.</p>
             </div>
           </div>
@@ -299,57 +299,57 @@
          § 3 · SKILLS
          ───────────────────────────────────── -->
     <section class="snap-section" id="skills">
-      <div class="make-flex set-height-screen align-center skills-grid"
+      <div class="display-flex height-screen align-center skills-grid"
            style="padding:40px 80px 40px 64px;gap:56px;">
 
         <!-- Left: bars -->
         <div class="flex-equal">
-          <span class="section-badge animate-fade-in-from-bottom animation-fill-forwards">
+          <span class="section-badge animation-fade-in-from-bottom animation-fill-forwards">
             <span class="icon icon-code-slash icon-16" style="background-color:#f7bf04;"></span>
             Technical
           </span>
-          <h2 class="set-text-36 text-extra-bold add-margin-top-12 add-margin-bottom-24 color-slate-50">Skills &amp; Tools</h2>
+          <h2 class="text-size-36 text-extra-bold margin-top-12 margin-bottom-24 color-slate-50">Skills &amp; Tools</h2>
 
-          <div class="make-flex flex-column gap-18" id="skills-bars">
+          <div class="display-flex flex-column gap-18" id="skills-bars">
             <div>
-              <div class="make-flex justify-between add-margin-bottom-8">
-                <span class="set-text-13 text-medium color-slate-300">React / Next.js</span>
-                <span class="set-text-12 text-semibold" style="color:#f7bf04;">92%</span>
+              <div class="display-flex justify-between margin-bottom-8">
+                <span class="text-size-13 text-medium color-slate-300">React / Next.js</span>
+                <span class="text-size-12 text-semibold" style="color:#f7bf04;">92%</span>
               </div>
               <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
             </div>
             <div>
-              <div class="make-flex justify-between add-margin-bottom-8">
-                <span class="set-text-13 text-medium color-slate-300">Node.js / Express</span>
-                <span class="set-text-12 text-semibold" style="color:#60a5fa;">88%</span>
+              <div class="display-flex justify-between margin-bottom-8">
+                <span class="text-size-13 text-medium color-slate-300">Node.js / Express</span>
+                <span class="text-size-12 text-semibold" style="color:#60a5fa;">88%</span>
               </div>
               <div class="skill-bar-track"><div class="skill-bar-fill skill-bar-fill-blue" data-width="88"></div></div>
             </div>
             <div>
-              <div class="make-flex justify-between add-margin-bottom-8">
-                <span class="set-text-13 text-medium color-slate-300">TypeScript</span>
-                <span class="set-text-12 text-semibold" style="color:#a78bfa;">85%</span>
+              <div class="display-flex justify-between margin-bottom-8">
+                <span class="text-size-13 text-medium color-slate-300">TypeScript</span>
+                <span class="text-size-12 text-semibold" style="color:#a78bfa;">85%</span>
               </div>
               <div class="skill-bar-track"><div class="skill-bar-fill skill-bar-fill-purple" data-width="85"></div></div>
             </div>
             <div>
-              <div class="make-flex justify-between add-margin-bottom-8">
-                <span class="set-text-13 text-medium color-slate-300">Python / Django</span>
-                <span class="set-text-12 text-semibold" style="color:#4ade80;">80%</span>
+              <div class="display-flex justify-between margin-bottom-8">
+                <span class="text-size-13 text-medium color-slate-300">Python / Django</span>
+                <span class="text-size-12 text-semibold" style="color:#4ade80;">80%</span>
               </div>
               <div class="skill-bar-track"><div class="skill-bar-fill skill-bar-fill-green" data-width="80"></div></div>
             </div>
             <div>
-              <div class="make-flex justify-between add-margin-bottom-8">
-                <span class="set-text-13 text-medium color-slate-300">PostgreSQL / MongoDB</span>
-                <span class="set-text-12 text-semibold" style="color:#22d3ee;">78%</span>
+              <div class="display-flex justify-between margin-bottom-8">
+                <span class="text-size-13 text-medium color-slate-300">PostgreSQL / MongoDB</span>
+                <span class="text-size-12 text-semibold" style="color:#22d3ee;">78%</span>
               </div>
               <div class="skill-bar-track"><div class="skill-bar-fill skill-bar-fill-cyan" data-width="78"></div></div>
             </div>
             <div>
-              <div class="make-flex justify-between add-margin-bottom-8">
-                <span class="set-text-13 text-medium color-slate-300">AWS / DevOps</span>
-                <span class="set-text-12 text-semibold" style="color:#f472b6;">72%</span>
+              <div class="display-flex justify-between margin-bottom-8">
+                <span class="text-size-13 text-medium color-slate-300">AWS / DevOps</span>
+                <span class="text-size-12 text-semibold" style="color:#f472b6;">72%</span>
               </div>
               <div class="skill-bar-track"><div class="skill-bar-fill skill-bar-fill-pink" data-width="72"></div></div>
             </div>
@@ -358,9 +358,9 @@
 
         <!-- Right: tags + soft skills -->
         <div class="flex-equal">
-          <div class="add-margin-bottom-28">
-            <div class="set-text-12 text-semibold color-slate-400 add-margin-bottom-14" style="letter-spacing:0.08em;text-transform:uppercase;">Technologies</div>
-            <div class="make-flex flex-wrap gap-8">
+          <div class="margin-bottom-28">
+            <div class="text-size-12 text-semibold color-slate-400 margin-bottom-14" style="letter-spacing:0.08em;text-transform:uppercase;">Technologies</div>
+            <div class="display-flex flex-wrap gap-8">
               <span class="chip chip-sm" style="background:rgba(255,255,255,0.05);color:#cbd5e1;border:1px solid rgba(255,255,255,0.08);">Git &amp; GitHub</span>
               <span class="chip chip-sm" style="background:rgba(255,255,255,0.05);color:#cbd5e1;border:1px solid rgba(255,255,255,0.08);">Docker</span>
               <span class="chip chip-sm" style="background:rgba(255,255,255,0.05);color:#cbd5e1;border:1px solid rgba(255,255,255,0.08);">Kubernetes</span>
@@ -375,31 +375,31 @@
           </div>
 
           <div>
-            <div class="set-text-12 text-semibold color-slate-400 add-margin-bottom-14" style="letter-spacing:0.08em;text-transform:uppercase;">Soft Skills</div>
-            <div class="make-grid grid-cols-2 gap-10">
-              <div class="glass-card make-flex align-center gap-10 add-padding-12 add-padding-x-14">
+            <div class="text-size-12 text-semibold color-slate-400 margin-bottom-14" style="letter-spacing:0.08em;text-transform:uppercase;">Soft Skills</div>
+            <div class="display-grid grid-columns-2 gap-10">
+              <div class="glass-card display-flex align-center gap-10 padding-12 padding-x-14">
                 <span class="icon icon-people icon-20" style="background-color:#f7bf04;"></span>
-                <span class="set-text-13 color-slate-300">Team Leadership</span>
+                <span class="text-size-13 color-slate-300">Team Leadership</span>
               </div>
-              <div class="glass-card make-flex align-center gap-10 add-padding-12 add-padding-x-14">
+              <div class="glass-card display-flex align-center gap-10 padding-12 padding-x-14">
                 <span class="icon icon-lightbulb icon-20" style="background-color:#fbbf24;"></span>
-                <span class="set-text-13 color-slate-300">Problem Solving</span>
+                <span class="text-size-13 color-slate-300">Problem Solving</span>
               </div>
-              <div class="glass-card make-flex align-center gap-10 add-padding-12 add-padding-x-14">
+              <div class="glass-card display-flex align-center gap-10 padding-12 padding-x-14">
                 <span class="icon icon-chat-dots icon-20" style="background-color:#60a5fa;"></span>
-                <span class="set-text-13 color-slate-300">Communication</span>
+                <span class="text-size-13 color-slate-300">Communication</span>
               </div>
-              <div class="glass-card make-flex align-center gap-10 add-padding-12 add-padding-x-14">
+              <div class="glass-card display-flex align-center gap-10 padding-12 padding-x-14">
                 <span class="icon icon-graph-up icon-20" style="background-color:#4ade80;"></span>
-                <span class="set-text-13 color-slate-300">Adaptability</span>
+                <span class="text-size-13 color-slate-300">Adaptability</span>
               </div>
-              <div class="glass-card make-flex align-center gap-10 add-padding-12 add-padding-x-14">
+              <div class="glass-card display-flex align-center gap-10 padding-12 padding-x-14">
                 <span class="icon icon-layers icon-20" style="background-color:#a78bfa;"></span>
-                <span class="set-text-13 color-slate-300">System Design</span>
+                <span class="text-size-13 color-slate-300">System Design</span>
               </div>
-              <div class="glass-card make-flex align-center gap-10 add-padding-12 add-padding-x-14">
+              <div class="glass-card display-flex align-center gap-10 padding-12 padding-x-14">
                 <span class="icon icon-clock-history icon-20" style="background-color:#22d3ee;"></span>
-                <span class="set-text-13 color-slate-300">Time Management</span>
+                <span class="text-size-13 color-slate-300">Time Management</span>
               </div>
             </div>
           </div>
@@ -412,128 +412,128 @@
          § 4 · PROJECTS
          ───────────────────────────────────── -->
     <section class="snap-section-scrollable" id="projects">
-      <div class="add-padding-y-48 blog-gap" style="max-width:1020px;margin:0 auto;padding-left:64px;padding-right:80px;">
+      <div class="padding-y-48 blog-gap" style="max-width:1020px;margin:0 auto;padding-left:64px;padding-right:80px;">
 
-        <div class="add-margin-bottom-32 animate-fade-in-from-bottom animation-fill-forwards">
+        <div class="margin-bottom-32 animation-fade-in-from-bottom animation-fill-forwards">
           <span class="section-badge">
             <span class="icon icon-folder2-open icon-16" style="background-color:#f7bf04;"></span>
             Portfolio
           </span>
-          <h2 class="set-text-40 text-extra-bold add-margin-top-12 add-margin-bottom-4 color-slate-50">Featured Projects</h2>
-          <p class="set-text-14 color-slate-400 add-margin-0">A selection of work I'm proud of</p>
+          <h2 class="text-size-40 text-extra-bold margin-top-12 margin-bottom-4 color-slate-50">Featured Projects</h2>
+          <p class="text-size-14 color-slate-400 margin-0">A selection of work I'm proud of</p>
         </div>
 
-        <div class="make-grid gap-20 proj-grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="display-grid gap-20 proj-grid" style="grid-template-columns:repeat(3,1fr);">
 
           <!-- Project 1 -->
-          <div class="glass-card add-padding-24 make-flex flex-column gap-14 animate-zoom-in animation-delay-100 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-48 set-height-48 round-corners-12"
+          <div class="glass-card padding-24 display-flex flex-column gap-14 animation-zoom-in animation-delay-100 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-48 height-48 radius-12"
                  style="background:rgba(247,191,4,0.1);border:1px solid rgba(247,191,4,0.2);">
               <span class="icon icon-cloud-upload icon-28" style="background-color:#f7bf04;"></span>
             </div>
             <div>
-              <div class="set-text-16 text-semibold color-slate-50 add-margin-bottom-6">CloudSync Pro</div>
-              <p class="set-text-13 color-slate-400 line-height-relaxed add-margin-0">Real-time file synchronisation with end-to-end encryption and team collaboration.</p>
+              <div class="text-size-16 text-semibold color-slate-50 margin-bottom-6">CloudSync Pro</div>
+              <p class="text-size-13 color-slate-400 line-height-relaxed margin-0">Real-time file synchronisation with end-to-end encryption and team collaboration.</p>
             </div>
-            <div class="make-flex flex-wrap gap-6">
+            <div class="display-flex flex-wrap gap-6">
               <span class="chip chip-sm" style="background:rgba(247,191,4,0.08);color:#fbbf24;border:1px solid rgba(247,191,4,0.2);">React</span>
               <span class="chip chip-sm" style="background:rgba(247,191,4,0.08);color:#fbbf24;border:1px solid rgba(247,191,4,0.2);">Node.js</span>
               <span class="chip chip-sm" style="background:rgba(247,191,4,0.08);color:#fbbf24;border:1px solid rgba(247,191,4,0.2);">AWS S3</span>
             </div>
-            <a href="#" class="make-flex align-center gap-6 set-text-13 text-semibold add-margin-top-auto" style="color:#f7bf04;">
+            <a href="#" class="display-flex align-center gap-6 text-size-13 text-semibold margin-top-auto" style="color:#f7bf04;">
               View Project <span class="icon icon-arrow-right icon-16" style="background-color:#f7bf04;"></span>
             </a>
           </div>
 
           <!-- Project 2 -->
-          <div class="glass-card add-padding-24 make-flex flex-column gap-14 animate-zoom-in animation-delay-200 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-48 set-height-48 round-corners-12"
+          <div class="glass-card padding-24 display-flex flex-column gap-14 animation-zoom-in animation-delay-200 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-48 height-48 radius-12"
                  style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);">
               <span class="icon icon-graph-up-arrow icon-28" style="background-color:#60a5fa;"></span>
             </div>
             <div>
-              <div class="set-text-16 text-semibold color-slate-50 add-margin-bottom-6">AnalyticsDash</div>
-              <p class="set-text-13 color-slate-400 line-height-relaxed add-margin-0">Analytics dashboard with AI-powered insights, custom reports and data visualisation.</p>
+              <div class="text-size-16 text-semibold color-slate-50 margin-bottom-6">AnalyticsDash</div>
+              <p class="text-size-13 color-slate-400 line-height-relaxed margin-0">Analytics dashboard with AI-powered insights, custom reports and data visualisation.</p>
             </div>
-            <div class="make-flex flex-wrap gap-6">
+            <div class="display-flex flex-wrap gap-6">
               <span class="chip chip-sm" style="background:rgba(59,130,246,0.08);color:#60a5fa;border:1px solid rgba(59,130,246,0.2);">Next.js</span>
               <span class="chip chip-sm" style="background:rgba(59,130,246,0.08);color:#60a5fa;border:1px solid rgba(59,130,246,0.2);">D3.js</span>
               <span class="chip chip-sm" style="background:rgba(59,130,246,0.08);color:#60a5fa;border:1px solid rgba(59,130,246,0.2);">Python</span>
             </div>
-            <a href="#" class="make-flex align-center gap-6 set-text-13 text-semibold add-margin-top-auto" style="color:#60a5fa;">
+            <a href="#" class="display-flex align-center gap-6 text-size-13 text-semibold margin-top-auto" style="color:#60a5fa;">
               View Project <span class="icon icon-arrow-right icon-16" style="background-color:#60a5fa;"></span>
             </a>
           </div>
 
           <!-- Project 3 -->
-          <div class="glass-card add-padding-24 make-flex flex-column gap-14 animate-zoom-in animation-delay-300 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-48 set-height-48 round-corners-12"
+          <div class="glass-card padding-24 display-flex flex-column gap-14 animation-zoom-in animation-delay-300 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-48 height-48 radius-12"
                  style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);">
               <span class="icon icon-cpu icon-28" style="background-color:#a78bfa;"></span>
             </div>
             <div>
-              <div class="set-text-16 text-semibold color-slate-50 add-margin-bottom-6">AI Code Reviewer</div>
-              <p class="set-text-13 color-slate-400 line-height-relaxed add-margin-0">ML-powered tool that reviews PRs, suggests improvements and detects security issues.</p>
+              <div class="text-size-16 text-semibold color-slate-50 margin-bottom-6">AI Code Reviewer</div>
+              <p class="text-size-13 color-slate-400 line-height-relaxed margin-0">ML-powered tool that reviews PRs, suggests improvements and detects security issues.</p>
             </div>
-            <div class="make-flex flex-wrap gap-6">
+            <div class="display-flex flex-wrap gap-6">
               <span class="chip chip-sm" style="background:rgba(139,92,246,0.08);color:#a78bfa;border:1px solid rgba(139,92,246,0.2);">Python</span>
               <span class="chip chip-sm" style="background:rgba(139,92,246,0.08);color:#a78bfa;border:1px solid rgba(139,92,246,0.2);">FastAPI</span>
               <span class="chip chip-sm" style="background:rgba(139,92,246,0.08);color:#a78bfa;border:1px solid rgba(139,92,246,0.2);">OpenAI</span>
             </div>
-            <a href="#" class="make-flex align-center gap-6 set-text-13 text-semibold add-margin-top-auto" style="color:#a78bfa;">
+            <a href="#" class="display-flex align-center gap-6 text-size-13 text-semibold margin-top-auto" style="color:#a78bfa;">
               View Project <span class="icon icon-arrow-right icon-16" style="background-color:#a78bfa;"></span>
             </a>
           </div>
 
           <!-- Project 4 -->
-          <div class="glass-card add-padding-24 make-flex flex-column gap-14 animate-zoom-in animation-delay-400 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-48 set-height-48 round-corners-12"
+          <div class="glass-card padding-24 display-flex flex-column gap-14 animation-zoom-in animation-delay-400 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-48 height-48 radius-12"
                  style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);">
               <span class="icon icon-cart icon-28" style="background-color:#4ade80;"></span>
             </div>
             <div>
-              <div class="set-text-16 text-semibold color-slate-50 add-margin-bottom-6">ShopStream</div>
-              <p class="set-text-13 color-slate-400 line-height-relaxed add-margin-0">Modern e-commerce with live inventory, multi-vendor support and payment processing.</p>
+              <div class="text-size-16 text-semibold color-slate-50 margin-bottom-6">ShopStream</div>
+              <p class="text-size-13 color-slate-400 line-height-relaxed margin-0">Modern e-commerce with live inventory, multi-vendor support and payment processing.</p>
             </div>
-            <div class="make-flex flex-wrap gap-6">
+            <div class="display-flex flex-wrap gap-6">
               <span class="chip chip-sm" style="background:rgba(34,197,94,0.08);color:#4ade80;border:1px solid rgba(34,197,94,0.2);">React</span>
               <span class="chip chip-sm" style="background:rgba(34,197,94,0.08);color:#4ade80;border:1px solid rgba(34,197,94,0.2);">Stripe</span>
               <span class="chip chip-sm" style="background:rgba(34,197,94,0.08);color:#4ade80;border:1px solid rgba(34,197,94,0.2);">MongoDB</span>
             </div>
-            <a href="#" class="make-flex align-center gap-6 set-text-13 text-semibold add-margin-top-auto" style="color:#4ade80;">
+            <a href="#" class="display-flex align-center gap-6 text-size-13 text-semibold margin-top-auto" style="color:#4ade80;">
               View Project <span class="icon icon-arrow-right icon-16" style="background-color:#4ade80;"></span>
             </a>
           </div>
 
           <!-- Project 5 -->
-          <div class="glass-card add-padding-24 make-flex flex-column gap-14 animate-zoom-in animation-delay-500 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-48 set-height-48 round-corners-12"
+          <div class="glass-card padding-24 display-flex flex-column gap-14 animation-zoom-in animation-delay-500 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-48 height-48 radius-12"
                  style="background:rgba(236,72,153,0.1);border:1px solid rgba(236,72,153,0.2);">
               <span class="icon icon-chat-dots icon-28" style="background-color:#f472b6;"></span>
             </div>
             <div>
-              <div class="set-text-16 text-semibold color-slate-50 add-margin-bottom-6">ChatSpace</div>
-              <p class="set-text-13 color-slate-400 line-height-relaxed add-margin-0">Real-time messaging with rooms, DMs, file sharing and a smart notification system.</p>
+              <div class="text-size-16 text-semibold color-slate-50 margin-bottom-6">ChatSpace</div>
+              <p class="text-size-13 color-slate-400 line-height-relaxed margin-0">Real-time messaging with rooms, DMs, file sharing and a smart notification system.</p>
             </div>
-            <div class="make-flex flex-wrap gap-6">
+            <div class="display-flex flex-wrap gap-6">
               <span class="chip chip-sm" style="background:rgba(236,72,153,0.08);color:#f472b6;border:1px solid rgba(236,72,153,0.2);">Socket.io</span>
               <span class="chip chip-sm" style="background:rgba(236,72,153,0.08);color:#f472b6;border:1px solid rgba(236,72,153,0.2);">Vue.js</span>
               <span class="chip chip-sm" style="background:rgba(236,72,153,0.08);color:#f472b6;border:1px solid rgba(236,72,153,0.2);">Redis</span>
             </div>
-            <a href="#" class="make-flex align-center gap-6 set-text-13 text-semibold add-margin-top-auto" style="color:#f472b6;">
+            <a href="#" class="display-flex align-center gap-6 text-size-13 text-semibold margin-top-auto" style="color:#f472b6;">
               View Project <span class="icon icon-arrow-right icon-16" style="background-color:#f472b6;"></span>
             </a>
           </div>
 
           <!-- GitHub CTA -->
-          <div class="glass-card-light add-padding-24 make-flex flex-column align-center justify-center gap-16 text-center animate-zoom-in animation-delay-600 animation-fill-forwards"
+          <div class="glass-card-light padding-24 display-flex flex-column align-center justify-center gap-16 text-center animation-zoom-in animation-delay-600 animation-fill-forwards"
                style="border:1px dashed rgba(247,191,4,0.22);">
             <span class="icon icon-github icon-40" style="background-color:rgba(255,255,255,0.25);"></span>
             <div>
-              <div class="set-text-15 text-semibold color-slate-200 add-margin-bottom-6">More on GitHub</div>
-              <p class="set-text-12 color-slate-400 add-margin-0">40+ open-source projects</p>
+              <div class="text-size-15 text-semibold color-slate-200 margin-bottom-6">More on GitHub</div>
+              <p class="text-size-12 color-slate-400 margin-0">40+ open-source projects</p>
             </div>
-            <a href="#" class="make-flex align-center gap-8 add-padding-x-20 add-padding-y-10 make-pill text-semibold set-text-13 cursor-pointer transition-normal"
+            <a href="#" class="display-flex align-center gap-8 padding-x-20 padding-y-10 radius-pill text-semibold text-size-13 cursor-pointer transition-normal"
                style="border:1px solid rgba(247,191,4,0.3);color:#f7bf04;background:transparent;"
                onmouseover="this.style.background='rgba(247,191,4,0.1)'"
                onmouseout="this.style.background='transparent'">
@@ -550,72 +550,72 @@
          § 5 · HOBBIES
          ───────────────────────────────────── -->
     <section class="snap-section" id="hobbies">
-      <div class="make-flex flex-column align-center justify-center set-height-screen blog-gap"
+      <div class="display-flex flex-column align-center justify-center height-screen blog-gap"
            style="padding:40px 80px 40px 64px;">
 
-        <div class="text-center add-margin-bottom-36 animate-fade-in-from-bottom animation-fill-forwards" style="width:100%;">
+        <div class="text-center add-margin-bottom-36 animation-fade-in-from-bottom animation-fill-forwards" style="width:100%;">
           <span class="section-badge">
             <span class="icon icon-heart-fill icon-16" style="background-color:#f7bf04;"></span>
             Personal
           </span>
-          <h2 class="set-text-40 text-extra-bold add-margin-top-12 add-margin-bottom-4 color-slate-50">Hobbies &amp; Interests</h2>
-          <p class="set-text-14 color-slate-400 add-margin-0">What keeps me inspired outside of work</p>
+          <h2 class="text-size-40 text-extra-bold margin-top-12 margin-bottom-4 color-slate-50">Hobbies &amp; Interests</h2>
+          <p class="text-size-14 color-slate-400 margin-0">What keeps me inspired outside of work</p>
         </div>
 
-        <div class="make-grid gap-20 hobby-grid" style="grid-template-columns:repeat(3,1fr);max-width:840px;width:100%;">
+        <div class="display-grid gap-20 hobby-grid" style="grid-template-columns:repeat(3,1fr);max-width:840px;width:100%;">
 
-          <div class="glass-card add-padding-24 make-flex flex-column align-center text-center gap-14 animate-bounce-in animation-delay-100 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-56 set-height-56 make-circle"
+          <div class="glass-card padding-24 display-flex flex-column align-center text-center gap-14 animation-bounce-in animation-delay-100 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-56 height-56 radius-circle"
                  style="background:rgba(247,191,4,0.1);border:1.5px solid rgba(247,191,4,0.25);">
               <span class="icon icon-music-note-beamed icon-28" style="background-color:#f7bf04;"></span>
             </div>
-            <div class="set-text-15 text-semibold color-slate-100">Music</div>
-            <p class="set-text-12 color-slate-400 add-margin-0">Playing guitar &amp; producing electronic music in my spare time</p>
+            <div class="text-size-15 text-semibold color-slate-100">Music</div>
+            <p class="text-size-12 color-slate-400 margin-0">Playing guitar &amp; producing electronic music in my spare time</p>
           </div>
 
-          <div class="glass-card add-padding-24 make-flex flex-column align-center text-center gap-14 animate-bounce-in animation-delay-200 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-56 set-height-56 make-circle"
+          <div class="glass-card padding-24 display-flex flex-column align-center text-center gap-14 animation-bounce-in animation-delay-200 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-56 height-56 radius-circle"
                  style="background:rgba(59,130,246,0.1);border:1.5px solid rgba(59,130,246,0.25);">
               <span class="icon icon-camera icon-28" style="background-color:#60a5fa;"></span>
             </div>
-            <div class="set-text-15 text-semibold color-slate-100">Photography</div>
-            <p class="set-text-12 color-slate-400 add-margin-0">Capturing urban landscapes and street photography</p>
+            <div class="text-size-15 text-semibold color-slate-100">Photography</div>
+            <p class="text-size-12 color-slate-400 margin-0">Capturing urban landscapes and street photography</p>
           </div>
 
-          <div class="glass-card add-padding-24 make-flex flex-column align-center text-center gap-14 animate-bounce-in animation-delay-300 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-56 set-height-56 make-circle"
+          <div class="glass-card padding-24 display-flex flex-column align-center text-center gap-14 animation-bounce-in animation-delay-300 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-56 height-56 radius-circle"
                  style="background:rgba(34,197,94,0.1);border:1.5px solid rgba(34,197,94,0.25);">
               <span class="icon icon-bicycle icon-28" style="background-color:#4ade80;"></span>
             </div>
-            <div class="set-text-15 text-semibold color-slate-100">Cycling</div>
-            <p class="set-text-12 color-slate-400 add-margin-0">Weekend rides through mountain trails and coastal paths</p>
+            <div class="text-size-15 text-semibold color-slate-100">Cycling</div>
+            <p class="text-size-12 color-slate-400 margin-0">Weekend rides through mountain trails and coastal paths</p>
           </div>
 
-          <div class="glass-card add-padding-24 make-flex flex-column align-center text-center gap-14 animate-bounce-in animation-delay-400 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-56 set-height-56 make-circle"
+          <div class="glass-card padding-24 display-flex flex-column align-center text-center gap-14 animation-bounce-in animation-delay-400 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-56 height-56 radius-circle"
                  style="background:rgba(139,92,246,0.1);border:1.5px solid rgba(139,92,246,0.25);">
               <span class="icon icon-book icon-28" style="background-color:#a78bfa;"></span>
             </div>
-            <div class="set-text-15 text-semibold color-slate-100">Reading</div>
-            <p class="set-text-12 color-slate-400 add-margin-0">Tech books, sci-fi novels and philosophy</p>
+            <div class="text-size-15 text-semibold color-slate-100">Reading</div>
+            <p class="text-size-12 color-slate-400 margin-0">Tech books, sci-fi novels and philosophy</p>
           </div>
 
-          <div class="glass-card add-padding-24 make-flex flex-column align-center text-center gap-14 animate-bounce-in animation-delay-500 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-56 set-height-56 make-circle"
+          <div class="glass-card padding-24 display-flex flex-column align-center text-center gap-14 animation-bounce-in animation-delay-500 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-56 height-56 radius-circle"
                  style="background:rgba(236,72,153,0.1);border:1.5px solid rgba(236,72,153,0.25);">
               <span class="icon icon-controller icon-28" style="background-color:#f472b6;"></span>
             </div>
-            <div class="set-text-15 text-semibold color-slate-100">Gaming</div>
-            <p class="set-text-12 color-slate-400 add-margin-0">Strategy &amp; indie games — big Elden Ring fan</p>
+            <div class="text-size-15 text-semibold color-slate-100">Gaming</div>
+            <p class="text-size-12 color-slate-400 margin-0">Strategy &amp; indie games — big Elden Ring fan</p>
           </div>
 
-          <div class="glass-card add-padding-24 make-flex flex-column align-center text-center gap-14 animate-bounce-in animation-delay-600 animation-fill-forwards transition-normal on-hover\:scale-105">
-            <div class="make-flex align-center justify-center set-width-56 set-height-56 make-circle"
+          <div class="glass-card padding-24 display-flex flex-column align-center text-center gap-14 animation-bounce-in animation-delay-600 animation-fill-forwards transition-normal on-hover\:scale-105">
+            <div class="display-flex align-center justify-center width-56 height-56 radius-circle"
                  style="background:rgba(6,182,212,0.1);border:1.5px solid rgba(6,182,212,0.25);">
               <span class="icon icon-globe icon-28" style="background-color:#22d3ee;"></span>
             </div>
-            <div class="set-text-15 text-semibold color-slate-100">Travelling</div>
-            <p class="set-text-12 color-slate-400 add-margin-0">Visited 22 countries, collecting experiences and stories</p>
+            <div class="text-size-15 text-semibold color-slate-100">Travelling</div>
+            <p class="text-size-12 color-slate-400 margin-0">Visited 22 countries, collecting experiences and stories</p>
           </div>
 
         </div>
@@ -626,77 +626,77 @@
          § 6 · BLOGS
          ───────────────────────────────────── -->
     <section class="snap-section" id="blogs">
-      <div class="make-flex flex-column align-center justify-center set-height-screen blog-gap"
+      <div class="display-flex flex-column align-center justify-center height-screen blog-gap"
            style="padding:40px 80px 40px 64px;">
 
-        <div class="text-center add-margin-bottom-32 animate-fade-in-from-bottom animation-fill-forwards" style="width:100%;max-width:760px;">
+        <div class="text-center margin-bottom-32 animation-fade-in-from-bottom animation-fill-forwards" style="width:100%;max-width:760px;">
           <span class="section-badge">
             <span class="icon icon-journal-text icon-16" style="background-color:#f7bf04;"></span>
             Writing
           </span>
-          <h2 class="set-text-40 text-extra-bold add-margin-top-12 add-margin-bottom-4 color-slate-50">Latest Blog Posts</h2>
-          <p class="set-text-14 color-slate-400 add-margin-0">Thoughts, tutorials and technical deep-dives</p>
+          <h2 class="text-size-40 text-extra-bold margin-top-12 margin-bottom-4 color-slate-50">Latest Blog Posts</h2>
+          <p class="text-size-14 color-slate-400 margin-0">Thoughts, tutorials and technical deep-dives</p>
         </div>
 
-        <div class="make-flex flex-column gap-14" style="max-width:760px;width:100%;">
+        <div class="display-flex flex-column gap-14" style="max-width:760px;width:100%;">
 
           <!-- Blog 1 -->
-          <a href="#" class="glass-card add-padding-24 make-flex gap-20 align-center animate-slide-in-from-left animation-delay-100 animation-fill-forwards transition-normal on-hover\:scale-105"
+          <a href="#" class="glass-card padding-24 display-flex gap-20 align-center animation-slide-in-from-left animation-delay-100 animation-fill-forwards transition-normal on-hover\:scale-105"
              style="cursor:pointer;">
-            <div class="make-flex align-center justify-center set-width-56 set-height-56 round-corners-12 flex-shrink-none"
+            <div class="display-flex align-center justify-center width-56 height-56 radius-12 flex-shrink-none"
                  style="background:rgba(247,191,4,0.1);border:1px solid rgba(247,191,4,0.2);">
               <span class="icon icon-cpu icon-28" style="background-color:#f7bf04;"></span>
             </div>
             <div class="flex-equal">
-              <div class="make-flex align-center gap-8 add-margin-bottom-6 flex-wrap">
+              <div class="display-flex align-center gap-8 margin-bottom-6 flex-wrap">
                 <span class="badge" style="background:rgba(247,191,4,0.1);color:#f7bf04;border:1px solid rgba(247,191,4,0.2);font-size:10px;padding:2px 8px;">Technical</span>
-                <span class="set-text-12 color-slate-400">Mar 15, 2024 · 8 min read</span>
+                <span class="text-size-12 color-slate-400">Mar 15, 2024 · 8 min read</span>
               </div>
-              <div class="set-text-15 text-semibold color-slate-100 add-margin-bottom-4">Building Scalable APIs with Node.js and GraphQL</div>
-              <p class="set-text-13 color-slate-400 add-margin-0 line-height-normal">A practical guide to designing production-ready GraphQL APIs that handle millions of requests.</p>
+              <div class="text-size-15 text-semibold color-slate-100 margin-bottom-4">Building Scalable APIs with Node.js and GraphQL</div>
+              <p class="text-size-13 color-slate-400 margin-0 line-height-normal">A practical guide to designing production-ready GraphQL APIs that handle millions of requests.</p>
             </div>
             <span class="icon icon-arrow-right-circle icon-20 flex-shrink-none" style="background-color:rgba(255,255,255,0.15);"></span>
           </a>
 
           <!-- Blog 2 -->
-          <a href="#" class="glass-card add-padding-24 make-flex gap-20 align-center animate-slide-in-from-left animation-delay-200 animation-fill-forwards transition-normal on-hover\:scale-105"
+          <a href="#" class="glass-card padding-24 display-flex gap-20 align-center animation-slide-in-from-left animation-delay-200 animation-fill-forwards transition-normal on-hover\:scale-105"
              style="cursor:pointer;">
-            <div class="make-flex align-center justify-center set-width-56 set-height-56 round-corners-12 flex-shrink-none"
+            <div class="display-flex align-center justify-center width-56 height-56 radius-12 flex-shrink-none"
                  style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);">
               <span class="icon icon-palette icon-28" style="background-color:#60a5fa;"></span>
             </div>
             <div class="flex-equal">
-              <div class="make-flex align-center gap-8 add-margin-bottom-6 flex-wrap">
+              <div class="display-flex align-center gap-8 margin-bottom-6 flex-wrap">
                 <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa;border:1px solid rgba(59,130,246,0.2);font-size:10px;padding:2px 8px;">Design</span>
-                <span class="set-text-12 color-slate-400">Feb 28, 2024 · 6 min read</span>
+                <span class="text-size-12 color-slate-400">Feb 28, 2024 · 6 min read</span>
               </div>
-              <div class="set-text-15 text-semibold color-slate-100 add-margin-bottom-4">The Art of CSS Utility Frameworks in 2024</div>
-              <p class="set-text-13 color-slate-400 add-margin-0 line-height-normal">Comparing modern CSS utilities — from Tailwind to SantyCSS, and why plain-English names matter.</p>
+              <div class="text-size-15 text-semibold color-slate-100 margin-bottom-4">The Art of CSS Utility Frameworks in 2024</div>
+              <p class="text-size-13 color-slate-400 margin-0 line-height-normal">Comparing modern CSS utilities — from Tailwind to SantyCSS, and why plain-English names matter.</p>
             </div>
             <span class="icon icon-arrow-right-circle icon-20 flex-shrink-none" style="background-color:rgba(255,255,255,0.15);"></span>
           </a>
 
           <!-- Blog 3 -->
-          <a href="#" class="glass-card add-padding-24 make-flex gap-20 align-center animate-slide-in-from-left animation-delay-300 animation-fill-forwards transition-normal on-hover\:scale-105"
+          <a href="#" class="glass-card padding-24 display-flex gap-20 align-center animation-slide-in-from-left animation-delay-300 animation-fill-forwards transition-normal on-hover\:scale-105"
              style="cursor:pointer;">
-            <div class="make-flex align-center justify-center set-width-56 set-height-56 round-corners-12 flex-shrink-none"
+            <div class="display-flex align-center justify-center width-56 height-56 radius-12 flex-shrink-none"
                  style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);">
               <span class="icon icon-stars icon-28" style="background-color:#4ade80;"></span>
             </div>
             <div class="flex-equal">
-              <div class="make-flex align-center gap-8 add-margin-bottom-6 flex-wrap">
+              <div class="display-flex align-center gap-8 margin-bottom-6 flex-wrap">
                 <span class="badge" style="background:rgba(34,197,94,0.1);color:#4ade80;border:1px solid rgba(34,197,94,0.2);font-size:10px;padding:2px 8px;">Career</span>
-                <span class="set-text-12 color-slate-400">Jan 10, 2024 · 5 min read</span>
+                <span class="text-size-12 color-slate-400">Jan 10, 2024 · 5 min read</span>
               </div>
-              <div class="set-text-15 text-semibold color-slate-100 add-margin-bottom-4">10 Things I Wish I Knew as a Junior Developer</div>
-              <p class="set-text-13 color-slate-400 add-margin-0 line-height-normal">Hard-earned lessons from 5 years of building software in fast-paced startup environments.</p>
+              <div class="text-size-15 text-semibold color-slate-100 margin-bottom-4">10 Things I Wish I Knew as a Junior Developer</div>
+              <p class="text-size-13 color-slate-400 margin-0 line-height-normal">Hard-earned lessons from 5 years of building software in fast-paced startup environments.</p>
             </div>
             <span class="icon icon-arrow-right-circle icon-20 flex-shrink-none" style="background-color:rgba(255,255,255,0.15);"></span>
           </a>
 
           <!-- Read all CTA -->
-          <div class="text-center add-padding-top-8">
-            <a href="#" class="make-inline-flex align-center gap-8 add-padding-x-24 add-padding-y-12 make-pill text-semibold set-text-14 cursor-pointer transition-normal"
+          <div class="text-center padding-top-8">
+            <a href="#" class="display-inline-flex align-center gap-8 padding-x-24 padding-y-12 radius-pill text-semibold text-size-14 cursor-pointer transition-normal"
                style="border:1px solid rgba(255,255,255,0.14);color:#cbd5e1;background:transparent;"
                onmouseover="this.style.borderColor='#f7bf04';this.style.color='#f7bf04'"
                onmouseout="this.style.borderColor='rgba(255,255,255,0.14)';this.style.color='#cbd5e1'">

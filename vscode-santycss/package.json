@@ -2,7 +2,7 @@
   "name": "santycss-intellisense",
   "displayName": "SantyCSS IntelliSense",
   "description": "Autocomplete, hover docs, and class preview for SantyCSS — the plain-English utility CSS framework",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "SantyCSS",
   "icon": "icon.png",
   "license": "MIT",

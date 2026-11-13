@@ -756,30 +756,30 @@
 // ─── Class data ───────────────────────────────────────────────────────────────
 const CATS = {
   layout: [
-    'make-flex','make-grid','make-block','make-inline-flex','make-hidden',
+    'display-flex','display-grid','display-block','display-inline-flex','display-none',
     'flex-row','flex-column','flex-wrap','flex-nowrap',
     'align-center','align-start','align-end','align-stretch',
     'justify-center','justify-between','justify-start','justify-end','justify-around',
-    'grid-cols-1','grid-cols-2','grid-cols-3','grid-cols-4','grid-cols-6','grid-cols-12',
+    'grid-columns-1','grid-columns-2','grid-columns-3','grid-columns-4','grid-columns-6','grid-columns-12',
     'gap-4','gap-8','gap-12','gap-16','gap-20','gap-24','gap-32','gap-48',
     'container','overflow-hidden','overflow-auto','overflow-scroll',
-    'pin-center','pin-top-0','pin-bottom-0',
+    'inset-center','top-0','bottom-0',
     'make-relative','make-absolute','make-fixed','make-sticky',
   ],
   spacing: [
-    'add-padding-4','add-padding-8','add-padding-12','add-padding-16','add-padding-20',
-    'add-padding-24','add-padding-32','add-padding-40','add-padding-48','add-padding-64',
-    'add-padding-x-8','add-padding-x-16','add-padding-x-24','add-padding-x-32','add-padding-x-48',
-    'add-padding-y-8','add-padding-y-16','add-padding-y-24','add-padding-y-32','add-padding-y-48',
-    'add-margin-4','add-margin-8','add-margin-16','add-margin-24','add-margin-32',
-    'add-margin-bottom-8','add-margin-bottom-12','add-margin-bottom-16','add-margin-bottom-24','add-margin-bottom-32',
-    'add-margin-top-8','add-margin-top-16','add-margin-top-24',
-    'add-margin-x-auto','add-margin-left-auto','add-margin-right-auto',
+    'padding-4','padding-8','padding-12','padding-16','padding-20',
+    'padding-24','padding-32','padding-40','padding-48','padding-64',
+    'padding-x-8','padding-x-16','padding-x-24','padding-x-32','padding-x-48',
+    'padding-y-8','padding-y-16','padding-y-24','padding-y-32','padding-y-48',
+    'margin-4','margin-8','margin-16','margin-24','margin-32',
+    'margin-bottom-8','margin-bottom-12','margin-bottom-16','margin-bottom-24','margin-bottom-32',
+    'margin-top-8','margin-top-16','margin-top-24',
+    'margin-x-auto','margin-left-auto','margin-right-auto',
     'gap-x-8','gap-x-16','gap-y-8','gap-y-16',
   ],
   type: [
-    'set-text-10','set-text-12','set-text-13','set-text-14','set-text-16','set-text-18',
-    'set-text-20','set-text-24','set-text-28','set-text-32','set-text-40','set-text-48','set-text-56','set-text-64',
+    'text-size-10','text-size-12','text-size-13','text-size-14','text-size-16','text-size-18',
+    'text-size-20','text-size-24','text-size-28','text-size-32','text-size-40','text-size-48','text-size-56','text-size-64',
     'text-bold','text-semibold','text-medium','text-regular','text-light',
     'text-center','text-left','text-right',
     'text-uppercase','text-lowercase','text-capitalize',
@@ -807,25 +807,25 @@ const CATS = {
     'background-white',
   ],
   border: [
-    'add-border-1','add-border-2','add-border-4',
-    'add-border-top-1','add-border-bottom-1','add-border-left-2','add-border-left-4','add-border-right-2',
+    'border-1','border-2','border-4',
+    'border-top-1','border-bottom-1','border-left-2','border-left-4','border-right-2',
     'border-color-blue-500','border-color-blue-300','border-color-green-500','border-color-red-500',
     'border-color-gray-100','border-color-gray-200','border-color-gray-300',
-    'round-corners-4','round-corners-6','round-corners-8','round-corners-12',
-    'round-corners-16','round-corners-20','round-corners-24','round-corners-32',
-    'make-circle','make-pill',
+    'radius-4','radius-6','radius-8','radius-12',
+    'radius-16','radius-20','radius-24','radius-32',
+    'radius-circle','radius-pill',
   ],
   fx: [
-    'add-shadow-sm','add-shadow-md','add-shadow-lg','add-shadow-xl','add-shadow-none',
+    'shadow-sm','shadow-md','shadow-lg','shadow-xl','shadow-none',
     'opacity-0','opacity-25','opacity-50','opacity-75','opacity-100',
     'transition-all','transition-colors','transition-transform',
-    'on-hover:add-shadow-md','on-hover:add-shadow-lg','on-hover:add-shadow-xl',
+    'on-hover:shadow-md','on-hover:shadow-lg','on-hover:add-shadow-xl',
     'on-hover:scale-105','on-hover:scale-110','on-hover:scale-95','on-hover:opacity-75',
     'on-hover:color-blue-500','on-hover:background-blue-50',
     'dark:background-gray-800','dark:background-gray-900','dark:color-white',
     'cursor-pointer','cursor-default','cursor-not-allowed','cursor-grab',
     'select-none','will-change-transform',
-    'isolate','z-modal','z-tooltip','z-toast',
+    'isolate','z-index-modal','z-index-tooltip','z-index-toast',
   ],
   comp: [
     'btn','btn-primary','btn-secondary','btn-success','btn-danger','btn-warning',
@@ -844,19 +844,19 @@ const CATS = {
     'table','table-bordered','table-striped',
   ],
   anim: [
-    'animate-spin','animate-pulse','animate-bounce',
-    'animate-fade-in','animate-fade-out',
-    'animate-slide-up','animate-slide-down','animate-slide-left','animate-slide-right',
-    'animate-zoom-in','animate-zoom-out',
-    'animate-flip-in-x','animate-flip-in-y',
-    'animate-bounce-in','animate-bounce-in-from-left','animate-bounce-in-from-right',
-    'animate-rubber-band','animate-shake','animate-wobble','animate-tada','animate-jello',
-    'animate-heartbeat','animate-flash','animate-swing',
-    'animate-text-gradient-flow','animate-text-glitch','animate-text-neon-pulse',
-    'animate-border-spin','animate-morph-blob','animate-error-shake',
-    'animate-toast-in','animate-modal-in',
-    'animate-on-scroll-slide-up','animate-on-scroll-fade-in',
-    'animate-stagger-slide-up','animate-stagger-children-100','animate-stagger-children-200',
+    'animation-spin','animation-pulse','animation-bounce',
+    'animation-fade-in','animation-fade-out',
+    'animation-slide-up','animation-slide-down','animate-slide-left','animate-slide-right',
+    'animation-zoom-in','animation-zoom-out',
+    'animation-flip-in-x','animation-flip-in-y',
+    'animation-bounce-in','animation-bounce-in-from-left','animation-bounce-in-from-right',
+    'animation-rubber-band','animate-shake','animation-wobble','animation-tada','animate-jello',
+    'animation-heartbeat','animation-flash','animation-swing',
+    'animation-text-gradient-flow','animation-text-glitch','animation-text-neon-pulse',
+    'animation-border-spin','animation-morph-blob','animation-error-shake',
+    'animation-toast-in','animation-modal-in',
+    'animation-on-scroll-slide-up','animation-on-scroll-fade-in',
+    'animation-stagger-slide-up','animation-stagger-children-100','animation-stagger-children-200',
     'on-hover:animate-bounce','on-hover:animate-rubber-band','on-hover:animate-tada',
     'on-hover:animate-shake','on-hover:animate-wobble',
     'animation-pause-on-hover','animation-ease-bounce','animation-ease-elastic',
@@ -866,93 +866,93 @@ const CATS = {
 
 // ─── Presets ─────────────────────────────────────────────────────────────────
 const PRESETS = {
-  card: `<div class="make-flex justify-center align-center add-padding-48 background-gray-50" style="min-height:100vh;">
-  <div class="background-white round-corners-20 add-shadow-lg add-border-1 border-color-gray-100 add-padding-36 on-hover:add-shadow-xl transition-all add-border-left-4 border-color-blue-500 cursor-pointer" style="width:360px;">
-    <span class="badge badge-primary add-margin-bottom-16">New Feature</span>
-    <h2 class="set-text-22 text-bold color-gray-900 add-margin-bottom-10">Beautiful Components</h2>
-    <p class="set-text-14 color-gray-500 line-height-relaxed add-margin-bottom-24">SantyCSS makes building UI fast and readable. Class names that just work — no lookup tables.</p>
-    <div class="make-flex gap-10">
+  card: `<div class="display-flex justify-center align-center padding-48 background-gray-50" style="min-height:100vh;">
+  <div class="background-white radius-20 shadow-lg border-1 border-color-gray-100 add-padding-36 on-hover:add-shadow-xl transition-all border-left-4 border-color-blue-500 cursor-pointer" style="width:360px;">
+    <span class="badge badge-primary margin-bottom-16">New Feature</span>
+    <h2 class="text-size-22 text-bold color-gray-900 margin-bottom-10">Beautiful Components</h2>
+    <p class="text-size-14 color-gray-500 line-height-relaxed margin-bottom-24">SantyCSS makes building UI fast and readable. Class names that just work — no lookup tables.</p>
+    <div class="display-flex gap-10">
       <button class="make-button style-primary shape-pill">Get started</button>
       <button class="make-button style-outline shape-pill">Learn more</button>
     </div>
   </div>
 </div>`,
 
-  hero: `<section class="make-flex flex-column align-center justify-center text-center add-padding-y-96 add-padding-x-24" style="min-height:100vh;background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#312e81 100%);">
-  <span class="badge add-margin-bottom-24 animate-fade-in" style="background:rgba(255,255,255,.1);color:#a5b4fc;border:1px solid rgba(255,255,255,.15);">✦ Plain English · No Build Step · 723KB</span>
-  <h1 class="set-text-64 text-bold color-white add-margin-bottom-20 animate-slide-up" style="line-height:1.1;letter-spacing:-2px;">
+  hero: `<section class="display-flex flex-column align-center justify-center text-center padding-y-96 padding-x-24" style="min-height:100vh;background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#312e81 100%);">
+  <span class="badge margin-bottom-24 animation-fade-in" style="background:rgba(255,255,255,.1);color:#a5b4fc;border:1px solid rgba(255,255,255,.15);">✦ Plain English · No Build Step · 723KB</span>
+  <h1 class="text-size-64 text-bold color-white margin-bottom-20 animation-slide-up" style="line-height:1.1;letter-spacing:-2px;">
     CSS that reads like<br><span style="color:#818cf8;">plain English</span>
   </h1>
-  <p class="set-text-20 add-margin-bottom-40 line-height-relaxed animate-slide-up animation-delay-200" style="color:rgba(255,255,255,.65);max-width:540px;">
+  <p class="text-size-20 margin-bottom-40 line-height-relaxed animation-slide-up animation-delay-200" style="color:rgba(255,255,255,.65);max-width:540px;">
     No cryptic abbreviations. No lookup tables. Class names that describe exactly what they do.
   </p>
-  <div class="make-flex gap-16 flex-wrap justify-center animate-slide-up animation-delay-500">
+  <div class="display-flex gap-16 flex-wrap justify-center animation-slide-up animation-delay-500">
     <button class="make-button style-primary size-large shape-pill on-hover:scale-105 transition-all">Get started →</button>
     <button class="make-button size-large shape-pill on-hover:scale-105 transition-all" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25);">View docs</button>
   </div>
 </section>`,
 
-  pricing: `<div class="make-flex flex-column align-center add-padding-64 background-gray-50" style="min-height:100vh;">
-  <h2 class="set-text-36 text-bold color-gray-900 add-margin-bottom-8 text-center" style="letter-spacing:-.5px;">Simple Pricing</h2>
-  <p class="set-text-16 color-gray-500 add-margin-bottom-48 text-center">No surprises. No hidden fees. Cancel any time.</p>
-  <div class="make-grid grid-cols-3 gap-24" style="max-width:960px;width:100%;">
-    <div class="background-white round-corners-20 add-shadow-sm add-border-1 border-color-gray-200 add-padding-32 on-hover:add-shadow-md transition-all">
-      <div class="set-text-13 text-semibold color-gray-500 text-uppercase letter-space-wide add-margin-bottom-12">Starter</div>
-      <div class="set-text-40 text-bold color-gray-900 add-margin-bottom-4">$0 <span class="set-text-16 text-regular color-gray-400">/mo</span></div>
-      <p class="set-text-14 color-gray-500 add-margin-bottom-28">Perfect for side projects</p>
+  pricing: `<div class="display-flex flex-column align-center padding-64 background-gray-50" style="min-height:100vh;">
+  <h2 class="text-size-36 text-bold color-gray-900 margin-bottom-8 text-center" style="letter-spacing:-.5px;">Simple Pricing</h2>
+  <p class="text-size-16 color-gray-500 margin-bottom-48 text-center">No surprises. No hidden fees. Cancel any time.</p>
+  <div class="display-grid grid-columns-3 gap-24" style="max-width:960px;width:100%;">
+    <div class="background-white radius-20 shadow-sm border-1 border-color-gray-200 padding-32 on-hover:shadow-md transition-all">
+      <div class="text-size-13 text-semibold color-gray-500 text-uppercase letter-spacing-wide margin-bottom-12">Starter</div>
+      <div class="text-size-40 text-bold color-gray-900 margin-bottom-4">$0 <span class="text-size-16 text-regular color-gray-400">/mo</span></div>
+      <p class="text-size-14 color-gray-500 margin-bottom-28">Perfect for side projects</p>
       <button class="make-button style-outline shape-pill" style="width:100%;">Get started free</button>
     </div>
-    <div class="background-blue-600 round-corners-20 add-shadow-xl add-padding-32 on-hover:scale-105 transition-all" style="position:relative;">
+    <div class="background-blue-600 radius-20 shadow-xl padding-32 on-hover:scale-105 transition-all" style="position:relative;">
       <span class="badge background-white color-blue-600" style="position:absolute;top:-14px;right:20px;font-weight:700;">Most Popular</span>
-      <div class="set-text-13 text-semibold text-uppercase letter-space-wide add-margin-bottom-12" style="color:rgba(255,255,255,.7);">Pro</div>
-      <div class="set-text-40 text-bold color-white add-margin-bottom-4">$29 <span class="set-text-16" style="opacity:.65;">/mo</span></div>
-      <p class="set-text-14 add-margin-bottom-28" style="color:rgba(255,255,255,.75);">For growing teams</p>
+      <div class="text-size-13 text-semibold text-uppercase letter-spacing-wide margin-bottom-12" style="color:rgba(255,255,255,.7);">Pro</div>
+      <div class="text-size-40 text-bold color-white margin-bottom-4">$29 <span class="text-size-16" style="opacity:.65;">/mo</span></div>
+      <p class="text-size-14 margin-bottom-28" style="color:rgba(255,255,255,.75);">For growing teams</p>
       <button class="make-button shape-pill" style="width:100%;background:#fff;color:#1d4ed8;font-weight:700;">Get Pro →</button>
     </div>
-    <div class="background-white round-corners-20 add-shadow-sm add-border-1 border-color-gray-200 add-padding-32 on-hover:add-shadow-md transition-all">
-      <div class="set-text-13 text-semibold color-gray-500 text-uppercase letter-space-wide add-margin-bottom-12">Enterprise</div>
-      <div class="set-text-40 text-bold color-gray-900 add-margin-bottom-4">$99 <span class="set-text-16 text-regular color-gray-400">/mo</span></div>
-      <p class="set-text-14 color-gray-500 add-margin-bottom-28">For large organisations</p>
+    <div class="background-white radius-20 shadow-sm border-1 border-color-gray-200 padding-32 on-hover:shadow-md transition-all">
+      <div class="text-size-13 text-semibold color-gray-500 text-uppercase letter-spacing-wide margin-bottom-12">Enterprise</div>
+      <div class="text-size-40 text-bold color-gray-900 margin-bottom-4">$99 <span class="text-size-16 text-regular color-gray-400">/mo</span></div>
+      <p class="text-size-14 color-gray-500 margin-bottom-28">For large organisations</p>
       <button class="make-button style-outline shape-pill" style="width:100%;">Contact sales</button>
     </div>
   </div>
 </div>`,
 
-  dashboard: `<div class="add-padding-32 background-gray-50" style="min-height:100vh;">
-  <div class="make-flex align-center justify-between add-margin-bottom-32">
+  dashboard: `<div class="padding-32 background-gray-50" style="min-height:100vh;">
+  <div class="display-flex align-center justify-between margin-bottom-32">
     <div>
-      <h1 class="set-text-24 text-bold color-gray-900">Dashboard</h1>
-      <p class="set-text-13 color-gray-400 add-margin-top-2">Welcome back! Here's what's happening.</p>
+      <h1 class="text-size-24 text-bold color-gray-900">Dashboard</h1>
+      <p class="text-size-13 color-gray-400 margin-top-2">Welcome back! Here's what's happening.</p>
     </div>
-    <div class="make-flex gap-8 align-center">
-      <span class="badge badge-success animate-pulse">● Live</span>
+    <div class="display-flex gap-8 align-center">
+      <span class="badge badge-success animation-pulse">● Live</span>
       <button class="make-button style-primary size-small">Export CSV</button>
     </div>
   </div>
-  <div class="make-grid grid-cols-4 gap-20 add-margin-bottom-28">
-    <div class="background-white round-corners-16 add-padding-24 add-shadow-sm add-border-left-4 border-color-blue-500 on-hover:add-shadow-md transition-all">
-      <div class="set-text-12 text-semibold color-gray-400 text-uppercase add-margin-bottom-6">Revenue</div>
-      <div class="set-text-28 text-bold color-gray-900 add-margin-bottom-4">$48,295</div>
-      <span class="set-text-12 color-green-600 text-semibold">↑ 12.5% this month</span>
+  <div class="display-grid grid-columns-4 gap-20 margin-bottom-28">
+    <div class="background-white radius-16 padding-24 shadow-sm border-left-4 border-color-blue-500 on-hover:shadow-md transition-all">
+      <div class="text-size-12 text-semibold color-gray-400 text-uppercase margin-bottom-6">Revenue</div>
+      <div class="text-size-28 text-bold color-gray-900 margin-bottom-4">$48,295</div>
+      <span class="text-size-12 color-green-600 text-semibold">↑ 12.5% this month</span>
     </div>
-    <div class="background-white round-corners-16 add-padding-24 add-shadow-sm add-border-left-4 border-color-green-500 on-hover:add-shadow-md transition-all">
-      <div class="set-text-12 text-semibold color-gray-400 text-uppercase add-margin-bottom-6">Users</div>
-      <div class="set-text-28 text-bold color-gray-900 add-margin-bottom-4">3,847</div>
-      <span class="set-text-12 color-green-600 text-semibold">↑ 8.2% this month</span>
+    <div class="background-white radius-16 padding-24 shadow-sm border-left-4 border-color-green-500 on-hover:shadow-md transition-all">
+      <div class="text-size-12 text-semibold color-gray-400 text-uppercase margin-bottom-6">Users</div>
+      <div class="text-size-28 text-bold color-gray-900 margin-bottom-4">3,847</div>
+      <span class="text-size-12 color-green-600 text-semibold">↑ 8.2% this month</span>
     </div>
-    <div class="background-white round-corners-16 add-padding-24 add-shadow-sm add-border-left-4 border-color-purple-500 on-hover:add-shadow-md transition-all">
-      <div class="set-text-12 text-semibold color-gray-400 text-uppercase add-margin-bottom-6">Orders</div>
-      <div class="set-text-28 text-bold color-gray-900 add-margin-bottom-4">1,293</div>
-      <span class="set-text-12 color-red-500 text-semibold">↓ 3.1% this month</span>
+    <div class="background-white radius-16 padding-24 shadow-sm border-left-4 border-color-purple-500 on-hover:shadow-md transition-all">
+      <div class="text-size-12 text-semibold color-gray-400 text-uppercase margin-bottom-6">Orders</div>
+      <div class="text-size-28 text-bold color-gray-900 margin-bottom-4">1,293</div>
+      <span class="text-size-12 color-red-500 text-semibold">↓ 3.1% this month</span>
     </div>
-    <div class="background-white round-corners-16 add-padding-24 add-shadow-sm add-border-left-4 border-color-amber-400 on-hover:add-shadow-md transition-all">
-      <div class="set-text-12 text-semibold color-gray-400 text-uppercase add-margin-bottom-6">Conversion</div>
-      <div class="set-text-28 text-bold color-gray-900 add-margin-bottom-4">4.7%</div>
-      <span class="set-text-12 color-green-600 text-semibold">↑ 0.8% this month</span>
+    <div class="background-white radius-16 padding-24 shadow-sm border-left-4 border-color-amber-400 on-hover:shadow-md transition-all">
+      <div class="text-size-12 text-semibold color-gray-400 text-uppercase margin-bottom-6">Conversion</div>
+      <div class="text-size-28 text-bold color-gray-900 margin-bottom-4">4.7%</div>
+      <span class="text-size-12 color-green-600 text-semibold">↑ 0.8% this month</span>
     </div>
   </div>
-  <div class="background-white round-corners-16 add-padding-28 add-shadow-sm">
-    <h3 class="set-text-16 text-semibold color-gray-800 add-margin-bottom-20">Recent Orders</h3>
+  <div class="background-white radius-16 padding-28 shadow-sm">
+    <h3 class="text-size-16 text-semibold color-gray-800 margin-bottom-20">Recent Orders</h3>
     <table class="table table-bordered" style="width:100%;font-size:13px;">
       <thead style="background:#f8fafc;"><tr><th>Order</th><th>Customer</th><th>Status</th><th>Amount</th></tr></thead>
       <tbody>
@@ -964,41 +964,41 @@ const PRESETS = {
   </div>
 </div>`,
 
-  form: `<div class="make-flex justify-center align-center add-padding-48 background-gray-50" style="min-height:100vh;">
-  <div class="background-white round-corners-20 add-shadow-lg add-padding-40" style="width:440px;">
-    <h2 class="set-text-24 text-bold color-gray-900 add-margin-bottom-4">Create account</h2>
-    <p class="set-text-14 color-gray-500 add-margin-bottom-28">Start building with SantyCSS today.</p>
-    <div class="make-grid grid-cols-2 gap-16 add-margin-bottom-16">
+  form: `<div class="display-flex justify-center align-center padding-48 background-gray-50" style="min-height:100vh;">
+  <div class="background-white radius-20 shadow-lg padding-40" style="width:440px;">
+    <h2 class="text-size-24 text-bold color-gray-900 margin-bottom-4">Create account</h2>
+    <p class="text-size-14 color-gray-500 margin-bottom-28">Start building with SantyCSS today.</p>
+    <div class="display-grid grid-columns-2 gap-16 margin-bottom-16">
       <div>
-        <label class="set-text-13 text-semibold color-gray-700 add-margin-bottom-6" style="display:block;">First name</label>
+        <label class="text-size-13 text-semibold color-gray-700 margin-bottom-6" style="display:block;">First name</label>
         <input class="input" placeholder="Alex" style="width:100%;">
       </div>
       <div>
-        <label class="set-text-13 text-semibold color-gray-700 add-margin-bottom-6" style="display:block;">Last name</label>
+        <label class="text-size-13 text-semibold color-gray-700 margin-bottom-6" style="display:block;">Last name</label>
         <input class="input" placeholder="Johnson" style="width:100%;">
       </div>
     </div>
-    <div class="add-margin-bottom-16">
-      <label class="set-text-13 text-semibold color-gray-700 add-margin-bottom-6" style="display:block;">Email</label>
+    <div class="margin-bottom-16">
+      <label class="text-size-13 text-semibold color-gray-700 margin-bottom-6" style="display:block;">Email</label>
       <input class="input" type="email" placeholder="alex@example.com" style="width:100%;">
     </div>
-    <div class="add-margin-bottom-28">
-      <label class="set-text-13 text-semibold color-gray-700 add-margin-bottom-6" style="display:block;">Password</label>
+    <div class="margin-bottom-28">
+      <label class="text-size-13 text-semibold color-gray-700 margin-bottom-6" style="display:block;">Password</label>
       <input class="input" type="password" placeholder="8+ characters" style="width:100%;">
     </div>
     <button class="make-button style-primary on-hover:scale-105 transition-all" style="width:100%;">Create account →</button>
-    <p class="set-text-13 color-gray-400 text-center add-margin-top-20">
+    <p class="text-size-13 color-gray-400 text-center margin-top-20">
       Already have an account? <a href="#" style="color:#3b82f6;font-weight:600;">Sign in</a>
     </p>
   </div>
 </div>`,
 
-  buttons: `<div class="add-padding-40 background-gray-50" style="min-height:100vh;">
-  <h2 class="set-text-24 text-bold color-gray-900 add-margin-bottom-4">Button Gallery</h2>
-  <p class="set-text-14 color-gray-500 add-margin-bottom-32">Every button style in SantyCSS v1.3</p>
+  buttons: `<div class="padding-40 background-gray-50" style="min-height:100vh;">
+  <h2 class="text-size-24 text-bold color-gray-900 margin-bottom-4">Button Gallery</h2>
+  <p class="text-size-14 color-gray-500 margin-bottom-32">Every button style in SantyCSS v1.3</p>
 
-  <h4 class="set-text-11 text-semibold color-gray-400 text-uppercase letter-space-wide add-margin-bottom-12">Styles</h4>
-  <div class="make-flex flex-wrap gap-10 add-margin-bottom-32">
+  <h4 class="text-size-11 text-semibold color-gray-400 text-uppercase letter-spacing-wide margin-bottom-12">Styles</h4>
+  <div class="display-flex flex-wrap gap-10 margin-bottom-32">
     <button class="make-button style-primary">Primary</button>
     <button class="make-button style-secondary">Secondary</button>
     <button class="make-button style-success">Success</button>
@@ -1009,23 +1009,23 @@ const PRESETS = {
     <button class="make-button style-dark">Dark</button>
   </div>
 
-  <h4 class="set-text-11 text-semibold color-gray-400 text-uppercase letter-space-wide add-margin-bottom-12">Sizes</h4>
-  <div class="make-flex flex-wrap align-center gap-10 add-margin-bottom-32">
+  <h4 class="text-size-11 text-semibold color-gray-400 text-uppercase letter-spacing-wide margin-bottom-12">Sizes</h4>
+  <div class="display-flex flex-wrap align-center gap-10 margin-bottom-32">
     <button class="make-button style-primary size-small">Small</button>
     <button class="make-button style-primary">Default</button>
     <button class="make-button style-primary size-large">Large</button>
     <button class="make-button style-primary size-xl">XL</button>
   </div>
 
-  <h4 class="set-text-11 text-semibold color-gray-400 text-uppercase letter-space-wide add-margin-bottom-12">Shapes</h4>
-  <div class="make-flex flex-wrap gap-10 add-margin-bottom-32">
+  <h4 class="text-size-11 text-semibold color-gray-400 text-uppercase letter-spacing-wide margin-bottom-12">Shapes</h4>
+  <div class="display-flex flex-wrap gap-10 margin-bottom-32">
     <button class="make-button style-primary shape-square">Square</button>
     <button class="make-button style-primary shape-rounded">Rounded</button>
     <button class="make-button style-primary shape-pill">Pill</button>
   </div>
 
-  <h4 class="set-text-11 text-semibold color-gray-400 text-uppercase letter-space-wide add-margin-bottom-12">Hover animations</h4>
-  <div class="make-flex flex-wrap gap-10">
+  <h4 class="text-size-11 text-semibold color-gray-400 text-uppercase letter-spacing-wide margin-bottom-12">Hover animations</h4>
+  <div class="display-flex flex-wrap gap-10">
     <button class="make-button style-primary on-hover:scale-105 transition-all">Scale</button>
     <button class="make-button style-success on-hover:animate-bounce">Bounce</button>
     <button class="make-button style-danger on-hover:animate-rubber-band">Rubber band</button>
@@ -1035,133 +1035,133 @@ const PRESETS = {
   </div>
 </div>`,
 
-  animations: `<div class="add-padding-40 background-gray-900" style="min-height:100vh;">
-  <h2 class="set-text-24 text-bold color-white add-margin-bottom-4">Animation Showcase</h2>
-  <p class="set-text-14 color-gray-400 add-margin-bottom-32">120+ animations — hover the cards for interactive ones.</p>
-  <div class="make-grid grid-cols-4 gap-16 add-margin-bottom-28">
-    <div class="background-gray-800 round-corners-16 add-padding-24 text-center add-border-1 border-color-gray-700 animate-fade-in">
-      <div class="set-text-36 add-margin-bottom-12">👋</div>
-      <code class="set-text-11 color-blue-400">fade-in</code>
+  animations: `<div class="padding-40 background-gray-900" style="min-height:100vh;">
+  <h2 class="text-size-24 text-bold color-white margin-bottom-4">Animation Showcase</h2>
+  <p class="text-size-14 color-gray-400 margin-bottom-32">120+ animations — hover the cards for interactive ones.</p>
+  <div class="display-grid grid-columns-4 gap-16 margin-bottom-28">
+    <div class="background-gray-800 radius-16 padding-24 text-center border-1 border-color-gray-700 animation-fade-in">
+      <div class="text-size-36 margin-bottom-12">👋</div>
+      <code class="text-size-11 color-blue-400">fade-in</code>
     </div>
-    <div class="background-gray-800 round-corners-16 add-padding-24 text-center add-border-1 border-color-gray-700 animate-slide-up animation-delay-100">
-      <div class="set-text-36 add-margin-bottom-12">⬆️</div>
-      <code class="set-text-11 color-blue-400">slide-up</code>
+    <div class="background-gray-800 radius-16 padding-24 text-center border-1 border-color-gray-700 animation-slide-up animation-delay-100">
+      <div class="text-size-36 margin-bottom-12">⬆️</div>
+      <code class="text-size-11 color-blue-400">slide-up</code>
     </div>
-    <div class="background-gray-800 round-corners-16 add-padding-24 text-center add-border-1 border-color-gray-700 animate-zoom-in animation-delay-200">
-      <div class="set-text-36 add-margin-bottom-12">🔍</div>
-      <code class="set-text-11 color-blue-400">zoom-in</code>
+    <div class="background-gray-800 radius-16 padding-24 text-center border-1 border-color-gray-700 animation-zoom-in animation-delay-200">
+      <div class="text-size-36 margin-bottom-12">🔍</div>
+      <code class="text-size-11 color-blue-400">zoom-in</code>
     </div>
-    <div class="background-gray-800 round-corners-16 add-padding-24 text-center add-border-1 border-color-gray-700 animate-bounce-in animation-delay-300">
-      <div class="set-text-36 add-margin-bottom-12">🎯</div>
-      <code class="set-text-11 color-blue-400">bounce-in</code>
+    <div class="background-gray-800 radius-16 padding-24 text-center border-1 border-color-gray-700 animation-bounce-in animation-delay-300">
+      <div class="text-size-36 margin-bottom-12">🎯</div>
+      <code class="text-size-11 color-blue-400">bounce-in</code>
     </div>
-    <div class="background-gray-800 round-corners-16 add-padding-24 text-center add-border-1 border-color-gray-700 cursor-pointer on-hover:animate-rubber-band">
-      <div class="set-text-36 add-margin-bottom-12">🎸</div>
-      <code class="set-text-11 color-teal-400">hover: rubber-band</code>
+    <div class="background-gray-800 radius-16 padding-24 text-center border-1 border-color-gray-700 cursor-pointer on-hover:animate-rubber-band">
+      <div class="text-size-36 margin-bottom-12">🎸</div>
+      <code class="text-size-11 color-teal-400">hover: rubber-band</code>
     </div>
-    <div class="background-gray-800 round-corners-16 add-padding-24 text-center add-border-1 border-color-gray-700 cursor-pointer on-hover:animate-tada">
-      <div class="set-text-36 add-margin-bottom-12">🎉</div>
-      <code class="set-text-11 color-teal-400">hover: tada</code>
+    <div class="background-gray-800 radius-16 padding-24 text-center border-1 border-color-gray-700 cursor-pointer on-hover:animate-tada">
+      <div class="text-size-36 margin-bottom-12">🎉</div>
+      <code class="text-size-11 color-teal-400">hover: tada</code>
     </div>
-    <div class="background-gray-800 round-corners-16 add-padding-24 text-center add-border-1 border-color-gray-700 cursor-pointer on-hover:animate-wobble">
-      <div class="set-text-36 add-margin-bottom-12">🌊</div>
-      <code class="set-text-11 color-teal-400">hover: wobble</code>
+    <div class="background-gray-800 radius-16 padding-24 text-center border-1 border-color-gray-700 cursor-pointer on-hover:animate-wobble">
+      <div class="text-size-36 margin-bottom-12">🌊</div>
+      <code class="text-size-11 color-teal-400">hover: wobble</code>
     </div>
-    <div class="background-gray-800 round-corners-16 add-padding-24 text-center add-border-1 border-color-gray-700">
-      <div class="set-text-36 add-margin-bottom-12 animate-pulse">💓</div>
-      <code class="set-text-11 color-blue-400">pulse</code>
+    <div class="background-gray-800 radius-16 padding-24 text-center border-1 border-color-gray-700">
+      <div class="text-size-36 margin-bottom-12 animation-pulse">💓</div>
+      <code class="text-size-11 color-blue-400">pulse</code>
     </div>
   </div>
-  <div class="background-gray-800 round-corners-20 add-padding-40 text-center add-border-1 border-color-gray-700">
-    <h3 class="set-text-40 text-bold add-margin-bottom-8 animate-text-gradient-flow" style="background:linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;">Gradient Flow Text</h3>
-    <p class="set-text-13 color-gray-500">animate-text-gradient-flow</p>
+  <div class="background-gray-800 radius-20 padding-40 text-center border-1 border-color-gray-700">
+    <h3 class="text-size-40 text-bold margin-bottom-8 animation-text-gradient-flow" style="background:linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;">Gradient Flow Text</h3>
+    <p class="text-size-13 color-gray-500">animation-text-gradient-flow</p>
   </div>
 </div>`,
 
-  grid: `<div class="add-padding-32 background-gray-50" style="min-height:100vh;">
-  <h2 class="set-text-22 text-bold color-gray-900 add-margin-bottom-24">Bento Grid Layout</h2>
-  <div class="make-grid gap-16" style="grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 180px;margin-bottom:24px;">
-    <div class="background-blue-600 round-corners-20 add-padding-32 color-white" style="grid-row:1/3;">
-      <h3 class="set-text-22 text-bold add-margin-bottom-12">Featured</h3>
-      <p class="set-text-15 line-height-relaxed" style="opacity:.85;">This tall card spans two rows using CSS grid placement. Perfect for a featured story or hero stat.</p>
+  grid: `<div class="padding-32 background-gray-50" style="min-height:100vh;">
+  <h2 class="text-size-22 text-bold color-gray-900 margin-bottom-24">Bento Grid Layout</h2>
+  <div class="display-grid gap-16" style="grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 180px;margin-bottom:24px;">
+    <div class="background-blue-600 radius-20 padding-32 color-white" style="grid-row:1/3;">
+      <h3 class="text-size-22 text-bold margin-bottom-12">Featured</h3>
+      <p class="text-size-15 line-height-relaxed" style="opacity:.85;">This tall card spans two rows using CSS grid placement. Perfect for a featured story or hero stat.</p>
     </div>
-    <div class="background-green-400 round-corners-16 add-padding-24 color-white">
-      <div class="set-text-28 text-bold add-margin-bottom-4">3,847</div>
-      <div class="set-text-13" style="opacity:.85;">Active users</div>
+    <div class="background-green-400 radius-16 padding-24 color-white">
+      <div class="text-size-28 text-bold margin-bottom-4">3,847</div>
+      <div class="text-size-13" style="opacity:.85;">Active users</div>
     </div>
-    <div class="background-amber-400 round-corners-16 add-padding-24 color-white">
-      <div class="set-text-28 text-bold add-margin-bottom-4">98.7%</div>
-      <div class="set-text-13" style="opacity:.85;">Uptime</div>
+    <div class="background-amber-400 radius-16 padding-24 color-white">
+      <div class="text-size-28 text-bold margin-bottom-4">98.7%</div>
+      <div class="text-size-13" style="opacity:.85;">Uptime</div>
     </div>
-    <div class="background-purple-500 round-corners-16 add-padding-24 color-white">
-      <div class="set-text-28 text-bold add-margin-bottom-4">120+</div>
-      <div class="set-text-13" style="opacity:.85;">Animations</div>
+    <div class="background-purple-500 radius-16 padding-24 color-white">
+      <div class="text-size-28 text-bold margin-bottom-4">120+</div>
+      <div class="text-size-13" style="opacity:.85;">Animations</div>
     </div>
-    <div class="background-red-400 round-corners-16 add-padding-24 color-white">
-      <div class="set-text-28 text-bold add-margin-bottom-4">20k+</div>
-      <div class="set-text-13" style="opacity:.85;">Downloads</div>
+    <div class="background-red-400 radius-16 padding-24 color-white">
+      <div class="text-size-28 text-bold margin-bottom-4">20k+</div>
+      <div class="text-size-13" style="opacity:.85;">Downloads</div>
     </div>
   </div>
-  <div class="make-grid grid-cols-3 gap-16">
-    <div class="background-white round-corners-16 add-padding-24 add-shadow-sm add-border-1 border-color-gray-100">Plain card</div>
-    <div class="background-white round-corners-16 add-padding-24 add-shadow-sm add-border-left-4 border-color-blue-500">Accent border</div>
-    <div class="background-white round-corners-16 add-padding-24 add-shadow-sm on-hover:add-shadow-xl on-hover:scale-105 transition-all cursor-pointer">Hover me!</div>
+  <div class="display-grid grid-columns-3 gap-16">
+    <div class="background-white radius-16 padding-24 shadow-sm border-1 border-color-gray-100">Plain card</div>
+    <div class="background-white radius-16 padding-24 shadow-sm border-left-4 border-color-blue-500">Accent border</div>
+    <div class="background-white radius-16 padding-24 shadow-sm on-hover:add-shadow-xl on-hover:scale-105 transition-all cursor-pointer">Hover me!</div>
   </div>
 </div>`,
 
   navbar: `<div style="min-height:100vh;background:#f8fafc;">
-  <nav class="background-white add-shadow-sm" style="border-bottom:1px solid #f1f5f9;">
-    <div class="make-flex align-center justify-between add-padding-y-16 add-padding-x-28">
-      <div class="make-flex align-center gap-12">
-        <div class="background-blue-600 round-corners-10 make-flex align-center justify-center" style="width:38px;height:38px;">
+  <nav class="background-white shadow-sm" style="border-bottom:1px solid #f1f5f9;">
+    <div class="display-flex align-center justify-between padding-y-16 padding-x-28">
+      <div class="display-flex align-center gap-12">
+        <div class="background-blue-600 radius-10 display-flex align-center justify-center" style="width:38px;height:38px;">
           <span class="color-white text-bold">S</span>
         </div>
-        <span class="set-text-18 text-bold color-gray-900">SantyCSS</span>
+        <span class="text-size-18 text-bold color-gray-900">SantyCSS</span>
         <span class="badge badge-primary">v1.3</span>
       </div>
-      <div class="make-flex align-center gap-4">
-        <a href="#" class="set-text-14 text-semibold color-gray-600 add-padding-x-12 add-padding-y-8 round-corners-8 on-hover:background-gray-100 transition-all text-no-decoration">Docs</a>
-        <a href="components.html" class="set-text-14 text-semibold color-gray-600 add-padding-x-12 add-padding-y-8 round-corners-8 on-hover:background-gray-100 transition-all text-no-decoration">Components</a>
-        <a href="#" class="set-text-14 text-semibold color-gray-600 add-padding-x-12 add-padding-y-8 round-corners-8 on-hover:background-gray-100 transition-all text-no-decoration">Playground</a>
+      <div class="display-flex align-center gap-4">
+        <a href="#" class="text-size-14 text-semibold color-gray-600 padding-x-12 padding-y-8 radius-8 on-hover:background-gray-100 transition-all text-no-decoration">Docs</a>
+        <a href="components.html" class="text-size-14 text-semibold color-gray-600 padding-x-12 padding-y-8 radius-8 on-hover:background-gray-100 transition-all text-no-decoration">Components</a>
+        <a href="#" class="text-size-14 text-semibold color-gray-600 padding-x-12 padding-y-8 radius-8 on-hover:background-gray-100 transition-all text-no-decoration">Playground</a>
         <div style="width:1px;height:20px;background:#e2e8f0;margin:0 4px;"></div>
         <button class="make-button style-outline size-small">Log in</button>
         <button class="make-button style-primary size-small shape-pill">Sign up →</button>
       </div>
     </div>
   </nav>
-  <div class="make-flex flex-column align-center justify-center text-center add-padding-y-96">
-    <h1 class="set-text-48 text-bold color-gray-900 add-margin-bottom-16" style="letter-spacing:-1.5px;">A clean navbar</h1>
-    <p class="set-text-18 color-gray-500 add-margin-bottom-32">Edit the HTML on the left to make it yours.</p>
+  <div class="display-flex flex-column align-center justify-center text-center padding-y-96">
+    <h1 class="text-size-48 text-bold color-gray-900 margin-bottom-16" style="letter-spacing:-1.5px;">A clean navbar</h1>
+    <p class="text-size-18 color-gray-500 margin-bottom-32">Edit the HTML on the left to make it yours.</p>
     <button class="make-button style-primary size-large shape-pill">Explore →</button>
   </div>
 </div>`,
 
-  testimonial: `<div class="make-flex flex-column align-center add-padding-64 background-gray-50" style="min-height:100vh;">
-  <h2 class="set-text-36 text-bold color-gray-900 add-margin-bottom-8 text-center" style="letter-spacing:-.5px;">What developers say</h2>
-  <p class="set-text-16 color-gray-500 add-margin-bottom-48 text-center">Loved by teams worldwide.</p>
-  <div class="make-grid grid-cols-3 gap-24" style="max-width:960px;width:100%;">
-    <div class="background-white round-corners-20 add-padding-28 add-shadow-sm add-border-1 border-color-gray-100 on-hover:add-shadow-lg transition-all">
-      <div class="add-margin-bottom-16" style="color:#f59e0b;font-size:18px;letter-spacing:2px;">★★★★★</div>
-      <p class="set-text-15 color-gray-700 line-height-relaxed add-margin-bottom-20">"I built a whole landing page in 30 minutes. The class names are so readable I barely had to think."</p>
-      <div class="make-flex align-center gap-12">
-        <div class="background-blue-500 make-flex align-center justify-center round-corners-full color-white text-bold set-text-16" style="width:40px;height:40px;flex-shrink:0;">A</div>
-        <div><div class="set-text-14 text-semibold color-gray-900">Alex Chen</div><div class="set-text-12 color-gray-400">Frontend Dev</div></div>
+  testimonial: `<div class="display-flex flex-column align-center padding-64 background-gray-50" style="min-height:100vh;">
+  <h2 class="text-size-36 text-bold color-gray-900 margin-bottom-8 text-center" style="letter-spacing:-.5px;">What developers say</h2>
+  <p class="text-size-16 color-gray-500 margin-bottom-48 text-center">Loved by teams worldwide.</p>
+  <div class="display-grid grid-columns-3 gap-24" style="max-width:960px;width:100%;">
+    <div class="background-white radius-20 padding-28 shadow-sm border-1 border-color-gray-100 on-hover:shadow-lg transition-all">
+      <div class="margin-bottom-16" style="color:#f59e0b;font-size:18px;letter-spacing:2px;">★★★★★</div>
+      <p class="text-size-15 color-gray-700 line-height-relaxed margin-bottom-20">"I built a whole landing page in 30 minutes. The class names are so readable I barely had to think."</p>
+      <div class="display-flex align-center gap-12">
+        <div class="background-blue-500 display-flex align-center justify-center round-corners-full color-white text-bold text-size-16" style="width:40px;height:40px;flex-shrink:0;">A</div>
+        <div><div class="text-size-14 text-semibold color-gray-900">Alex Chen</div><div class="text-size-12 color-gray-400">Frontend Dev</div></div>
       </div>
     </div>
-    <div class="background-blue-600 round-corners-20 add-padding-28 add-shadow-xl">
-      <div class="add-margin-bottom-16" style="color:#fbbf24;font-size:18px;letter-spacing:2px;">★★★★★</div>
-      <p class="set-text-15 color-white line-height-relaxed add-margin-bottom-20" style="opacity:.9;">"Finally, CSS class names I can read like plain English. Switched from Tailwind and never looked back."</p>
-      <div class="make-flex align-center gap-12">
-        <div class="background-white make-flex align-center justify-center round-corners-full text-bold set-text-16" style="width:40px;height:40px;flex-shrink:0;color:#2563eb;">S</div>
-        <div><div class="set-text-14 text-semibold color-white">Sarah Kim</div><div class="set-text-12 color-white" style="opacity:.7;">UI Designer</div></div>
+    <div class="background-blue-600 radius-20 padding-28 shadow-xl">
+      <div class="margin-bottom-16" style="color:#fbbf24;font-size:18px;letter-spacing:2px;">★★★★★</div>
+      <p class="text-size-15 color-white line-height-relaxed margin-bottom-20" style="opacity:.9;">"Finally, CSS class names I can read like plain English. Switched from Tailwind and never looked back."</p>
+      <div class="display-flex align-center gap-12">
+        <div class="background-white display-flex align-center justify-center round-corners-full text-bold text-size-16" style="width:40px;height:40px;flex-shrink:0;color:#2563eb;">S</div>
+        <div><div class="text-size-14 text-semibold color-white">Sarah Kim</div><div class="text-size-12 color-white" style="opacity:.7;">UI Designer</div></div>
       </div>
     </div>
-    <div class="background-white round-corners-20 add-padding-28 add-shadow-sm add-border-1 border-color-gray-100 on-hover:add-shadow-lg transition-all">
-      <div class="add-margin-bottom-16" style="color:#f59e0b;font-size:18px;letter-spacing:2px;">★★★★★</div>
-      <p class="set-text-15 color-gray-700 line-height-relaxed add-margin-bottom-20">"Zero config, zero build step, and the class names are self-documenting. Game changer for rapid prototyping."</p>
-      <div class="make-flex align-center gap-12">
-        <div class="background-green-500 make-flex align-center justify-center round-corners-full color-white text-bold set-text-16" style="width:40px;height:40px;flex-shrink:0;">M</div>
-        <div><div class="set-text-14 text-semibold color-gray-900">Marcus Webb</div><div class="set-text-12 color-gray-400">Full-stack Dev</div></div>
+    <div class="background-white radius-20 padding-28 shadow-sm border-1 border-color-gray-100 on-hover:shadow-lg transition-all">
+      <div class="margin-bottom-16" style="color:#f59e0b;font-size:18px;letter-spacing:2px;">★★★★★</div>
+      <p class="text-size-15 color-gray-700 line-height-relaxed margin-bottom-20">"Zero config, zero build step, and the class names are self-documenting. Game changer for rapid prototyping."</p>
+      <div class="display-flex align-center gap-12">
+        <div class="background-green-500 display-flex align-center justify-center round-corners-full color-white text-bold text-size-16" style="width:40px;height:40px;flex-shrink:0;">M</div>
+        <div><div class="text-size-14 text-semibold color-gray-900">Marcus Webb</div><div class="text-size-12 color-gray-400">Full-stack Dev</div></div>
       </div>
     </div>
   </div>
@@ -1187,39 +1187,39 @@ let challengeIdx = 0;
 
 // ─── AI map ───────────────────────────────────────────────────────────────────
 const AI_MAP = [
-  [/flex|row|inline/,            'make-flex flex-row align-center gap-16'],
-  [/column|stack|vertical/,      'make-flex flex-column gap-16'],
-  [/grid/,                       (t) => { const m=t.match(/(\d)\s*col/); return `make-grid grid-cols-${m?m[1]:'3'} gap-20`; }],
-  [/center(ed)?|middle/,         'make-flex align-center justify-center'],
-  [/hero|banner|jumbotron/,      'make-flex flex-column align-center justify-center text-center add-padding-y-96'],
-  [/card/,                       'background-white round-corners-16 add-shadow-md add-padding-28 add-border-1 border-color-gray-100'],
+  [/flex|row|inline/,            'display-flex flex-row align-center gap-16'],
+  [/column|stack|vertical/,      'display-flex flex-column gap-16'],
+  [/grid/,                       (t) => { const m=t.match(/(\d)\s*col/); return `display-grid grid-cols-${m?m[1]:'3'} gap-20`; }],
+  [/center(ed)?|middle/,         'display-flex align-center justify-center'],
+  [/hero|banner|jumbotron/,      'display-flex flex-column align-center justify-center text-center padding-y-96'],
+  [/card/,                       'background-white radius-16 shadow-md padding-28 border-1 border-color-gray-100'],
   [/button|btn/,                 'make-button style-primary shape-pill size-large'],
   [/badge|tag|chip/,             'badge badge-primary'],
-  [/form|input/,                 'input round-corners-8 add-padding-12'],
-  [/nav(bar)?/,                  'background-white add-shadow-sm add-padding-y-16 add-padding-x-24 make-flex align-center justify-between'],
-  [/shadow/,                     'add-shadow-lg on-hover:add-shadow-xl transition-all'],
-  [/hover/,                      'on-hover:scale-105 on-hover:add-shadow-lg transition-all'],
+  [/form|input/,                 'input radius-8 padding-12'],
+  [/nav(bar)?/,                  'background-white shadow-sm padding-y-16 padding-x-24 display-flex align-center justify-between'],
+  [/shadow/,                     'shadow-lg on-hover:add-shadow-xl transition-all'],
+  [/hover/,                      'on-hover:scale-105 on-hover:shadow-lg transition-all'],
   [/blue/,                       'background-blue-500 color-white'],
   [/green/,                      'background-green-500 color-white'],
   [/red|danger/,                 'background-red-500 color-white'],
   [/purple/,                     'background-purple-500 color-white'],
   [/dark|night/,                 'background-gray-900 color-white'],
   [/gradient/,                   (t) => `style="background:linear-gradient(135deg,#3b82f6,#8b5cf6)"`],
-  [/rounded|pill/,               'round-corners-24'],
-  [/bounce|jump/,                'animate-bounce'],
-  [/fade/,                       'animate-fade-in'],
-  [/slide/,                      'animate-slide-up'],
-  [/spin|rotate/,                'animate-spin'],
-  [/pulse|glow/,                 'animate-pulse'],
+  [/rounded|pill/,               'radius-24'],
+  [/bounce|jump/,                'animation-bounce'],
+  [/fade/,                       'animation-fade-in'],
+  [/slide/,                      'animation-slide-up'],
+  [/spin|rotate/,                'animation-spin'],
+  [/pulse|glow/,                 'animation-pulse'],
   [/rubber|elastic/,             'on-hover:animate-rubber-band'],
   [/shake|error/,                'animate-shake'],
-  [/large|big|huge/,             'set-text-32 add-padding-32'],
-  [/small|tiny|sm/,              'set-text-12 add-padding-8'],
+  [/large|big|huge/,             'text-size-32 padding-32'],
+  [/small|tiny|sm/,              'text-size-12 padding-8'],
   [/bold|strong/,                'text-bold'],
-  [/border/,                     'add-border-2 border-color-blue-500'],
-  [/circle|round/,               'make-circle add-padding-20'],
-  [/padding|space/,              'add-padding-24'],
-  [/white|light|clean/,          'background-white color-gray-900 add-shadow-sm'],
+  [/border/,                     'border-2 border-color-blue-500'],
+  [/circle|round/,               'radius-circle padding-20'],
+  [/padding|space/,              'padding-24'],
+  [/white|light|clean/,          'background-white color-gray-900 shadow-sm'],
 ];
 
 // ─── Flat class list (for autocomplete + search) ─────────────────────────────
@@ -1416,13 +1416,13 @@ function aiGenerate() {
   const sAttr = sty ? ` style="${sty}"` : '';
   let snippet;
   if (/hero|banner/.test(raw))
-    snippet = `<section class="${cls}"${sAttr}>\n  <h1 class="set-text-56 text-bold add-margin-bottom-16">Hero Heading</h1>\n  <p class="set-text-18 add-margin-bottom-32" style="opacity:.8;">Your subtitle goes here.</p>\n  <button class="make-button style-primary size-large shape-pill">Get started →</button>\n</section>`;
+    snippet = `<section class="${cls}"${sAttr}>\n  <h1 class="text-size-56 text-bold margin-bottom-16">Hero Heading</h1>\n  <p class="text-size-18 margin-bottom-32" style="opacity:.8;">Your subtitle goes here.</p>\n  <button class="make-button style-primary size-large shape-pill">Get started →</button>\n</section>`;
   else if (/button|btn/.test(raw))
     snippet = `<button class="${cls}"${sAttr}>Click me</button>`;
   else if (/nav/.test(raw))
-    snippet = `<nav class="${cls}"${sAttr}>\n  <span class="set-text-18 text-bold">Logo</span>\n  <div class="make-flex gap-16">\n    <a href="#">Home</a>\n    <a href="#">About</a>\n    <button class="make-button style-primary size-small">Sign up</button>\n  </div>\n</nav>`;
+    snippet = `<nav class="${cls}"${sAttr}>\n  <span class="text-size-18 text-bold">Logo</span>\n  <div class="display-flex gap-16">\n    <a href="#">Home</a>\n    <a href="#">About</a>\n    <button class="make-button style-primary size-small">Sign up</button>\n  </div>\n</nav>`;
   else
-    snippet = `<div class="${cls}"${sAttr}>\n  <h3 class="set-text-18 text-bold add-margin-bottom-8">Card Title</h3>\n  <p class="set-text-14 color-gray-500 line-height-relaxed">Your content goes here.</p>\n</div>`;
+    snippet = `<div class="${cls}"${sAttr}>\n  <h3 class="text-size-18 text-bold margin-bottom-8">Card Title</h3>\n  <p class="text-size-14 color-gray-500 line-height-relaxed">Your content goes here.</p>\n</div>`;
 
   editor.value = (editor.value ? editor.value + '\n\n' : '') + snippet;
   updatePreview(); updateGutter();

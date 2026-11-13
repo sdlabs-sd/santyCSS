@@ -274,16 +274,16 @@
 
 <!-- ── Navbar ── -->
 <nav class="site-nav" id="site-nav">
-  <div class="container make-flex align-center justify-between add-padding-y-14" style="max-width:1280px">
+  <div class="container display-flex align-center justify-between padding-y-14" style="max-width:1280px">
     <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px">
       <div style="width:36px;height:36px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff">L</div>
-      <span class="set-text-20 text-bold color-gray-900">LuxeStore</span>
+      <span class="text-size-20 text-bold color-gray-900">LuxeStore</span>
     </a>
-    <div class="desktop-nav make-flex align-center gap-4">
+    <div class="desktop-nav display-flex align-center gap-4">
       <a href="index.html" class="navbar-item" style="color:#374151">Home</a>
       <a href="shop.html" class="navbar-item" style="color:#374151">Shop</a>
       <div style="position:relative" id="dropdown-wrap">
-        <button onclick="toggleDropdown()" class="navbar-item make-flex align-center gap-4" style="background:none;border:none;cursor:pointer;font-weight:500;color:#374151;font-size:14px">
+        <button onclick="toggleDropdown()" class="navbar-item display-flex align-center gap-4" style="background:none;border:none;cursor:pointer;font-weight:500;color:#374151;font-size:14px">
           Collections <span style="font-size:10px">▼</span>
         </button>
         <div id="nav-dropdown" class="dropdown-menu" style="display:none">
@@ -299,7 +299,7 @@
       <a href="#" class="navbar-item" style="color:#374151">About</a>
       <a href="#" class="navbar-item" style="color:#374151">Contact</a>
     </div>
-    <div class="make-flex align-center gap-8">
+    <div class="display-flex align-center gap-8">
       <button class="navbar-item" style="background:none;border:none;cursor:pointer;font-size:18px;color:#6b7280" title="Search">🔍</button>
       <a href="#" class="navbar-item" style="font-size:18px;color:#6b7280;text-decoration:none" title="Wishlist">♡</a>
       <button onclick="toggleDark()" class="navbar-item" style="background:none;border:none;cursor:pointer;font-size:18px;color:#6b7280" title="Toggle dark mode">🌙</button>
@@ -678,7 +678,7 @@ function renderRecommendations() {
   const recs = PRODUCTS.filter(p => !cartIds.has(p.id)).slice(0, 4);
   const grid = document.getElementById('rec-grid');
   grid.innerHTML = recs.map(p => `
-    <div class="rec-card when-visible:animate-zoom-in">
+    <div class="rec-card when-visible:animation-zoom-in">
       <img class="rec-card-img" src="${p.img}" alt="${p.name}" loading="lazy" onclick="window.location='product.html?id=${p.id}'" />
       <div class="rec-card-body">
         <div class="rec-card-name">${p.name}</div>

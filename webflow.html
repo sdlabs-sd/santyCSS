@@ -158,23 +158,23 @@
 </head>
 <body class="background-white">
 
-<header class="position-sticky pin-top-0 layer-50 background-white add-shadow-sm" style="border-bottom:1px solid #e5e7eb;">
-  <div class="container make-flex align-center justify-between add-padding-y-14">
-    <a href="index.html" class="make-flex align-center gap-10 text-no-decoration">
+<header class="position-sticky top-0 z-index-50 background-white shadow-sm" style="border-bottom:1px solid #e5e7eb;">
+  <div class="container display-flex align-center justify-between padding-y-14">
+    <a href="index.html" class="display-flex align-center gap-10 text-no-decoration">
       <img src="assest/santy_css.png" alt="SantyCSS" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
-      <span class="set-text-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
+      <span class="text-size-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
       <span class="badge background-blue-100 color-blue-700" style="font-size:11px;">v2.8.0</span>
     </a>
     <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
       <svg id="ham-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       <svg id="ham-close" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="display:none"><path d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
-    <nav id="main-nav" class="make-flex align-center gap-20">
-      <a href="classes.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Classes</a>
-      <a href="components.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Components</a>
-      <a href="animations.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Animations</a>
-      <a href="icons.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Icons</a>
-      <a href="templates.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Templates</a>
+    <nav id="main-nav" class="display-flex align-center gap-20">
+      <a href="classes.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Classes</a>
+      <a href="components.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Components</a>
+      <a href="animations.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Animations</a>
+      <a href="icons.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Icons</a>
+      <a href="templates.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Templates</a>
       <div class="nav-resources" id="navResources">
         <button class="nav-resources-btn nav-resources-btn-active" id="navResBtn" onclick="toggleResources()" aria-expanded="false">
           Resources
@@ -244,19 +244,19 @@
 
   <main class="wf-main">
     <section class="wf-section" id="intro">
-      <p class="set-text-13 text-semibold color-blue-600 text-uppercase add-margin-bottom-8" style="letter-spacing:0.06em;">Webflow · Custom code</p>
-      <h1 class="set-text-40 text-bold color-gray-900 add-margin-bottom-16" style="letter-spacing:-1px;line-height:1.15;">
+      <p class="text-size-13 text-semibold color-blue-600 text-uppercase margin-bottom-8" style="letter-spacing:0.06em;">Webflow · Custom code</p>
+      <h1 class="text-size-40 text-bold color-gray-900 margin-bottom-16" style="letter-spacing:-1px;line-height:1.15;">
         SantyCSS in Webflow
       </h1>
-      <p class="set-text-17 color-gray-600 line-height-relaxed" style="max-width:640px;">
+      <p class="text-size-17 color-gray-600 line-height-relaxed" style="max-width:640px;">
         Add SantyCSS once in <strong class="color-gray-800">Project settings → Custom code</strong>, then type utility classes on any element under
         <strong class="color-gray-800">Style panel → Selector</strong> (the field next to the class name). Keep this page open: the left sidebar jumps to snippets and the full class reference on <a href="classes.html" class="color-blue-600 text-no-decoration">classes.html</a>.
       </p>
     </section>
 
     <section class="wf-section" id="head-full">
-      <h2 class="set-text-22 text-bold color-gray-900 add-margin-bottom-8">Head · Full bundle (recommended)</h2>
-      <p class="set-text-14 color-gray-600 add-margin-bottom-12" style="max-width:640px;">
+      <h2 class="text-size-22 text-bold color-gray-900 margin-bottom-8">Head · Full bundle (recommended)</h2>
+      <p class="text-size-14 color-gray-600 margin-bottom-12" style="max-width:640px;">
         Paste into <strong>Head code</strong>. Delivers utilities, components, and animations in one request (~615KB minified from CDN).
       </p>
       <div class="wf-card">
@@ -265,12 +265,12 @@
         </div>
         <pre class="code-wrap" id="snip-head-full">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/santycss@2/dist/santy.min.css"&gt;</pre>
       </div>
-      <p class="set-text-13 color-gray-500 add-margin-top-12">Non-minified: swap <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">santy.min.css</code> for <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">santy.css</code>.</p>
+      <p class="text-size-13 color-gray-500 margin-top-12">Non-minified: swap <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">santy.min.css</code> for <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">santy.css</code>.</p>
     </section>
 
     <section class="wf-section" id="head-split">
-      <h2 class="set-text-22 text-bold color-gray-900 add-margin-bottom-8">Head · Split bundles (lighter first paint)</h2>
-      <p class="set-text-14 color-gray-600 add-margin-bottom-12" style="max-width:640px;">
+      <h2 class="text-size-22 text-bold color-gray-900 margin-bottom-8">Head · Split bundles (lighter first paint)</h2>
+      <p class="text-size-14 color-gray-600 margin-bottom-12" style="max-width:640px;">
         Load only what you need. Add <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">santy-animations.css</code> if you use scroll or hover animations. On the CDN, split modules ship as readable CSS; the single-file <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">santy.min.css</code> bundle is the minified option.
       </p>
       <div class="wf-card">
@@ -284,8 +284,8 @@
     </section>
 
     <section class="wf-section" id="head-icons">
-      <h2 class="set-text-22 text-bold color-gray-900 add-margin-bottom-8">Head · Icons</h2>
-      <p class="set-text-14 color-gray-600 add-margin-bottom-12" style="max-width:640px;">
+      <h2 class="text-size-22 text-bold color-gray-900 margin-bottom-8">Head · Icons</h2>
+      <p class="text-size-14 color-gray-600 margin-bottom-12" style="max-width:640px;">
         Optional. Add an <strong>Embed</strong> or icon span with classes from the <a href="icons.html" class="color-blue-600 text-no-decoration">icon browser</a>.
       </p>
       <div class="wf-card">
@@ -297,8 +297,8 @@
     </section>
 
     <section class="wf-section" id="footer-script">
-      <h2 class="set-text-22 text-bold color-gray-900 add-margin-bottom-8">Footer · Scroll-triggered animations</h2>
-      <p class="set-text-14 color-gray-600 add-margin-bottom-12" style="max-width:640px;">
+      <h2 class="text-size-22 text-bold color-gray-900 margin-bottom-8">Footer · Scroll-triggered animations</h2>
+      <p class="text-size-14 color-gray-600 margin-bottom-12" style="max-width:640px;">
         SantyCSS scroll utilities (e.g. <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">animate-on-scroll-*</code>) need a one-time <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">is-visible</code> class. Paste into <strong>Footer code</strong>.
       </p>
       <div class="wf-card">
@@ -321,20 +321,20 @@
     </section>
 
     <section class="wf-section" id="webflow-tips">
-      <h2 class="set-text-22 text-bold color-gray-900 add-margin-bottom-8">Webflow workflow</h2>
+      <h2 class="text-size-22 text-bold color-gray-900 margin-bottom-8">Webflow workflow</h2>
       <div class="wf-card">
-        <ul class="tip-list add-padding-left-20" style="margin:0;">
+        <ul class="tip-list padding-left-20" style="margin:0;">
           <li><strong>Combining classes:</strong> Webflow shows one “selector” string per combo. Add multiple Santy utilities as space-separated classes on the same element (same as HTML <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">class</code>).</li>
           <li><strong>CMS &amp; embeds:</strong> Rich text and embeds still inherit project CSS, so utilities apply there too once the head link is global.</li>
-          <li><strong>Breakpoints:</strong> Use Santy responsive prefixes (<code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">md:grid-cols-3</code>, <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">on-mobile:</code>…) on any class field — Webflow’s own breakpoints are separate; test in preview.</li>
+          <li><strong>Breakpoints:</strong> Use Santy responsive prefixes (<code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">md:grid-columns-3</code>, <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">on-mobile:</code>…) on any class field — Webflow’s own breakpoints are separate; test in preview.</li>
           <li><strong>Conflicts:</strong> If a Webflow style and a utility both set the same property, remove the Webflow property or use a more specific combo class.</li>
         </ul>
       </div>
     </section>
 
     <section class="wf-section" id="tokens">
-      <h2 class="set-text-22 text-bold color-gray-900 add-margin-bottom-8">Design tokens (optional)</h2>
-      <p class="set-text-14 color-gray-600 add-margin-bottom-12" style="max-width:640px;">
+      <h2 class="text-size-22 text-bold color-gray-900 margin-bottom-8">Design tokens (optional)</h2>
+      <p class="text-size-14 color-gray-600 margin-bottom-12" style="max-width:640px;">
         Override brand colors globally via <strong>Project settings → Custom code → Head</strong> <em>after</em> the SantyCSS link.
       </p>
       <div class="wf-card">

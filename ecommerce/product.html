@@ -84,16 +84,16 @@
 
 <!-- Navbar -->
 <nav class="site-nav" id="site-nav">
-  <div class="container make-flex align-center justify-between add-padding-y-14" style="max-width:1280px">
+  <div class="container display-flex align-center justify-between padding-y-14" style="max-width:1280px">
     <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px">
       <div style="width:36px;height:36px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff">L</div>
-      <span class="set-text-20 text-bold color-gray-900">LuxeStore</span>
+      <span class="text-size-20 text-bold color-gray-900">LuxeStore</span>
     </a>
-    <div class="desktop-nav make-flex align-center gap-4">
+    <div class="desktop-nav display-flex align-center gap-4">
       <a href="index.html" class="navbar-item" style="color:#374151">Home</a>
       <a href="shop.html" class="navbar-item" style="color:#2563eb;font-weight:700">Shop</a>
       <div style="position:relative" id="dropdown-wrap">
-        <button onclick="toggleDropdown()" class="navbar-item make-flex align-center gap-4" style="background:none;border:none;cursor:pointer;font-weight:500;color:#374151;font-size:14px">
+        <button onclick="toggleDropdown()" class="navbar-item display-flex align-center gap-4" style="background:none;border:none;cursor:pointer;font-weight:500;color:#374151;font-size:14px">
           Collections <span style="font-size:10px">▼</span>
         </button>
         <div id="nav-dropdown" class="dropdown-menu" style="display:none">
@@ -109,7 +109,7 @@
       <a href="#" class="navbar-item" style="color:#374151">About</a>
       <a href="#" class="navbar-item" style="color:#374151">Contact</a>
     </div>
-    <div class="make-flex align-center gap-8">
+    <div class="display-flex align-center gap-8">
       <button class="navbar-item" style="background:none;border:none;cursor:pointer;font-size:18px;color:#6b7280" title="Search">🔍</button>
       <a href="#" class="navbar-item" style="font-size:18px;color:#6b7280;text-decoration:none" title="Wishlist">♡</a>
       <button onclick="toggleDark()" class="navbar-item" style="background:none;border:none;cursor:pointer;font-size:18px;color:#6b7280" title="Toggle dark mode">🌙</button>
@@ -132,7 +132,7 @@
 
 <!-- Breadcrumb -->
 <div style="background:#fff;border-bottom:1px solid #e5e7eb">
-  <div class="container add-padding-y-14 set-text-13 color-gray-400" style="max-width:1280px">
+  <div class="container padding-y-14 text-size-13 color-gray-400" style="max-width:1280px">
     <a href="index.html" class="color-gray-400" style="text-decoration:none">Home</a> ›
     <a href="shop.html" class="color-gray-400" style="text-decoration:none;margin:0 4px">Shop</a> ›
     <a href="shop.html" class="color-gray-400" style="text-decoration:none;margin:0 4px" id="bc-category">Category</a> ›
@@ -142,7 +142,7 @@
 
 <!-- Product Section -->
 <div class="container" style="max-width:1280px;padding:40px 16px">
-  <div class="product-layout make-flex gap-48 align-start" id="product-layout">
+  <div class="product-layout display-flex gap-48 align-start" id="product-layout">
     <!-- Images -->
     <div class="product-images" style="width:520px;flex-shrink:0">
       <div class="main-image-wrap">
@@ -155,37 +155,37 @@
     <!-- Info -->
     <div style="flex:1;min-width:0">
       <!-- Badge + category -->
-      <div class="make-flex align-center gap-8 add-margin-bottom-12">
+      <div class="display-flex align-center gap-8 margin-bottom-12">
         <span class="badge" id="product-badge" style="display:none"></span>
-        <span class="set-text-12 color-gray-400 text-uppercase" style="letter-spacing:.08em" id="product-category"></span>
+        <span class="text-size-12 color-gray-400 text-uppercase" style="letter-spacing:.08em" id="product-category"></span>
       </div>
 
-      <h1 class="set-text-32 text-bold color-gray-900 add-margin-bottom-12" id="product-name"></h1>
+      <h1 class="text-size-32 text-bold color-gray-900 margin-bottom-12" id="product-name"></h1>
 
       <!-- Rating -->
-      <div class="make-flex align-center gap-10 add-margin-bottom-20">
+      <div class="display-flex align-center gap-10 margin-bottom-20">
         <div id="product-stars" style="color:#f59e0b;font-size:18px"></div>
-        <span class="set-text-14 color-gray-500" id="product-rating-text"></span>
+        <span class="text-size-14 color-gray-500" id="product-rating-text"></span>
         <span class="color-gray-300">|</span>
-        <a href="#tab-reviews" onclick="switchTab('reviews')" class="set-text-14 color-blue-600" style="text-decoration:none" id="product-reviews-link"></a>
+        <a href="#tab-reviews" onclick="switchTab('reviews')" class="text-size-14 color-blue-600" style="text-decoration:none" id="product-reviews-link"></a>
       </div>
 
       <!-- Price -->
-      <div class="make-flex align-center gap-16 add-margin-bottom-24">
-        <span class="set-text-36 text-bold" style="color:#0f172a" id="product-price"></span>
-        <span class="set-text-18 color-gray-400" style="text-decoration:line-through" id="product-old-price"></span>
+      <div class="display-flex align-center gap-16 margin-bottom-24">
+        <span class="text-size-36 text-bold" style="color:#0f172a" id="product-price"></span>
+        <span class="text-size-18 color-gray-400" style="text-decoration:line-through" id="product-old-price"></span>
         <span class="badge badge-red" id="product-discount" style="background:#fee2e2;color:#b91c1c;display:none"></span>
       </div>
 
       <!-- Short description -->
-      <p class="set-text-15 color-gray-600 add-margin-bottom-28" style="line-height:1.7" id="product-desc"></p>
+      <p class="text-size-15 color-gray-600 margin-bottom-28" style="line-height:1.7" id="product-desc"></p>
 
       <!-- Color selection -->
-      <div class="add-margin-bottom-24" id="color-section">
-        <div class="set-text-14 text-semibold color-gray-700 add-margin-bottom-12">
+      <div class="margin-bottom-24" id="color-section">
+        <div class="text-size-14 text-semibold color-gray-700 margin-bottom-12">
           Color: <span class="text-normal color-gray-500" id="selected-color">Black</span>
         </div>
-        <div class="make-flex gap-10" id="color-options">
+        <div class="display-flex gap-10" id="color-options">
           <button class="color-btn active" style="background:#111827" title="Black" onclick="selectColor(this,'Black')"></button>
           <button class="color-btn" style="background:#fff;border:2px solid #e5e7eb" title="White" onclick="selectColor(this,'White')"></button>
           <button class="color-btn" style="background:#dc2626" title="Red" onclick="selectColor(this,'Red')"></button>
@@ -195,12 +195,12 @@
       </div>
 
       <!-- Size selection -->
-      <div class="add-margin-bottom-28" id="size-section">
-        <div class="make-flex align-center justify-between add-margin-bottom-12">
-          <div class="set-text-14 text-semibold color-gray-700">Size: <span class="text-normal color-gray-500" id="selected-size">Select size</span></div>
-          <a href="#" class="set-text-13 color-blue-600" style="text-decoration:none">Size Guide ↗</a>
+      <div class="margin-bottom-28" id="size-section">
+        <div class="display-flex align-center justify-between margin-bottom-12">
+          <div class="text-size-14 text-semibold color-gray-700">Size: <span class="text-normal color-gray-500" id="selected-size">Select size</span></div>
+          <a href="#" class="text-size-13 color-blue-600" style="text-decoration:none">Size Guide ↗</a>
         </div>
-        <div class="make-flex gap-10 flex-wrap" id="size-options">
+        <div class="display-flex gap-10 flex-wrap" id="size-options">
           <button class="size-pill" onclick="selectSize(this,'XS')">XS</button>
           <button class="size-pill" onclick="selectSize(this,'S')">S</button>
           <button class="size-pill active" onclick="selectSize(this,'M')">M</button>
@@ -211,8 +211,8 @@
       </div>
 
       <!-- Quantity + Add to cart -->
-      <div class="make-flex gap-16 align-center add-margin-bottom-20 flex-wrap">
-        <div class="make-flex align-center gap-0" style="border:1.5px solid #e5e7eb;border-radius:10px;overflow:hidden">
+      <div class="display-flex gap-16 align-center margin-bottom-20 flex-wrap">
+        <div class="display-flex align-center gap-0" style="border:1.5px solid #e5e7eb;border-radius:10px;overflow:hidden">
           <button class="qty-btn" onclick="changeQty(-1)" style="border:none;border-right:1px solid #e5e7eb;border-radius:0">−</button>
           <input type="text" class="qty-display" id="qty" value="1" readonly>
           <button class="qty-btn" onclick="changeQty(1)" style="border:none;border-left:1px solid #e5e7eb;border-radius:0">+</button>
@@ -230,35 +230,35 @@
 
       <!-- Trust badges -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px">
-        <div class="make-flex align-center gap-10" style="background:#f9fafb;border-radius:10px;padding:12px 14px">
+        <div class="display-flex align-center gap-10" style="background:#f9fafb;border-radius:10px;padding:12px 14px">
           <span style="font-size:20px">🚚</span>
-          <div><div class="set-text-12 text-semibold color-gray-700">Free Shipping</div><div class="set-text-11 color-gray-400">Orders over $75</div></div>
+          <div><div class="text-size-12 text-semibold color-gray-700">Free Shipping</div><div class="text-size-11 color-gray-400">Orders over $75</div></div>
         </div>
-        <div class="make-flex align-center gap-10" style="background:#f9fafb;border-radius:10px;padding:12px 14px">
+        <div class="display-flex align-center gap-10" style="background:#f9fafb;border-radius:10px;padding:12px 14px">
           <span style="font-size:20px">↩️</span>
-          <div><div class="set-text-12 text-semibold color-gray-700">Free Returns</div><div class="set-text-11 color-gray-400">30-day policy</div></div>
+          <div><div class="text-size-12 text-semibold color-gray-700">Free Returns</div><div class="text-size-11 color-gray-400">30-day policy</div></div>
         </div>
-        <div class="make-flex align-center gap-10" style="background:#f9fafb;border-radius:10px;padding:12px 14px">
+        <div class="display-flex align-center gap-10" style="background:#f9fafb;border-radius:10px;padding:12px 14px">
           <span style="font-size:20px">🔒</span>
-          <div><div class="set-text-12 text-semibold color-gray-700">Secure Payment</div><div class="set-text-11 color-gray-400">SSL encrypted</div></div>
+          <div><div class="text-size-12 text-semibold color-gray-700">Secure Payment</div><div class="text-size-11 color-gray-400">SSL encrypted</div></div>
         </div>
-        <div class="make-flex align-center gap-10" style="background:#f9fafb;border-radius:10px;padding:12px 14px">
+        <div class="display-flex align-center gap-10" style="background:#f9fafb;border-radius:10px;padding:12px 14px">
           <span style="font-size:20px">✅</span>
-          <div><div class="set-text-12 text-semibold color-gray-700">Authenticity</div><div class="set-text-11 color-gray-400">100% genuine</div></div>
+          <div><div class="text-size-12 text-semibold color-gray-700">Authenticity</div><div class="text-size-11 color-gray-400">100% genuine</div></div>
         </div>
       </div>
 
       <!-- Stock indicator -->
-      <div class="make-flex align-center gap-8 add-margin-bottom-16">
+      <div class="display-flex align-center gap-8 margin-bottom-16">
         <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite"></div>
-        <span class="set-text-13 color-green-600 text-semibold">In Stock</span>
-        <span class="set-text-13 color-gray-400">— <span id="stock-count">8</span> items left</span>
+        <span class="text-size-13 color-green-600 text-semibold">In Stock</span>
+        <span class="text-size-13 color-gray-400">— <span id="stock-count">8</span> items left</span>
       </div>
       @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.2)} }
 
       <!-- Share -->
-      <div class="make-flex align-center gap-12">
-        <span class="set-text-13 color-gray-400">Share:</span>
+      <div class="display-flex align-center gap-12">
+        <span class="text-size-13 color-gray-400">Share:</span>
         <a href="#" style="text-decoration:none;font-size:18px">𝕏</a>
         <a href="#" style="text-decoration:none;font-size:18px">f</a>
         <a href="#" style="text-decoration:none;font-size:18px">📸</a>
@@ -279,9 +279,9 @@
     <!-- Description -->
     <div class="tab-panel active" id="panel-description" style="padding:32px">
       <div style="max-width:720px">
-        <h3 class="set-text-20 text-bold color-gray-900 add-margin-bottom-16" id="tab-desc-title">About this product</h3>
-        <p class="set-text-15 color-gray-600 add-margin-bottom-20" style="line-height:1.8" id="tab-desc-text"></p>
-        <h4 class="set-text-16 text-semibold color-gray-800 add-margin-bottom-12">Key Features</h4>
+        <h3 class="text-size-20 text-bold color-gray-900 margin-bottom-16" id="tab-desc-title">About this product</h3>
+        <p class="text-size-15 color-gray-600 margin-bottom-20" style="line-height:1.8" id="tab-desc-text"></p>
+        <h4 class="text-size-16 text-semibold color-gray-800 margin-bottom-12">Key Features</h4>
         <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px" id="features-list"></ul>
       </div>
     </div>
@@ -291,29 +291,29 @@
       <div style="display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start">
         <!-- Summary -->
         <div>
-          <div class="text-center add-margin-bottom-20">
-            <div class="set-text-64 text-bold" style="color:#0f172a;line-height:1" id="avg-rating-big">0.0</div>
+          <div class="text-center margin-bottom-20">
+            <div class="text-size-64 text-bold" style="color:#0f172a;line-height:1" id="avg-rating-big">0.0</div>
             <div style="color:#f59e0b;font-size:24px;margin:6px 0" id="avg-stars-big"></div>
-            <div class="set-text-13 color-gray-400" id="total-reviews-text"></div>
+            <div class="text-size-13 color-gray-400" id="total-reviews-text"></div>
           </div>
           <div style="display:flex;flex-direction:column;gap:8px">
-            <div class="make-flex align-center gap-10 set-text-13"><span style="color:#f59e0b;width:20px">5★</span><div class="review-bar"><div class="review-fill" style="width:70%"></div></div><span class="color-gray-400 set-text-12">70%</span></div>
-            <div class="make-flex align-center gap-10 set-text-13"><span style="color:#f59e0b;width:20px">4★</span><div class="review-bar"><div class="review-fill" style="width:20%"></div></div><span class="color-gray-400 set-text-12">20%</span></div>
-            <div class="make-flex align-center gap-10 set-text-13"><span style="color:#f59e0b;width:20px">3★</span><div class="review-bar"><div class="review-fill" style="width:5%"></div></div><span class="color-gray-400 set-text-12">5%</span></div>
-            <div class="make-flex align-center gap-10 set-text-13"><span style="color:#f59e0b;width:20px">2★</span><div class="review-bar"><div class="review-fill" style="width:3%"></div></div><span class="color-gray-400 set-text-12">3%</span></div>
-            <div class="make-flex align-center gap-10 set-text-13"><span style="color:#f59e0b;width:20px">1★</span><div class="review-bar"><div class="review-fill" style="width:2%"></div></div><span class="color-gray-400 set-text-12">2%</span></div>
+            <div class="display-flex align-center gap-10 text-size-13"><span style="color:#f59e0b;width:20px">5★</span><div class="review-bar"><div class="review-fill" style="width:70%"></div></div><span class="color-gray-400 text-size-12">70%</span></div>
+            <div class="display-flex align-center gap-10 text-size-13"><span style="color:#f59e0b;width:20px">4★</span><div class="review-bar"><div class="review-fill" style="width:20%"></div></div><span class="color-gray-400 text-size-12">20%</span></div>
+            <div class="display-flex align-center gap-10 text-size-13"><span style="color:#f59e0b;width:20px">3★</span><div class="review-bar"><div class="review-fill" style="width:5%"></div></div><span class="color-gray-400 text-size-12">5%</span></div>
+            <div class="display-flex align-center gap-10 text-size-13"><span style="color:#f59e0b;width:20px">2★</span><div class="review-bar"><div class="review-fill" style="width:3%"></div></div><span class="color-gray-400 text-size-12">3%</span></div>
+            <div class="display-flex align-center gap-10 text-size-13"><span style="color:#f59e0b;width:20px">1★</span><div class="review-bar"><div class="review-fill" style="width:2%"></div></div><span class="color-gray-400 text-size-12">2%</span></div>
           </div>
-          <button onclick="document.getElementById('write-review').classList.toggle('make-hidden')" class="btn btn-outline add-margin-top-20" style="width:100%;margin-top:20px">Write a Review</button>
+          <button onclick="document.getElementById('write-review').classList.toggle('display-none')" class="btn btn-outline margin-top-20" style="width:100%;margin-top:20px">Write a Review</button>
         </div>
 
         <!-- Review list -->
         <div>
           <!-- Write review form -->
-          <div id="write-review" class="make-hidden" style="background:#f9fafb;border-radius:12px;padding:20px;margin-bottom:24px">
-            <h4 class="set-text-16 text-semibold add-margin-bottom-16">Write Your Review</h4>
-            <div class="add-margin-bottom-12">
-              <div class="set-text-13 text-semibold add-margin-bottom-8">Your Rating</div>
-              <div class="make-flex gap-4" id="star-input">
+          <div id="write-review" class="display-none" style="background:#f9fafb;border-radius:12px;padding:20px;margin-bottom:24px">
+            <h4 class="text-size-16 text-semibold margin-bottom-16">Write Your Review</h4>
+            <div class="margin-bottom-12">
+              <div class="text-size-13 text-semibold margin-bottom-8">Your Rating</div>
+              <div class="display-flex gap-4" id="star-input">
                 <span class="star" onclick="setRating(1)">★</span>
                 <span class="star" onclick="setRating(2)">★</span>
                 <span class="star" onclick="setRating(3)">★</span>
@@ -321,8 +321,8 @@
                 <span class="star" onclick="setRating(5)">★</span>
               </div>
             </div>
-            <input type="text" class="input add-margin-bottom-10" placeholder="Your name">
-            <textarea class="textarea add-margin-bottom-12" placeholder="Share your experience with this product..." rows="3"></textarea>
+            <input type="text" class="input margin-bottom-10" placeholder="Your name">
+            <textarea class="textarea margin-bottom-12" placeholder="Share your experience with this product..." rows="3"></textarea>
             <button onclick="submitReview()" class="btn btn-primary">Submit Review</button>
           </div>
 
@@ -335,33 +335,33 @@
     <div class="tab-panel" id="panel-shipping" style="padding:32px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:720px">
         <div>
-          <h3 class="set-text-18 text-bold add-margin-bottom-16">🚚 Shipping Options</h3>
+          <h3 class="text-size-18 text-bold margin-bottom-16">🚚 Shipping Options</h3>
           <div style="display:flex;flex-direction:column;gap:12px">
             <div style="background:#f9fafb;border-radius:10px;padding:14px 16px">
               <div class="text-semibold color-gray-900">Standard Shipping</div>
-              <div class="set-text-13 color-gray-500">5–7 business days</div>
+              <div class="text-size-13 color-gray-500">5–7 business days</div>
               <div class="text-bold color-green-600">FREE on orders $75+</div>
             </div>
             <div style="background:#f9fafb;border-radius:10px;padding:14px 16px">
               <div class="text-semibold color-gray-900">Express Shipping</div>
-              <div class="set-text-13 color-gray-500">2–3 business days</div>
+              <div class="text-size-13 color-gray-500">2–3 business days</div>
               <div class="text-bold">$9.99</div>
             </div>
             <div style="background:#f9fafb;border-radius:10px;padding:14px 16px">
               <div class="text-semibold color-gray-900">Next Day Delivery</div>
-              <div class="set-text-13 color-gray-500">Order before 2pm</div>
+              <div class="text-size-13 color-gray-500">Order before 2pm</div>
               <div class="text-bold">$19.99</div>
             </div>
           </div>
         </div>
         <div>
-          <h3 class="set-text-18 text-bold add-margin-bottom-16">↩️ Returns Policy</h3>
-          <div class="set-text-14 color-gray-600" style="line-height:1.8">
-            <p class="add-margin-bottom-12">We offer a hassle-free 30-day return policy on all items.</p>
+          <h3 class="text-size-18 text-bold margin-bottom-16">↩️ Returns Policy</h3>
+          <div class="text-size-14 color-gray-600" style="line-height:1.8">
+            <p class="margin-bottom-12">We offer a hassle-free 30-day return policy on all items.</p>
             <ul style="padding-left:20px">
-              <li class="add-margin-bottom-8">Items must be in original condition</li>
-              <li class="add-margin-bottom-8">Tags must be attached</li>
-              <li class="add-margin-bottom-8">Receipt or order confirmation required</li>
+              <li class="margin-bottom-8">Items must be in original condition</li>
+              <li class="margin-bottom-8">Tags must be attached</li>
+              <li class="margin-bottom-8">Receipt or order confirmation required</li>
               <li>Returns processed within 3–5 business days</li>
             </ul>
           </div>
@@ -381,18 +381,18 @@
 
   <!-- ── RELATED PRODUCTS ── -->
   <div style="margin-top:64px">
-    <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-32">You May Also Like</h2>
+    <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-32">You May Also Like</h2>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px" id="related-products"></div>
   </div>
 </div>
 
 <!-- Sticky ATC bar -->
 <div id="sticky-atc">
-  <div class="make-flex align-center gap-16">
+  <div class="display-flex align-center gap-16">
     <img id="sticky-img" src="" style="width:48px;height:48px;object-fit:cover;border-radius:8px" alt="">
     <div>
-      <div class="set-text-14 text-semibold color-gray-900" id="sticky-name"></div>
-      <div class="set-text-16 text-bold color-blue-600" id="sticky-price"></div>
+      <div class="text-size-14 text-semibold color-gray-900" id="sticky-name"></div>
+      <div class="text-size-16 text-bold color-blue-600" id="sticky-price"></div>
     </div>
   </div>
   <button onclick="addToCartBtn()" class="btn btn-primary">Add to Cart</button>
@@ -474,7 +474,7 @@ function loadProduct(){
   document.getElementById('tab-desc-title').textContent = `About ${p.name}`;
   document.getElementById('tab-desc-text').textContent = p.desc;
   document.getElementById('features-list').innerHTML = p.features.map(f=>`
-    <li class="make-flex align-center gap-10 set-text-14 color-gray-700">
+    <li class="display-flex align-center gap-10 text-size-14 color-gray-700">
       <span style="color:#22c55e;font-size:18px;flex-shrink:0">✓</span> ${f}
     </li>`).join('');
 
@@ -499,10 +499,10 @@ function loadProduct(){
     <div class="rel-card" onclick="location.href='product.html?id=${r.id}'">
       <div style="overflow:hidden"><img class="rel-img" src="${r.img}" alt="${r.name}" loading="lazy"></div>
       <div style="padding:14px 16px 18px">
-        <div class="set-text-12 color-gray-400">${r.category}</div>
-        <div class="set-text-14 text-semibold color-gray-900 add-margin-y-4">${r.name}</div>
+        <div class="text-size-12 color-gray-400">${r.category}</div>
+        <div class="text-size-14 text-semibold color-gray-900 margin-y-4">${r.name}</div>
         <div style="color:#f59e0b;font-size:12px">${'★'.repeat(Math.floor(r.rating))}</div>
-        <div class="set-text-16 text-bold color-gray-900 add-margin-top-6">$${r.price.toFixed(2)}</div>
+        <div class="text-size-16 text-bold color-gray-900 margin-top-6">$${r.price.toFixed(2)}</div>
       </div>
     </div>`).join('');
 }
@@ -515,18 +515,18 @@ function renderReviews(){
   ];
   document.getElementById('reviews-list').innerHTML = reviews.map(r=>`
     <div class="review-card">
-      <div class="make-flex align-center justify-between add-margin-bottom-10">
-        <div class="make-flex align-center gap-10">
+      <div class="display-flex align-center justify-between margin-bottom-10">
+        <div class="display-flex align-center gap-10">
           <div style="width:40px;height:40px;border-radius:50%;background:#dbeafe;color:#1d4ed8;display:flex;align-items:center;justify-content:center;font-weight:700">${r.name.charAt(0)}</div>
           <div>
-            <div class="set-text-14 text-semibold color-gray-900">${r.name}</div>
-            <div class="set-text-12 color-gray-400">${r.date}</div>
+            <div class="text-size-14 text-semibold color-gray-900">${r.name}</div>
+            <div class="text-size-12 color-gray-400">${r.date}</div>
           </div>
         </div>
         ${r.verified?'<span class="badge" style="background:#d1fae5;color:#065f46;font-size:11px">✓ Verified</span>':''}
       </div>
       <div style="color:#f59e0b;margin-bottom:8px">${'★'.repeat(r.rating)}</div>
-      <p class="set-text-14 color-gray-600">${r.text}</p>
+      <p class="text-size-14 color-gray-600">${r.text}</p>
     </div>`).join('');
 }
 
@@ -597,7 +597,7 @@ function setRating(n){
 
 function submitReview(){
   showToast('🙏 Thank you for your review!');
-  document.getElementById('write-review').classList.add('make-hidden');
+  document.getElementById('write-review').classList.add('display-none');
 }
 
 // Sticky bar on scroll

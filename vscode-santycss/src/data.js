@@ -554,7 +554,45 @@ function generateAll() {
     items.push({ name:`clip-${name}`, css:`clip-path: ${value}`, doc });
   }
 
-  return items;
+  // v2.10 component layer (santy-next.css / santy-ui.css)
+  const COMPONENTS = {
+    button: 'Button', card: 'Card', navbar: 'Navbar', input: 'Input (input, select, textarea)',
+    badge: 'Badge', alert: 'Alert', modal: 'Modal (popover, <dialog> or :target)', tabs: 'Tabs', pricing: 'Pricing table',
+  };
+  for (const [c, label] of Object.entries(COMPONENTS)) {
+    items.push({ name: c, css: '', doc: `${label}, Persimmon theme. Add a variant and a size: \`${c} ${c}-primary ${c}-lg\`` });
+    for (const v of ['primary', 'secondary', 'outline', 'ghost']) items.push({ name: `${c}-${v}`, css: '', doc: `${label}: ${v} variant` });
+    for (const sz of ['sm', 'md', 'lg']) items.push({ name: `${c}-${sz}`, css: '', doc: `${label}: size ${sz}` });
+  }
+  for (const n of ['card-title', 'card-text', 'card-header', 'card-footer', 'card-media', 'navbar-brand', 'navbar-links',
+    'navbar-link', 'navbar-actions', 'navbar-toggle', 'navbar-sticky', 'input-label', 'input-hint', 'alert-title',
+    'modal-panel', 'modal-header', 'modal-title', 'modal-body', 'modal-footer', 'modal-close', 'tabs-item', 'tabs-input',
+    'tabs-panel', 'pricing-plan', 'pricing-featured', 'pricing-name', 'pricing-price', 'pricing-period',
+    'pricing-description', 'pricing-features', 'button-pill', 'button-block', 'button-icon', 'button-danger',
+    'button-success', 'badge-success', 'badge-warning', 'badge-danger', 'badge-info', 'badge-dot', 'badge-mono',
+    'alert-success', 'alert-warning', 'alert-danger', 'alert-info', 'shell', 'eyebrow']) {
+    items.push({ name: n, css: '', doc: 'SantyCSS component part (santy-next.css)' });
+  }
+
+  return withGrammar(items);
+}
+
+// v2.10: every pre-2.10 name gets its grammar name as the primary entry; the
+// old name stays, marked deprecated, so existing code still gets hover docs.
+function withGrammar(items) {
+  const naming = require('./naming');
+  const seen = new Set(items.map(i => i.name));
+  const out = [];
+  for (const item of items) {
+    const next = naming.toNew(item.name);
+    if (!next) { out.push(item); continue; }
+    if (!seen.has(next)) {
+      seen.add(next);
+      out.push({ ...item, name: next });
+    }
+    out.push({ ...item, deprecated: next });
+  }
+  return out;
 }
 
 module.exports = { generateAll, COLORS, SHADES };

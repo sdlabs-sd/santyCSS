@@ -205,7 +205,7 @@
 <div id="scroll-progress"></div>
 
 <!-- Announcement Bar -->
-<div id="announcement-bar" class="background-blue-600 color-white text-center add-padding-y-10 set-text-13 make-flex align-center justify-center gap-16" style="position:relative">
+<div id="announcement-bar" class="background-blue-600 color-white text-center padding-y-10 text-size-13 display-flex align-center justify-center gap-16" style="position:relative">
   <span>🎉 Free shipping on orders over $75 — Limited time offer!</span>
   <a href="shop.html" class="text-bold text-underline color-white" style="white-space:nowrap">Shop Now →</a>
   <button onclick="document.getElementById('announcement-bar').classList.add('dismissed')" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.7);cursor:pointer;font-size:18px;line-height:1">×</button>
@@ -213,19 +213,19 @@
 
 <!-- Navbar -->
 <nav class="site-nav" id="site-nav">
-  <div class="container make-flex align-center justify-between add-padding-y-14" style="max-width:1280px">
+  <div class="container display-flex align-center justify-between padding-y-14" style="max-width:1280px">
     <!-- Logo -->
     <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px">
       <div style="width:36px;height:36px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff">L</div>
-      <span class="set-text-20 text-bold color-gray-900">LuxeStore</span>
+      <span class="text-size-20 text-bold color-gray-900">LuxeStore</span>
     </a>
 
     <!-- Desktop Nav -->
-    <div class="desktop-nav make-flex align-center gap-4">
+    <div class="desktop-nav display-flex align-center gap-4">
       <a href="index.html" class="navbar-item on-hover:color-blue-600" style="font-weight:500;color:#374151">Home</a>
       <a href="shop.html" class="navbar-item on-hover:color-blue-600" style="font-weight:500;color:#374151">Shop</a>
       <div style="position:relative" id="dropdown-wrap">
-        <button onclick="toggleDropdown()" class="navbar-item make-flex align-center gap-4 on-hover:color-blue-600" style="background:none;border:none;cursor:pointer;font-weight:500;color:#374151;font-size:14px">
+        <button onclick="toggleDropdown()" class="navbar-item display-flex align-center gap-4 on-hover:color-blue-600" style="background:none;border:none;cursor:pointer;font-weight:500;color:#374151;font-size:14px">
           Collections <span style="font-size:10px">▼</span>
         </button>
         <div id="nav-dropdown" class="dropdown-menu" style="display:none;top:calc(100% + 8px);min-width:220px">
@@ -243,7 +243,7 @@
     </div>
 
     <!-- Actions -->
-    <div class="make-flex align-center gap-8">
+    <div class="display-flex align-center gap-8">
       <!-- Search -->
       <button id="search-toggle" onclick="toggleSearch()" class="navbar-item" style="background:none;border:none;cursor:pointer;font-size:18px;color:#6b7280" title="Search">🔍</button>
 
@@ -286,15 +286,15 @@
 <section class="hero-section">
   <div class="container" style="max-width:1280px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:80px 16px;position:relative;z-index:1">
     <!-- Left content -->
-    <div class="animate-fade-in" style="animation-delay:0.1s">
-      <p class="hero-eyebrow add-margin-bottom-16">New Season 2025</p>
-      <h1 class="hero-title add-margin-bottom-24">
+    <div class="animation-fade-in" style="animation-delay:0.1s">
+      <p class="hero-eyebrow margin-bottom-16">New Season 2025</p>
+      <h1 class="hero-title margin-bottom-24">
         Style That<br><span>Speaks</span><br>Volumes.
       </h1>
-      <p class="hero-sub add-margin-bottom-40">
+      <p class="hero-sub margin-bottom-40">
         Discover curated collections from the world's finest designers. Free shipping on orders over $75.
       </p>
-      <div class="hero-ctas make-flex gap-16 align-center flex-wrap">
+      <div class="hero-ctas display-flex gap-16 align-center flex-wrap">
         <a href="shop.html" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#2563eb,#7c3aed);border:none;padding:14px 32px;font-size:16px;border-radius:12px">
           Shop Collection →
         </a>
@@ -303,41 +303,41 @@
         </a>
       </div>
       <!-- Stats -->
-      <div class="make-flex gap-32 add-margin-top-48" style="border-top:1px solid rgba(255,255,255,.1);padding-top:32px">
+      <div class="display-flex gap-32 margin-top-48" style="border-top:1px solid rgba(255,255,255,.1);padding-top:32px">
         <div>
-          <div class="set-text-32 text-bold" style="color:#fff">50K+</div>
+          <div class="text-size-32 text-bold" style="color:#fff">50K+</div>
           <div style="color:#64748b;font-size:13px">Happy Customers</div>
         </div>
         <div>
-          <div class="set-text-32 text-bold" style="color:#fff">2K+</div>
+          <div class="text-size-32 text-bold" style="color:#fff">2K+</div>
           <div style="color:#64748b;font-size:13px">Products</div>
         </div>
         <div>
-          <div class="set-text-32 text-bold" style="color:#fff">4.9★</div>
+          <div class="text-size-32 text-bold" style="color:#fff">4.9★</div>
           <div style="color:#64748b;font-size:13px">Average Rating</div>
         </div>
       </div>
     </div>
 
     <!-- Right image -->
-    <div class="hero-image-side make-flex justify-center" style="position:relative">
+    <div class="hero-image-side display-flex justify-center" style="position:relative">
       <div class="hero-image-wrap">
         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=560&h=640&fit=crop" alt="Fashion" style="width:440px;height:560px;object-fit:cover;border-radius:24px;box-shadow:0 32px 64px rgba(0,0,0,.4)">
         <!-- Floating badge 1 -->
         <div class="hero-badge">
-          <div class="make-flex align-center gap-8">
+          <div class="display-flex align-center gap-8">
             <div style="width:36px;height:36px;border-radius:8px;overflow:hidden"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=36&h=36&fit=crop" style="width:100%;height:100%;object-fit:cover"></div>
             <div>
-              <div class="set-text-12 text-bold color-gray-900">Just added</div>
-              <div class="set-text-11 color-gray-500">Nike Air Max</div>
+              <div class="text-size-12 text-bold color-gray-900">Just added</div>
+              <div class="text-size-11 color-gray-500">Nike Air Max</div>
             </div>
           </div>
         </div>
         <!-- Floating badge 2 -->
         <div class="hero-badge2">
-          <div class="set-text-12 text-semibold" style="opacity:.8">Exclusive Deal</div>
-          <div class="set-text-22 text-bold">30% OFF</div>
-          <div class="set-text-11" style="opacity:.7">On all summer items</div>
+          <div class="text-size-12 text-semibold" style="opacity:.8">Exclusive Deal</div>
+          <div class="text-size-22 text-bold">30% OFF</div>
+          <div class="text-size-11" style="opacity:.7">On all summer items</div>
         </div>
       </div>
     </div>
@@ -354,77 +354,77 @@
 
 <!-- ════════ FEATURE STRIP ════════ -->
 <div class="feature-strip">
-  <div class="feature-item when-visible:animate-fade-in">
+  <div class="feature-item when-visible:animation-fade-in">
     <div class="feature-icon">🚚</div>
     <div>
-      <div class="set-text-14 text-semibold color-gray-900">Free Shipping</div>
-      <div class="set-text-12 color-gray-500">On orders over $75</div>
+      <div class="text-size-14 text-semibold color-gray-900">Free Shipping</div>
+      <div class="text-size-12 color-gray-500">On orders over $75</div>
     </div>
   </div>
-  <div class="feature-item when-visible:animate-fade-in" style="animation-delay:.1s">
+  <div class="feature-item when-visible:animation-fade-in" style="animation-delay:.1s">
     <div class="feature-icon">↩️</div>
     <div>
-      <div class="set-text-14 text-semibold color-gray-900">Free Returns</div>
-      <div class="set-text-12 color-gray-500">30-day return policy</div>
+      <div class="text-size-14 text-semibold color-gray-900">Free Returns</div>
+      <div class="text-size-12 color-gray-500">30-day return policy</div>
     </div>
   </div>
-  <div class="feature-item when-visible:animate-fade-in" style="animation-delay:.2s">
+  <div class="feature-item when-visible:animation-fade-in" style="animation-delay:.2s">
     <div class="feature-icon">🔒</div>
     <div>
-      <div class="set-text-14 text-semibold color-gray-900">Secure Payments</div>
-      <div class="set-text-12 color-gray-500">SSL encrypted checkout</div>
+      <div class="text-size-14 text-semibold color-gray-900">Secure Payments</div>
+      <div class="text-size-12 color-gray-500">SSL encrypted checkout</div>
     </div>
   </div>
-  <div class="feature-item when-visible:animate-fade-in" style="animation-delay:.3s">
+  <div class="feature-item when-visible:animation-fade-in" style="animation-delay:.3s">
     <div class="feature-icon">💬</div>
     <div>
-      <div class="set-text-14 text-semibold color-gray-900">24/7 Support</div>
-      <div class="set-text-12 color-gray-500">Chat, email & phone</div>
+      <div class="text-size-14 text-semibold color-gray-900">24/7 Support</div>
+      <div class="text-size-12 color-gray-500">Chat, email & phone</div>
     </div>
   </div>
 </div>
 
 <!-- ════════ CATEGORIES ════════ -->
-<section class="add-padding-y-96" style="background:#fff">
+<section class="padding-y-96" style="background:#fff">
   <div class="container" style="max-width:1280px">
-    <div class="text-center add-margin-bottom-56">
-      <p class="section-eyebrow add-margin-bottom-12">Browse by Category</p>
+    <div class="text-center margin-bottom-56">
+      <p class="section-eyebrow margin-bottom-12">Browse by Category</p>
       <h2 class="section-title">Shop Our Collections</h2>
-      <p class="set-text-16 color-gray-500 add-margin-top-16" style="max-width:480px;margin-left:auto;margin-right:auto">Find exactly what you're looking for across our curated categories.</p>
+      <p class="text-size-16 color-gray-500 margin-top-16" style="max-width:480px;margin-left:auto;margin-right:auto">Find exactly what you're looking for across our curated categories.</p>
     </div>
 
     <!-- 4-column + 2 smaller -->
     <div class="cat-grid" style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:280px 220px;gap:16px">
       <!-- Large featured -->
-      <a href="shop.html?cat=women" class="cat-card when-visible:animate-zoom-in" style="grid-row:1/3;grid-column:1/2">
+      <a href="shop.html?cat=women" class="cat-card when-visible:animation-zoom-in" style="grid-row:1/3;grid-column:1/2">
         <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=560&fit=crop" alt="Women's Fashion">
         <div class="cat-overlay">
           <h3>Women's Fashion</h3>
           <span>240+ Items</span>
         </div>
       </a>
-      <a href="shop.html?cat=men" class="cat-card when-visible:animate-zoom-in" style="animation-delay:.1s">
+      <a href="shop.html?cat=men" class="cat-card when-visible:animation-zoom-in" style="animation-delay:.1s">
         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=280&fit=crop" alt="Men's Fashion">
         <div class="cat-overlay">
           <h3>Men's Fashion</h3>
           <span>180+ Items</span>
         </div>
       </a>
-      <a href="shop.html?cat=bags" class="cat-card when-visible:animate-zoom-in" style="animation-delay:.2s">
+      <a href="shop.html?cat=bags" class="cat-card when-visible:animation-zoom-in" style="animation-delay:.2s">
         <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=280&fit=crop" alt="Bags">
         <div class="cat-overlay">
           <h3>Bags & Luggage</h3>
           <span>120+ Items</span>
         </div>
       </a>
-      <a href="shop.html?cat=shoes" class="cat-card when-visible:animate-zoom-in" style="animation-delay:.3s">
+      <a href="shop.html?cat=shoes" class="cat-card when-visible:animation-zoom-in" style="animation-delay:.3s">
         <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=220&fit=crop" alt="Shoes">
         <div class="cat-overlay">
           <h3>Shoes & Footwear</h3>
           <span>95+ Items</span>
         </div>
       </a>
-      <a href="shop.html?cat=accessories" class="cat-card when-visible:animate-zoom-in" style="animation-delay:.4s">
+      <a href="shop.html?cat=accessories" class="cat-card when-visible:animation-zoom-in" style="animation-delay:.4s">
         <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&h=220&fit=crop" alt="Accessories">
         <div class="cat-overlay">
           <h3>Accessories</h3>
@@ -436,11 +436,11 @@
 </section>
 
 <!-- ════════ FEATURED PRODUCTS ════════ -->
-<section class="add-padding-y-96 background-gray-50">
+<section class="padding-y-96 background-gray-50">
   <div class="container" style="max-width:1280px">
-    <div class="make-flex align-center justify-between add-margin-bottom-48 flex-wrap gap-16">
+    <div class="display-flex align-center justify-between margin-bottom-48 flex-wrap gap-16">
       <div>
-        <p class="section-eyebrow add-margin-bottom-12">Hand-picked for you</p>
+        <p class="section-eyebrow margin-bottom-12">Hand-picked for you</p>
         <h2 class="section-title">Best Sellers</h2>
       </div>
       <a href="shop.html" class="btn btn-outline" style="color:#2563eb;border-color:#2563eb">View All Products →</a>
@@ -453,21 +453,21 @@
 </section>
 
 <!-- ════════ SALE BANNER ════════ -->
-<section class="sale-banner add-padding-y-80">
-  <div class="container make-flex align-center justify-between gap-48 flex-wrap" style="max-width:1280px;position:relative;z-index:1">
-    <div class="when-visible:animate-slide-in-from-left" style="max-width:540px">
-      <div class="badge badge-red add-margin-bottom-20" style="background:rgba(239,68,68,.2);color:#fca5a5;font-size:13px">Limited Time Offer</div>
-      <h2 class="set-text-48 text-bold add-margin-bottom-16" style="color:#fff;line-height:1.1">
+<section class="sale-banner padding-y-80">
+  <div class="container display-flex align-center justify-between gap-48 flex-wrap" style="max-width:1280px;position:relative;z-index:1">
+    <div class="when-visible:animation-slide-in-from-left" style="max-width:540px">
+      <div class="badge badge-red margin-bottom-20" style="background:rgba(239,68,68,.2);color:#fca5a5;font-size:13px">Limited Time Offer</div>
+      <h2 class="text-size-48 text-bold margin-bottom-16" style="color:#fff;line-height:1.1">
         Summer Sale is<br><span style="color:#fbbf24">Live Now!</span>
       </h2>
-      <p class="set-text-16 add-margin-bottom-32" style="color:#94a3b8;max-width:400px">Up to 50% off on selected items. Don't miss out on these incredible deals.</p>
+      <p class="text-size-16 margin-bottom-32" style="color:#94a3b8;max-width:400px">Up to 50% off on selected items. Don't miss out on these incredible deals.</p>
       <a href="shop.html?cat=sale" class="btn btn-lg" style="background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;border:none;padding:14px 32px;font-size:16px;border-radius:12px">
         Shop the Sale 🔥
       </a>
     </div>
-    <div class="when-visible:animate-slide-in-from-right">
-      <div class="set-text-14 add-margin-bottom-16 text-semibold" style="color:#94a3b8;text-transform:uppercase;letter-spacing:.1em">Ends in</div>
-      <div class="make-flex gap-12">
+    <div class="when-visible:animation-slide-in-from-right">
+      <div class="text-size-14 margin-bottom-16 text-semibold" style="color:#94a3b8;text-transform:uppercase;letter-spacing:.1em">Ends in</div>
+      <div class="display-flex gap-12">
         <div class="countdown-unit">
           <span class="countdown-num" id="cd-hours">12</span>
           <span class="countdown-lbl">Hours</span>
@@ -484,7 +484,7 @@
         </div>
       </div>
       <!-- Sale products preview -->
-      <div class="make-flex gap-12 add-margin-top-32">
+      <div class="display-flex gap-12 margin-top-32">
         <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=80&h=80&fit=crop" style="width:72px;height:72px;object-fit:cover;border-radius:12px;border:2px solid rgba(255,255,255,.2)">
         <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=80&h=80&fit=crop" style="width:72px;height:72px;object-fit:cover;border-radius:12px;border:2px solid rgba(255,255,255,.2)">
         <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=80&h=80&fit=crop" style="width:72px;height:72px;object-fit:cover;border-radius:12px;border:2px solid rgba(255,255,255,.2)">
@@ -495,14 +495,14 @@
 </section>
 
 <!-- ════════ NEW ARRIVALS ════════ -->
-<section class="add-padding-y-96" style="background:#fff;overflow:hidden">
+<section class="padding-y-96" style="background:#fff;overflow:hidden">
   <div class="container" style="max-width:1280px">
-    <div class="make-flex align-center justify-between add-margin-bottom-40">
+    <div class="display-flex align-center justify-between margin-bottom-40">
       <div>
-        <p class="section-eyebrow add-margin-bottom-12">Fresh Drops</p>
+        <p class="section-eyebrow margin-bottom-12">Fresh Drops</p>
         <h2 class="section-title">New Arrivals</h2>
       </div>
-      <div class="make-flex gap-8">
+      <div class="display-flex gap-8">
         <button onclick="scrollArrivals(-1)" class="btn btn-outline" style="width:44px;height:44px;padding:0;border-radius:50%" id="arr-prev">←</button>
         <button onclick="scrollArrivals(1)" class="btn btn-outline" style="width:44px;height:44px;padding:0;border-radius:50%" id="arr-next">→</button>
       </div>
@@ -515,56 +515,56 @@
 <!-- ════════ BRAND LOGOS ════════ -->
 <section style="background:#f8fafc;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:40px 0;overflow:hidden">
   <div class="container" style="max-width:1280px">
-    <p class="text-center set-text-12 text-semibold color-gray-400 add-margin-bottom-32" style="letter-spacing:.12em;text-transform:uppercase">Trusted by shoppers from top brands</p>
-    <div class="make-flex align-center justify-around flex-wrap gap-32" id="brand-logos">
-      <div class="set-text-22 text-bold color-gray-200" style="font-family:serif">VOGUE</div>
-      <div class="set-text-22 text-bold color-gray-200">ZARA</div>
-      <div class="set-text-22 text-bold color-gray-200">H&M</div>
-      <div class="set-text-22 text-bold color-gray-200" style="font-family:serif">GUCCI</div>
-      <div class="set-text-22 text-bold color-gray-200">PRADA</div>
-      <div class="set-text-22 text-bold color-gray-200">NIKE</div>
+    <p class="text-center text-size-12 text-semibold color-gray-400 margin-bottom-32" style="letter-spacing:.12em;text-transform:uppercase">Trusted by shoppers from top brands</p>
+    <div class="display-flex align-center justify-around flex-wrap gap-32" id="brand-logos">
+      <div class="text-size-22 text-bold color-gray-200" style="font-family:serif">VOGUE</div>
+      <div class="text-size-22 text-bold color-gray-200">ZARA</div>
+      <div class="text-size-22 text-bold color-gray-200">H&M</div>
+      <div class="text-size-22 text-bold color-gray-200" style="font-family:serif">GUCCI</div>
+      <div class="text-size-22 text-bold color-gray-200">PRADA</div>
+      <div class="text-size-22 text-bold color-gray-200">NIKE</div>
     </div>
   </div>
 </section>
 
 <!-- ════════ TESTIMONIALS ════════ -->
-<section class="add-padding-y-96 background-gray-50">
+<section class="padding-y-96 background-gray-50">
   <div class="container" style="max-width:1280px">
-    <div class="text-center add-margin-bottom-56">
-      <p class="section-eyebrow add-margin-bottom-12">What Our Customers Say</p>
+    <div class="text-center margin-bottom-56">
+      <p class="section-eyebrow margin-bottom-12">What Our Customers Say</p>
       <h2 class="section-title">Loved by Thousands</h2>
     </div>
     <div class="testimonial-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-      <div class="testimonial-card when-visible:animate-slide-up">
-        <div class="testimonial-stars add-margin-bottom-12">★★★★★</div>
-        <p class="color-gray-600 set-text-15" style="line-height:1.7;margin-bottom:20px">"Absolutely love the quality! The fabric is so soft and the fit is perfect. Will definitely be ordering again. Fast shipping too!"</p>
-        <div class="make-flex align-center gap-12">
+      <div class="testimonial-card when-visible:animation-slide-up">
+        <div class="testimonial-stars margin-bottom-12">★★★★★</div>
+        <p class="color-gray-600 text-size-15" style="line-height:1.7;margin-bottom:20px">"Absolutely love the quality! The fabric is so soft and the fit is perfect. Will definitely be ordering again. Fast shipping too!"</p>
+        <div class="display-flex align-center gap-12">
           <div class="avatar-initials" style="background:#dbeafe;color:#1d4ed8">SR</div>
           <div>
-            <div class="text-semibold set-text-14 color-gray-900">Sarah R.</div>
-            <div class="set-text-12 color-gray-400">Verified Buyer · 2 days ago</div>
+            <div class="text-semibold text-size-14 color-gray-900">Sarah R.</div>
+            <div class="text-size-12 color-gray-400">Verified Buyer · 2 days ago</div>
           </div>
         </div>
       </div>
-      <div class="testimonial-card when-visible:animate-slide-up" style="animation-delay:.1s">
-        <div class="testimonial-stars add-margin-bottom-12">★★★★★</div>
-        <p class="color-gray-600 set-text-15" style="line-height:1.7;margin-bottom:20px">"The leather jacket I ordered exceeded my expectations. Great craftsmanship and arrived in beautiful packaging. LuxeStore is my new go-to!"</p>
-        <div class="make-flex align-center gap-12">
+      <div class="testimonial-card when-visible:animation-slide-up" style="animation-delay:.1s">
+        <div class="testimonial-stars margin-bottom-12">★★★★★</div>
+        <p class="color-gray-600 text-size-15" style="line-height:1.7;margin-bottom:20px">"The leather jacket I ordered exceeded my expectations. Great craftsmanship and arrived in beautiful packaging. LuxeStore is my new go-to!"</p>
+        <div class="display-flex align-center gap-12">
           <div class="avatar-initials" style="background:#d1fae5;color:#065f46">MK</div>
           <div>
-            <div class="text-semibold set-text-14 color-gray-900">Michael K.</div>
-            <div class="set-text-12 color-gray-400">Verified Buyer · 1 week ago</div>
+            <div class="text-semibold text-size-14 color-gray-900">Michael K.</div>
+            <div class="text-size-12 color-gray-400">Verified Buyer · 1 week ago</div>
           </div>
         </div>
       </div>
-      <div class="testimonial-card when-visible:animate-slide-up" style="animation-delay:.2s">
-        <div class="testimonial-stars add-margin-bottom-12">★★★★☆</div>
-        <p class="color-gray-600 set-text-15" style="line-height:1.7;margin-bottom:20px">"Quick delivery and easy returns process. The sunglasses look even better in person. Great customer service when I had a question."</p>
-        <div class="make-flex align-center gap-12">
+      <div class="testimonial-card when-visible:animation-slide-up" style="animation-delay:.2s">
+        <div class="testimonial-stars margin-bottom-12">★★★★☆</div>
+        <p class="color-gray-600 text-size-15" style="line-height:1.7;margin-bottom:20px">"Quick delivery and easy returns process. The sunglasses look even better in person. Great customer service when I had a question."</p>
+        <div class="display-flex align-center gap-12">
           <div class="avatar-initials" style="background:#fce7f3;color:#9d174d">JP</div>
           <div>
-            <div class="text-semibold set-text-14 color-gray-900">Jessica P.</div>
-            <div class="set-text-12 color-gray-400">Verified Buyer · 2 weeks ago</div>
+            <div class="text-semibold text-size-14 color-gray-900">Jessica P.</div>
+            <div class="text-size-12 color-gray-400">Verified Buyer · 2 weeks ago</div>
           </div>
         </div>
       </div>
@@ -573,17 +573,17 @@
 </section>
 
 <!-- ════════ NEWSLETTER ════════ -->
-<section class="newsletter-section add-padding-y-96">
+<section class="newsletter-section padding-y-96">
   <div class="container text-center" style="max-width:640px;position:relative;z-index:1">
-    <div class="when-visible:animate-slide-up">
+    <div class="when-visible:animation-slide-up">
       <div style="width:64px;height:64px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 24px">💌</div>
-      <h2 class="set-text-40 text-bold add-margin-bottom-16" style="color:#fff">Stay in the Loop</h2>
-      <p class="set-text-16 add-margin-bottom-40" style="color:rgba(255,255,255,.75)">Get early access to new arrivals, exclusive offers, and style inspiration delivered to your inbox.</p>
-      <form onsubmit="subscribeNewsletter(event)" class="make-flex gap-12" style="max-width:480px;margin:0 auto">
+      <h2 class="text-size-40 text-bold margin-bottom-16" style="color:#fff">Stay in the Loop</h2>
+      <p class="text-size-16 margin-bottom-40" style="color:rgba(255,255,255,.75)">Get early access to new arrivals, exclusive offers, and style inspiration delivered to your inbox.</p>
+      <form onsubmit="subscribeNewsletter(event)" class="display-flex gap-12" style="max-width:480px;margin:0 auto">
         <input type="email" class="input flex-grow" placeholder="Enter your email address" style="border-radius:10px;border:none" required>
         <button type="submit" class="btn btn-lg" style="background:#fff;color:#2563eb;font-weight:700;border:none;border-radius:10px;white-space:nowrap">Subscribe →</button>
       </form>
-      <p class="set-text-12 add-margin-top-16" style="color:rgba(255,255,255,.5)">No spam, ever. Unsubscribe anytime.</p>
+      <p class="text-size-12 margin-top-16" style="color:rgba(255,255,255,.5)">No spam, ever. Unsubscribe anytime.</p>
     </div>
   </div>
 </section>
@@ -594,12 +594,12 @@
     <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;flex-wrap:wrap">
       <!-- Brand -->
       <div>
-        <div class="make-flex align-center gap-10 add-margin-bottom-20">
+        <div class="display-flex align-center gap-10 margin-bottom-20">
           <div style="width:36px;height:36px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff">L</div>
-          <span class="set-text-20 text-bold" style="color:#fff">LuxeStore</span>
+          <span class="text-size-20 text-bold" style="color:#fff">LuxeStore</span>
         </div>
-        <p class="set-text-14" style="line-height:1.7;max-width:280px;margin-bottom:24px">Your premium destination for fashion, lifestyle, and accessories. Quality you can feel, style you can trust.</p>
-        <div class="make-flex gap-10">
+        <p class="text-size-14" style="line-height:1.7;max-width:280px;margin-bottom:24px">Your premium destination for fashion, lifestyle, and accessories. Quality you can feel, style you can trust.</p>
+        <div class="display-flex gap-10">
           <a href="#" class="social-btn">𝕏</a>
           <a href="#" class="social-btn">f</a>
           <a href="#" class="social-btn">📸</a>
@@ -608,8 +608,8 @@
       </div>
       <!-- Shop -->
       <div>
-        <h4 class="set-text-14 text-semibold add-margin-bottom-20" style="color:#e2e8f0">Shop</h4>
-        <div class="make-flex flex-column gap-12">
+        <h4 class="text-size-14 text-semibold margin-bottom-20" style="color:#e2e8f0">Shop</h4>
+        <div class="display-flex flex-column gap-12">
           <a href="shop.html?cat=women" class="footer-link">Women's Fashion</a>
           <a href="shop.html?cat=men" class="footer-link">Men's Fashion</a>
           <a href="shop.html?cat=shoes" class="footer-link">Shoes</a>
@@ -619,8 +619,8 @@
       </div>
       <!-- Help -->
       <div>
-        <h4 class="set-text-14 text-semibold add-margin-bottom-20" style="color:#e2e8f0">Help</h4>
-        <div class="make-flex flex-column gap-12">
+        <h4 class="text-size-14 text-semibold margin-bottom-20" style="color:#e2e8f0">Help</h4>
+        <div class="display-flex flex-column gap-12">
           <a href="#" class="footer-link">Track Your Order</a>
           <a href="#" class="footer-link">Returns & Exchanges</a>
           <a href="#" class="footer-link">Shipping Info</a>
@@ -630,8 +630,8 @@
       </div>
       <!-- Company -->
       <div>
-        <h4 class="set-text-14 text-semibold add-margin-bottom-20" style="color:#e2e8f0">Company</h4>
-        <div class="make-flex flex-column gap-12">
+        <h4 class="text-size-14 text-semibold margin-bottom-20" style="color:#e2e8f0">Company</h4>
+        <div class="display-flex flex-column gap-12">
           <a href="#" class="footer-link">About LuxeStore</a>
           <a href="#" class="footer-link">Careers</a>
           <a href="#" class="footer-link">Press</a>
@@ -642,9 +642,9 @@
     </div>
     <!-- Bottom bar -->
     <div style="border-top:1px solid #1e293b;padding:24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
-      <p class="set-text-13">© 2025 LuxeStore. All rights reserved. Built with SantyCSS.</p>
-      <div class="make-flex gap-12 align-center">
-        <span class="set-text-12" style="color:#475569">Accepted payments:</span>
+      <p class="text-size-13">© 2025 LuxeStore. All rights reserved. Built with SantyCSS.</p>
+      <div class="display-flex gap-12 align-center">
+        <span class="text-size-12" style="color:#475569">Accepted payments:</span>
         <span style="font-size:22px">💳</span>
         <span style="font-size:22px">📱</span>
         <span style="font-size:18px;color:#475569">VISA</span>
@@ -728,7 +728,7 @@ function renderProducts(products, container) {
     const stars = '★'.repeat(Math.floor(p.rating)) + (p.rating%1>=.5?'½':'') + '☆'.repeat(5-Math.ceil(p.rating));
     const saved = p.oldPrice ? Math.round((1-p.price/p.oldPrice)*100) : 0;
     return `
-    <div class="product-card when-visible:animate-slide-up">
+    <div class="product-card when-visible:animation-slide-up">
       <div class="product-img-wrap">
         <img src="${p.img}" alt="${p.name}" loading="lazy">
         ${p.badge?`<div class="product-badge"><span class="badge" style="background:${p.badge==='Sale'?'#fee2e2':p.badge==='New'?'#d1fae5':'#fef3c7'};color:${p.badge==='Sale'?'#b91c1c':p.badge==='New'?'#065f46':'#b45309'}">${p.badge}${saved?` -${saved}%`:''}</span></div>`:''}
@@ -739,16 +739,16 @@ function renderProducts(products, container) {
         </div>
       </div>
       <div style="padding:16px 20px 20px">
-        <div class="set-text-12 color-gray-400 add-margin-bottom-4">${p.category.charAt(0).toUpperCase()+p.category.slice(1)}</div>
+        <div class="text-size-12 color-gray-400 margin-bottom-4">${p.category.charAt(0).toUpperCase()+p.category.slice(1)}</div>
         <a href="product.html?id=${p.id}" style="text-decoration:none">
-          <div class="set-text-15 text-semibold color-gray-900 add-margin-bottom-8">${p.name}</div>
+          <div class="text-size-15 text-semibold color-gray-900 margin-bottom-8">${p.name}</div>
         </a>
-        <div class="make-flex align-center gap-6 add-margin-bottom-10">
+        <div class="display-flex align-center gap-6 margin-bottom-10">
           <span class="star-rating">${'★'.repeat(Math.floor(p.rating))}</span>
-          <span class="set-text-12 color-gray-400">(${p.reviews})</span>
+          <span class="text-size-12 color-gray-400">(${p.reviews})</span>
         </div>
-        <div class="make-flex align-center gap-10">
-          <span class="set-text-18 text-bold" style="color:#0f172a">$${p.price.toFixed(2)}</span>
+        <div class="display-flex align-center gap-10">
+          <span class="text-size-18 text-bold" style="color:#0f172a">$${p.price.toFixed(2)}</span>
           ${p.oldPrice?`<span class="price-old">$${p.oldPrice.toFixed(2)}</span>`:''}
         </div>
       </div>
@@ -768,8 +768,8 @@ function renderArrivals(products, container) {
           </div>
         </div>
         <div style="padding:14px 16px 18px">
-          <div class="set-text-14 text-semibold color-gray-900 add-margin-bottom-4">${p.name}</div>
-          <div class="set-text-16 text-bold" style="color:#2563eb">$${p.price.toFixed(2)}</div>
+          <div class="text-size-14 text-semibold color-gray-900 margin-bottom-4">${p.name}</div>
+          <div class="text-size-16 text-bold" style="color:#2563eb">$${p.price.toFixed(2)}</div>
         </div>
       </div>
     </div>
@@ -831,9 +831,9 @@ function searchProducts(q) {
   if(!results.length) { sug.style.display='none'; return; }
   sug.style.display = 'block';
   sug.innerHTML = results.map(p=>`
-    <a href="product.html?id=${p.id}" class="dropdown-item make-flex align-center gap-12">
+    <a href="product.html?id=${p.id}" class="dropdown-item display-flex align-center gap-12">
       <img src="${p.img}" style="width:36px;height:36px;object-fit:cover;border-radius:6px">
-      <div><div class="set-text-13 text-semibold">${p.name}</div><div class="set-text-12 color-blue-600">$${p.price.toFixed(2)}</div></div>
+      <div><div class="text-size-13 text-semibold">${p.name}</div><div class="text-size-12 color-blue-600">$${p.price.toFixed(2)}</div></div>
     </a>
   `).join('');
 }

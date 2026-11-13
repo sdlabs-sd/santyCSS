@@ -77,16 +77,16 @@
 
 <!-- Navbar -->
 <nav class="site-nav" id="site-nav">
-  <div class="container make-flex align-center justify-between add-padding-y-14" style="max-width:1280px">
+  <div class="container display-flex align-center justify-between padding-y-14" style="max-width:1280px">
     <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px">
       <div style="width:36px;height:36px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff">L</div>
-      <span class="set-text-20 text-bold color-gray-900">LuxeStore</span>
+      <span class="text-size-20 text-bold color-gray-900">LuxeStore</span>
     </a>
-    <div class="desktop-nav make-flex align-center gap-4">
+    <div class="desktop-nav display-flex align-center gap-4">
       <a href="index.html" class="navbar-item" style="color:#374151">Home</a>
       <a href="shop.html" class="navbar-item" style="color:#2563eb;font-weight:700">Shop</a>
       <div style="position:relative" id="dropdown-wrap">
-        <button onclick="toggleDropdown()" class="navbar-item make-flex align-center gap-4" style="background:none;border:none;cursor:pointer;font-weight:500;color:#374151;font-size:14px">
+        <button onclick="toggleDropdown()" class="navbar-item display-flex align-center gap-4" style="background:none;border:none;cursor:pointer;font-weight:500;color:#374151;font-size:14px">
           Collections <span style="font-size:10px">▼</span>
         </button>
         <div id="nav-dropdown" class="dropdown-menu" style="display:none">
@@ -102,7 +102,7 @@
       <a href="#" class="navbar-item" style="color:#374151">About</a>
       <a href="#" class="navbar-item" style="color:#374151">Contact</a>
     </div>
-    <div class="make-flex align-center gap-8">
+    <div class="display-flex align-center gap-8">
       <button class="navbar-item" style="background:none;border:none;cursor:pointer;font-size:18px;color:#6b7280" title="Search">🔍</button>
       <a href="#" class="navbar-item" style="font-size:18px;color:#6b7280;text-decoration:none" title="Wishlist">♡</a>
       <button onclick="toggleDark()" class="navbar-item" style="background:none;border:none;cursor:pointer;font-size:18px;color:#6b7280" title="Toggle dark mode">🌙</button>
@@ -126,25 +126,25 @@
 <!-- Page Header -->
 <div style="background:linear-gradient(135deg,#0f172a,#1e3a5f);padding:48px 16px">
   <div class="container" style="max-width:1280px">
-    <nav class="make-flex align-center gap-8 add-margin-bottom-12 set-text-13">
+    <nav class="display-flex align-center gap-8 margin-bottom-12 text-size-13">
       <a href="index.html" style="color:rgba(255,255,255,.5);text-decoration:none">Home</a>
       <span style="color:rgba(255,255,255,.3)">›</span>
       <span style="color:#fff" id="breadcrumb-cat">All Products</span>
     </nav>
-    <h1 class="set-text-36 text-bold add-margin-bottom-8" style="color:#fff" id="page-title">Shop All</h1>
+    <h1 class="text-size-36 text-bold margin-bottom-8" style="color:#fff" id="page-title">Shop All</h1>
     <p style="color:#94a3b8;font-size:15px" id="product-count">Loading products...</p>
   </div>
 </div>
 
 <div class="container" style="max-width:1280px;padding:32px 16px">
-  <div class="make-flex gap-32 align-start">
+  <div class="display-flex gap-32 align-start">
 
     <!-- ── FILTER SIDEBAR ── -->
     <aside class="filter-sidebar">
       <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 1px 4px rgba(0,0,0,.06)">
-        <div class="make-flex align-center justify-between add-margin-bottom-20">
-          <h3 class="set-text-16 text-bold color-gray-900">Filters</h3>
-          <button onclick="clearAllFilters()" class="set-text-13 color-blue-600" style="background:none;border:none;cursor:pointer;font-weight:500">Clear all</button>
+        <div class="display-flex align-center justify-between margin-bottom-20">
+          <h3 class="text-size-16 text-bold color-gray-900">Filters</h3>
+          <button onclick="clearAllFilters()" class="text-size-13 color-blue-600" style="background:none;border:none;cursor:pointer;font-weight:500">Clear all</button>
         </div>
 
         <!-- Category -->
@@ -153,23 +153,23 @@
             Category <span class="filter-toggle" id="cat-toggle">▲</span>
           </div>
           <div id="cat-filter">
-            <label class="filter-option"><input type="checkbox" value="women" onchange="filterProducts()"> Women's Fashion <span class="badge add-margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">240</span></label>
-            <label class="filter-option"><input type="checkbox" value="men" onchange="filterProducts()"> Men's Fashion <span class="badge add-margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">180</span></label>
-            <label class="filter-option"><input type="checkbox" value="shoes" onchange="filterProducts()"> Shoes <span class="badge add-margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">95</span></label>
-            <label class="filter-option"><input type="checkbox" value="accessories" onchange="filterProducts()"> Accessories <span class="badge add-margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">75</span></label>
-            <label class="filter-option"><input type="checkbox" value="bags" onchange="filterProducts()"> Bags & Luggage <span class="badge add-margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">60</span></label>
+            <label class="filter-option"><input type="checkbox" value="women" onchange="filterProducts()"> Women's Fashion <span class="badge margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">240</span></label>
+            <label class="filter-option"><input type="checkbox" value="men" onchange="filterProducts()"> Men's Fashion <span class="badge margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">180</span></label>
+            <label class="filter-option"><input type="checkbox" value="shoes" onchange="filterProducts()"> Shoes <span class="badge margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">95</span></label>
+            <label class="filter-option"><input type="checkbox" value="accessories" onchange="filterProducts()"> Accessories <span class="badge margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">75</span></label>
+            <label class="filter-option"><input type="checkbox" value="bags" onchange="filterProducts()"> Bags & Luggage <span class="badge margin-left-auto" style="background:#f3f4f6;color:#6b7280;font-size:11px">60</span></label>
           </div>
         </div>
 
         <!-- Price Range -->
         <div class="filter-section">
           <div class="filter-title">Price Range</div>
-          <div class="make-flex justify-between add-margin-bottom-12 set-text-13 color-gray-500">
+          <div class="display-flex justify-between margin-bottom-12 text-size-13 color-gray-500">
             <span>$<span id="price-min">0</span></span>
             <span>$<span id="price-max">350</span></span>
           </div>
           <input type="range" class="price-range" min="0" max="350" value="350" id="price-slider" oninput="updatePrice(this.value)">
-          <div class="make-flex gap-8 add-margin-top-12">
+          <div class="display-flex gap-8 margin-top-12">
             <input type="number" class="input input-sm" placeholder="Min" id="price-from" style="width:80px" onchange="filterProducts()">
             <span class="color-gray-400 align-self-center">—</span>
             <input type="number" class="input input-sm" placeholder="Max" id="price-to" value="350" style="width:80px" onchange="filterProducts()">
@@ -179,7 +179,7 @@
         <!-- Size -->
         <div class="filter-section">
           <div class="filter-title">Size</div>
-          <div class="make-flex flex-wrap gap-8">
+          <div class="display-flex flex-wrap gap-8">
             <button class="size-btn" onclick="toggleSize(this,'XS')">XS</button>
             <button class="size-btn" onclick="toggleSize(this,'S')">S</button>
             <button class="size-btn active" onclick="toggleSize(this,'M')">M</button>
@@ -192,7 +192,7 @@
         <!-- Color -->
         <div class="filter-section">
           <div class="filter-title">Color</div>
-          <div class="make-flex flex-wrap gap-8">
+          <div class="display-flex flex-wrap gap-8">
             <div class="color-swatch active" style="background:#111827" title="Black" onclick="toggleColor(this,'black')"></div>
             <div class="color-swatch" style="background:#fff;border-color:#e5e7eb" title="White" onclick="toggleColor(this,'white')"></div>
             <div class="color-swatch" style="background:#dc2626" title="Red" onclick="toggleColor(this,'red')"></div>
@@ -208,8 +208,8 @@
         <div class="filter-section">
           <div class="filter-title">Rating</div>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <label class="filter-option" style="gap:8px"><input type="radio" name="rating" value="4" onchange="filterProducts()"><span style="color:#f59e0b">★★★★★</span> <span class="set-text-12 color-gray-400">(4.0+)</span></label>
-            <label class="filter-option" style="gap:8px"><input type="radio" name="rating" value="3" onchange="filterProducts()"><span style="color:#f59e0b">★★★★</span>☆ <span class="set-text-12 color-gray-400">(3.0+)</span></label>
+            <label class="filter-option" style="gap:8px"><input type="radio" name="rating" value="4" onchange="filterProducts()"><span style="color:#f59e0b">★★★★★</span> <span class="text-size-12 color-gray-400">(4.0+)</span></label>
+            <label class="filter-option" style="gap:8px"><input type="radio" name="rating" value="3" onchange="filterProducts()"><span style="color:#f59e0b">★★★★</span>☆ <span class="text-size-12 color-gray-400">(3.0+)</span></label>
             <label class="filter-option" style="gap:8px"><input type="radio" name="rating" value="0" checked onchange="filterProducts()"> Any rating</label>
           </div>
         </div>
@@ -228,16 +228,16 @@
     <div style="flex:1;min-width:0">
 
       <!-- Sort bar -->
-      <div class="sort-bar animate-fade-in">
-        <div class="make-flex align-center gap-12 flex-wrap">
+      <div class="sort-bar animation-fade-in">
+        <div class="display-flex align-center gap-12 flex-wrap">
           <!-- Mobile filter btn -->
           <button onclick="openMobileFilter()" class="btn btn-sm btn-outline" style="display:none" id="mobile-filter-btn">⚙ Filters</button>
           <!-- Active filters -->
-          <div id="active-filters" class="make-flex gap-8 flex-wrap"></div>
+          <div id="active-filters" class="display-flex gap-8 flex-wrap"></div>
         </div>
-        <div class="make-flex align-center gap-16">
+        <div class="display-flex align-center gap-16">
           <!-- View toggle -->
-          <div class="make-flex gap-4">
+          <div class="display-flex gap-4">
             <button onclick="setView('grid')" id="grid-view-btn" class="btn btn-sm" style="padding:6px 10px;background:#2563eb;color:#fff" title="Grid view">⊞</button>
             <button onclick="setView('list')" id="list-view-btn" class="btn btn-sm btn-outline" style="padding:6px 10px" title="List view">☰</button>
           </div>
@@ -265,7 +265,7 @@
       </div>
 
       <!-- Pagination -->
-      <div class="make-flex align-center justify-center gap-8 add-margin-top-48" id="pagination"></div>
+      <div class="display-flex align-center justify-center gap-8 margin-top-48" id="pagination"></div>
     </div>
   </div>
 </div>
@@ -274,19 +274,19 @@
 <div id="mobile-filter-panel">
   <div class="filter-backdrop" onclick="closeMobileFilter()"></div>
   <div class="filter-drawer">
-    <div class="make-flex align-center justify-between add-margin-bottom-24">
-      <h3 class="set-text-18 text-bold">Filters</h3>
+    <div class="display-flex align-center justify-between margin-bottom-24">
+      <h3 class="text-size-18 text-bold">Filters</h3>
       <button onclick="closeMobileFilter()" style="background:none;border:none;font-size:24px;cursor:pointer;color:#6b7280">×</button>
     </div>
     <!-- Mirror of sidebar filters -->
-    <p class="color-gray-400 set-text-14">Use the filter sidebar on desktop for full filtering options.</p>
-    <div class="make-flex flex-column gap-12 add-margin-top-20">
+    <p class="color-gray-400 text-size-14">Use the filter sidebar on desktop for full filtering options.</p>
+    <div class="display-flex flex-column gap-12 margin-top-20">
       <label class="filter-option"><input type="checkbox" onchange="filterProducts()"> Women's Fashion</label>
       <label class="filter-option"><input type="checkbox" onchange="filterProducts()"> Men's Fashion</label>
       <label class="filter-option"><input type="checkbox" onchange="filterProducts()"> Shoes</label>
       <label class="filter-option"><input type="checkbox" onchange="filterProducts()"> Accessories</label>
     </div>
-    <button onclick="closeMobileFilter()" class="btn btn-primary add-margin-top-24" style="width:100%">Apply Filters</button>
+    <button onclick="closeMobileFilter()" class="btn btn-primary margin-top-24" style="width:100%">Apply Filters</button>
   </div>
 </div>
 
@@ -396,18 +396,18 @@ function renderPage() {
   if(currentView==='list') {
     document.getElementById('products-container').style.gridTemplateColumns = '1fr';
     document.getElementById('products-container').innerHTML = pageProducts.map(p=>`
-      <div class="product-card make-flex gap-0 when-visible:animate-slide-up" style="flex-direction:row;align-items:center">
+      <div class="product-card display-flex gap-0 when-visible:animation-slide-up" style="flex-direction:row;align-items:center">
         <img src="${p.img}" style="width:140px;height:140px;object-fit:cover;flex-shrink:0" alt="${p.name}">
         <div style="padding:20px;flex:1">
-          <div class="set-text-12 color-gray-400">${p.category}</div>
-          <a href="product.html?id=${p.id}" style="text-decoration:none"><h3 class="set-text-16 text-semibold color-gray-900 add-margin-y-6">${p.name}</h3></a>
+          <div class="text-size-12 color-gray-400">${p.category}</div>
+          <a href="product.html?id=${p.id}" style="text-decoration:none"><h3 class="text-size-16 text-semibold color-gray-900 margin-y-6">${p.name}</h3></a>
           <div style="color:#f59e0b;font-size:13px">${'★'.repeat(Math.floor(p.rating))}</div>
-          ${p.inStock?'<span class="set-text-12 color-green-600">● In Stock</span>':'<span class="set-text-12 color-red-500">✕ Out of Stock</span>'}
+          ${p.inStock?'<span class="text-size-12 color-green-600">● In Stock</span>':'<span class="text-size-12 color-red-500">✕ Out of Stock</span>'}
         </div>
         <div style="padding:20px;text-align:right;flex-shrink:0">
-          <div class="set-text-22 text-bold color-gray-900">$${p.price.toFixed(2)}</div>
-          ${p.oldPrice?`<div class="set-text-13 color-gray-400" style="text-decoration:line-through">$${p.oldPrice.toFixed(2)}</div>`:''}
-          <button class="btn btn-primary add-margin-top-12" onclick="addToCart({id:${p.id},name:'${p.name}',price:${p.price},img:'${p.img}'})" ${p.inStock?'':'disabled'}>Add to Cart</button>
+          <div class="text-size-22 text-bold color-gray-900">$${p.price.toFixed(2)}</div>
+          ${p.oldPrice?`<div class="text-size-13 color-gray-400" style="text-decoration:line-through">$${p.oldPrice.toFixed(2)}</div>`:''}
+          <button class="btn btn-primary margin-top-12" onclick="addToCart({id:${p.id},name:'${p.name}',price:${p.price},img:'${p.img}'})" ${p.inStock?'':'disabled'}>Add to Cart</button>
         </div>
       </div>
     `).join('');
@@ -416,7 +416,7 @@ function renderPage() {
     document.getElementById('products-container').innerHTML = pageProducts.map(p=>{
       const saved = p.oldPrice?Math.round((1-p.price/p.oldPrice)*100):0;
       return `
-      <div class="product-card when-visible:animate-slide-up">
+      <div class="product-card when-visible:animation-slide-up">
         <div class="product-img-wrap">
           <img src="${p.img}" alt="${p.name}" loading="lazy">
           ${p.badge?`<div style="position:absolute;top:12px;left:12px"><span class="badge" style="background:${p.badge==='Sale'?'#fee2e2':p.badge==='New'?'#d1fae5':'#fef3c7'};color:${p.badge==='Sale'?'#b91c1c':p.badge==='New'?'#065f46':'#b45309'}">${p.badge}${saved?` -${saved}%`:''}</span></div>`:''}
@@ -428,11 +428,11 @@ function renderPage() {
           </div>
         </div>
         <div style="padding:14px 18px 20px">
-          <div class="set-text-11 color-gray-400 add-margin-bottom-4">${p.category.toUpperCase()}</div>
-          <a href="product.html?id=${p.id}" style="text-decoration:none"><div class="set-text-14 text-semibold color-gray-900 add-margin-bottom-6">${p.name}</div></a>
-          <div style="color:#f59e0b;font-size:12px;margin-bottom:8px">${'★'.repeat(Math.floor(p.rating))} <span class="color-gray-400 set-text-11">(${p.reviews})</span></div>
-          <div class="make-flex align-center gap-10">
-            <span class="set-text-17 text-bold color-gray-900">$${p.price.toFixed(2)}</span>
+          <div class="text-size-11 color-gray-400 margin-bottom-4">${p.category.toUpperCase()}</div>
+          <a href="product.html?id=${p.id}" style="text-decoration:none"><div class="text-size-14 text-semibold color-gray-900 margin-bottom-6">${p.name}</div></a>
+          <div style="color:#f59e0b;font-size:12px;margin-bottom:8px">${'★'.repeat(Math.floor(p.rating))} <span class="color-gray-400 text-size-11">(${p.reviews})</span></div>
+          <div class="display-flex align-center gap-10">
+            <span class="text-size-17 text-bold color-gray-900">$${p.price.toFixed(2)}</span>
             ${p.oldPrice?`<span style="text-decoration:line-through;color:#9ca3af;font-size:13px">$${p.oldPrice.toFixed(2)}</span>`:''}
           </div>
         </div>

@@ -17,7 +17,7 @@ const gridSystem = require('./lib/grid-system');
   const START = '/* @naming:start */', END = '/* @naming:end */';
   const src = fs.readFileSync(path.join(__dirname, 'lib', 'naming.js'), 'utf8');
   const block = src.slice(src.indexOf(START), src.indexOf(END) + END.length);
-  for (const rel of ['santy-jit.js', 'packages/merge/santy-merge.js', 'packages/sort/santy-sort.js']) {
+  for (const rel of ['santy-jit.js', 'packages/merge/santy-merge.js', 'packages/sort/santy-sort.js', 'vscode-santycss/src/naming.js']) {
     const file = path.join(__dirname, rel);
     const text = fs.readFileSync(file, 'utf8');
     const a = text.indexOf(START), z = text.indexOf(END);

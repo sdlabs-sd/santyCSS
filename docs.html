@@ -175,11 +175,11 @@
       .docs-layout { flex-direction: column !important; }
       .docs-sidebar { display: none; }
       .module-banner { flex-direction: column; padding: 20px; }
-      .grid-cols-2, .grid-cols-3, .grid-cols-4, .grid-cols-5, .grid-cols-6 { grid-template-columns: 1fr !important; }
+      .grid-columns-2, .grid-columns-3, .grid-columns-4, .grid-columns-5, .grid-columns-6 { grid-template-columns: 1fr !important; }
       [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-      .set-text-40 { font-size: 24px !important; }
-      .set-text-32 { font-size: 22px !important; }
-      .add-padding-y-80 { padding-top: 40px !important; padding-bottom: 40px !important; }
+      .text-size-40 { font-size: 24px !important; }
+      .text-size-32 { font-size: 22px !important; }
+      .padding-y-80 { padding-top: 40px !important; padding-bottom: 40px !important; }
       pre { max-width: 100%; overflow-x: auto; }
     }
     @media (max-width: 640px) {
@@ -194,24 +194,24 @@
 <body class="background-white">
 
 <!-- ─── TOP NAV ──────────────────────────────────────────────────────────── -->
-<header class="position-sticky pin-top-0 layer-50 background-white add-shadow-sm" style="border-bottom:1px solid #e5e7eb;">
-  <div class="container make-flex align-center justify-between add-padding-y-14">
-    <a href="index.html" class="make-flex align-center gap-10 text-no-decoration">
+<header class="position-sticky top-0 z-index-50 background-white shadow-sm" style="border-bottom:1px solid #e5e7eb;">
+  <div class="container display-flex align-center justify-between padding-y-14">
+    <a href="index.html" class="display-flex align-center gap-10 text-no-decoration">
       <img src="assest/santy_css.png" alt="SantyCSS" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
-      <span class="set-text-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
+      <span class="text-size-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
       <span class="badge background-blue-100 color-blue-700" style="font-size:11px;">v2.8.0</span>
     </a>
     <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
       <svg id="ham-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       <svg id="ham-close" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="display:none"><path d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
-    <nav id="main-nav" class="make-flex align-center gap-20">
-      <a href="classes.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Classes</a>
-      <a href="components.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Components</a>
-      <a href="animations.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Animations</a>
-      <a href="icons.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Icons</a>
-      <a href="templates.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Templates</a>
-      <a href="snippets.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Snippets</a>
+    <nav id="main-nav" class="display-flex align-center gap-20">
+      <a href="classes.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Classes</a>
+      <a href="components.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Components</a>
+      <a href="animations.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Animations</a>
+      <a href="icons.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Icons</a>
+      <a href="templates.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Templates</a>
+      <a href="snippets.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Snippets</a>
       <div class="nav-resources" id="navResources">
         <button class="nav-resources-btn nav-resources-btn-active" id="navResBtn" onclick="toggleResources()" aria-expanded="false">
           Resources
@@ -240,7 +240,7 @@
 </header>
 
 <!-- ─── PAGE LAYOUT ─────────────────────────────────────────────────────── -->
-<div class="container make-flex gap-0 docs-layout" style="align-items:flex-start;padding-top:0;">
+<div class="container display-flex gap-0 docs-layout" style="align-items:flex-start;padding-top:0;">
 
   <!-- ── SIDEBAR ────────────────────────────────────────────────────────── -->
   <aside class="docs-sidebar">
@@ -301,14 +301,14 @@
   <main style="flex:1;min-width:0;padding:40px 0 80px 48px;">
 
     <!-- Page title -->
-    <div class="add-margin-bottom-48">
-      <div class="make-flex align-center gap-12 add-margin-bottom-12">
+    <div class="margin-bottom-48">
+      <div class="display-flex align-center gap-12 margin-bottom-12">
         <span class="chip chip-blue">v2.8.0</span>
         <span class="chip chip-green">MIT License</span>
         <a href="https://www.npmjs.com/package/santycss" target="_blank" class="chip chip-red" style="text-decoration:none;">npm ↗</a>
       </div>
-      <h1 class="set-text-40 text-bold color-gray-900 add-margin-bottom-12" style="letter-spacing:-1px;">Module Documentation</h1>
-      <p class="set-text-18 color-gray-500 line-height-relaxed" style="max-width:640px;">SantyCSS ships as 5 independent CSS modules. Use the full bundle, or load only what you need for optimal performance.</p>
+      <h1 class="text-size-40 text-bold color-gray-900 margin-bottom-12" style="letter-spacing:-1px;">Module Documentation</h1>
+      <p class="text-size-18 color-gray-500 line-height-relaxed" style="max-width:640px;">SantyCSS ships as 5 independent CSS modules. Use the full bundle, or load only what you need for optimal performance.</p>
     </div>
 
     <!-- ── NAMING RULES (v2.10) ─────────────────────────────────────────── -->
@@ -369,42 +369,42 @@
 
     <!-- ── INSTALLATION ─────────────────────────────────────────────────── -->
     <section id="install" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">Installation</h2>
-      <p class="set-text-15 color-gray-500 add-margin-bottom-24 line-height-relaxed">Install once, use everywhere. Zero dependencies, no build step required.</p>
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Installation</h2>
+      <p class="text-size-15 color-gray-500 margin-bottom-24 line-height-relaxed">Install once, use everywhere. Zero dependencies, no build step required.</p>
 
-      <div class="install-box add-margin-bottom-16">
+      <div class="install-box margin-bottom-16">
         <code>npm install santycss</code>
         <button class="copy-btn" onclick="copyText('npm install santycss', this)">Copy</button>
       </div>
 
-      <div class="make-grid grid-cols-3 gap-16 add-margin-bottom-32">
-        <div class="background-gray-50 round-corners-12 add-padding-20">
-          <div class="set-text-24 add-margin-bottom-8">📦</div>
-          <div class="set-text-13 text-semibold color-gray-800 add-margin-bottom-4">Package size</div>
-          <div class="set-text-20 text-bold color-blue-600">284 KB</div>
-          <div class="set-text-12 color-gray-400">compressed tarball</div>
+      <div class="display-grid grid-columns-3 gap-16 margin-bottom-32">
+        <div class="background-gray-50 radius-12 padding-20">
+          <div class="text-size-24 margin-bottom-8">📦</div>
+          <div class="text-size-13 text-semibold color-gray-800 margin-bottom-4">Package size</div>
+          <div class="text-size-20 text-bold color-blue-600">284 KB</div>
+          <div class="text-size-12 color-gray-400">compressed tarball</div>
         </div>
-        <div class="background-gray-50 round-corners-12 add-padding-20">
-          <div class="set-text-24 add-margin-bottom-8">🗂️</div>
-          <div class="set-text-13 text-semibold color-gray-800 add-margin-bottom-4">Files included</div>
-          <div class="set-text-20 text-bold color-blue-600">15 files</div>
-          <div class="set-text-12 color-gray-400">CSS + JS tooling</div>
+        <div class="background-gray-50 radius-12 padding-20">
+          <div class="text-size-24 margin-bottom-8">🗂️</div>
+          <div class="text-size-13 text-semibold color-gray-800 margin-bottom-4">Files included</div>
+          <div class="text-size-20 text-bold color-blue-600">15 files</div>
+          <div class="text-size-12 color-gray-400">CSS + JS tooling</div>
         </div>
-        <div class="background-gray-50 round-corners-12 add-padding-20">
-          <div class="set-text-24 add-margin-bottom-8">⚡</div>
-          <div class="set-text-13 text-semibold color-gray-800 add-margin-bottom-4">Dependencies</div>
-          <div class="set-text-20 text-bold color-green-600">Zero</div>
-          <div class="set-text-12 color-gray-400">no runtime deps</div>
+        <div class="background-gray-50 radius-12 padding-20">
+          <div class="text-size-24 margin-bottom-8">⚡</div>
+          <div class="text-size-13 text-semibold color-gray-800 margin-bottom-4">Dependencies</div>
+          <div class="text-size-20 text-bold color-green-600">Zero</div>
+          <div class="text-size-12 color-gray-400">no runtime deps</div>
         </div>
       </div>
     </section>
 
     <!-- ── CONFIGURATION ───────────────────────────────────────── -->
     <section id="configuration" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">Configuration — santy.config.json <span class="make-badge style-primary set-text-12">v2.8.0</span></h2>
-      <p class="set-text-15 color-gray-500 add-margin-bottom-24 line-height-relaxed">Customize the framework without forking. Create a <code class="chip">santy.config.json</code> in your project root and run <code class="chip">npx santycss build</code> — your customized bundles are generated into <code class="chip">./santy-dist</code> (or the directory set by <code class="chip">output</code>).</p>
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Configuration — santy.config.json <span class="make-badge style-primary text-size-12">v2.8.0</span></h2>
+      <p class="text-size-15 color-gray-500 margin-bottom-24 line-height-relaxed">Customize the framework without forking. Create a <code class="chip">santy.config.json</code> in your project root and run <code class="chip">npx santycss build</code> — your customized bundles are generated into <code class="chip">./santy-dist</code> (or the directory set by <code class="chip">output</code>).</p>
 
-      <div class="code-block add-margin-bottom-24">
+      <div class="code-block margin-bottom-24">
 <pre>{
   <span class="c-attr">"colors"</span>:      { <span class="c-str">"brand"</span>: { <span class="c-str">"500"</span>: <span class="c-str">"#0a5cff"</span> }, <span class="c-str">"accent"</span>: <span class="c-str">"#7c3aed"</span> },
   <span class="c-attr">"spacing"</span>:     [13, 26],
@@ -415,7 +415,7 @@
 }</pre>
       </div>
 
-      <div class="table-wrap add-margin-bottom-24">
+      <div class="table-wrap margin-bottom-24">
         <table>
           <thead><tr><th>Key</th><th>What it does</th></tr></thead>
           <tbody>
@@ -437,10 +437,10 @@
 
     <!-- ── PACKAGE STRUCTURE ────────────────────────────────────────────── -->
     <section id="package-structure" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">Package Structure</h2>
-      <p class="set-text-15 color-gray-500 add-margin-bottom-24 line-height-relaxed">Everything ships inside the <code class="chip">dist/</code> folder with the JS tooling at the root level.</p>
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Package Structure</h2>
+      <p class="text-size-15 color-gray-500 margin-bottom-24 line-height-relaxed">Everything ships inside the <code class="chip">dist/</code> folder with the JS tooling at the root level.</p>
 
-      <div class="code-block add-margin-bottom-24">
+      <div class="code-block margin-bottom-24">
 <pre><span class="c-com">santycss/</span>
 ├── <span class="c-key">dist/</span>
 │   ├── <span class="c-str">santy.css</span>            <span class="c-com">← Full bundle (718KB) — all utilities + components + animations</span>
@@ -479,17 +479,17 @@
 
     <!-- ── IMPORT OPTIONS ───────────────────────────────────────────────── -->
     <section id="import-options" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">Import Options</h2>
-      <p class="set-text-15 color-gray-500 add-margin-bottom-32 line-height-relaxed">4 ways to use SantyCSS depending on your setup.</p>
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Import Options</h2>
+      <p class="text-size-15 color-gray-500 margin-bottom-32 line-height-relaxed">4 ways to use SantyCSS depending on your setup.</p>
 
-      <div class="make-grid grid-cols-2 gap-24 add-margin-bottom-0">
+      <div class="display-grid grid-columns-2 gap-24 margin-bottom-0">
 
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-12">
+          <div class="display-flex align-center gap-10 margin-bottom-12">
             <span class="chip chip-blue">Option A</span>
-            <span class="set-text-15 text-semibold color-gray-800">JS import (React / Vue / Vite)</span>
+            <span class="text-size-15 text-semibold color-gray-800">JS import (React / Vue / Vite)</span>
           </div>
-          <div class="code-block add-margin-bottom-20">
+          <div class="code-block margin-bottom-20">
 <pre><span class="c-com">// Full bundle</span>
 <span class="c-key">import</span> <span class="c-str">'santycss/css'</span>;
 
@@ -502,11 +502,11 @@
         </div>
 
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-12">
+          <div class="display-flex align-center gap-10 margin-bottom-12">
             <span class="chip chip-purple">Option B</span>
-            <span class="set-text-15 text-semibold color-gray-800">CSS / SCSS @import</span>
+            <span class="text-size-15 text-semibold color-gray-800">CSS / SCSS @import</span>
           </div>
-          <div class="code-block add-margin-bottom-20">
+          <div class="code-block margin-bottom-20">
 <pre><span class="c-com">/* In your main.css */</span>
 <span class="c-key">@import</span> <span class="c-str">'santycss/dist/santy.css'</span>;
 
@@ -518,11 +518,11 @@
         </div>
 
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-12">
+          <div class="display-flex align-center gap-10 margin-bottom-12">
             <span class="chip chip-green">Option C</span>
-            <span class="set-text-15 text-semibold color-gray-800">Next.js layout.js</span>
+            <span class="text-size-15 text-semibold color-gray-800">Next.js layout.js</span>
           </div>
-          <div class="code-block add-margin-bottom-20">
+          <div class="code-block margin-bottom-20">
 <pre><span class="c-com">// app/layout.js or pages/_app.js</span>
 <span class="c-key">import</span> <span class="c-str">'santycss/css'</span>;
 
@@ -537,11 +537,11 @@
         </div>
 
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-12">
+          <div class="display-flex align-center gap-10 margin-bottom-12">
             <span class="chip chip-orange">Option D</span>
-            <span class="set-text-15 text-semibold color-gray-800">Path resolver (webpack / rollup)</span>
+            <span class="text-size-15 text-semibold color-gray-800">Path resolver (webpack / rollup)</span>
           </div>
-          <div class="code-block add-margin-bottom-20">
+          <div class="code-block margin-bottom-20">
 <pre><span class="c-com">// Get absolute paths for config files</span>
 <span class="c-key">const</span> santy = <span class="c-fn">require</span>(<span class="c-str">'santycss'</span>);
 
@@ -559,10 +559,10 @@ santy.email      <span class="c-com">// → /path/to/dist/santy-email.css</span>
 
     <!-- ── CDN ──────────────────────────────────────────────────────────── -->
     <section id="cdn" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">CDN Links</h2>
-      <p class="set-text-15 color-gray-500 add-margin-bottom-24 line-height-relaxed">Once published on npm, jsDelivr and unpkg serve the files instantly — no setup needed.</p>
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">CDN Links</h2>
+      <p class="text-size-15 color-gray-500 margin-bottom-24 line-height-relaxed">Once published on npm, jsDelivr and unpkg serve the files instantly — no setup needed.</p>
 
-      <div class="code-block add-margin-bottom-16">
+      <div class="code-block margin-bottom-16">
 <pre><span class="c-com">&lt;!-- Full minified bundle — recommended for production --&gt;</span>
 <span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy.min.css"</span><span class="c-tag">&gt;</span>
 
@@ -595,32 +595,32 @@ santy.email      <span class="c-com">// → /path/to/dist/santy-email.css</span>
       <div class="module-banner" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);">
         <div class="module-icon" style="background:#2563eb;color:#fff;">🎨</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">New Templates — v2.6.1</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">New Templates — v2.6.1</h2>
             <span class="chip" style="background:#dbeafe;color:#1d4ed8;border-color:#bfdbfe;">New in v2.6.1</span>
           </div>
-          <p class="set-text-15 color-gray-600 line-height-relaxed" style="margin:0;">4 new industry-grade HTML templates built entirely with SantyCSS — copy, paste, and go live.</p>
+          <p class="text-size-15 color-gray-600 line-height-relaxed" style="margin:0;">4 new industry-grade HTML templates built entirely with SantyCSS — copy, paste, and go live.</p>
         </div>
       </div>
-      <div class="make-grid grid-cols-2 gap-16 add-margin-top-24">
-        <div class="background-white round-corners-12 add-border-1 border-color-gray-200 add-padding-20">
-          <p class="set-text-13 text-bold color-blue-600 add-margin-bottom-4">🏫 MERIDIAN Academy</p>
-          <p class="set-text-13 color-gray-600 line-height-relaxed add-margin-bottom-12">7-page school website — Home, About, Academics, Admissions, Faculty, Events, and a grade-filtered Notifications hub (Grade 1–12 + Staff).</p>
+      <div class="display-grid grid-columns-2 gap-16 margin-top-24">
+        <div class="background-white radius-12 border-1 border-color-gray-200 padding-20">
+          <p class="text-size-13 text-bold color-blue-600 margin-bottom-4">🏫 MERIDIAN Academy</p>
+          <p class="text-size-13 color-gray-600 line-height-relaxed margin-bottom-12">7-page school website — Home, About, Academics, Admissions, Faculty, Events, and a grade-filtered Notifications hub (Grade 1–12 + Staff).</p>
           <a href="school/index.html" target="_blank" class="make-button style-primary size-small">Preview →</a>
         </div>
-        <div class="background-white round-corners-12 add-border-1 border-color-gray-200 add-padding-20">
-          <p class="set-text-13 text-bold color-blue-600 add-margin-bottom-4">💇 AURUM Studio — Saloon</p>
-          <p class="set-text-13 color-gray-600 line-height-relaxed add-margin-bottom-12">Luxury dark salon: gold accents, serif typography, marquee strip, 6 service cards, stylist team with hover overlays, gallery, and booking CTA.</p>
+        <div class="background-white radius-12 border-1 border-color-gray-200 padding-20">
+          <p class="text-size-13 text-bold color-blue-600 margin-bottom-4">💇 AURUM Studio — Saloon</p>
+          <p class="text-size-13 color-gray-600 line-height-relaxed margin-bottom-12">Luxury dark salon: gold accents, serif typography, marquee strip, 6 service cards, stylist team with hover overlays, gallery, and booking CTA.</p>
           <a href="saloon/index.html" target="_blank" class="make-button style-primary size-small">Preview →</a>
         </div>
-        <div class="background-white round-corners-12 add-border-1 border-color-gray-200 add-padding-20">
-          <p class="set-text-13 text-bold color-blue-600 add-margin-bottom-4">👁️ OPTIXA — Eye Vision Center</p>
-          <p class="set-text-13 color-gray-600 line-height-relaxed add-margin-bottom-12">Sci-fi vision clinic: animated SVG iris ring, CSS scanline overlay, cyan glow, concentric tech animation, doctor cards, and radial-glow CTA.</p>
+        <div class="background-white radius-12 border-1 border-color-gray-200 padding-20">
+          <p class="text-size-13 text-bold color-blue-600 margin-bottom-4">👁️ OPTIXA — Eye Vision Center</p>
+          <p class="text-size-13 color-gray-600 line-height-relaxed margin-bottom-12">Sci-fi vision clinic: animated SVG iris ring, CSS scanline overlay, cyan glow, concentric tech animation, doctor cards, and radial-glow CTA.</p>
           <a href="eye-vision/index.html" target="_blank" class="make-button style-primary size-small">Preview →</a>
         </div>
-        <div class="background-white round-corners-12 add-border-1 border-color-gray-200 add-padding-20">
-          <p class="set-text-13 text-bold color-blue-600 add-margin-bottom-4">🍺 IRONFORGE — Craft Brewery</p>
-          <p class="set-text-13 color-gray-600 line-height-relaxed add-margin-bottom-12">Dark industrial brewery: amber/copper palette, ember marquee strip, 6-tap beer list with ABV/IBU, 6-step brewing process grid, events, newsletter.</p>
+        <div class="background-white radius-12 border-1 border-color-gray-200 padding-20">
+          <p class="text-size-13 text-bold color-blue-600 margin-bottom-4">🍺 IRONFORGE — Craft Brewery</p>
+          <p class="text-size-13 color-gray-600 line-height-relaxed margin-bottom-12">Dark industrial brewery: amber/copper palette, ember marquee strip, 6-tap beer list with ABV/IBU, 6-step brewing process grid, events, newsletter.</p>
           <a href="brewery/index.html" target="_blank" class="make-button style-primary size-small">Preview →</a>
         </div>
       </div>
@@ -630,17 +630,17 @@ santy.email      <span class="c-com">// → /path/to/dist/santy-email.css</span>
       <div class="module-banner" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">
         <div class="module-icon" style="background:#10b981;color:#fff;">⚡</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">Granular Module Imports</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">Granular Module Imports</h2>
             <span class="chip" style="background:#d1fae5;color:#065f46;border-color:#6ee7b7;">New in v2.6.1</span>
           </div>
-          <p class="set-text-15 color-gray-600 line-height-relaxed" style="margin:0;">Import only the CSS you need. Each module is a standalone file — combine any mix to build the smallest possible bundle for your project.</p>
+          <p class="text-size-15 color-gray-600 line-height-relaxed" style="margin:0;">Import only the CSS you need. Each module is a standalone file — combine any mix to build the smallest possible bundle for your project.</p>
         </div>
       </div>
 
-      <p class="set-text-14 color-gray-600 line-height-relaxed add-margin-bottom-24">Instead of loading the full 1.2 MB bundle, pick only the modules your UI actually uses. Each module is self-contained and can be imported individually in any order.</p>
+      <p class="text-size-14 color-gray-600 line-height-relaxed margin-bottom-24">Instead of loading the full 1.2 MB bundle, pick only the modules your UI actually uses. Each module is self-contained and can be imported individually in any order.</p>
 
-      <h3 class="set-text-18 text-semibold color-gray-900 add-margin-bottom-16">Available modules</h3>
+      <h3 class="text-size-18 text-semibold color-gray-900 margin-bottom-16">Available modules</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:28px;">
         <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;">
           <code style="font-size:12px;font-weight:700;color:#0f172a;">reset</code><span style="font-size:11px;color:#64748b;float:right;">1.9 KB</span>
@@ -684,10 +684,10 @@ santy.email      <span class="c-com">// → /path/to/dist/santy-email.css</span>
         </div>
       </div>
 
-      <h3 class="set-text-18 text-semibold color-gray-900 add-margin-bottom-16">Import examples</h3>
+      <h3 class="text-size-18 text-semibold color-gray-900 margin-bottom-16">Import examples</h3>
 
-      <p class="set-text-14 color-gray-700 text-semibold add-margin-bottom-8">ES module / Vite / Next.js / Vue</p>
-      <div class="code-block add-margin-bottom-20">
+      <p class="text-size-14 color-gray-700 text-semibold margin-bottom-8">ES module / Vite / Next.js / Vue</p>
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-com">// Minimal dashboard UI — ~50 KB total</span>
 <span class="c-kw">import</span> <span class="c-str">'santycss/css/reset'</span>;
 <span class="c-kw">import</span> <span class="c-str">'santycss/css/flex'</span>;
@@ -701,8 +701,8 @@ santy.email      <span class="c-com">// → /path/to/dist/santy-email.css</span>
 <span class="c-kw">import</span> <span class="c-str">'santycss/css/variants'</span>;</pre>
       </div>
 
-      <p class="set-text-14 color-gray-700 text-semibold add-margin-bottom-8">CDN — individual module links</p>
-      <div class="code-block add-margin-bottom-20">
+      <p class="text-size-14 color-gray-700 text-semibold margin-bottom-8">CDN — individual module links</p>
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-reset.css"</span><span class="c-tag">&gt;</span>
 <span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-flex.css"</span><span class="c-tag">&gt;</span>
 <span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-spacing.css"</span><span class="c-tag">&gt;</span>
@@ -710,8 +710,8 @@ santy.email      <span class="c-com">// → /path/to/dist/santy-email.css</span>
 <span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-colors.css"</span><span class="c-tag">&gt;</span></pre>
       </div>
 
-      <p class="set-text-14 color-gray-700 text-semibold add-margin-bottom-8">Node.js path helpers</p>
-      <div class="code-block add-margin-bottom-20">
+      <p class="text-size-14 color-gray-700 text-semibold margin-bottom-8">Node.js path helpers</p>
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-kw">const</span> santy <span class="c-op">=</span> <span class="c-fn">require</span>(<span class="c-str">'santycss'</span>);
 
 <span class="c-com">// Absolute paths for webpack / rollup config</span>
@@ -732,28 +732,28 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       <div class="module-banner" style="background:linear-gradient(135deg,#ede9fe,#dbeafe);">
         <div class="module-icon" style="background:#6366f1;color:#fff;">📦</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">santy.css</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">santy.css</h2>
             <span class="chip chip-purple">Full Bundle</span>
             <span class="chip chip-gray">718KB</span>
           </div>
-          <p class="set-text-15 color-gray-600 line-height-relaxed" style="margin:0;">The complete SantyCSS package — all utilities, components, and animations in a single file. The simplest way to get started.</p>
+          <p class="text-size-15 color-gray-600 line-height-relaxed" style="margin:0;">The complete SantyCSS package — all utilities, components, and animations in a single file. The simplest way to get started.</p>
         </div>
       </div>
 
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-16">What's included</h3>
-      <div class="make-grid grid-cols-2 gap-16 add-margin-bottom-24">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-16">What's included</h3>
+      <div class="display-grid grid-columns-2 gap-16 margin-bottom-24">
         <div>
-          <div class="feature-row"><div class="feature-check">✓</div><div class="set-text-14 color-gray-700">All 10,000+ utility classes (spacing, color, layout, typography…)</div></div>
-          <div class="feature-row"><div class="feature-check">✓</div><div class="set-text-14 color-gray-700">20 color families × 10 shades each</div></div>
-          <div class="feature-row"><div class="feature-check">✓</div><div class="set-text-14 color-gray-700">Responsive prefixes: <code class="chip">sm: md: lg: xl:</code></div></div>
-          <div class="feature-row"><div class="feature-check">✓</div><div class="set-text-14 color-gray-700">State variants: <code class="chip">on-hover: on-focus: dark:</code></div></div>
+          <div class="feature-row"><div class="feature-check">✓</div><div class="text-size-14 color-gray-700">All 10,000+ utility classes (spacing, color, layout, typography…)</div></div>
+          <div class="feature-row"><div class="feature-check">✓</div><div class="text-size-14 color-gray-700">20 color families × 10 shades each</div></div>
+          <div class="feature-row"><div class="feature-check">✓</div><div class="text-size-14 color-gray-700">Responsive prefixes: <code class="chip">sm: md: lg: xl:</code></div></div>
+          <div class="feature-row"><div class="feature-check">✓</div><div class="text-size-14 color-gray-700">State variants: <code class="chip">on-hover: on-focus: dark:</code></div></div>
         </div>
         <div>
-          <div class="feature-row"><div class="feature-check">✓</div><div class="set-text-14 color-gray-700">15+ UI components: btn, card, modal, drawer, table…</div></div>
-          <div class="feature-row"><div class="feature-check">✓</div><div class="set-text-14 color-gray-700">70+ animations with entrance/exit variants</div></div>
-          <div class="feature-row"><div class="feature-check">✓</div><div class="set-text-14 color-gray-700">CSS design tokens (<code class="chip">--santy-primary</code> etc.)</div></div>
-          <div class="feature-row"><div class="feature-check">✓</div><div class="set-text-14 color-gray-700">Dark mode, RTL, print, motion-reduce variants</div></div>
+          <div class="feature-row"><div class="feature-check">✓</div><div class="text-size-14 color-gray-700">15+ UI components: btn, card, modal, drawer, table…</div></div>
+          <div class="feature-row"><div class="feature-check">✓</div><div class="text-size-14 color-gray-700">70+ animations with entrance/exit variants</div></div>
+          <div class="feature-row"><div class="feature-check">✓</div><div class="text-size-14 color-gray-700">CSS design tokens (<code class="chip">--santy-primary</code> etc.)</div></div>
+          <div class="feature-row"><div class="feature-check">✓</div><div class="text-size-14 color-gray-700">Dark mode, RTL, print, motion-reduce variants</div></div>
         </div>
       </div>
 
@@ -775,29 +775,29 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       <div class="module-banner" style="background:linear-gradient(135deg,#dbeafe,#e0f2fe);">
         <div class="module-icon" style="background:#3b82f6;color:#fff;">🔧</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">santy-core.css</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">santy-core.css</h2>
             <span class="chip chip-blue">Utilities Only</span>
             <span class="chip chip-gray">597KB</span>
           </div>
-          <p class="set-text-15 color-gray-600 line-height-relaxed" style="margin:0;">Pure utility classes only — no components, no animations. Ideal when you want to build your own component styles on top of the utility system.</p>
+          <p class="text-size-15 color-gray-600 line-height-relaxed" style="margin:0;">Pure utility classes only — no components, no animations. Ideal when you want to build your own component styles on top of the utility system.</p>
         </div>
       </div>
 
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-16">Utility categories</h3>
-      <div class="table-wrap add-margin-bottom-24">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-16">Utility categories</h3>
+      <div class="table-wrap margin-bottom-24">
         <table>
           <thead><tr><th>Category</th><th>Example classes</th><th>Count</th></tr></thead>
           <tbody>
             <tr><td>Spacing</td><td>add-padding-{n}, add-margin-{n}, gap-{n}, space-x-{n}</td><td>~2400 classes</td></tr>
             <tr><td>Colors</td><td>color-blue-500, background-green-100, border-color-red-600</td><td>~1200 classes</td></tr>
             <tr><td>Typography</td><td>set-text-{n}, text-bold, text-center, font-sans, line-height-relaxed</td><td>~400 classes</td></tr>
-            <tr><td>Layout</td><td>make-flex, make-grid, grid-cols-{1-12}, flex-row, align-center</td><td>~300 classes</td></tr>
-            <tr><td>Sizing</td><td>set-width-{n}, set-height-{n}, max-width-{n}, aspect-ratio-16-9</td><td>~800 classes</td></tr>
-            <tr><td>Position</td><td>position-relative, pin-top-0, z-10, z-50, inset-0</td><td>~200 classes</td></tr>
+            <tr><td>Layout</td><td>display-flex, display-grid, grid-cols-{1-12}, flex-row, align-center</td><td>~300 classes</td></tr>
+            <tr><td>Sizing</td><td>set-width-{n}, set-height-{n}, max-width-{n}, aspect-16-by-9</td><td>~800 classes</td></tr>
+            <tr><td>Position</td><td>position-relative, top-0, z-index-10, z-index-50, inset-0</td><td>~200 classes</td></tr>
             <tr><td>Overflow</td><td>overflow-hidden, overflow-x-auto, overflow-y-scroll</td><td>12 classes</td></tr>
-            <tr><td>Borders</td><td>add-border-{n}, round-corners-{n}, make-circle, make-pill</td><td>~300 classes</td></tr>
-            <tr><td>Effects</td><td>add-shadow-md, opacity-50, blur-md, backdrop-blur-lg, ring-2</td><td>~200 classes</td></tr>
+            <tr><td>Borders</td><td>add-border-{n}, round-corners-{n}, radius-circle, radius-pill</td><td>~300 classes</td></tr>
+            <tr><td>Effects</td><td>shadow-md, opacity-50, blur-md, backdrop-blur-lg, ring-2</td><td>~200 classes</td></tr>
             <tr><td>Transforms</td><td>rotate-45, scale-110, flip-horizontal, skew-x-6</td><td>~80 classes</td></tr>
             <tr><td>Gradients</td><td>gradient-to-right, from-blue-500, to-purple-600</td><td>~100 classes</td></tr>
             <tr><td>Transitions</td><td>transition-fast, transition-colors, transition-transform</td><td>~30 classes</td></tr>
@@ -812,10 +812,10 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
 <pre><span class="c-key">import</span> <span class="c-str">'santycss/css/core'</span>;
 
 <span class="c-com">&lt;!-- Example: build your own card using utilities --&gt;</span>
-<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"background-white round-corners-16 add-padding-24 add-shadow-md
-         on-hover:add-shadow-lg on-hover:scale-102 transition-normal"</span><span class="c-tag">&gt;</span>
-  <span class="c-tag">&lt;h3</span> <span class="c-attr">class</span>=<span class="c-str">"set-text-18 text-semibold color-gray-900 add-margin-bottom-8"</span><span class="c-tag">&gt;</span>Title<span class="c-tag">&lt;/h3&gt;</span>
-  <span class="c-tag">&lt;p</span>  <span class="c-attr">class</span>=<span class="c-str">"set-text-14 color-gray-500 line-height-relaxed"</span><span class="c-tag">&gt;</span>Body text.<span class="c-tag">&lt;/p&gt;</span>
+<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"background-white radius-16 padding-24 shadow-md
+         on-hover:shadow-lg on-hover:scale-102 transition-normal"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;h3</span> <span class="c-attr">class</span>=<span class="c-str">"text-size-18 text-semibold color-gray-900 margin-bottom-8"</span><span class="c-tag">&gt;</span>Title<span class="c-tag">&lt;/h3&gt;</span>
+  <span class="c-tag">&lt;p</span>  <span class="c-attr">class</span>=<span class="c-str">"text-size-14 color-gray-500 line-height-relaxed"</span><span class="c-tag">&gt;</span>Body text.<span class="c-tag">&lt;/p&gt;</span>
 <span class="c-tag">&lt;/div&gt;</span></pre>
       </div>
     </section>
@@ -827,17 +827,17 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       <div class="module-banner" style="background:linear-gradient(135deg,#dcfce7,#d1fae5);">
         <div class="module-icon" style="background:#22c55e;color:#fff;">🧩</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">santy-components.css</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">santy-components.css</h2>
             <span class="chip chip-green">Components</span>
             <span class="chip chip-gray">56KB</span>
           </div>
-          <p class="set-text-15 color-gray-600 line-height-relaxed" style="margin:0;">Pre-built UI components with full dark mode support. Load alongside <code class="chip">santy-core.css</code> for the complete design system.</p>
+          <p class="text-size-15 color-gray-600 line-height-relaxed" style="margin:0;">Pre-built UI components with full dark mode support. Load alongside <code class="chip">santy-core.css</code> for the complete design system.</p>
         </div>
       </div>
 
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-16">All components</h3>
-      <div class="make-grid grid-cols-2 gap-16 add-margin-bottom-24">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-16">All components</h3>
+      <div class="display-grid grid-columns-2 gap-16 margin-bottom-24">
         <div class="table-wrap">
           <table>
             <thead><tr><th>Component</th><th>Key classes</th></tr></thead>
@@ -871,11 +871,11 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       </div>
 
       <!-- v1.4 New Components -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12 add-margin-top-8">New in v1.4 — Dark Theme UI Components</h3>
-      <p class="set-text-14 color-gray-500 add-margin-bottom-16">CSS custom property tokens + ready-made dark-theme components for mobile apps, chat UIs, dashboards, and scanners.</p>
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12 margin-top-8">New in v1.4 — Dark Theme UI Components</h3>
+      <p class="text-size-14 color-gray-500 margin-bottom-16">CSS custom property tokens + ready-made dark-theme components for mobile apps, chat UIs, dashboards, and scanners.</p>
 
-      <h4 class="set-text-14 text-semibold color-gray-700 add-margin-bottom-8">Dark theme tokens</h4>
-      <div class="table-wrap add-margin-bottom-20">
+      <h4 class="text-size-14 text-semibold color-gray-700 margin-bottom-8">Dark theme tokens</h4>
+      <div class="table-wrap margin-bottom-20">
         <table>
           <thead><tr><th>Token</th><th>Value</th><th>Utility class</th></tr></thead>
           <tbody>
@@ -889,14 +889,14 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
         </table>
       </div>
 
-      <h4 class="set-text-14 text-semibold color-gray-700 add-margin-bottom-8">New component classes</h4>
-      <div class="table-wrap add-margin-bottom-20">
+      <h4 class="text-size-14 text-semibold color-gray-700 margin-bottom-8">New component classes</h4>
+      <div class="table-wrap margin-bottom-20">
         <table>
           <thead><tr><th>Class</th><th>Description</th></tr></thead>
           <tbody>
             <tr><td>.badge-green / -blue / -yellow / -red</td><td>Semi-transparent tinted badge variants</td></tr>
             <tr><td>.progress-bar-green / -red / -yellow / -purple / -orange</td><td>Colour overrides for .progress-bar fill</td></tr>
-            <tr><td>.h-xs / .h-sm / .h-md / .h-lg</td><td>Named height utilities: 24 / 48 / 96 / 160px</td></tr>
+            <tr><td>.height-xs / .height-sm / .height-md / .height-lg</td><td>Named height utilities: 24 / 48 / 96 / 160px</td></tr>
             <tr><td>.slider</td><td>Dark-themed range input (accent colour thumb)</td></tr>
             <tr><td>.stat-card</td><td>Dark card for KPI / metric tiles</td></tr>
             <tr><td>.btn-icon</td><td>44×44 circular icon button</td></tr>
@@ -912,7 +912,7 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
         </table>
       </div>
 
-      <div class="code-block add-margin-bottom-24"><pre><span class="c-com">&lt;!-- Typing indicator --&gt;</span>
+      <div class="code-block margin-bottom-24"><pre><span class="c-com">&lt;!-- Typing indicator --&gt;</span>
 <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"typing-indicator"</span><span class="c-tag">&gt;</span>
   <span class="c-tag">&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</span>
 <span class="c-tag">&lt;/div&gt;</span>
@@ -932,7 +932,7 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
 <span class="c-tag">&lt;/div&gt;</span></pre></div>
 
       <!-- Dark mode note -->
-      <div class="alert alert-info add-margin-bottom-24" style="background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af;border-radius:10px;padding:14px 18px;">
+      <div class="alert alert-info margin-bottom-24" style="background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af;border-radius:10px;padding:14px 18px;">
         <strong>Dark mode:</strong> All components adapt automatically when you add <code class="chip">class="dark"</code> to <code class="chip">&lt;html&gt;</code>. Use <code class="chip">class="dark-auto"</code> to follow the OS preference.
       </div>
 
@@ -960,10 +960,10 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
     </section>
 
       <!-- v1.5 New Components -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12 add-margin-top-32">New in v1.5 — Advanced UI Patterns</h3>
-      <p class="set-text-14 color-gray-500 add-margin-bottom-16">9 new component families for common app UI patterns: command palettes, kanban boards, timelines, dropzones, mega menus, split panes, ratings, and code blocks.</p>
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12 margin-top-32">New in v1.5 — Advanced UI Patterns</h3>
+      <p class="text-size-14 color-gray-500 margin-bottom-16">9 new component families for common app UI patterns: command palettes, kanban boards, timelines, dropzones, mega menus, split panes, ratings, and code blocks.</p>
 
-      <div class="table-wrap add-margin-bottom-20">
+      <div class="table-wrap margin-bottom-20">
         <table>
           <thead><tr><th>Component</th><th>Root class</th><th>Key modifiers &amp; sub-classes</th></tr></thead>
           <tbody>
@@ -1016,8 +1016,8 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
         </table>
       </div>
 
-      <h4 class="set-text-14 text-semibold color-gray-700 add-margin-bottom-8">Usage examples</h4>
-      <div class="code-block add-margin-bottom-16"><pre><span class="c-com">&lt;!-- Command Palette --&gt;</span>
+      <h4 class="text-size-14 text-semibold color-gray-700 margin-bottom-8">Usage examples</h4>
+      <div class="code-block margin-bottom-16"><pre><span class="c-com">&lt;!-- Command Palette --&gt;</span>
 <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"cmd-palette-backdrop"</span><span class="c-tag">&gt;</span>
   <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"cmd-palette"</span><span class="c-tag">&gt;</span>
     <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"cmd-palette-input-wrap"</span><span class="c-tag">&gt;</span>
@@ -1034,7 +1034,7 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
   <span class="c-tag">&lt;/div&gt;</span>
 <span class="c-tag">&lt;/div&gt;</span></pre></div>
 
-      <div class="code-block add-margin-bottom-16"><pre><span class="c-com">&lt;!-- Timeline --&gt;</span>
+      <div class="code-block margin-bottom-16"><pre><span class="c-com">&lt;!-- Timeline --&gt;</span>
 <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"timeline"</span><span class="c-tag">&gt;</span>
   <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"timeline-item"</span><span class="c-tag">&gt;</span>
     <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"timeline-dot timeline-dot-green"</span><span class="c-tag">&gt;</span>✓<span class="c-tag">&lt;/div&gt;</span>
@@ -1088,67 +1088,67 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       <div class="module-banner" style="background:linear-gradient(135deg,#fef9c3,#fef3c7);">
         <div class="module-icon" style="background:#f59e0b;color:#fff;">✨</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">santy-animations.css</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">santy-animations.css</h2>
             <span class="chip chip-orange">Animations</span>
             <span class="chip chip-gray">33KB</span>
           </div>
-          <p class="set-text-15 color-gray-600 line-height-relaxed" style="margin:0;">70+ production-ready CSS animations. Entrance, exit, looping, attention-seeker variants — all pure CSS, no JS required.</p>
+          <p class="text-size-15 color-gray-600 line-height-relaxed" style="margin:0;">70+ production-ready CSS animations. Entrance, exit, looping, attention-seeker variants — all pure CSS, no JS required.</p>
         </div>
       </div>
 
-      <div class="table-wrap add-margin-bottom-24">
+      <div class="table-wrap margin-bottom-24">
         <table>
           <thead><tr><th>Group</th><th>Classes</th></tr></thead>
           <tbody>
-            <tr><td>Looping</td><td>animate-spin, animate-ping, animate-pulse, animate-bounce</td></tr>
-            <tr><td>Fade</td><td>animate-fade-in, animate-fade-in-from-top/bottom/left/right, animate-fade-out</td></tr>
-            <tr><td>Slide</td><td>animate-slide-in-from-top/bottom/left/right, animate-slide-out-to-*</td></tr>
-            <tr><td>Zoom</td><td>animate-zoom-in, animate-zoom-in-from-*, animate-zoom-out-*</td></tr>
-            <tr><td>Bounce</td><td>animate-bounce-in, animate-bounce-in-from-top/bottom/left/right</td></tr>
-            <tr><td>Flip</td><td>animate-flip, animate-flip-in-x/y, animate-flip-out-x/y</td></tr>
-            <tr><td>Rotate</td><td>animate-rotate-in, animate-rotate-in-from-top-left/right/bottom-left/right</td></tr>
+            <tr><td>Looping</td><td>animation-spin, animation-ping, animation-pulse, animation-bounce</td></tr>
+            <tr><td>Fade</td><td>animation-fade-in, animation-fade-in-from-top/bottom/left/right, animation-fade-out</td></tr>
+            <tr><td>Slide</td><td>animation-slide-in-from-top/bottom/left/right, animate-slide-out-to-*</td></tr>
+            <tr><td>Zoom</td><td>animation-zoom-in, animate-zoom-in-from-*, animate-zoom-out-*</td></tr>
+            <tr><td>Bounce</td><td>animation-bounce-in, animation-bounce-in-from-top/bottom/left/right</td></tr>
+            <tr><td>Flip</td><td>animation-flip, animation-flip-in-x/y, animation-flip-out-x/y</td></tr>
+            <tr><td>Rotate</td><td>animation-rotate-in, animation-rotate-in-from-top-left/right/bottom-left/right</td></tr>
             <tr><td>Back</td><td>animate-back-in-from-*, animate-back-out-to-*</td></tr>
-            <tr><td>Attention</td><td>animate-shake-x/y, animate-rubber-band, animate-tada, animate-wobble</td></tr>
-            <tr><td>Specials</td><td>animate-hinge, animate-jack-in-box, animate-roll-in, animate-roll-out</td></tr>
+            <tr><td>Attention</td><td>animation-shake-x/y, animation-rubber-band, animation-tada, animation-wobble</td></tr>
+            <tr><td>Specials</td><td>animation-hinge, animation-jack-in-box, animation-roll-in, animation-roll-out</td></tr>
             <tr><td>Speed</td><td>animation-speed-fastest (0.3s) → animation-speed-glacial (3s)</td></tr>
             <tr><td>Delay</td><td>animation-delay-100 → animation-delay-3000 (ms)</td></tr>
             <tr><td>Repeat</td><td>animation-loop-1/2/3/4/5, animation-loop-forever</td></tr>
             <tr><td>Fill</td><td>animation-fill-none/forwards/backwards/both</td></tr>
-            <tr><td>Motion</td><td>motion-safe:animate-spin, motion-reduce:animate-none</td></tr>
+            <tr><td>Motion</td><td>motion-safe:animation-spin, motion-reduce:animation-none</td></tr>
           </tbody>
         </table>
       </div>
 
-      <div class="code-block add-margin-bottom-16">
+      <div class="code-block margin-bottom-16">
 <pre><span class="c-key">import</span> <span class="c-str">'santycss/css/animations'</span>;
 
 <span class="c-com">&lt;!-- Fade in on page load --&gt;</span>
-<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"animate-fade-in"</span><span class="c-tag">&gt;</span>Appears smoothly<span class="c-tag">&lt;/div&gt;</span>
+<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"animation-fade-in"</span><span class="c-tag">&gt;</span>Appears smoothly<span class="c-tag">&lt;/div&gt;</span>
 
 <span class="c-com">&lt;!-- Staggered entrance --&gt;</span>
-<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"animate-slide-in-from-left animation-delay-0"</span><span class="c-tag">&gt;</span>Item 1<span class="c-tag">&lt;/div&gt;</span>
-<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"animate-slide-in-from-left animation-delay-200"</span><span class="c-tag">&gt;</span>Item 2<span class="c-tag">&lt;/div&gt;</span>
-<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"animate-slide-in-from-left animation-delay-400"</span><span class="c-tag">&gt;</span>Item 3<span class="c-tag">&lt;/div&gt;</span>
+<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"animation-slide-in-from-left animation-delay-0"</span><span class="c-tag">&gt;</span>Item 1<span class="c-tag">&lt;/div&gt;</span>
+<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"animation-slide-in-from-left animation-delay-200"</span><span class="c-tag">&gt;</span>Item 2<span class="c-tag">&lt;/div&gt;</span>
+<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"animation-slide-in-from-left animation-delay-400"</span><span class="c-tag">&gt;</span>Item 3<span class="c-tag">&lt;/div&gt;</span>
 
 <span class="c-com">&lt;!-- Reduced motion accessibility --&gt;</span>
-<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"motion-safe:animate-bounce motion-reduce:animate-none"</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"motion-safe:animation-bounce motion-reduce:animation-none"</span><span class="c-tag">&gt;</span>
   Bounces only if user hasn't requested reduce-motion
 <span class="c-tag">&lt;/div&gt;</span></pre>
       </div>
-      <p class="set-text-13 color-gray-400">→ <a href="animations.html" style="color:#3b82f6;text-decoration:none;font-weight:600;">See all 70+ animations with live previews ↗</a></p>
+      <p class="text-size-13 color-gray-400">→ <a href="animations.html" style="color:#3b82f6;text-decoration:none;font-weight:600;">See all 70+ animations with live previews ↗</a></p>
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════════════
          v1.7 NEW FEATURES
     ═══════════════════════════════════════════════════════════════════ -->
     <section id="v17-features" class="doc-section">
-      <h2 class="set-text-24 text-bold color-gray-900 add-margin-bottom-8">New in v1.7</h2>
-      <p class="set-text-14 color-gray-500 add-margin-bottom-24">Accessibility, internationalisation, mobile-first components, command palette, date picker, and Figma plugin in development.</p>
+      <h2 class="text-size-24 text-bold color-gray-900 margin-bottom-8">New in v1.7</h2>
+      <p class="text-size-14 color-gray-500 margin-bottom-24">Accessibility, internationalisation, mobile-first components, command palette, date picker, and Figma plugin in development.</p>
 
       <!-- Accessibility -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">Accessibility Utilities</h3>
-      <div class="table-wrap add-margin-bottom-24">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">Accessibility Utilities</h3>
+      <div class="table-wrap margin-bottom-24">
         <table>
           <thead><tr><th>Class</th><th>What it does</th></tr></thead>
           <tbody>
@@ -1165,18 +1165,18 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       </div>
 
       <!-- i18n -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">Internationalisation (i18n) &amp; RTL</h3>
-      <div class="table-wrap add-margin-bottom-24">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">Internationalisation (i18n) &amp; RTL</h3>
+      <div class="table-wrap margin-bottom-24">
         <table>
           <thead><tr><th>Class</th><th>What it does</th></tr></thead>
           <tbody>
             <tr><td><code class="chip">.add-padding-block-{4–32}</code></td><td>Logical block padding — adapts to writing direction</td></tr>
             <tr><td><code class="chip">.add-padding-inline-{4–32}</code></td><td>Logical inline padding</td></tr>
             <tr><td><code class="chip">.add-margin-block-{n}</code> / <code class="chip">.add-margin-inline-{n}</code></td><td>Logical margins</td></tr>
-            <tr><td><code class="chip">.pin-block-start-0</code> / <code class="chip">.pin-inline-start-0</code></td><td>Logical positioning</td></tr>
+            <tr><td><code class="chip">.inset-block-start-0</code> / <code class="chip">.inset-inline-start-0</code></td><td>Logical positioning</td></tr>
             <tr><td><code class="chip">.border-block-start</code> / <code class="chip">.border-inline-start</code></td><td>Logical borders</td></tr>
-            <tr><td><code class="chip">.make-text-vertical</code></td><td><code>writing-mode: vertical-rl</code> — CJK / Japanese vertical text</td></tr>
-            <tr><td><code class="chip">.make-text-vertical-up</code></td><td><code>writing-mode: vertical-lr</code> — upward vertical text</td></tr>
+            <tr><td><code class="chip">.text-vertical</code></td><td><code>writing-mode: vertical-rl</code> — CJK / Japanese vertical text</td></tr>
+            <tr><td><code class="chip">.text-vertical-up</code></td><td><code>writing-mode: vertical-lr</code> — upward vertical text</td></tr>
             <tr><td><code class="chip">.text-orientation-mixed</code> / <code class="chip">.text-orientation-upright</code></td><td>Controls glyph orientation in vertical text</td></tr>
             <tr><td><code class="chip">.text-direction-ltr</code> / <code class="chip">.text-direction-rtl</code></td><td>Explicit <code>direction</code> property</td></tr>
           </tbody>
@@ -1184,8 +1184,8 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       </div>
 
       <!-- Mobile-first -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">Mobile-First Components</h3>
-      <div class="table-wrap add-margin-bottom-16">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">Mobile-First Components</h3>
+      <div class="table-wrap margin-bottom-16">
         <table>
           <thead><tr><th>Component</th><th>Root class</th><th>Key sub-classes</th></tr></thead>
           <tbody>
@@ -1207,7 +1207,7 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
             <tr>
               <td><strong>Safe Area Insets</strong></td>
               <td>—</td>
-              <td><code class="chip">.padding-safe-top</code> <code class="chip">.padding-safe-bottom</code> <code class="chip">.padding-safe-left</code> <code class="chip">.padding-safe-right</code> <code class="chip">.padding-safe-all</code> <code class="chip">.margin-safe-bottom</code> <code class="chip">.pin-bottom-safe</code></td>
+              <td><code class="chip">.padding-safe-top</code> <code class="chip">.padding-safe-bottom</code> <code class="chip">.padding-safe-left</code> <code class="chip">.padding-safe-right</code> <code class="chip">.padding-safe-all</code> <code class="chip">.margin-safe-bottom</code> <code class="chip">.bottom-safe</code></td>
             </tr>
             <tr>
               <td><strong>Command Palette</strong></td>
@@ -1224,12 +1224,12 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       </div>
 
       <!-- Figma plugin -->
-      <div class="background-pink-50 round-corners-12 add-padding-20 add-margin-bottom-8 add-border-1 border-color-pink-200">
-        <div class="make-flex align-center gap-12">
+      <div class="background-pink-50 radius-12 padding-20 margin-bottom-8 border-1 border-color-pink-200">
+        <div class="display-flex align-center gap-12">
           <span style="font-size:24px;">🎨</span>
           <div>
-            <div class="set-text-15 text-semibold color-gray-900 add-margin-bottom-4">Figma → SantyCSS Plugin <span style="font-size:11px;font-weight:700;padding:2px 8px;border-radius:9999px;background:#fce7f3;color:#be185d;margin-left:6px;">IN DEVELOPMENT</span></div>
-            <p class="set-text-13 color-gray-600" style="margin:0;">Inspect a Figma frame and export the exact SantyCSS classes that match the design. No more translating design tokens by hand.</p>
+            <div class="text-size-15 text-semibold color-gray-900 margin-bottom-4">Figma → SantyCSS Plugin <span style="font-size:11px;font-weight:700;padding:2px 8px;border-radius:9999px;background:#fce7f3;color:#be185d;margin-left:6px;">IN DEVELOPMENT</span></div>
+            <p class="text-size-13 color-gray-600" style="margin:0;">Inspect a Figma frame and export the exact SantyCSS classes that match the design. No more translating design tokens by hand.</p>
           </div>
         </div>
       </div>
@@ -1239,30 +1239,30 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
          v1.8 NEW FEATURES
     ═══════════════════════════════════════════════════════════════════ -->
     <section id="v18-features" class="doc-section">
-      <h2 class="set-text-24 text-bold color-gray-900 add-margin-bottom-8">What's New in v1.8</h2>
-      <p class="set-text-14 color-gray-500 add-margin-bottom-24">Figma plugin launch, full Inspector docs, AI class generator, SantyCSS Builder WordPress plugin, expanded component library, and a live changelog.</p>
+      <h2 class="text-size-24 text-bold color-gray-900 margin-bottom-8">What's New in v1.8</h2>
+      <p class="text-size-14 color-gray-500 margin-bottom-24">Figma plugin launch, full Inspector docs, AI class generator, SantyCSS Builder WordPress plugin, expanded component library, and a live changelog.</p>
 
       <!-- Figma Inspector -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">SantyCSS Inspector (Figma Plugin)</h3>
-      <div class="background-pink-50 round-corners-12 add-padding-20 add-margin-bottom-20 add-border-1 border-color-pink-200">
-        <div class="make-flex align-center gap-12 add-margin-bottom-8">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">SantyCSS Inspector (Figma Plugin)</h3>
+      <div class="background-pink-50 radius-12 padding-20 margin-bottom-20 border-1 border-color-pink-200">
+        <div class="display-flex align-center gap-12 margin-bottom-8">
           <span style="font-size:22px;">🎨</span>
-          <strong class="set-text-15 color-gray-800">v1.0 — full release</strong>
+          <strong class="text-size-15 color-gray-800">v1.0 — full release</strong>
           <span class="chip" style="background:#fce7f3;color:#be185d;border-color:#fbcfe8;">New</span>
         </div>
-        <p class="set-text-13 color-gray-600" style="margin:0;">Select any Figma layer and instantly get the matching SantyCSS utility classes — colors, typography, spacing, shadows, borders, and border-radius — all mapped in one click.</p>
+        <p class="text-size-13 color-gray-600" style="margin:0;">Select any Figma layer and instantly get the matching SantyCSS utility classes — colors, typography, spacing, shadows, borders, and border-radius — all mapped in one click.</p>
       </div>
 
       <!-- AI Generator -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">AI Class Generator</h3>
-      <div class="background-indigo-50 round-corners-12 add-padding-20 add-margin-bottom-20 add-border-1 border-color-indigo-200">
-        <div class="make-flex align-center gap-12 add-margin-bottom-8">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">AI Class Generator</h3>
+      <div class="background-indigo-50 radius-12 padding-20 margin-bottom-20 border-1 border-color-indigo-200">
+        <div class="display-flex align-center gap-12 margin-bottom-8">
           <span style="font-size:22px;">✨</span>
-          <strong class="set-text-15 color-gray-800">Claude API integration</strong>
+          <strong class="text-size-15 color-gray-800">Claude API integration</strong>
           <span class="chip" style="background:#eef2ff;color:#4338ca;border-color:#c7d2fe;">New</span>
         </div>
-        <p class="set-text-13 color-gray-600 add-margin-bottom-8" style="margin-bottom:8px;">Describe a UI element in plain English and get SantyCSS classes instantly. Provide your Anthropic API key to use Claude AI, or the built-in smart rule engine runs offline for free.</p>
-        <ul class="set-text-13 color-gray-600" style="padding-left:18px;margin:0;line-height:1.8;">
+        <p class="text-size-13 color-gray-600 margin-bottom-8" style="margin-bottom:8px;">Describe a UI element in plain English and get SantyCSS classes instantly. Provide your Anthropic API key to use Claude AI, or the built-in smart rule engine runs offline for free.</p>
+        <ul class="text-size-13 color-gray-600" style="padding-left:18px;margin:0;line-height:1.8;">
           <li>Prompt-to-classes via Claude Haiku (optional API key)</li>
           <li>Smart rule engine fallback — works 100% offline</li>
           <li>Live preview + one-click copy</li>
@@ -1271,15 +1271,15 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       </div>
 
       <!-- Builder plugin -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">SantyCSS Builder (WordPress Plugin)</h3>
-      <div class="background-blue-50 round-corners-12 add-padding-20 add-margin-bottom-20 add-border-1 border-color-blue-200">
-        <div class="make-flex align-center gap-12 add-margin-bottom-8">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">SantyCSS Builder (WordPress Plugin)</h3>
+      <div class="background-blue-50 radius-12 padding-20 margin-bottom-20 border-1 border-color-blue-200">
+        <div class="display-flex align-center gap-12 margin-bottom-8">
           <span style="font-size:22px;">🔌</span>
-          <strong class="set-text-15 color-gray-800">v1.0.0 — initial release</strong>
+          <strong class="text-size-15 color-gray-800">v1.0.0 — initial release</strong>
           <span class="chip" style="background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;">New</span>
         </div>
-        <p class="set-text-13 color-gray-600 add-margin-bottom-8">Drag-and-drop visual builder inside WordPress. Add SantyCSS utility classes to any block via a side panel — no code needed.</p>
-        <ul class="set-text-13 color-gray-600" style="padding-left:18px;margin:0;line-height:1.8;">
+        <p class="text-size-13 color-gray-600 margin-bottom-8">Drag-and-drop visual builder inside WordPress. Add SantyCSS utility classes to any block via a side panel — no code needed.</p>
+        <ul class="text-size-13 color-gray-600" style="padding-left:18px;margin:0;line-height:1.8;">
           <li>Visual block editor with live preview</li>
           <li>Class autocomplete panel — all SantyCSS utilities</li>
           <li>Dark mode support baked in</li>
@@ -1288,25 +1288,25 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       </div>
 
       <!-- Components -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">Expanded Component Library</h3>
-      <div class="background-green-50 round-corners-12 add-padding-20 add-margin-bottom-20 add-border-1 border-color-green-200">
-        <div class="make-flex align-center gap-12 add-margin-bottom-8">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">Expanded Component Library</h3>
+      <div class="background-green-50 radius-12 padding-20 margin-bottom-20 border-1 border-color-green-200">
+        <div class="display-flex align-center gap-12 margin-bottom-8">
           <span style="font-size:22px;">🧩</span>
-          <strong class="set-text-15 color-gray-800">19 ready-to-use components</strong>
+          <strong class="text-size-15 color-gray-800">19 ready-to-use components</strong>
           <span class="chip" style="background:#f0fdf4;color:#15803d;border-color:#bbf7d0;">Improved</span>
         </div>
-        <p class="set-text-13 color-gray-600">New standalone <code class="chip">components.html</code> page with live previews and copy-paste code for buttons, cards, badges, alerts, modals, navbars, hero sections, pricing tables, testimonials, and more.</p>
+        <p class="text-size-13 color-gray-600">New standalone <code class="chip">components.html</code> page with live previews and copy-paste code for buttons, cards, badges, alerts, modals, navbars, hero sections, pricing tables, testimonials, and more.</p>
       </div>
 
       <!-- Changelog -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">Live Changelog</h3>
-      <div class="background-gray-50 round-corners-12 add-padding-20 add-margin-bottom-8 add-border-1 border-color-gray-200">
-        <div class="make-flex align-center gap-12 add-margin-bottom-8">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">Live Changelog</h3>
+      <div class="background-gray-50 radius-12 padding-20 margin-bottom-8 border-1 border-color-gray-200">
+        <div class="display-flex align-center gap-12 margin-bottom-8">
           <span style="font-size:22px;">📋</span>
-          <strong class="set-text-15 color-gray-800">Full version history</strong>
+          <strong class="text-size-15 color-gray-800">Full version history</strong>
           <span class="chip">New</span>
         </div>
-        <p class="set-text-13 color-gray-600">New <code class="chip">changelog.html</code> page tracks every release from v1.0.0 → v2.6.1 with New / Fix / Improve tags and a timeline layout.</p>
+        <p class="text-size-13 color-gray-600">New <code class="chip">changelog.html</code> page tracks every release from v1.0.0 → v2.6.1 with New / Fix / Improve tags and a timeline layout.</p>
       </div>
     </section>
 
@@ -1317,52 +1317,52 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       <div class="module-banner" style="background:linear-gradient(135deg,#fce7f3,#fdf4ff);">
         <div class="module-icon" style="background:linear-gradient(135deg,#db2777,#a855f7);color:#fff;">🎨</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">SantyCSS Inspector</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">SantyCSS Inspector</h2>
             <span class="chip" style="background:#fce7f3;color:#be185d;border-color:#fbcfe8;">Figma Plugin</span>
             <span class="chip" style="background:#dcfce7;color:#15803d;border-color:#bbf7d0;">v1.0 Ready</span>
           </div>
-          <p class="set-text-14 color-gray-600" style="margin:0;">Select any Figma layer → instantly get the matching SantyCSS utility classes. No more manually translating design tokens.</p>
+          <p class="text-size-14 color-gray-600" style="margin:0;">Select any Figma layer → instantly get the matching SantyCSS utility classes. No more manually translating design tokens.</p>
         </div>
       </div>
 
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">What it inspects</h3>
-      <div class="table-wrap add-margin-bottom-24">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">What it inspects</h3>
+      <div class="table-wrap margin-bottom-24">
         <table>
           <thead><tr><th>Figma property</th><th>SantyCSS class generated</th></tr></thead>
           <tbody>
-            <tr><td>Auto-layout direction (horizontal)</td><td><code class="chip">make-flex flex-row</code></td></tr>
-            <tr><td>Auto-layout direction (vertical)</td><td><code class="chip">make-flex flex-column</code></td></tr>
+            <tr><td>Auto-layout direction (horizontal)</td><td><code class="chip">display-flex flex-row</code></td></tr>
+            <tr><td>Auto-layout direction (vertical)</td><td><code class="chip">display-flex flex-column</code></td></tr>
             <tr><td>Primary axis alignment</td><td><code class="chip">justify-center</code> / <code class="chip">justify-between</code> / <code class="chip">justify-end</code></td></tr>
             <tr><td>Counter axis alignment</td><td><code class="chip">align-center</code> / <code class="chip">align-end</code> / <code class="chip">align-baseline</code></td></tr>
             <tr><td>Flex wrap</td><td><code class="chip">flex-wrap</code></td></tr>
             <tr><td>Item spacing / gap</td><td><code class="chip">gap-16</code>, <code class="chip">gap-24</code> …</td></tr>
-            <tr><td>Padding (uniform)</td><td><code class="chip">add-padding-24</code></td></tr>
-            <tr><td>Padding (axis)</td><td><code class="chip">add-padding-x-16 add-padding-y-8</code></td></tr>
-            <tr><td>Padding (individual sides)</td><td><code class="chip">add-padding-top-12 add-padding-right-16 …</code></td></tr>
-            <tr><td>Width (fixed)</td><td><code class="chip">set-width-320</code></td></tr>
-            <tr><td>Width (fill container)</td><td><code class="chip">set-width-full</code></td></tr>
-            <tr><td>Width (hug contents)</td><td><code class="chip">set-width-fit</code></td></tr>
-            <tr><td>Height</td><td><code class="chip">set-height-48</code>, <code class="chip">set-height-full</code>, <code class="chip">set-height-fit</code></td></tr>
-            <tr><td>Corner radius</td><td><code class="chip">round-corners-8</code></td></tr>
-            <tr><td>Full corner radius</td><td><code class="chip">make-pill</code></td></tr>
-            <tr><td>Stroke / border</td><td><code class="chip">add-border-1</code> + <code class="chip">border-color-blue-500</code></td></tr>
+            <tr><td>Padding (uniform)</td><td><code class="chip">padding-24</code></td></tr>
+            <tr><td>Padding (axis)</td><td><code class="chip">padding-x-16 padding-y-8</code></td></tr>
+            <tr><td>Padding (individual sides)</td><td><code class="chip">padding-top-12 padding-right-16 …</code></td></tr>
+            <tr><td>Width (fixed)</td><td><code class="chip">width-320</code></td></tr>
+            <tr><td>Width (fill container)</td><td><code class="chip">width-full</code></td></tr>
+            <tr><td>Width (hug contents)</td><td><code class="chip">width-fit</code></td></tr>
+            <tr><td>Height</td><td><code class="chip">height-48</code>, <code class="chip">height-full</code>, <code class="chip">height-fit</code></td></tr>
+            <tr><td>Corner radius</td><td><code class="chip">radius-8</code></td></tr>
+            <tr><td>Full corner radius</td><td><code class="chip">radius-pill</code></td></tr>
+            <tr><td>Stroke / border</td><td><code class="chip">border-1</code> + <code class="chip">border-color-blue-500</code></td></tr>
             <tr><td>Fill color (solid)</td><td><code class="chip">background-blue-500</code> — nearest palette match across 200 colors</td></tr>
             <tr><td>Text color</td><td><code class="chip">color-gray-900</code></td></tr>
-            <tr><td>Font size</td><td><code class="chip">set-text-16</code></td></tr>
+            <tr><td>Font size</td><td><code class="chip">text-size-16</code></td></tr>
             <tr><td>Font weight</td><td><code class="chip">text-bold</code>, <code class="chip">text-semibold</code>, <code class="chip">text-medium</code> …</td></tr>
             <tr><td>Text alignment</td><td><code class="chip">text-center</code>, <code class="chip">text-right</code>, <code class="chip">text-justify</code></td></tr>
             <tr><td>Text decoration</td><td><code class="chip">text-underline</code>, <code class="chip">text-line-through</code></td></tr>
             <tr><td>Text transform</td><td><code class="chip">text-uppercase</code>, <code class="chip">text-lowercase</code>, <code class="chip">text-capitalize</code></td></tr>
-            <tr><td>Drop shadow</td><td><code class="chip">add-shadow-sm</code> / <code class="chip">add-shadow-lg</code> / <code class="chip">add-shadow-xl</code></td></tr>
+            <tr><td>Drop shadow</td><td><code class="chip">shadow-sm</code> / <code class="chip">shadow-lg</code> / <code class="chip">shadow-xl</code></td></tr>
             <tr><td>Opacity</td><td><code class="chip">opacity-50</code>, <code class="chip">opacity-75</code> …</td></tr>
             <tr><td>Clips content</td><td><code class="chip">overflow-hidden</code></td></tr>
           </tbody>
         </table>
       </div>
 
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">Install locally (development)</h3>
-      <div class="code-block add-margin-bottom-20"><pre><span class="c-com"># 1. Clone or download the plugin folder</span>
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">Install locally (development)</h3>
+      <div class="code-block margin-bottom-20"><pre><span class="c-com"># 1. Clone or download the plugin folder</span>
 <span class="c-com"># figma-plugin-santycss/ contains: manifest.json, code.js, ui.html</span>
 
 <span class="c-com"># 2. In Figma Desktop:</span>
@@ -1372,8 +1372,8 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
 <span class="c-com"># 3. Select any layer on the canvas</span>
 <span class="c-com">#    Plugins → Development → SantyCSS Inspector</span></pre></div>
 
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">Plugin UI features</h3>
-      <div class="make-grid grid-cols-3 gap-16 add-margin-bottom-24">
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">Plugin UI features</h3>
+      <div class="display-grid grid-columns-3 gap-16 margin-bottom-24">
         <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;">
           <div style="font-size:20px;margin-bottom:8px;">📋</div>
           <div style="font-size:13px;font-weight:600;color:#111827;margin-bottom:4px;">Copy All</div>
@@ -1391,20 +1391,20 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
         </div>
       </div>
 
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">Color matching algorithm</h3>
-      <p class="set-text-14 color-gray-500 add-margin-bottom-12 line-height-relaxed">The plugin converts Figma's RGBA values (0–1 range) to the nearest SantyCSS palette color using <strong>Euclidean distance in RGB space</strong> across all 20 color families × 10 shades = 200 reference colors. White (<code class="chip">color-white</code>) and black (<code class="chip">color-black</code>) are checked first with a tight threshold.</p>
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">Color matching algorithm</h3>
+      <p class="text-size-14 color-gray-500 margin-bottom-12 line-height-relaxed">The plugin converts Figma's RGBA values (0–1 range) to the nearest SantyCSS palette color using <strong>Euclidean distance in RGB space</strong> across all 20 color families × 10 shades = 200 reference colors. White (<code class="chip">color-white</code>) and black (<code class="chip">color-black</code>) are checked first with a tight threshold.</p>
 
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12">File structure</h3>
-      <div class="code-block add-margin-bottom-16"><pre>figma-plugin-santycss/
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12">File structure</h3>
+      <div class="code-block margin-bottom-16"><pre>figma-plugin-santycss/
 ├── <span class="c-str">manifest.json</span>   <span class="c-com">← Plugin config (name, API version, entry points)</span>
 ├── <span class="c-str">code.js</span>         <span class="c-com">← Runs in Figma sandbox — reads node properties via Figma API</span>
 ├── <span class="c-str">ui.html</span>         <span class="c-com">← Plugin window UI — grouped output, copy buttons, dark mode</span>
 └── <span class="c-str">README.md</span>       <span class="c-com">← Install &amp; publish instructions</span></pre></div>
 
-      <div class="background-pink-50 round-corners-12 add-padding-20 add-border-1 border-color-pink-200">
-        <div class="make-flex align-center gap-10 add-margin-bottom-8">
+      <div class="background-pink-50 radius-12 padding-20 border-1 border-color-pink-200">
+        <div class="display-flex align-center gap-10 margin-bottom-8">
           <span style="font-size:16px;">🚀</span>
-          <strong class="set-text-14 color-gray-800">Publish to Figma Community</strong>
+          <strong class="text-size-14 color-gray-800">Publish to Figma Community</strong>
         </div>
         <ol style="font-size:13px;color:#4b5563;line-height:1.8;padding-left:20px;margin:0;">
           <li>Create / log in at <strong>figma.com</strong></li>
@@ -1422,17 +1422,17 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       <div class="module-banner" style="background:linear-gradient(135deg,#fce7f3,#fdf2f8);">
         <div class="module-icon" style="background:#ec4899;color:#fff;">✉️</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">santy-email.css</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">santy-email.css</h2>
             <span class="chip" style="background:#fce7f3;color:#be185d;border-color:#fbcfe8;">Email</span>
             <span class="chip chip-gray">13KB</span>
           </div>
-          <p class="set-text-15 color-gray-600 line-height-relaxed" style="margin:0;">Email-safe CSS for HTML email templates. Compatible with Gmail, Outlook, Apple Mail, Yahoo Mail. Includes responsive layout, dark mode, and all common email patterns.</p>
+          <p class="text-size-15 color-gray-600 line-height-relaxed" style="margin:0;">Email-safe CSS for HTML email templates. Compatible with Gmail, Outlook, Apple Mail, Yahoo Mail. Includes responsive layout, dark mode, and all common email patterns.</p>
         </div>
       </div>
 
       <!-- Compatibility badges -->
-      <div class="make-flex flex-wrap gap-8 add-margin-bottom-24">
+      <div class="display-flex flex-wrap gap-8 margin-bottom-24">
         <span class="chip chip-blue">✓ Gmail</span>
         <span class="chip chip-blue">✓ Outlook 2016+</span>
         <span class="chip chip-blue">✓ Apple Mail</span>
@@ -1443,7 +1443,7 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
         <span class="chip chip-purple">✓ Dark mode</span>
       </div>
 
-      <div class="table-wrap add-margin-bottom-24">
+      <div class="table-wrap margin-bottom-24">
         <table>
           <thead><tr><th>Category</th><th>Key classes</th><th>Purpose</th></tr></thead>
           <tbody>
@@ -1470,10 +1470,10 @@ santy.colors     <span class="c-com">// → /path/to/dist/santy-colors.css</span
       </div>
 
       <!-- ── How to include ─────────────────────────────── -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-12" style="margin-top:8px;">How to include</h3>
-      <p class="set-text-14 color-gray-500 add-margin-bottom-16">Pick any one of these methods depending on your setup:</p>
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-12" style="margin-top:8px;">How to include</h3>
+      <p class="text-size-14 color-gray-500 margin-bottom-16">Pick any one of these methods depending on your setup:</p>
 
-      <div class="grid-cols-2 add-margin-bottom-24" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;">
+      <div class="grid-columns-2 margin-bottom-24" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;">
         <div class="code-block" style="margin:0;">
           <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8;margin-bottom:8px;">① CDN / Plain HTML email</div>
 <pre style="margin:0;"><span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span>
@@ -1496,13 +1496,13 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- ── Component examples ─────────────────────────── -->
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-16">Component examples</h3>
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-16">Component examples</h3>
 
       <!-- Layout -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Layout &amp; Structure</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-com">&lt;!-- Full outer wrapper → max 600px, centered --&gt;</span>
 <span class="c-tag">&lt;table</span> <span class="c-attr">class</span>=<span class="c-str">"email-wrapper"</span> <span class="c-attr">role</span>=<span class="c-str">"presentation"</span><span class="c-tag">&gt;&lt;tr&gt;&lt;td&gt;</span>
   <span class="c-tag">&lt;table</span> <span class="c-attr">class</span>=<span class="c-str">"email-container"</span> <span class="c-attr">role</span>=<span class="c-str">"presentation"</span><span class="c-tag">&gt;</span>
@@ -1525,10 +1525,10 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- Header / Footer / Hero -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Header · Hero · Footer</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-com">&lt;!-- Dark header with logo --&gt;</span>
 <span class="c-tag">&lt;tr&gt;&lt;td</span> <span class="c-attr">class</span>=<span class="c-str">"email-header"</span><span class="c-tag">&gt;</span>
   <span class="c-tag">&lt;img</span> <span class="c-attr">src</span>=<span class="c-str">"logo.png"</span> <span class="c-attr">class</span>=<span class="c-str">"email-logo"</span> <span class="c-attr">alt</span>=<span class="c-str">"Brand"</span> <span class="c-attr">width</span>=<span class="c-str">"140"</span><span class="c-tag">&gt;</span>
@@ -1551,10 +1551,10 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- Typography -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Typography</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-tag">&lt;tr&gt;&lt;td</span> <span class="c-attr">class</span>=<span class="c-str">"email-body-wrap"</span><span class="c-tag">&gt;</span>
   <span class="c-tag">&lt;h1</span> <span class="c-attr">class</span>=<span class="c-str">"email-h1"</span><span class="c-tag">&gt;</span>Main heading<span class="c-tag">&lt;/h1&gt;</span>
   <span class="c-tag">&lt;h2</span> <span class="c-attr">class</span>=<span class="c-str">"email-h2"</span><span class="c-tag">&gt;</span>Section heading<span class="c-tag">&lt;/h2&gt;</span>
@@ -1567,10 +1567,10 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- Buttons -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Buttons (CTAs)</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-com">&lt;!-- Primary button (blue) --&gt;</span>
 <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"email-btn-center"</span><span class="c-tag">&gt;</span>
   <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-str">"https://example.com"</span> <span class="c-attr">class</span>=<span class="c-str">"email-btn"</span><span class="c-tag">&gt;</span>Get Started<span class="c-tag">&lt;/a&gt;</span>
@@ -1587,10 +1587,10 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- Callouts -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Cards &amp; Callouts</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-com">&lt;!-- White card with border --&gt;</span>
 <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"email-card"</span><span class="c-tag">&gt;</span>
   <span class="c-tag">&lt;h3</span> <span class="c-attr">class</span>=<span class="c-str">"email-h3"</span><span class="c-tag">&gt;</span>Order Summary<span class="c-tag">&lt;/h3&gt;</span>
@@ -1604,10 +1604,10 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- Lists -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Lists</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-com">&lt;!-- Bulleted list --&gt;</span>
 <span class="c-tag">&lt;ul</span> <span class="c-attr">class</span>=<span class="c-str">"email-list"</span><span class="c-tag">&gt;</span>
   <span class="c-tag">&lt;li&gt;</span>Unlimited projects<span class="c-tag">&lt;/li&gt;</span>
@@ -1623,10 +1623,10 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- Badges -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Badges &amp; Status labels</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-tag">&lt;span</span> <span class="c-attr">class</span>=<span class="c-str">"email-badge-blue"</span><span class="c-tag">&gt;</span>Info<span class="c-tag">&lt;/span&gt;</span>
 <span class="c-tag">&lt;span</span> <span class="c-attr">class</span>=<span class="c-str">"email-badge-green"</span><span class="c-tag">&gt;</span>Active<span class="c-tag">&lt;/span&gt;</span>
 <span class="c-tag">&lt;span</span> <span class="c-attr">class</span>=<span class="c-str">"email-badge-red"</span><span class="c-tag">&gt;</span>Expired<span class="c-tag">&lt;/span&gt;</span>
@@ -1637,10 +1637,10 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- Stats -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Stats &amp; Metrics</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-tag">&lt;table</span> <span class="c-attr">class</span>=<span class="c-str">"email-table"</span><span class="c-tag">&gt;&lt;tr&gt;</span>
   <span class="c-tag">&lt;td</span> <span class="c-attr">class</span>=<span class="c-str">"email-cell"</span> <span class="c-attr">style</span>=<span class="c-str">"text-align:center;"</span><span class="c-tag">&gt;</span>
     <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"email-stat-value"</span><span class="c-tag">&gt;</span>1,284<span class="c-tag">&lt;/div&gt;</span>
@@ -1658,10 +1658,10 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- Spacers / Dividers -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Spacers &amp; Dividers</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-com">&lt;!-- Horizontal rule --&gt;</span>
 <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"email-divider"</span><span class="c-tag">&gt;&lt;/div&gt;</span>
 
@@ -1672,10 +1672,10 @@ fs.<span class="c-fn">readFileSync</span>(santy.email, <span class="c-str">'utf8
       </div>
 
       <!-- Code blocks & Images -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Code &amp; Images</span>
       </div>
-      <div class="code-block add-margin-bottom-20">
+      <div class="code-block margin-bottom-20">
 <pre><span class="c-com">&lt;!-- Code block (developer emails) --&gt;</span>
 <span class="c-tag">&lt;pre</span> <span class="c-attr">class</span>=<span class="c-str">"email-code"</span><span class="c-tag">&gt;</span>npm install santycss<span class="c-tag">&lt;/pre&gt;</span>
 
@@ -1689,10 +1689,10 @@ Use the <span class="c-tag">&lt;code</span> <span class="c-attr">class</span>=<s
       </div>
 
       <!-- Social / Preheader -->
-      <div class="add-margin-bottom-8">
+      <div class="margin-bottom-8">
         <span class="chip chip-gray" style="font-size:11px;">Social links &amp; Preheader</span>
       </div>
-      <div class="code-block add-margin-bottom-24">
+      <div class="code-block margin-bottom-24">
 <pre><span class="c-com">&lt;!-- Hidden preview text (shows in inbox before open) --&gt;</span>
 <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"email-preheader"</span><span class="c-tag">&gt;</span>Your invoice is ready — view it now<span class="c-tag">&lt;/div&gt;</span>
 
@@ -1705,7 +1705,7 @@ Use the <span class="c-tag">&lt;code</span> <span class="c-attr">class</span>=<s
 <span class="c-tag">&lt;/div&gt;</span></pre>
       </div>
 
-      <h3 class="set-text-18 text-semibold color-gray-800 add-margin-bottom-16">Complete email template</h3>
+      <h3 class="text-size-18 text-semibold color-gray-800 margin-bottom-16">Complete email template</h3>
       <div class="code-block">
 <pre><span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"https://cdn.jsdelivr.net/npm/santycss@2/dist/santy-email.css"</span><span class="c-tag">&gt;</span>
 
@@ -1763,14 +1763,14 @@ Use the <span class="c-tag">&lt;code</span> <span class="c-attr">class</span>=<s
       <div class="module-banner" style="background:linear-gradient(135deg,#fee2e2,#fef2f2);">
         <div class="module-icon" style="background:#ef4444;color:#fff;">⚙️</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">PostCSS Plugin</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">PostCSS Plugin</h2>
             <span class="chip chip-red">Tree-shaking</span>
           </div>
-          <p class="set-text-15 color-gray-600 line-height-relaxed" style="margin:0;">Scan your source files and strip every class you don't use. Takes 718KB → as low as 5–20KB for typical projects.</p>
+          <p class="text-size-15 color-gray-600 line-height-relaxed" style="margin:0;">Scan your source files and strip every class you don't use. Takes 718KB → as low as 5–20KB for typical projects.</p>
         </div>
       </div>
-      <div class="code-block add-margin-bottom-16">
+      <div class="code-block margin-bottom-16">
 <pre><span class="c-com">// postcss.config.js</span>
 <span class="c-key">const</span> santycss = <span class="c-fn">require</span>(<span class="c-str">'santycss/postcss'</span>);
 
@@ -1781,7 +1781,7 @@ Use the <span class="c-tag">&lt;code</span> <span class="c-attr">class</span>=<s
         <span class="c-str">'./src/**/*.{html,js,jsx,ts,tsx,vue,svelte}'</span>,
         <span class="c-str">'./pages/**/*.{js,jsx,ts,tsx}'</span>,
       ],
-      safelist: [<span class="c-str">'animate-spin'</span>, <span class="c-str">'make-hidden'</span>], <span class="c-com">// never purge these</span>
+      safelist: [<span class="c-str">'animation-spin'</span>, <span class="c-str">'display-none'</span>], <span class="c-com">// never purge these</span>
     }),
   ],
 };</pre>
@@ -1795,11 +1795,11 @@ Use the <span class="c-tag">&lt;code</span> <span class="c-attr">class</span>=<s
       <div class="module-banner" style="background:linear-gradient(135deg,#ede9fe,#eef2ff);">
         <div class="module-icon" style="background:#646cff;color:#fff;">⚡</div>
         <div>
-          <div class="make-flex align-center gap-10 add-margin-bottom-8">
-            <h2 class="set-text-24 text-bold color-gray-900" style="margin:0;">Vite Plugin</h2>
+          <div class="display-flex align-center gap-10 margin-bottom-8">
+            <h2 class="text-size-24 text-bold color-gray-900" style="margin:0;">Vite Plugin</h2>
             <span class="chip chip-purple">Vite / Rollup</span>
           </div>
-          <p class="set-text-15 color-gray-600 line-height-relaxed" style="margin:0;">First-class Vite integration — auto-purges unused classes during build, injects CSS in dev mode.</p>
+          <p class="text-size-15 color-gray-600 line-height-relaxed" style="margin:0;">First-class Vite integration — auto-purges unused classes during build, injects CSS in dev mode.</p>
         </div>
       </div>
       <div class="code-block">
@@ -1821,14 +1821,14 @@ Use the <span class="c-tag">&lt;code</span> <span class="c-attr">class</span>=<s
          PURGE API
     ═══════════════════════════════════════════════════════════════════ -->
     <section id="purge-api" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">Purge / Tree-shake API</h2>
-      <p class="set-text-15 color-gray-500 add-margin-bottom-24 line-height-relaxed">Use the Node.js API directly for custom build pipelines, CI steps, or scripts.</p>
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Purge / Tree-shake API</h2>
+      <p class="text-size-15 color-gray-500 margin-bottom-24 line-height-relaxed">Use the Node.js API directly for custom build pipelines, CI steps, or scripts.</p>
       <div class="code-block">
 <pre><span class="c-key">const</span> { purge, purgeFiles } = <span class="c-fn">require</span>(<span class="c-str">'santycss'</span>);
 
 <span class="c-com">// Purge from a string of HTML/JS</span>
 <span class="c-key">const</span> purgedCSS = <span class="c-fn">purge</span>(originalCSS, htmlContent, {
-  safelist: [<span class="c-str">'animate-spin'</span>],
+  safelist: [<span class="c-str">'animation-spin'</span>],
 });
 
 <span class="c-com">// Purge from file globs</span>
@@ -1843,8 +1843,8 @@ Use the <span class="c-tag">&lt;code</span> <span class="c-attr">class</span>=<s
          FRAMEWORK GUIDES
     ═══════════════════════════════════════════════════════════════════ -->
     <section id="guide-react" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">React / Next.js</h2>
-      <div class="code-block add-margin-bottom-16">
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">React / Next.js</h2>
+      <div class="code-block margin-bottom-16">
 <pre><span class="c-com">// Install</span>
 npm install santycss
 
@@ -1857,9 +1857,9 @@ npm install santycss
 <span class="c-com">// Usage in any component</span>
 <span class="c-key">export default function</span> <span class="c-fn">Card</span>() {
   <span class="c-key">return</span> (
-    <span class="c-tag">&lt;div</span> <span class="c-attr">className</span>=<span class="c-str">"background-white round-corners-16 add-padding-24 add-shadow-md"</span><span class="c-tag">&gt;</span>
-      <span class="c-tag">&lt;h2</span> <span class="c-attr">className</span>=<span class="c-str">"set-text-20 text-bold color-gray-900"</span><span class="c-tag">&gt;</span>Hello<span class="c-tag">&lt;/h2&gt;</span>
-      <span class="c-tag">&lt;button</span> <span class="c-attr">className</span>=<span class="c-str">"btn btn-primary add-margin-top-16"</span><span class="c-tag">&gt;</span>Click<span class="c-tag">&lt;/button&gt;</span>
+    <span class="c-tag">&lt;div</span> <span class="c-attr">className</span>=<span class="c-str">"background-white radius-16 padding-24 shadow-md"</span><span class="c-tag">&gt;</span>
+      <span class="c-tag">&lt;h2</span> <span class="c-attr">className</span>=<span class="c-str">"text-size-20 text-bold color-gray-900"</span><span class="c-tag">&gt;</span>Hello<span class="c-tag">&lt;/h2&gt;</span>
+      <span class="c-tag">&lt;button</span> <span class="c-attr">className</span>=<span class="c-str">"btn btn-primary margin-top-16"</span><span class="c-tag">&gt;</span>Click<span class="c-tag">&lt;/button&gt;</span>
     <span class="c-tag">&lt;/div&gt;</span>
   );
 }</pre>
@@ -1867,8 +1867,8 @@ npm install santycss
     </section>
 
     <section id="guide-vue" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">Vue / Nuxt</h2>
-      <div class="code-block add-margin-bottom-16">
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Vue / Nuxt</h2>
+      <div class="code-block margin-bottom-16">
 <pre><span class="c-com">// main.js</span>
 <span class="c-key">import</span> { createApp } <span class="c-key">from</span> <span class="c-str">'vue'</span>;
 <span class="c-key">import</span> <span class="c-str">'santycss/css'</span>;
@@ -1882,7 +1882,7 @@ npm install santycss
 
 <span class="c-com">&lt;!-- MyComponent.vue --&gt;</span>
 <span class="c-tag">&lt;template&gt;</span>
-  <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"make-flex align-center gap-16"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"display-flex align-center gap-16"</span><span class="c-tag">&gt;</span>
     <span class="c-tag">&lt;button</span> <span class="c-attr">class</span>=<span class="c-str">"btn btn-primary"</span><span class="c-tag">&gt;</span>Save<span class="c-tag">&lt;/button&gt;</span>
   <span class="c-tag">&lt;/div&gt;</span>
 <span class="c-tag">&lt;/template&gt;</span></pre>
@@ -1890,7 +1890,7 @@ npm install santycss
     </section>
 
     <section id="guide-html" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">Plain HTML</h2>
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Plain HTML</h2>
       <div class="code-block">
 <pre><span class="c-tag">&lt;!DOCTYPE html&gt;</span>
 <span class="c-tag">&lt;html</span> <span class="c-attr">lang</span>=<span class="c-str">"en"</span><span class="c-tag">&gt;</span>
@@ -1904,9 +1904,9 @@ npm install santycss
   <span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-str">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-str">"santy.css"</span><span class="c-tag">&gt;</span>
 <span class="c-tag">&lt;/head&gt;</span>
 <span class="c-tag">&lt;body</span> <span class="c-attr">class</span>=<span class="c-str">"background-gray-50"</span><span class="c-tag">&gt;</span>
-  <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"container add-padding-y-64"</span><span class="c-tag">&gt;</span>
-    <span class="c-tag">&lt;h1</span> <span class="c-attr">class</span>=<span class="c-str">"set-text-40 text-bold color-gray-900"</span><span class="c-tag">&gt;</span>Hello, SantyCSS!<span class="c-tag">&lt;/h1&gt;</span>
-    <span class="c-tag">&lt;button</span> <span class="c-attr">class</span>=<span class="c-str">"btn btn-primary add-margin-top-24"</span><span class="c-tag">&gt;</span>Get Started<span class="c-tag">&lt;/button&gt;</span>
+  <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"container padding-y-64"</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;h1</span> <span class="c-attr">class</span>=<span class="c-str">"text-size-40 text-bold color-gray-900"</span><span class="c-tag">&gt;</span>Hello, SantyCSS!<span class="c-tag">&lt;/h1&gt;</span>
+    <span class="c-tag">&lt;button</span> <span class="c-attr">class</span>=<span class="c-str">"btn btn-primary margin-top-24"</span><span class="c-tag">&gt;</span>Get Started<span class="c-tag">&lt;/button&gt;</span>
   <span class="c-tag">&lt;/div&gt;</span>
 <span class="c-tag">&lt;/body&gt;</span>
 <span class="c-tag">&lt;/html&gt;</span></pre>
@@ -1933,9 +1933,9 @@ npm install santycss
     </section>
 
     <section id="browser-support" class="doc-section">
-      <h2 class="set-text-28 text-bold color-gray-900 add-margin-bottom-8">Browser support</h2>
-      <p class="set-text-15 color-gray-500 add-margin-bottom-24 line-height-relaxed">Core utilities (flex, grid, spacing, colors, typography, borders, effects) work in all evergreen browsers. Some opt-in features rely on modern CSS. Everything degrades gracefully: unsupported features simply don't apply, and layout and content stay intact.</p>
-      <div class="table-wrap add-margin-bottom-24">
+      <h2 class="text-size-28 text-bold color-gray-900 margin-bottom-8">Browser support</h2>
+      <p class="text-size-15 color-gray-500 margin-bottom-24 line-height-relaxed">Core utilities (flex, grid, spacing, colors, typography, borders, effects) work in all evergreen browsers. Some opt-in features rely on modern CSS. Everything degrades gracefully: unsupported features simply don't apply, and layout and content stay intact.</p>
+      <div class="table-wrap margin-bottom-24">
         <table>
           <thead><tr><th>Feature</th><th>Classes</th><th>Chrome / Edge</th><th>Firefox</th><th>Safari</th></tr></thead>
           <tbody>
@@ -1943,7 +1943,7 @@ npm install santycss
             <tr><td>Container queries</td><td><code class="chip">container-query, cq-sm:</code></td><td>105+</td><td>110+</td><td>16+</td></tr>
             <tr><td>Popover API</td><td><code class="chip">.popover</code></td><td>114+</td><td>125+</td><td>17+</td></tr>
             <tr><td>&lt;dialog&gt;</td><td><code class="chip">.dialog</code></td><td>37+</td><td>98+</td><td>15.4+</td></tr>
-            <tr><td>Dynamic viewport units</td><td><code class="chip">set-height-dvh/svh/lvh</code></td><td>108+</td><td>101+</td><td>15.4+</td></tr>
+            <tr><td>Dynamic viewport units</td><td><code class="chip">height-dvh/svh/lvh</code></td><td>108+</td><td>101+</td><td>15.4+</td></tr>
             <tr><td>Scroll snap / carousel</td><td><code class="chip">.carousel, scroll-snap-x</code></td><td>69+</td><td>68+</td><td>11+</td></tr>
             <tr><td>text-wrap: balance</td><td><code class="chip">text-balance</code></td><td>114+</td><td>121+</td><td>17.5+</td></tr>
             <tr><td>View Transitions</td><td><code class="chip">view-transition-*</code></td><td>111+</td><td>—</td><td>18+</td></tr>
@@ -1956,22 +1956,22 @@ npm install santycss
 </div>
 
 <!-- ─── FOOTER ──────────────────────────────────────────────────────────── -->
-<footer class="background-gray-900 add-padding-y-48">
+<footer class="background-gray-900 padding-y-48">
   <div class="container text-center">
-    <div class="make-flex justify-center align-center gap-10 add-margin-bottom-16">
+    <div class="display-flex justify-center align-center gap-10 margin-bottom-16">
       <img src="assest/santy_css.png" alt="SantyCSS" style="width:28px;height:28px;border-radius:6px;object-fit:cover;opacity:0.8;" />
-      <span class="set-text-16 text-semibold color-white">Santy<span class="color-blue-400">CSS</span></span>
+      <span class="text-size-16 text-semibold color-white">Santy<span class="color-blue-400">CSS</span></span>
     </div>
-    <p class="set-text-13 color-gray-500 add-margin-bottom-16">Plain-English utility CSS framework · MIT License</p>
-    <div class="make-flex justify-center gap-20 flex-wrap">
-      <a href="index.html" class="set-text-13 color-gray-400 text-no-decoration nav-link">Home</a>
-      <a href="docs.html" class="set-text-13 color-gray-400 text-no-decoration nav-link">Docs</a>
-      <a href="demo.html" class="set-text-13 color-gray-400 text-no-decoration nav-link">Demo</a>
-      <a href="animations.html" class="set-text-13 color-gray-400 text-no-decoration nav-link">Animations</a>
-      <a href="https://github.com/Santy-Labs/santyCSS" target="_blank" class="set-text-13 color-gray-400 text-no-decoration nav-link">GitHub ↗</a>
-      <a href="https://www.npmjs.com/package/santycss" target="_blank" class="set-text-13 color-gray-400 text-no-decoration nav-link">npm ↗</a>
-      <a href="https://www.linkedin.com/in/santhosh-prabakar/" target="_blank" rel="noopener" class="set-text-13 color-gray-400 text-no-decoration nav-link">LinkedIn ↗</a>
-      <a href="https://instagram.com/santystudio" target="_blank" rel="noopener" class="set-text-13 color-gray-400 text-no-decoration nav-link">Instagram ↗</a>
+    <p class="text-size-13 color-gray-500 margin-bottom-16">Plain-English utility CSS framework · MIT License</p>
+    <div class="display-flex justify-center gap-20 flex-wrap">
+      <a href="index.html" class="text-size-13 color-gray-400 text-no-decoration nav-link">Home</a>
+      <a href="docs.html" class="text-size-13 color-gray-400 text-no-decoration nav-link">Docs</a>
+      <a href="demo.html" class="text-size-13 color-gray-400 text-no-decoration nav-link">Demo</a>
+      <a href="animations.html" class="text-size-13 color-gray-400 text-no-decoration nav-link">Animations</a>
+      <a href="https://github.com/Santy-Labs/santyCSS" target="_blank" class="text-size-13 color-gray-400 text-no-decoration nav-link">GitHub ↗</a>
+      <a href="https://www.npmjs.com/package/santycss" target="_blank" class="text-size-13 color-gray-400 text-no-decoration nav-link">npm ↗</a>
+      <a href="https://www.linkedin.com/in/santhosh-prabakar/" target="_blank" rel="noopener" class="text-size-13 color-gray-400 text-no-decoration nav-link">LinkedIn ↗</a>
+      <a href="https://instagram.com/santystudio" target="_blank" rel="noopener" class="text-size-13 color-gray-400 text-no-decoration nav-link">Instagram ↗</a>
     </div>
   </div>
 </footer>

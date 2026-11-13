@@ -162,24 +162,24 @@
 <body>
 
 <!-- Nav -->
-<header class="position-sticky pin-top-0 layer-50 background-white add-shadow-sm" style="border-bottom:1px solid #e5e7eb;">
-  <div class="container make-flex align-center justify-between add-padding-y-14">
-    <a href="index.html" class="make-flex align-center gap-10 text-no-decoration">
+<header class="position-sticky top-0 z-index-50 background-white shadow-sm" style="border-bottom:1px solid #e5e7eb;">
+  <div class="container display-flex align-center justify-between padding-y-14">
+    <a href="index.html" class="display-flex align-center gap-10 text-no-decoration">
       <img src="assest/santy_css.png" alt="SantyCSS" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
-      <span class="set-text-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
+      <span class="text-size-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
       <span class="badge background-blue-100 color-blue-700" style="font-size:11px;">v2.8.0</span>
     </a>
     <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
       <svg id="ham-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       <svg id="ham-close" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="display:none"><path d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
-    <nav id="main-nav" class="make-flex align-center gap-20">
-      <a href="classes.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Classes</a>
-      <a href="components.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Components</a>
-      <a href="animations.html" class="nav-link nav-link-active text-no-decoration set-text-14 text-semibold">Animations</a>
-      <a href="icons.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Icons</a>
-      <a href="templates.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Templates</a>
-      <a href="snippets.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Snippets</a>
+    <nav id="main-nav" class="display-flex align-center gap-20">
+      <a href="classes.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Classes</a>
+      <a href="components.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Components</a>
+      <a href="animations.html" class="nav-link nav-link-active text-no-decoration text-size-14 text-semibold">Animations</a>
+      <a href="icons.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Icons</a>
+      <a href="templates.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Templates</a>
+      <a href="snippets.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Snippets</a>
       <div class="nav-resources" id="navResources">
         <button class="nav-resources-btn" id="navResBtn" onclick="toggleResources()" aria-expanded="false">
           Resources
@@ -225,12 +225,12 @@
   <div class="naming-guide">
     <h2>Naming Convention</h2>
     <div class="pattern-grid">
-      <div class="pattern-row"><span class="pattern-class">animate-fade-in</span><span class="pattern-arrow">→</span><span class="pattern-desc">Simple entrance</span></div>
-      <div class="pattern-row"><span class="pattern-class">animate-fade-out</span><span class="pattern-arrow">→</span><span class="pattern-desc">Simple exit</span></div>
-      <div class="pattern-row"><span class="pattern-class">animate-fade-in-from-top</span><span class="pattern-arrow">→</span><span class="pattern-desc">Directional entrance</span></div>
-      <div class="pattern-row"><span class="pattern-class">animate-fade-out-to-right</span><span class="pattern-arrow">→</span><span class="pattern-desc">Directional exit</span></div>
-      <div class="pattern-row"><span class="pattern-class">animate-bounce-in-from-left</span><span class="pattern-arrow">→</span><span class="pattern-desc">Bounce entrance</span></div>
-      <div class="pattern-row"><span class="pattern-class">animate-shake-x</span><span class="pattern-arrow">→</span><span class="pattern-desc">Attention seeker</span></div>
+      <div class="pattern-row"><span class="pattern-class">animation-fade-in</span><span class="pattern-arrow">→</span><span class="pattern-desc">Simple entrance</span></div>
+      <div class="pattern-row"><span class="pattern-class">animation-fade-out</span><span class="pattern-arrow">→</span><span class="pattern-desc">Simple exit</span></div>
+      <div class="pattern-row"><span class="pattern-class">animation-fade-in-from-top</span><span class="pattern-arrow">→</span><span class="pattern-desc">Directional entrance</span></div>
+      <div class="pattern-row"><span class="pattern-class">animation-fade-out-to-right</span><span class="pattern-arrow">→</span><span class="pattern-desc">Directional exit</span></div>
+      <div class="pattern-row"><span class="pattern-class">animation-bounce-in-from-left</span><span class="pattern-arrow">→</span><span class="pattern-desc">Bounce entrance</span></div>
+      <div class="pattern-row"><span class="pattern-class">animation-shake-x</span><span class="pattern-arrow">→</span><span class="pattern-desc">Attention seeker</span></div>
       <div class="pattern-row"><span class="pattern-class">animation-speed-fast</span><span class="pattern-arrow">→</span><span class="pattern-desc">Duration modifier</span></div>
       <div class="pattern-row"><span class="pattern-class">animation-delay-500</span><span class="pattern-arrow">→</span><span class="pattern-desc">Delay in ms</span></div>
       <div class="pattern-row"><span class="pattern-class">animation-loop-forever</span><span class="pattern-arrow">→</span><span class="pattern-desc">Infinite loop</span></div>
@@ -500,25 +500,25 @@
         </div>
         <p style="font-size:13px;color:var(--muted);margin:0 0 16px;line-height:1.6;">Elements start invisible and animate in when they enter the viewport. Requires a tiny <strong>IntersectionObserver</strong> script (shown below) to add <code style="background:#f1f5f9;padding:2px 5px;border-radius:4px;">.is-visible</code> on scroll.</p>
         <div class="anim-grid">
-          <div class="anim-card" onclick="triggerScrollAnim(this,'animate-on-scroll-fade-in')">
-            <div class="anim-box animate-on-scroll-fade-in is-visible">Aa</div>
-            <div class="anim-name">animate-on-scroll-fade-in</div>
+          <div class="anim-card" onclick="triggerScrollAnim(this,'animation-on-scroll-fade-in')">
+            <div class="anim-box animation-on-scroll-fade-in is-visible">Aa</div>
+            <div class="anim-name">animation-on-scroll-fade-in</div>
           </div>
-          <div class="anim-card" onclick="triggerScrollAnim(this,'animate-on-scroll-slide-up')">
-            <div class="anim-box animate-on-scroll-slide-up is-visible">Aa</div>
-            <div class="anim-name">animate-on-scroll-slide-up</div>
+          <div class="anim-card" onclick="triggerScrollAnim(this,'animation-on-scroll-slide-up')">
+            <div class="anim-box animation-on-scroll-slide-up is-visible">Aa</div>
+            <div class="anim-name">animation-on-scroll-slide-up</div>
           </div>
-          <div class="anim-card" onclick="triggerScrollAnim(this,'animate-on-scroll-zoom-in')">
-            <div class="anim-box animate-on-scroll-zoom-in is-visible">Aa</div>
-            <div class="anim-name">animate-on-scroll-zoom-in</div>
+          <div class="anim-card" onclick="triggerScrollAnim(this,'animation-on-scroll-zoom-in')">
+            <div class="anim-box animation-on-scroll-zoom-in is-visible">Aa</div>
+            <div class="anim-name">animation-on-scroll-zoom-in</div>
           </div>
-          <div class="anim-card" onclick="triggerScrollAnim(this,'animate-on-scroll-from-left')">
-            <div class="anim-box animate-on-scroll-from-left is-visible">Aa</div>
-            <div class="anim-name">animate-on-scroll-from-left</div>
+          <div class="anim-card" onclick="triggerScrollAnim(this,'animation-on-scroll-from-left')">
+            <div class="anim-box animation-on-scroll-from-left is-visible">Aa</div>
+            <div class="anim-name">animation-on-scroll-from-left</div>
           </div>
-          <div class="anim-card" onclick="triggerScrollAnim(this,'animate-on-scroll-from-right')">
-            <div class="anim-box animate-on-scroll-from-right is-visible">Aa</div>
-            <div class="anim-name">animate-on-scroll-from-right</div>
+          <div class="anim-card" onclick="triggerScrollAnim(this,'animation-on-scroll-from-right')">
+            <div class="anim-box animation-on-scroll-from-right is-visible">Aa</div>
+            <div class="anim-name">animation-on-scroll-from-right</div>
           </div>
           <div class="anim-card" onclick="triggerScrollAnim(this,'scroll-reveal-once')">
             <div class="anim-box scroll-reveal-once is-visible">Aa</div>
@@ -561,31 +561,31 @@
           <h2 class="section-title">Text Animations</h2>
         </div>
         <div class="anim-grid">
-          <div class="anim-card" onclick="triggerAnim(this,'animate-typewriter')">
-            <div class="anim-box" style="font-size:13px;white-space:nowrap;overflow:hidden;"><span class="animate-typewriter" style="display:inline-block;">Hello, World!</span></div>
-            <div class="anim-name">animate-typewriter</div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-typewriter')">
+            <div class="anim-box" style="font-size:13px;white-space:nowrap;overflow:hidden;"><span class="animation-typewriter" style="display:inline-block;">Hello, World!</span></div>
+            <div class="anim-name">animation-typewriter</div>
           </div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-text-blur-in')">
-            <div class="anim-box animate-text-blur-in">Blur</div>
-            <div class="anim-name">animate-text-blur-in</div>
-          </div>
-          <div class="anim-card">
-            <div class="anim-box animate-text-gradient-flow set-text-24 text-bold">Gradient</div>
-            <div class="anim-name">animate-text-gradient-flow</div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-text-blur-in')">
+            <div class="anim-box animation-text-blur-in">Blur</div>
+            <div class="anim-name">animation-text-blur-in</div>
           </div>
           <div class="anim-card">
-            <div class="anim-box animate-text-glitch set-text-22 text-bold">Glitch</div>
-            <div class="anim-name">animate-text-glitch</div>
+            <div class="anim-box animation-text-gradient-flow text-size-24 text-bold">Gradient</div>
+            <div class="anim-name">animation-text-gradient-flow</div>
           </div>
           <div class="anim-card">
-            <div class="anim-box animate-text-neon-pulse set-text-22 text-bold color-blue-400">Neon</div>
-            <div class="anim-name">animate-text-neon-pulse</div>
+            <div class="anim-box animation-text-glitch text-size-22 text-bold">Glitch</div>
+            <div class="anim-name">animation-text-glitch</div>
           </div>
           <div class="anim-card">
-            <div class="anim-box animate-text-wave set-text-22">
+            <div class="anim-box animation-text-neon-pulse text-size-22 text-bold color-blue-400">Neon</div>
+            <div class="anim-name">animation-text-neon-pulse</div>
+          </div>
+          <div class="anim-card">
+            <div class="anim-box animation-text-wave text-size-22">
               <span>W</span><span>a</span><span>v</span><span>e</span><span>!</span>
             </div>
-            <div class="anim-name">animate-text-wave</div>
+            <div class="anim-name">animation-text-wave</div>
           </div>
         </div>
       </section>
@@ -596,10 +596,10 @@
           <div class="section-icon" style="background:rgba(139,92,246,.15);color:#8b5cf6;">🔲</div>
           <h2 class="section-title">Staggered Entrance Sequences</h2>
         </div>
-        <p style="font-size:13px;color:var(--muted);margin:0 0 16px;line-height:1.6;">Apply parent class — each child gets an automatic delay. Combine with an entrance like <code style="background:#f1f5f9;padding:2px 5px;border-radius:4px;">animate-stagger-slide-up</code>.</p>
+        <p style="font-size:13px;color:var(--muted);margin:0 0 16px;line-height:1.6;">Apply parent class — each child gets an automatic delay. Combine with an entrance like <code style="background:#f1f5f9;padding:2px 5px;border-radius:4px;">animation-stagger-slide-up</code>.</p>
         <div class="anim-grid">
-          <div class="anim-card" onclick="triggerStagger(this,'animate-stagger-fade-in animate-stagger-children-100')">
-            <div class="anim-box make-flex gap-4 align-center justify-center animate-stagger-fade-in animate-stagger-children-100">
+          <div class="anim-card" onclick="triggerStagger(this,'animation-stagger-fade-in animation-stagger-children-100')">
+            <div class="anim-box display-flex gap-4 align-center justify-center animation-stagger-fade-in animation-stagger-children-100">
               <div style="width:10px;height:10px;border-radius:50%;background:#3b82f6;"></div>
               <div style="width:10px;height:10px;border-radius:50%;background:#8b5cf6;"></div>
               <div style="width:10px;height:10px;border-radius:50%;background:#ec4899;"></div>
@@ -607,8 +607,8 @@
             </div>
             <div class="anim-name">stagger-fade-in + children-100</div>
           </div>
-          <div class="anim-card" onclick="triggerStagger(this,'animate-stagger-slide-up animate-stagger-children-200')">
-            <div class="anim-box make-flex gap-4 align-center justify-center animate-stagger-slide-up animate-stagger-children-200">
+          <div class="anim-card" onclick="triggerStagger(this,'animation-stagger-slide-up animation-stagger-children-200')">
+            <div class="anim-box display-flex gap-4 align-center justify-center animation-stagger-slide-up animation-stagger-children-200">
               <div style="width:10px;height:24px;border-radius:3px;background:#3b82f6;"></div>
               <div style="width:10px;height:24px;border-radius:3px;background:#8b5cf6;"></div>
               <div style="width:10px;height:24px;border-radius:3px;background:#ec4899;"></div>
@@ -616,8 +616,8 @@
             </div>
             <div class="anim-name">stagger-slide-up + children-200</div>
           </div>
-          <div class="anim-card" onclick="triggerStagger(this,'animate-stagger-zoom-in animate-stagger-children-300')">
-            <div class="anim-box make-flex gap-4 align-center justify-center animate-stagger-zoom-in animate-stagger-children-300">
+          <div class="anim-card" onclick="triggerStagger(this,'animation-stagger-zoom-in animation-stagger-children-300')">
+            <div class="anim-box display-flex gap-4 align-center justify-center animation-stagger-zoom-in animation-stagger-children-300">
               <div style="width:14px;height:14px;border-radius:3px;background:#f59e0b;"></div>
               <div style="width:14px;height:14px;border-radius:3px;background:#ef4444;"></div>
               <div style="width:14px;height:14px;border-radius:3px;background:#22c55e;"></div>
@@ -626,14 +626,14 @@
           </div>
         </div>
         <div class="helper-grid" style="margin-top:20px;">
-          <div class="helper-row"><span class="helper-class">animate-stagger-children-100</span><span class="helper-val">+100ms per child</span></div>
-          <div class="helper-row"><span class="helper-class">animate-stagger-children-200</span><span class="helper-val">+200ms per child</span></div>
-          <div class="helper-row"><span class="helper-class">animate-stagger-children-300</span><span class="helper-val">+300ms per child</span></div>
-          <div class="helper-row"><span class="helper-class">animate-stagger-fade-in</span><span class="helper-val">fade entrance</span></div>
-          <div class="helper-row"><span class="helper-class">animate-stagger-slide-up</span><span class="helper-val">slide-up entrance</span></div>
-          <div class="helper-row"><span class="helper-class">animate-stagger-zoom-in</span><span class="helper-val">zoom entrance</span></div>
-          <div class="helper-row"><span class="helper-class">animate-stagger-from-left</span><span class="helper-val">from left entrance</span></div>
-          <div class="helper-row"><span class="helper-class">animate-stagger-from-right</span><span class="helper-val">from right entrance</span></div>
+          <div class="helper-row"><span class="helper-class">animation-stagger-children-100</span><span class="helper-val">+100ms per child</span></div>
+          <div class="helper-row"><span class="helper-class">animation-stagger-children-200</span><span class="helper-val">+200ms per child</span></div>
+          <div class="helper-row"><span class="helper-class">animation-stagger-children-300</span><span class="helper-val">+300ms per child</span></div>
+          <div class="helper-row"><span class="helper-class">animation-stagger-fade-in</span><span class="helper-val">fade entrance</span></div>
+          <div class="helper-row"><span class="helper-class">animation-stagger-slide-up</span><span class="helper-val">slide-up entrance</span></div>
+          <div class="helper-row"><span class="helper-class">animation-stagger-zoom-in</span><span class="helper-val">zoom entrance</span></div>
+          <div class="helper-row"><span class="helper-class">animation-stagger-from-left</span><span class="helper-val">from left entrance</span></div>
+          <div class="helper-row"><span class="helper-class">animation-stagger-from-right</span><span class="helper-val">from right entrance</span></div>
         </div>
       </section>
 
@@ -645,28 +645,28 @@
         </div>
         <div class="anim-grid">
           <div class="anim-card">
-            <div class="anim-box animate-morph-blob" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);width:60px;height:60px;"></div>
-            <div class="anim-name">animate-morph-blob</div>
+            <div class="anim-box animation-morph-blob" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);width:60px;height:60px;"></div>
+            <div class="anim-name">animation-morph-blob</div>
           </div>
           <div class="anim-card">
-            <div style="width:60px;height:60px;border-radius:12px;overflow:hidden;position:relative;margin:0 auto 8px;"><div class="animate-border-spin" style="position:absolute;inset:-20px;"></div><div style="position:absolute;inset:3px;background:#fff;border-radius:9px;"></div></div>
-            <div class="anim-name">animate-border-spin</div>
+            <div style="width:60px;height:60px;border-radius:12px;overflow:hidden;position:relative;margin:0 auto 8px;"><div class="animation-border-spin" style="position:absolute;inset:-20px;"></div><div style="position:absolute;inset:3px;background:#fff;border-radius:9px;"></div></div>
+            <div class="anim-name">animation-border-spin</div>
           </div>
           <div class="anim-card">
-            <div class="anim-box animate-shimmer" style="width:80px;height:20px;border-radius:6px;background:#e5e7eb;"></div>
-            <div class="anim-name">animate-shimmer</div>
+            <div class="anim-box animation-shimmer" style="width:80px;height:20px;border-radius:6px;background:#e5e7eb;"></div>
+            <div class="anim-name">animation-shimmer</div>
           </div>
           <div class="anim-card">
-            <div class="anim-box animate-gradient-shift" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);background-size:200% 200%;width:60px;height:60px;border-radius:12px;"></div>
-            <div class="anim-name">animate-gradient-shift</div>
+            <div class="anim-box animation-gradient-shift" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);background-size:200% 200%;width:60px;height:60px;border-radius:12px;"></div>
+            <div class="anim-name">animation-gradient-shift</div>
           </div>
           <div class="anim-card">
-            <div class="anim-box animate-morph-circle-to-square" style="width:50px;height:50px;background:#10b981;"></div>
-            <div class="anim-name">animate-morph-circle-to-square</div>
+            <div class="anim-box animation-morph-circle-to-square" style="width:50px;height:50px;background:#10b981;"></div>
+            <div class="anim-name">animation-morph-circle-to-square</div>
           </div>
           <div class="anim-card">
-            <div class="anim-box animate-liquid" style="width:54px;height:54px;background:linear-gradient(135deg,#3b82f6,#06b6d4);"></div>
-            <div class="anim-name">animate-liquid</div>
+            <div class="anim-box animation-liquid" style="width:54px;height:54px;background:linear-gradient(135deg,#3b82f6,#06b6d4);"></div>
+            <div class="anim-name">animation-liquid</div>
           </div>
         </div>
       </section>
@@ -678,14 +678,14 @@
           <h2 class="section-title">3D Animations</h2>
         </div>
         <div class="anim-grid">
-          <div class="anim-card" onclick="triggerAnim(this,'animate-flip-3d-x')"><div class="anim-box animate-flip-3d-x">Aa</div><div class="anim-name">animate-flip-3d-x</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-flip-3d-y')"><div class="anim-box animate-flip-3d-y">Aa</div><div class="anim-name">animate-flip-3d-y</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-depth-in')"><div class="anim-box animate-depth-in">Aa</div><div class="anim-name">animate-depth-in</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-depth-out')"><div class="anim-box animate-depth-out">Aa</div><div class="anim-name">animate-depth-out</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-tilt-left')"><div class="anim-box animate-tilt-left">Aa</div><div class="anim-name">animate-tilt-left</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-tilt-right')"><div class="anim-box animate-tilt-right">Aa</div><div class="anim-name">animate-tilt-right</div></div>
-          <div class="anim-card"><div class="anim-box animate-rotate-3d">Aa</div><div class="anim-name">animate-rotate-3d</div></div>
-          <div class="anim-card"><div class="anim-box animate-swing-3d">Aa</div><div class="anim-name">animate-swing-3d</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-flip-3d-x')"><div class="anim-box animation-flip-3d-x">Aa</div><div class="anim-name">animation-flip-3d-x</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-flip-3d-y')"><div class="anim-box animation-flip-3d-y">Aa</div><div class="anim-name">animation-flip-3d-y</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-depth-in')"><div class="anim-box animation-depth-in">Aa</div><div class="anim-name">animation-depth-in</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-depth-out')"><div class="anim-box animation-depth-out">Aa</div><div class="anim-name">animation-depth-out</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-tilt-left')"><div class="anim-box animation-tilt-left">Aa</div><div class="anim-name">animation-tilt-left</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-tilt-right')"><div class="anim-box animation-tilt-right">Aa</div><div class="anim-name">animation-tilt-right</div></div>
+          <div class="anim-card"><div class="anim-box animation-rotate-3d">Aa</div><div class="anim-name">animation-rotate-3d</div></div>
+          <div class="anim-card"><div class="anim-box animation-swing-3d">Aa</div><div class="anim-name">animation-swing-3d</div></div>
         </div>
       </section>
 
@@ -696,14 +696,14 @@
           <h2 class="section-title">Exit &amp; Page Transition Animations</h2>
         </div>
         <div class="anim-grid">
-          <div class="anim-card" onclick="triggerAnim(this,'animate-exit-fade-out')"><div class="anim-box animate-exit-fade-out">Aa</div><div class="anim-name">animate-exit-fade-out</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-exit-slide-left')"><div class="anim-box animate-exit-slide-left">Aa</div><div class="anim-name">animate-exit-slide-left</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-exit-slide-right')"><div class="anim-box animate-exit-slide-right">Aa</div><div class="anim-name">animate-exit-slide-right</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-exit-scale-down')"><div class="anim-box animate-exit-scale-down">Aa</div><div class="anim-name">animate-exit-scale-down</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-page-in-from-right')"><div class="anim-box animate-page-in-from-right">Aa</div><div class="anim-name">animate-page-in-from-right</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-page-in-from-left')"><div class="anim-box animate-page-in-from-left">Aa</div><div class="anim-name">animate-page-in-from-left</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-page-out-to-left')"><div class="anim-box animate-page-out-to-left">Aa</div><div class="anim-name">animate-page-out-to-left</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-page-out-to-right')"><div class="anim-box animate-page-out-to-right">Aa</div><div class="anim-name">animate-page-out-to-right</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-exit-fade-out')"><div class="anim-box animation-exit-fade-out">Aa</div><div class="anim-name">animation-exit-fade-out</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-exit-slide-left')"><div class="anim-box animation-exit-slide-left">Aa</div><div class="anim-name">animation-exit-slide-left</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-exit-slide-right')"><div class="anim-box animation-exit-slide-right">Aa</div><div class="anim-name">animation-exit-slide-right</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-exit-scale-down')"><div class="anim-box animation-exit-scale-down">Aa</div><div class="anim-name">animation-exit-scale-down</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-page-in-from-right')"><div class="anim-box animation-page-in-from-right">Aa</div><div class="anim-name">animation-page-in-from-right</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-page-in-from-left')"><div class="anim-box animation-page-in-from-left">Aa</div><div class="anim-name">animation-page-in-from-left</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-page-out-to-left')"><div class="anim-box animation-page-out-to-left">Aa</div><div class="anim-name">animation-page-out-to-left</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-page-out-to-right')"><div class="anim-box animation-page-out-to-right">Aa</div><div class="anim-name">animation-page-out-to-right</div></div>
         </div>
       </section>
 
@@ -715,15 +715,15 @@
         </div>
         <p style="font-size:13px;color:var(--muted);margin:0 0 16px;line-height:1.6;">Paired with SantyCSS components — toast, modal, drawer, dropdown, tooltip.</p>
         <div class="anim-grid">
-          <div class="anim-card" onclick="triggerAnim(this,'animate-toast-in')"><div class="anim-box animate-toast-in" style="font-size:12px;">Toast</div><div class="anim-name">animate-toast-in</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-toast-out')"><div class="anim-box animate-toast-out" style="font-size:12px;">Toast</div><div class="anim-name">animate-toast-out</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-modal-in')"><div class="anim-box animate-modal-in" style="font-size:12px;">Modal</div><div class="anim-name">animate-modal-in</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-modal-out')"><div class="anim-box animate-modal-out" style="font-size:12px;">Modal</div><div class="anim-name">animate-modal-out</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-drawer-in-right')"><div class="anim-box animate-drawer-in-right" style="font-size:12px;">Drawer</div><div class="anim-name">animate-drawer-in-right</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-drawer-in-bottom')"><div class="anim-box animate-drawer-in-bottom" style="font-size:12px;">Bottom</div><div class="anim-name">animate-drawer-in-bottom</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-dropdown-in')"><div class="anim-box animate-dropdown-in" style="font-size:12px;">Menu</div><div class="anim-name">animate-dropdown-in</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-badge-pop')"><div class="anim-box animate-badge-pop" style="font-size:12px;background:#ef4444;color:#fff;border-radius:9999px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;">3</div><div class="anim-name">animate-badge-pop</div></div>
-          <div class="anim-card" onclick="triggerAnim(this,'animate-error-shake')"><div class="anim-box animate-error-shake" style="font-size:12px;background:#fee2e2;color:#dc2626;border-radius:8px;padding:4px 12px;">Error!</div><div class="anim-name">animate-error-shake</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-toast-in')"><div class="anim-box animation-toast-in" style="font-size:12px;">Toast</div><div class="anim-name">animation-toast-in</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-toast-out')"><div class="anim-box animation-toast-out" style="font-size:12px;">Toast</div><div class="anim-name">animation-toast-out</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-modal-in')"><div class="anim-box animation-modal-in" style="font-size:12px;">Modal</div><div class="anim-name">animation-modal-in</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-modal-out')"><div class="anim-box animation-modal-out" style="font-size:12px;">Modal</div><div class="anim-name">animation-modal-out</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-drawer-in-right')"><div class="anim-box animation-drawer-in-right" style="font-size:12px;">Drawer</div><div class="anim-name">animation-drawer-in-right</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-drawer-in-bottom')"><div class="anim-box animation-drawer-in-bottom" style="font-size:12px;">Bottom</div><div class="anim-name">animation-drawer-in-bottom</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-dropdown-in')"><div class="anim-box animation-dropdown-in" style="font-size:12px;">Menu</div><div class="anim-name">animation-dropdown-in</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-badge-pop')"><div class="anim-box animation-badge-pop" style="font-size:12px;background:#ef4444;color:#fff;border-radius:9999px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;">3</div><div class="anim-name">animation-badge-pop</div></div>
+          <div class="anim-card" onclick="triggerAnim(this,'animation-error-shake')"><div class="anim-box animation-error-shake" style="font-size:12px;background:#fee2e2;color:#dc2626;border-radius:8px;padding:4px 12px;">Error!</div><div class="anim-name">animation-error-shake</div></div>
         </div>
       </section>
 
@@ -740,28 +740,28 @@
           <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#a855f7;margin-bottom:10px;">⭐ Premium Free — v2.0 Exclusive</div>
           <code style="display:block;font-family:ui-monospace,monospace;font-size:12px;color:#c4b5fd;line-height:2;">
 <span style="color:#7dd3fc;"><!-- 🦇 Bat --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-bat-fly animate-bat-wings</span>" style="display:inline-block;font-size:32px;"&gt;🦇&lt;/span&gt;<br><br>
+&lt;span class="<span style="color:#f9a8d4;">animation-bat-fly animation-bat-wings</span>" style="display:inline-block;font-size:32px;"&gt;🦇&lt;/span&gt;<br><br>
 <span style="color:#7dd3fc;"><!-- 🦋 Butterfly --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-butterfly animate-butterfly-drift</span>" style="display:inline-block;font-size:32px;"&gt;🦋&lt;/span&gt;<br><br>
+&lt;span class="<span style="color:#f9a8d4;">animation-butterfly animation-butterfly-drift</span>" style="display:inline-block;font-size:32px;"&gt;🦋&lt;/span&gt;<br><br>
 <span style="color:#7dd3fc;"><!-- ✨ Firefly --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-firefly animate-firefly-glow</span>" style="display:inline-block;font-size:32px;"&gt;✨&lt;/span&gt;<br><br>
+&lt;span class="<span style="color:#f9a8d4;">animation-firefly animation-firefly-glow</span>" style="display:inline-block;font-size:32px;"&gt;✨&lt;/span&gt;<br><br>
 <span style="color:#7dd3fc;"><!-- 🕷️ Spider --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-spider-drop animate-spider-swing</span>" style="display:inline-block;font-size:32px;"&gt;🕷️&lt;/span&gt;<br><br>
+&lt;span class="<span style="color:#f9a8d4;">animation-spider-drop animation-spider-swing</span>" style="display:inline-block;font-size:32px;"&gt;🕷️&lt;/span&gt;<br><br>
 <span style="color:#7dd3fc;"><!-- 🐟 Fish --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-fish-swim</span>" style="display:inline-block;font-size:32px;"&gt;🐟&lt;/span&gt;<br><br>
+&lt;span class="<span style="color:#f9a8d4;">animation-fish-swim</span>" style="display:inline-block;font-size:32px;"&gt;🐟&lt;/span&gt;<br><br>
 <span style="color:#7dd3fc;"><!-- 🪼 Jellyfish --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-jellyfish</span>" style="display:inline-block;font-size:32px;"&gt;🪼&lt;/span&gt;<br><br>
+&lt;span class="<span style="color:#f9a8d4;">animation-jellyfish</span>" style="display:inline-block;font-size:32px;"&gt;🪼&lt;/span&gt;<br><br>
 <span style="color:#7dd3fc;"><!-- 🐦 Bird Flock --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-bird-flock</span>" style="display:inline-block;font-size:24px;"&gt;🐦&lt;/span&gt;
-&lt;span class="<span style="color:#f9a8d4;">animate-bird-flock-2</span>" style="display:inline-block;font-size:24px;"&gt;🐦&lt;/span&gt;
-&lt;span class="<span style="color:#f9a8d4;">animate-bird-flock-3</span>" style="display:inline-block;font-size:24px;"&gt;🐦&lt;/span&gt;<br><br>
+&lt;span class="<span style="color:#f9a8d4;">animation-bird-flock</span>" style="display:inline-block;font-size:24px;"&gt;🐦&lt;/span&gt;
+&lt;span class="<span style="color:#f9a8d4;">animation-bird-flock-2</span>" style="display:inline-block;font-size:24px;"&gt;🐦&lt;/span&gt;
+&lt;span class="<span style="color:#f9a8d4;">animation-bird-flock-3</span>" style="display:inline-block;font-size:24px;"&gt;🐦&lt;/span&gt;<br><br>
 <span style="color:#7dd3fc;"><!-- 🐝 Bee --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-bee-hover animate-bee-buzz</span>" style="display:inline-block;font-size:32px;"&gt;🐝&lt;/span&gt;<br><br>
+&lt;span class="<span style="color:#f9a8d4;">animation-bee-hover animation-bee-buzz</span>" style="display:inline-block;font-size:32px;"&gt;🐝&lt;/span&gt;<br><br>
 <span style="color:#7dd3fc;"><!-- 🐍 Snake --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-snake-slither</span>" style="display:inline-block;font-size:32px;"&gt;🐍&lt;/span&gt;<br><br>
+&lt;span class="<span style="color:#f9a8d4;">animation-snake-slither</span>" style="display:inline-block;font-size:32px;"&gt;🐍&lt;/span&gt;<br><br>
 <span style="color:#7dd3fc;"><!-- 🐉 Dragon Fire --></span><br>
-&lt;span class="<span style="color:#f9a8d4;">animate-dragon-fire</span>" style="display:inline-block;font-size:32px;"&gt;🐉&lt;/span&gt;
-&lt;span class="<span style="color:#f9a8d4;">animate-dragon-fire</span>" style="display:inline-block;font-size:32px;"&gt;🔥&lt;/span&gt;
+&lt;span class="<span style="color:#f9a8d4;">animation-dragon-fire</span>" style="display:inline-block;font-size:32px;"&gt;🐉&lt;/span&gt;
+&lt;span class="<span style="color:#f9a8d4;">animation-dragon-fire</span>" style="display:inline-block;font-size:32px;"&gt;🔥&lt;/span&gt;
           </code>
         </div>
       </section>
@@ -777,123 +777,123 @@
 // ─── Animation data ─────────────────────────────────────────────────────────
 const ANIMATIONS = {
   'attention': [
-    { cls: 'animate-flash',       label: 'Flash' },
-    { cls: 'animate-rubber-band', label: 'Rubber Band' },
-    { cls: 'animate-shake-x',     label: 'Shake X' },
-    { cls: 'animate-shake-y',     label: 'Shake Y' },
-    { cls: 'animate-shake-head',  label: 'Shake Head' },
-    { cls: 'animate-swing',       label: 'Swing' },
-    { cls: 'animate-tada',        label: 'Tada' },
-    { cls: 'animate-wobble',      label: 'Wobble' },
-    { cls: 'animate-jelly',       label: 'Jelly' },
-    { cls: 'animate-heartbeat',   label: 'Heartbeat' },
+    { cls: 'animation-flash',       label: 'Flash' },
+    { cls: 'animation-rubber-band', label: 'Rubber Band' },
+    { cls: 'animation-shake-x',     label: 'Shake X' },
+    { cls: 'animation-shake-y',     label: 'Shake Y' },
+    { cls: 'animation-shake-head',  label: 'Shake Head' },
+    { cls: 'animation-swing',       label: 'Swing' },
+    { cls: 'animation-tada',        label: 'Tada' },
+    { cls: 'animation-wobble',      label: 'Wobble' },
+    { cls: 'animation-jelly',       label: 'Jelly' },
+    { cls: 'animation-heartbeat',   label: 'Heartbeat' },
   ],
   'fade-in': [
-    { cls: 'animate-fade-in',              label: 'Fade In' },
-    { cls: 'animate-fade-in-from-top',     label: 'From Top' },
-    { cls: 'animate-fade-in-from-bottom',  label: 'From Bottom' },
-    { cls: 'animate-fade-in-from-left',    label: 'From Left' },
-    { cls: 'animate-fade-in-from-right',   label: 'From Right' },
-    { cls: 'animate-fade-in-top-left',     label: 'Top Left' },
-    { cls: 'animate-fade-in-top-right',    label: 'Top Right' },
-    { cls: 'animate-fade-in-bottom-left',  label: 'Bottom Left' },
-    { cls: 'animate-fade-in-bottom-right', label: 'Bottom Right' },
+    { cls: 'animation-fade-in',              label: 'Fade In' },
+    { cls: 'animation-fade-in-from-top',     label: 'From Top' },
+    { cls: 'animation-fade-in-from-bottom',  label: 'From Bottom' },
+    { cls: 'animation-fade-in-from-left',    label: 'From Left' },
+    { cls: 'animation-fade-in-from-right',   label: 'From Right' },
+    { cls: 'animation-fade-in-top-left',     label: 'Top Left' },
+    { cls: 'animation-fade-in-top-right',    label: 'Top Right' },
+    { cls: 'animation-fade-in-bottom-left',  label: 'Bottom Left' },
+    { cls: 'animation-fade-in-bottom-right', label: 'Bottom Right' },
   ],
   'fade-out': [
-    { cls: 'animate-fade-out',              label: 'Fade Out' },
-    { cls: 'animate-fade-out-to-top',       label: 'To Top' },
-    { cls: 'animate-fade-out-to-bottom',    label: 'To Bottom' },
-    { cls: 'animate-fade-out-to-left',      label: 'To Left' },
-    { cls: 'animate-fade-out-to-right',     label: 'To Right' },
-    { cls: 'animate-fade-out-top-left',     label: 'Top Left' },
-    { cls: 'animate-fade-out-top-right',    label: 'Top Right' },
-    { cls: 'animate-fade-out-bottom-left',  label: 'Bottom Left' },
-    { cls: 'animate-fade-out-bottom-right', label: 'Bottom Right' },
+    { cls: 'animation-fade-out',              label: 'Fade Out' },
+    { cls: 'animation-fade-out-to-top',       label: 'To Top' },
+    { cls: 'animation-fade-out-to-bottom',    label: 'To Bottom' },
+    { cls: 'animation-fade-out-to-left',      label: 'To Left' },
+    { cls: 'animation-fade-out-to-right',     label: 'To Right' },
+    { cls: 'animation-fade-out-top-left',     label: 'Top Left' },
+    { cls: 'animation-fade-out-top-right',    label: 'Top Right' },
+    { cls: 'animation-fade-out-bottom-left',  label: 'Bottom Left' },
+    { cls: 'animation-fade-out-bottom-right', label: 'Bottom Right' },
   ],
   'bounce-in': [
-    { cls: 'animate-bounce-in',             label: 'Bounce In' },
-    { cls: 'animate-bounce-in-from-top',    label: 'From Top' },
-    { cls: 'animate-bounce-in-from-bottom', label: 'From Bottom' },
-    { cls: 'animate-bounce-in-from-left',   label: 'From Left' },
-    { cls: 'animate-bounce-in-from-right',  label: 'From Right' },
+    { cls: 'animation-bounce-in',             label: 'Bounce In' },
+    { cls: 'animation-bounce-in-from-top',    label: 'From Top' },
+    { cls: 'animation-bounce-in-from-bottom', label: 'From Bottom' },
+    { cls: 'animation-bounce-in-from-left',   label: 'From Left' },
+    { cls: 'animation-bounce-in-from-right',  label: 'From Right' },
   ],
   'bounce-out': [
-    { cls: 'animate-bounce-out',            label: 'Bounce Out' },
-    { cls: 'animate-bounce-out-to-top',     label: 'To Top' },
-    { cls: 'animate-bounce-out-to-bottom',  label: 'To Bottom' },
-    { cls: 'animate-bounce-out-to-left',    label: 'To Left' },
-    { cls: 'animate-bounce-out-to-right',   label: 'To Right' },
+    { cls: 'animation-bounce-out',            label: 'Bounce Out' },
+    { cls: 'animation-bounce-out-to-top',     label: 'To Top' },
+    { cls: 'animation-bounce-out-to-bottom',  label: 'To Bottom' },
+    { cls: 'animation-bounce-out-to-left',    label: 'To Left' },
+    { cls: 'animation-bounce-out-to-right',   label: 'To Right' },
   ],
   'slide-in': [
-    { cls: 'animate-slide-in-from-top',    label: 'From Top' },
-    { cls: 'animate-slide-in-from-bottom', label: 'From Bottom' },
-    { cls: 'animate-slide-in-from-left',   label: 'From Left' },
-    { cls: 'animate-slide-in-from-right',  label: 'From Right' },
+    { cls: 'animation-slide-in-from-top',    label: 'From Top' },
+    { cls: 'animation-slide-in-from-bottom', label: 'From Bottom' },
+    { cls: 'animation-slide-in-from-left',   label: 'From Left' },
+    { cls: 'animation-slide-in-from-right',  label: 'From Right' },
   ],
   'slide-out': [
-    { cls: 'animate-slide-out-to-top',    label: 'To Top' },
-    { cls: 'animate-slide-out-to-bottom', label: 'To Bottom' },
-    { cls: 'animate-slide-out-to-left',   label: 'To Left' },
-    { cls: 'animate-slide-out-to-right',  label: 'To Right' },
+    { cls: 'animation-slide-out-to-top',    label: 'To Top' },
+    { cls: 'animation-slide-out-to-bottom', label: 'To Bottom' },
+    { cls: 'animation-slide-out-to-left',   label: 'To Left' },
+    { cls: 'animation-slide-out-to-right',  label: 'To Right' },
   ],
   'zoom-in': [
-    { cls: 'animate-zoom-in',             label: 'Zoom In' },
-    { cls: 'animate-zoom-in-from-top',    label: 'From Top' },
-    { cls: 'animate-zoom-in-from-bottom', label: 'From Bottom' },
-    { cls: 'animate-zoom-in-from-left',   label: 'From Left' },
-    { cls: 'animate-zoom-in-from-right',  label: 'From Right' },
+    { cls: 'animation-zoom-in',             label: 'Zoom In' },
+    { cls: 'animation-zoom-in-from-top',    label: 'From Top' },
+    { cls: 'animation-zoom-in-from-bottom', label: 'From Bottom' },
+    { cls: 'animation-zoom-in-from-left',   label: 'From Left' },
+    { cls: 'animation-zoom-in-from-right',  label: 'From Right' },
   ],
   'zoom-out': [
-    { cls: 'animate-zoom-out',            label: 'Zoom Out' },
-    { cls: 'animate-zoom-out-to-top',     label: 'To Top' },
-    { cls: 'animate-zoom-out-to-bottom',  label: 'To Bottom' },
-    { cls: 'animate-zoom-out-to-left',    label: 'To Left' },
-    { cls: 'animate-zoom-out-to-right',   label: 'To Right' },
+    { cls: 'animation-zoom-out',            label: 'Zoom Out' },
+    { cls: 'animation-zoom-out-to-top',     label: 'To Top' },
+    { cls: 'animation-zoom-out-to-bottom',  label: 'To Bottom' },
+    { cls: 'animation-zoom-out-to-left',    label: 'To Left' },
+    { cls: 'animation-zoom-out-to-right',   label: 'To Right' },
   ],
   'flip': [
-    { cls: 'animate-flip',       label: 'Flip' },
-    { cls: 'animate-flip-in-x',  label: 'Flip In X' },
-    { cls: 'animate-flip-in-y',  label: 'Flip In Y' },
-    { cls: 'animate-flip-out-x', label: 'Flip Out X' },
-    { cls: 'animate-flip-out-y', label: 'Flip Out Y' },
+    { cls: 'animation-flip',       label: 'Flip' },
+    { cls: 'animation-flip-in-x',  label: 'Flip In X' },
+    { cls: 'animation-flip-in-y',  label: 'Flip In Y' },
+    { cls: 'animation-flip-out-x', label: 'Flip Out X' },
+    { cls: 'animation-flip-out-y', label: 'Flip Out Y' },
   ],
   'rotate-in': [
-    { cls: 'animate-rotate-in',                   label: 'Rotate In' },
-    { cls: 'animate-rotate-in-from-top-left',     label: 'From Top Left' },
-    { cls: 'animate-rotate-in-from-top-right',    label: 'From Top Right' },
-    { cls: 'animate-rotate-in-from-bottom-left',  label: 'From Bottom Left' },
-    { cls: 'animate-rotate-in-from-bottom-right', label: 'From Bottom Right' },
+    { cls: 'animation-rotate-in',                   label: 'Rotate In' },
+    { cls: 'animation-rotate-in-from-top-left',     label: 'From Top Left' },
+    { cls: 'animation-rotate-in-from-top-right',    label: 'From Top Right' },
+    { cls: 'animation-rotate-in-from-bottom-left',  label: 'From Bottom Left' },
+    { cls: 'animation-rotate-in-from-bottom-right', label: 'From Bottom Right' },
   ],
   'rotate-out': [
-    { cls: 'animate-rotate-out',                   label: 'Rotate Out' },
-    { cls: 'animate-rotate-out-to-top-left',       label: 'To Top Left' },
-    { cls: 'animate-rotate-out-to-top-right',      label: 'To Top Right' },
-    { cls: 'animate-rotate-out-to-bottom-left',    label: 'To Bottom Left' },
-    { cls: 'animate-rotate-out-to-bottom-right',   label: 'To Bottom Right' },
+    { cls: 'animation-rotate-out',                   label: 'Rotate Out' },
+    { cls: 'animation-rotate-out-to-top-left',       label: 'To Top Left' },
+    { cls: 'animation-rotate-out-to-top-right',      label: 'To Top Right' },
+    { cls: 'animation-rotate-out-to-bottom-left',    label: 'To Bottom Left' },
+    { cls: 'animation-rotate-out-to-bottom-right',   label: 'To Bottom Right' },
   ],
   'back-in': [
-    { cls: 'animate-back-in-from-top',    label: 'From Top' },
-    { cls: 'animate-back-in-from-bottom', label: 'From Bottom' },
-    { cls: 'animate-back-in-from-left',   label: 'From Left' },
-    { cls: 'animate-back-in-from-right',  label: 'From Right' },
+    { cls: 'animation-back-in-from-top',    label: 'From Top' },
+    { cls: 'animation-back-in-from-bottom', label: 'From Bottom' },
+    { cls: 'animation-back-in-from-left',   label: 'From Left' },
+    { cls: 'animation-back-in-from-right',  label: 'From Right' },
   ],
   'back-out': [
-    { cls: 'animate-back-out-to-top',    label: 'To Top' },
-    { cls: 'animate-back-out-to-bottom', label: 'To Bottom' },
-    { cls: 'animate-back-out-to-left',   label: 'To Left' },
-    { cls: 'animate-back-out-to-right',  label: 'To Right' },
+    { cls: 'animation-back-out-to-top',    label: 'To Top' },
+    { cls: 'animation-back-out-to-bottom', label: 'To Bottom' },
+    { cls: 'animation-back-out-to-left',   label: 'To Left' },
+    { cls: 'animation-back-out-to-right',  label: 'To Right' },
   ],
   'speed': [
-    { cls: 'animate-speed-in-from-left',  label: 'In from Left' },
-    { cls: 'animate-speed-in-from-right', label: 'In from Right' },
-    { cls: 'animate-speed-out-to-left',   label: 'Out to Left' },
-    { cls: 'animate-speed-out-to-right',  label: 'Out to Right' },
+    { cls: 'animation-speed-in-from-left',  label: 'In from Left' },
+    { cls: 'animation-speed-in-from-right', label: 'In from Right' },
+    { cls: 'animation-speed-out-to-left',   label: 'Out to Left' },
+    { cls: 'animation-speed-out-to-right',  label: 'Out to Right' },
   ],
   'specials': [
-    { cls: 'animate-hinge',       label: 'Hinge' },
-    { cls: 'animate-jack-in-box', label: 'Jack In Box' },
-    { cls: 'animate-roll-in',     label: 'Roll In' },
-    { cls: 'animate-roll-out',    label: 'Roll Out' },
+    { cls: 'animation-hinge',       label: 'Hinge' },
+    { cls: 'animation-jack-in-box', label: 'Jack In Box' },
+    { cls: 'animation-roll-in',     label: 'Roll In' },
+    { cls: 'animation-roll-out',    label: 'Roll Out' },
   ],
 };
 
@@ -999,23 +999,23 @@ Object.keys(ANIMATIONS).forEach(id => renderGrid(id, ANIMATIONS[id]));
 // ── Creature Animations grid ──────────────────────────────────────────────────
 // preview: 'bat' = CSS bat shape, 'emoji' = emoji char
 const CREATURES = [
-  { cls: 'animate-bat-fly',            preview: 'bat',  label: 'Bat fly',            dur: 3200 },
-  { cls: 'animate-bat-wings',          preview: 'bat',  label: 'Bat wings only',     dur: 1800 },
-  { cls: 'animate-butterfly',          preview: '🦋',   label: 'Butterfly flap',     dur: 2000 },
-  { cls: 'animate-butterfly-drift',    preview: '🦋',   label: 'Butterfly drift',    dur: 3500 },
-  { cls: 'animate-firefly',            preview: '✨',   label: 'Firefly float',      dur: 4000 },
-  { cls: 'animate-firefly-glow',       preview: '✨',   label: 'Firefly glow',       dur: 3000 },
-  { cls: 'animate-spider-drop',        preview: '🕷️',  label: 'Spider drop',        dur: 3500 },
-  { cls: 'animate-spider-swing',       preview: '🕷️',  label: 'Spider swing',       dur: 2500 },
-  { cls: 'animate-fish-swim',          preview: '🐟',   label: 'Fish swim',          dur: 3000 },
-  { cls: 'animate-jellyfish',          preview: '🪼',   label: 'Jellyfish pulse',    dur: 3000 },
-  { cls: 'animate-jellyfish-tendrils', preview: '🎐',   label: 'Jellyfish tendrils', dur: 2500 },
-  { cls: 'animate-bird-flock',         preview: '🐦',   label: 'Bird flock',         dur: 3500 },
-  { cls: 'animate-bee-hover',          preview: '🐝',   label: 'Bee hover',          dur: 2500 },
-  { cls: 'animate-bee-buzz',           preview: '🐝',   label: 'Bee buzz',           dur: 1000 },
-  { cls: 'animate-snake-slither',      preview: '🐍',   label: 'Snake slither',      dur: 3000 },
-  { cls: 'animate-dragon-fire',        preview: '🔥',   label: 'Dragon fire',        dur: 2000 },
-  { cls: 'animate-fire-flicker',       preview: '🔥',   label: 'Fire flicker',       dur: 1500 },
+  { cls: 'animation-bat-fly',            preview: 'bat',  label: 'Bat fly',            dur: 3200 },
+  { cls: 'animation-bat-wings',          preview: 'bat',  label: 'Bat wings only',     dur: 1800 },
+  { cls: 'animation-butterfly',          preview: '🦋',   label: 'Butterfly flap',     dur: 2000 },
+  { cls: 'animation-butterfly-drift',    preview: '🦋',   label: 'Butterfly drift',    dur: 3500 },
+  { cls: 'animation-firefly',            preview: '✨',   label: 'Firefly float',      dur: 4000 },
+  { cls: 'animation-firefly-glow',       preview: '✨',   label: 'Firefly glow',       dur: 3000 },
+  { cls: 'animation-spider-drop',        preview: '🕷️',  label: 'Spider drop',        dur: 3500 },
+  { cls: 'animation-spider-swing',       preview: '🕷️',  label: 'Spider swing',       dur: 2500 },
+  { cls: 'animation-fish-swim',          preview: '🐟',   label: 'Fish swim',          dur: 3000 },
+  { cls: 'animation-jellyfish',          preview: '🪼',   label: 'Jellyfish pulse',    dur: 3000 },
+  { cls: 'animation-jellyfish-tendrils', preview: '🎐',   label: 'Jellyfish tendrils', dur: 2500 },
+  { cls: 'animation-bird-flock',         preview: '🐦',   label: 'Bird flock',         dur: 3500 },
+  { cls: 'animation-bee-hover',          preview: '🐝',   label: 'Bee hover',          dur: 2500 },
+  { cls: 'animation-bee-buzz',           preview: '🐝',   label: 'Bee buzz',           dur: 1000 },
+  { cls: 'animation-snake-slither',      preview: '🐍',   label: 'Snake slither',      dur: 3000 },
+  { cls: 'animation-dragon-fire',        preview: '🔥',   label: 'Dragon fire',        dur: 2000 },
+  { cls: 'animation-fire-flicker',       preview: '🔥',   label: 'Fire flicker',       dur: 1500 },
 ];
 
 function makeBatHTML() {

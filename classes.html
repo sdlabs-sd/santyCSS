@@ -211,7 +211,7 @@
       /* Code blocks */
       .code-block { font-size: 11px !important; padding: 14px 16px !important; }
       /* Hero text if present */
-      .set-text-56, .set-text-64 { font-size: 2rem !important; letter-spacing: -1px !important; }
+      .text-size-56, .text-size-64 { font-size: 2rem !important; letter-spacing: -1px !important; }
       /* Filter bar stacks on smallest screens */
       .filter-bar .container { gap: 8px; }
     }
@@ -233,24 +233,24 @@
 <body class="background-gray-50">
 
 <!-- ─── TOP NAV ─────────────────────────────────────────────────────────────── -->
-<header class="position-sticky pin-top-0 layer-50 background-white add-shadow-sm" style="border-bottom:1px solid #e5e7eb;">
-  <div class="container make-flex align-center justify-between add-padding-y-14">
-    <a href="index.html" class="make-flex align-center gap-10 text-no-decoration">
+<header class="position-sticky top-0 z-index-50 background-white shadow-sm" style="border-bottom:1px solid #e5e7eb;">
+  <div class="container display-flex align-center justify-between padding-y-14">
+    <a href="index.html" class="display-flex align-center gap-10 text-no-decoration">
       <img src="assest/santy_css.png" alt="SantyCSS" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
-      <span class="set-text-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
+      <span class="text-size-20 text-bold color-gray-900">Santy<span class="color-blue-600">CSS</span></span>
       <span class="badge background-blue-100 color-blue-700" style="font-size:11px;">v2.8.0</span>
     </a>
     <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
       <svg id="ham-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       <svg id="ham-close" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="display:none"><path d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
-    <nav id="main-nav" class="make-flex align-center gap-20">
-      <a href="classes.html" class="nav-link nav-link-active text-no-decoration set-text-14 text-semibold">Classes</a>
-      <a href="components.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Components</a>
-      <a href="animations.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Animations</a>
-      <a href="icons.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Icons</a>
-      <a href="templates.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Templates</a>
-      <a href="snippets.html" class="nav-link color-gray-600 text-no-decoration set-text-14 text-semibold">Snippets</a>
+    <nav id="main-nav" class="display-flex align-center gap-20">
+      <a href="classes.html" class="nav-link nav-link-active text-no-decoration text-size-14 text-semibold">Classes</a>
+      <a href="components.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Components</a>
+      <a href="animations.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Animations</a>
+      <a href="icons.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Icons</a>
+      <a href="templates.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Templates</a>
+      <a href="snippets.html" class="nav-link color-gray-600 text-no-decoration text-size-14 text-semibold">Snippets</a>
       <div class="nav-resources" id="navResources">
         <button class="nav-resources-btn" id="navResBtn" onclick="toggleResources()" aria-expanded="false">
           Resources
@@ -279,21 +279,21 @@
 </header>
 
 <!-- ─── HERO ──────────────────────────────────────────────────────────────────── -->
-<section class="hero-gradient add-padding-y-64 add-padding-x-16">
+<section class="hero-gradient padding-y-64 padding-x-16">
   <div class="container text-center">
-    <h1 class="set-text-56 text-bold color-white add-margin-bottom-16" style="letter-spacing:-2px;line-height:1.1;">
+    <h1 class="text-size-56 text-bold color-white margin-bottom-16" style="letter-spacing:-2px;line-height:1.1;">
       Complete Class <span style="color:#7dd3fc;">Reference</span>
     </h1>
-    <p class="set-text-18 add-margin-bottom-32" style="color:rgba(255,255,255,0.7);max-width:540px;margin-left:auto;margin-right:auto;">
+    <p class="text-size-18 margin-bottom-32" style="color:rgba(255,255,255,0.7);max-width:540px;margin-left:auto;margin-right:auto;">
       Every SantyCSS utility class, its CSS output, and a plain-English description — all searchable.
     </p>
-    <div class="make-flex justify-center flex-wrap gap-12">
-      <span class="chip">add-padding-y-16</span>
-      <span class="chip">make-flex</span>
-      <span class="chip">set-text-24</span>
+    <div class="display-flex justify-center flex-wrap gap-12">
+      <span class="chip">padding-y-16</span>
+      <span class="chip">display-flex</span>
+      <span class="chip">text-size-24</span>
       <span class="chip">on-hover:scale-110</span>
       <span class="chip">background-blue-500</span>
-      <span class="chip">round-corners-8</span>
+      <span class="chip">radius-8</span>
     </div>
   </div>
 </section>
@@ -301,7 +301,7 @@
 <!-- ─── FILTER BAR ───────────────────────────────────────────────────────────── -->
 <div class="filter-bar">
   <div class="container">
-    <div class="make-flex align-center gap-12 flex-wrap">
+    <div class="display-flex align-center gap-12 flex-wrap">
       <div style="position:relative;flex:1;min-width:240px;max-width:480px;">
         <input
           type="search"
@@ -312,7 +312,7 @@
           autocomplete="off"
         />
       </div>
-      <span class="set-text-13 color-gray-400" id="result-count"></span>
+      <span class="text-size-13 color-gray-400" id="result-count"></span>
     </div>
     <div class="pills-row" id="cat-pills">
       <button class="pill active" data-cat="all" onclick="filterCat(this)">All</button>
@@ -340,31 +340,31 @@
 </div>
 
 <!-- ─── CONTENT ──────────────────────────────────────────────────────────────── -->
-<main class="container add-padding-y-48 add-padding-x-16">
+<main class="container padding-y-48 padding-x-16">
 
   <div id="no-results">
     <svg width="48" height="48" fill="none" stroke="#cbd5e1" stroke-width="1.5" viewBox="0 0 24 24" style="margin:0 auto 12px;display:block;"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-    <p class="set-text-16 color-gray-400">No classes matched your search.</p>
-    <p class="set-text-13 color-gray-300">Try a different keyword or clear the search.</p>
+    <p class="text-size-16 color-gray-400">No classes matched your search.</p>
+    <p class="text-size-13 color-gray-300">Try a different keyword or clear the search.</p>
   </div>
 
   <!-- ── LAYOUT ─────────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="layout" data-cat="layout">
+  <section class="cat-section margin-bottom-56" id="layout" data-cat="layout">
     <div class="section-header">
       <div class="section-icon background-blue-100">🧱</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Layout</h2>
-        <p class="set-text-13 color-gray-500">Flexbox, grid, alignment and justification helpers.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Layout</h2>
+        <p class="text-size-13 color-gray-500">Flexbox, grid, alignment and justification helpers.</p>
       </div>
     </div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Class</th><th>CSS Output</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td>make-flex</td><td>display: flex</td><td>Enable flex container</td></tr>
-          <tr><td>make-inline-flex</td><td>display: inline-flex</td><td>Inline flex container</td></tr>
-          <tr><td>make-grid</td><td>display: grid</td><td>Enable grid container</td></tr>
-          <tr><td>make-inline-grid</td><td>display: inline-grid</td><td>Inline grid container</td></tr>
+          <tr><td>display-flex</td><td>display: flex</td><td>Enable flex container</td></tr>
+          <tr><td>display-inline-flex</td><td>display: inline-flex</td><td>Inline flex container</td></tr>
+          <tr><td>display-grid</td><td>display: grid</td><td>Enable grid container</td></tr>
+          <tr><td>display-inline-grid</td><td>display: inline-grid</td><td>Inline grid container</td></tr>
           <tr><td>flex-row</td><td>flex-direction: row</td><td>Horizontal flex direction</td></tr>
           <tr><td>flex-column</td><td>flex-direction: column</td><td>Vertical flex direction</td></tr>
           <tr><td>flex-row-reverse</td><td>flex-direction: row-reverse</td><td>Reverse horizontal flex</td></tr>
@@ -395,11 +395,11 @@
           <tr><td>gap-x-{n}</td><td>column-gap: {n}px</td><td>Horizontal gap only</td></tr>
           <tr><td>gap-y-{n}</td><td>row-gap: {n}px</td><td>Vertical gap only</td></tr>
           <tr><td>place-center</td><td>place-items: center</td><td>Center items on both axes</td></tr>
-          <tr><td>self-auto</td><td>align-self: auto</td><td>Self alignment auto</td></tr>
-          <tr><td>self-start</td><td>align-self: flex-start</td><td>Self align to start</td></tr>
-          <tr><td>self-end</td><td>align-self: flex-end</td><td>Self align to end</td></tr>
-          <tr><td>self-center</td><td>align-self: center</td><td>Self center on cross axis</td></tr>
-          <tr><td>self-stretch</td><td>align-self: stretch</td><td>Self stretch on cross axis</td></tr>
+          <tr><td>align-self-auto</td><td>align-self: auto</td><td>Self alignment auto</td></tr>
+          <tr><td>align-self-start</td><td>align-self: flex-start</td><td>Self align to start</td></tr>
+          <tr><td>align-self-end</td><td>align-self: flex-end</td><td>Self align to end</td></tr>
+          <tr><td>align-self-center</td><td>align-self: center</td><td>Self center on cross axis</td></tr>
+          <tr><td>align-self-stretch</td><td>align-self: stretch</td><td>Self stretch on cross axis</td></tr>
           <tr><td>order-{0-12}</td><td>order: {n}</td><td>Item order in flex/grid</td></tr>
           <tr><td>order-first</td><td>order: -9999</td><td>Force item to be first</td></tr>
           <tr><td>order-last</td><td>order: 9999</td><td>Force item to be last</td></tr>
@@ -410,12 +410,12 @@
   </section>
 
   <!-- ── SPACING ────────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="spacing" data-cat="spacing">
+  <section class="cat-section margin-bottom-56" id="spacing" data-cat="spacing">
     <div class="section-header">
       <div class="section-icon background-purple-100">↔</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Spacing</h2>
-        <p class="set-text-13 color-gray-500">Padding and margin utilities. Values: 0–50 every 1px, 52–200 every 4px, plus 240, 256, 320, 384, 512.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Spacing</h2>
+        <p class="text-size-13 color-gray-500">Padding and margin utilities. Values: 0–50 every 1px, 52–200 every 4px, plus 240, 256, 320, 384, 512.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -448,12 +448,12 @@
   </section>
 
   <!-- ── SIZING ─────────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="sizing" data-cat="sizing">
+  <section class="cat-section margin-bottom-56" id="sizing" data-cat="sizing">
     <div class="section-header">
       <div class="section-icon background-green-100">📐</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Sizing</h2>
-        <p class="set-text-13 color-gray-500">Width, height, min/max dimensions, and aspect ratio.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Sizing</h2>
+        <p class="text-size-13 color-gray-500">Width, height, min/max dimensions, and aspect ratio.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -483,19 +483,19 @@
           <tr><td>object-cover</td><td>object-fit: cover</td><td>Cover container preserving ratio</td></tr>
           <tr><td>object-contain</td><td>object-fit: contain</td><td>Contain within bounds</td></tr>
           <tr><td>object-fill</td><td>object-fit: fill</td><td>Stretch to fill</td></tr>
-          <tr><td>object-center</td><td>object-position: center</td><td>Center object position</td></tr>
+          <tr><td>object-position-center</td><td>object-position: center</td><td>Center object position</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
   <!-- ── COLORS ─────────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="colors" data-cat="colors">
+  <section class="cat-section margin-bottom-56" id="colors" data-cat="colors">
     <div class="section-header">
       <div class="section-icon background-pink-100">🎨</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Colors</h2>
-        <p class="set-text-13 color-gray-500">Text color, background color, and border color — 20 families × 10 shades (50–950).</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Colors</h2>
+        <p class="text-size-13 color-gray-500">Text color, background color, and border color — 20 families × 10 shades (50–950).</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -516,19 +516,19 @@
         </tbody>
       </table>
     </div>
-    <div class="add-margin-top-16 add-padding-16 round-corners-10" style="background:#f0f9ff;border:1px solid #bae6fd;">
-      <p class="set-text-13 color-blue-700 text-semibold add-margin-bottom-8">Color families</p>
-      <p class="set-text-13 color-blue-600">gray, red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, slate, zinc</p>
+    <div class="margin-top-16 padding-16 radius-10" style="background:#f0f9ff;border:1px solid #bae6fd;">
+      <p class="text-size-13 color-blue-700 text-semibold margin-bottom-8">Color families</p>
+      <p class="text-size-13 color-blue-600">gray, red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, slate, zinc</p>
     </div>
   </section>
 
   <!-- ── BORDERS & RADIUS ───────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="borders" data-cat="borders">
+  <section class="cat-section margin-bottom-56" id="borders" data-cat="borders">
     <div class="section-header">
       <div class="section-icon background-orange-100">⬡</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Borders &amp; Radius</h2>
-        <p class="set-text-13 color-gray-500">Border width, style, and border-radius utilities.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Borders &amp; Radius</h2>
+        <p class="text-size-13 color-gray-500">Border width, style, and border-radius utilities.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -549,8 +549,8 @@
           <tr><td>round-corners-bottom-{n}</td><td>border-bottom-left-radius: {n}px; border-bottom-right-radius: {n}px</td><td>Bottom corners only</td></tr>
           <tr><td>round-corners-left-{n}</td><td>border-top-left-radius: {n}px; border-bottom-left-radius: {n}px</td><td>Left corners only</td></tr>
           <tr><td>round-corners-right-{n}</td><td>border-top-right-radius: {n}px; border-bottom-right-radius: {n}px</td><td>Right corners only</td></tr>
-          <tr><td>make-circle</td><td>border-radius: 50%</td><td>Fully round (circle/ellipse)</td></tr>
-          <tr><td>make-pill</td><td>border-radius: 9999px</td><td>Pill / capsule shape</td></tr>
+          <tr><td>radius-circle</td><td>border-radius: 50%</td><td>Fully round (circle/ellipse)</td></tr>
+          <tr><td>radius-pill</td><td>border-radius: 9999px</td><td>Pill / capsule shape</td></tr>
           <tr><td>outline-none</td><td>outline: none</td><td>Remove focus outline</td></tr>
           <tr><td>ring-{n}</td><td>box-shadow: 0 0 0 {n}px</td><td>Focus ring via box-shadow</td></tr>
         </tbody>
@@ -559,12 +559,12 @@
   </section>
 
   <!-- ── TYPOGRAPHY ─────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="typography" data-cat="typography">
+  <section class="cat-section margin-bottom-56" id="typography" data-cat="typography">
     <div class="section-header">
       <div class="section-icon background-yellow-100">Aa</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Typography</h2>
-        <p class="set-text-13 color-gray-500">Font size, weight, style, alignment, decoration, line-height, and letter-spacing.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Typography</h2>
+        <p class="text-size-13 color-gray-500">Font size, weight, style, alignment, decoration, line-height, and letter-spacing.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -579,7 +579,7 @@
           <tr><td>text-light</td><td>font-weight: 300</td><td>Light weight</td></tr>
           <tr><td>text-thin</td><td>font-weight: 100</td><td>Thin / hairline weight</td></tr>
           <tr><td>text-extrabold</td><td>font-weight: 800</td><td>Extra bold</td></tr>
-          <tr><td>text-black-weight</td><td>font-weight: 900</td><td>Black / heaviest weight</td></tr>
+          <tr><td>text-weight-black</td><td>font-weight: 900</td><td>Black / heaviest weight</td></tr>
           <tr><td>text-italic</td><td>font-style: italic</td><td>Italic text</td></tr>
           <tr><td>text-not-italic</td><td>font-style: normal</td><td>Remove italic</td></tr>
           <tr><td>text-center</td><td>text-align: center</td><td>Center-align text</td></tr>
@@ -598,10 +598,10 @@
           <tr><td>line-height-normal</td><td>line-height: 1.5</td><td>Normal line height</td></tr>
           <tr><td>line-height-relaxed</td><td>line-height: 1.75</td><td>Relaxed line height</td></tr>
           <tr><td>line-height-loose</td><td>line-height: 2</td><td>Loose line height</td></tr>
-          <tr><td>letter-space-tight</td><td>letter-spacing: -0.05em</td><td>Tight letter spacing</td></tr>
-          <tr><td>letter-space-normal</td><td>letter-spacing: 0</td><td>Normal letter spacing</td></tr>
-          <tr><td>letter-space-wide</td><td>letter-spacing: 0.05em</td><td>Wide letter spacing</td></tr>
-          <tr><td>letter-space-wider</td><td>letter-spacing: 0.1em</td><td>Wider letter spacing</td></tr>
+          <tr><td>letter-spacing-tight</td><td>letter-spacing: -0.05em</td><td>Tight letter spacing</td></tr>
+          <tr><td>letter-spacing-normal</td><td>letter-spacing: 0</td><td>Normal letter spacing</td></tr>
+          <tr><td>letter-spacing-wide</td><td>letter-spacing: 0.05em</td><td>Wide letter spacing</td></tr>
+          <tr><td>letter-spacing-wider</td><td>letter-spacing: 0.1em</td><td>Wider letter spacing</td></tr>
           <tr><td>text-truncate</td><td>overflow: hidden; text-overflow: ellipsis; white-space: nowrap</td><td>Single-line text truncation</td></tr>
           <tr><td>text-nowrap</td><td>white-space: nowrap</td><td>Prevent line wrapping</td></tr>
           <tr><td>text-wrap</td><td>white-space: normal</td><td>Allow line wrapping</td></tr>
@@ -618,26 +618,26 @@
   </section>
 
   <!-- ── SHADOWS ────────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="shadows" data-cat="shadows">
+  <section class="cat-section margin-bottom-56" id="shadows" data-cat="shadows">
     <div class="section-header">
       <div class="section-icon background-gray-200">◫</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Shadows</h2>
-        <p class="set-text-13 color-gray-500">Box shadow and text shadow utilities.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Shadows</h2>
+        <p class="text-size-13 color-gray-500">Box shadow and text shadow utilities.</p>
       </div>
     </div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Class</th><th>CSS Output</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td>add-shadow-none</td><td>box-shadow: none</td><td>Remove shadow</td></tr>
+          <tr><td>shadow-none</td><td>box-shadow: none</td><td>Remove shadow</td></tr>
           <tr><td>add-shadow-xs</td><td>box-shadow: 0 1px 2px rgba(0,0,0,0.05)</td><td>Extra small shadow</td></tr>
-          <tr><td>add-shadow-sm</td><td>box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)</td><td>Small shadow</td></tr>
-          <tr><td>add-shadow-md</td><td>box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)</td><td>Medium shadow</td></tr>
-          <tr><td>add-shadow-lg</td><td>box-shadow: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05)</td><td>Large shadow</td></tr>
-          <tr><td>add-shadow-xl</td><td>box-shadow: 0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04)</td><td>Extra large shadow</td></tr>
+          <tr><td>shadow-sm</td><td>box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)</td><td>Small shadow</td></tr>
+          <tr><td>shadow-md</td><td>box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)</td><td>Medium shadow</td></tr>
+          <tr><td>shadow-lg</td><td>box-shadow: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05)</td><td>Large shadow</td></tr>
+          <tr><td>shadow-xl</td><td>box-shadow: 0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04)</td><td>Extra large shadow</td></tr>
           <tr><td>add-shadow-2xl</td><td>box-shadow: 0 25px 50px rgba(0,0,0,0.25)</td><td>2xl shadow</td></tr>
-          <tr><td>add-shadow-inner</td><td>box-shadow: inset 0 2px 4px rgba(0,0,0,0.06)</td><td>Inner shadow</td></tr>
+          <tr><td>shadow-inner</td><td>box-shadow: inset 0 2px 4px rgba(0,0,0,0.06)</td><td>Inner shadow</td></tr>
           <tr><td>add-shadow-colored-{name}</td><td>box-shadow: 0 4px 14px var(--{name}-shadow)</td><td>Colored shadow (e.g. add-shadow-colored-blue)</td></tr>
           <tr><td>text-shadow-sm</td><td>text-shadow: 0 1px 2px rgba(0,0,0,0.2)</td><td>Small text shadow</td></tr>
           <tr><td>text-shadow-md</td><td>text-shadow: 0 2px 4px rgba(0,0,0,0.3)</td><td>Medium text shadow</td></tr>
@@ -649,12 +649,12 @@
   </section>
 
   <!-- ── POSITIONING ────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="positioning" data-cat="positioning">
+  <section class="cat-section margin-bottom-56" id="positioning" data-cat="positioning">
     <div class="section-header">
       <div class="section-icon background-red-100">📌</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Positioning</h2>
-        <p class="set-text-13 color-gray-500">Position type, inset values, z-index, and float utilities.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Positioning</h2>
+        <p class="text-size-13 color-gray-500">Position type, inset values, z-index, and float utilities.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -670,12 +670,12 @@
           <tr><td>pin-bottom-{n}</td><td>bottom: {n}px</td><td>Bottom inset</td></tr>
           <tr><td>pin-left-{n}</td><td>left: {n}px</td><td>Left inset</td></tr>
           <tr><td>pin-right-{n}</td><td>right: {n}px</td><td>Right inset</td></tr>
-          <tr><td>pin-center</td><td>top: 50%; left: 50%; transform: translate(-50%,-50%)</td><td>Absolutely center element</td></tr>
-          <tr><td>pin-center-x</td><td>left: 50%; transform: translateX(-50%)</td><td>Center horizontally</td></tr>
-          <tr><td>pin-center-y</td><td>top: 50%; transform: translateY(-50%)</td><td>Center vertically</td></tr>
+          <tr><td>inset-center</td><td>top: 50%; left: 50%; transform: translate(-50%,-50%)</td><td>Absolutely center element</td></tr>
+          <tr><td>inset-center-x</td><td>left: 50%; transform: translateX(-50%)</td><td>Center horizontally</td></tr>
+          <tr><td>inset-center-y</td><td>top: 50%; transform: translateY(-50%)</td><td>Center vertically</td></tr>
           <tr><td>pin-inset-0</td><td>inset: 0</td><td>Stretch to all edges</td></tr>
           <tr><td>layer-{n}</td><td>z-index: {n}</td><td>Z-index (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)</td></tr>
-          <tr><td>layer-auto</td><td>z-index: auto</td><td>Auto z-index</td></tr>
+          <tr><td>z-index-auto</td><td>z-index: auto</td><td>Auto z-index</td></tr>
           <tr><td>float-left</td><td>float: left</td><td>Float element left</td></tr>
           <tr><td>float-right</td><td>float: right</td><td>Float element right</td></tr>
           <tr><td>float-none</td><td>float: none</td><td>Remove float</td></tr>
@@ -687,12 +687,12 @@
   </section>
 
   <!-- ── TRANSITIONS ────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="transitions" data-cat="transitions">
+  <section class="cat-section margin-bottom-56" id="transitions" data-cat="transitions">
     <div class="section-header">
       <div class="section-icon background-teal-100">⚡</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Transitions</h2>
-        <p class="set-text-13 color-gray-500">Transition shorthand, duration, timing, and transform utilities.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Transitions</h2>
+        <p class="text-size-13 color-gray-500">Transition shorthand, duration, timing, and transform utilities.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -730,38 +730,38 @@
   </section>
 
   <!-- ── ANIMATIONS ─────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="animations" data-cat="animations">
+  <section class="cat-section margin-bottom-56" id="animations" data-cat="animations">
     <div class="section-header">
       <div class="section-icon background-indigo-100">🎬</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Animations</h2>
-        <p class="set-text-13 color-gray-500">Keyframe animation helpers. See <a href="animations.html" class="color-blue-600">animations.html</a> for a full showcase of 70+ animations.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Animations</h2>
+        <p class="text-size-13 color-gray-500">Keyframe animation helpers. See <a href="animations.html" class="color-blue-600">animations.html</a> for a full showcase of 70+ animations.</p>
       </div>
     </div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Class</th><th>CSS Output</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td>animate-spin</td><td>animation: spin 1s linear infinite</td><td>Continuous rotation</td></tr>
-          <tr><td>animate-ping</td><td>animation: ping 1s cubic-bezier(0,0,0.2,1) infinite</td><td>Ripple / beacon pulse</td></tr>
-          <tr><td>animate-pulse</td><td>animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite</td><td>Slow opacity pulse</td></tr>
-          <tr><td>animate-bounce</td><td>animation: bounce 1s infinite</td><td>Up-and-down bounce</td></tr>
-          <tr><td>animate-fade-in</td><td>animation: fadeIn 0.5s ease forwards</td><td>Fade in on load</td></tr>
-          <tr><td>animate-fade-out</td><td>animation: fadeOut 0.5s ease forwards</td><td>Fade out</td></tr>
-          <tr><td>animate-slide-up</td><td>animation: slideUp 0.4s ease forwards</td><td>Slide in from below</td></tr>
-          <tr><td>animate-slide-down</td><td>animation: slideDown 0.4s ease forwards</td><td>Slide in from above</td></tr>
+          <tr><td>animation-spin</td><td>animation: spin 1s linear infinite</td><td>Continuous rotation</td></tr>
+          <tr><td>animation-ping</td><td>animation: ping 1s cubic-bezier(0,0,0.2,1) infinite</td><td>Ripple / beacon pulse</td></tr>
+          <tr><td>animation-pulse</td><td>animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite</td><td>Slow opacity pulse</td></tr>
+          <tr><td>animation-bounce</td><td>animation: bounce 1s infinite</td><td>Up-and-down bounce</td></tr>
+          <tr><td>animation-fade-in</td><td>animation: fadeIn 0.5s ease forwards</td><td>Fade in on load</td></tr>
+          <tr><td>animation-fade-out</td><td>animation: fadeOut 0.5s ease forwards</td><td>Fade out</td></tr>
+          <tr><td>animation-slide-up</td><td>animation: slideUp 0.4s ease forwards</td><td>Slide in from below</td></tr>
+          <tr><td>animation-slide-down</td><td>animation: slideDown 0.4s ease forwards</td><td>Slide in from above</td></tr>
           <tr><td>animate-slide-left</td><td>animation: slideLeft 0.4s ease forwards</td><td>Slide in from right</td></tr>
           <tr><td>animate-slide-right</td><td>animation: slideRight 0.4s ease forwards</td><td>Slide in from left</td></tr>
-          <tr><td>animate-zoom-in</td><td>animation: zoomIn 0.3s ease forwards</td><td>Scale up from 0.8</td></tr>
-          <tr><td>animate-zoom-out</td><td>animation: zoomOut 0.3s ease forwards</td><td>Scale down to 0.8</td></tr>
+          <tr><td>animation-zoom-in</td><td>animation: zoomIn 0.3s ease forwards</td><td>Scale up from 0.8</td></tr>
+          <tr><td>animation-zoom-out</td><td>animation: zoomOut 0.3s ease forwards</td><td>Scale down to 0.8</td></tr>
           <tr><td>animate-shake</td><td>animation: shake 0.5s ease</td><td>Horizontal shake</td></tr>
           <tr><td>animate-wiggle</td><td>animation: wiggle 0.5s ease</td><td>Rotation wiggle</td></tr>
           <tr><td>animate-flip-x</td><td>animation: flipX 0.5s ease forwards</td><td>Flip on X axis</td></tr>
           <tr><td>animate-flip-y</td><td>animation: flipY 0.5s ease forwards</td><td>Flip on Y axis</td></tr>
-          <tr><td>animate-heartbeat</td><td>animation: heartbeat 1s ease infinite</td><td>Pulsing heartbeat scale</td></tr>
+          <tr><td>animation-heartbeat</td><td>animation: heartbeat 1s ease infinite</td><td>Pulsing heartbeat scale</td></tr>
           <tr><td>animate-float</td><td>animation: float 3s ease-in-out infinite</td><td>Gentle floating effect</td></tr>
           <tr><td>animate-glow</td><td>animation: glow 2s ease-in-out infinite</td><td>Glowing box-shadow pulse</td></tr>
-          <tr><td>animate-typewriter</td><td>animation: typewriter steps(30) forwards</td><td>Typewriter reveal effect</td></tr>
+          <tr><td>animation-typewriter</td><td>animation: typewriter steps(30) forwards</td><td>Typewriter reveal effect</td></tr>
           <tr><td>animate-none</td><td>animation: none</td><td>Disable animation</td></tr>
           <tr><td>delay-{n}</td><td>animation-delay: {n}ms</td><td>Animation delay (75, 100, 150, 200, 300, 500, 700, 1000)</td></tr>
           <tr><td>iteration-{n}</td><td>animation-iteration-count: {n}</td><td>Play count (1, 2, 3, infinite)</td></tr>
@@ -771,12 +771,12 @@
   </section>
 
   <!-- ── STATE VARIANTS ─────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="state" data-cat="state">
+  <section class="cat-section margin-bottom-56" id="state" data-cat="state">
     <div class="section-header">
       <div class="section-icon background-violet-100">👆</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">State Variants</h2>
-        <p class="set-text-13 color-gray-500">Prefix any utility with a state modifier to apply it conditionally.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">State Variants</h2>
+        <p class="text-size-13 color-gray-500">Prefix any utility with a state modifier to apply it conditionally.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -803,12 +803,12 @@
   </section>
 
   <!-- ── RESPONSIVE ─────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="responsive" data-cat="responsive">
+  <section class="cat-section margin-bottom-56" id="responsive" data-cat="responsive">
     <div class="section-header">
       <div class="section-icon background-sky-100">📱</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Responsive</h2>
-        <p class="set-text-13 color-gray-500">Breakpoint prefixes. Prefix any utility to apply it at a specific screen size.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Responsive</h2>
+        <p class="text-size-13 color-gray-500">Breakpoint prefixes. Prefix any utility to apply it at a specific screen size.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -826,31 +826,31 @@
         </tbody>
       </table>
     </div>
-    <div class="add-margin-top-16 add-padding-16 round-corners-10" style="background:#f0fdf4;border:1px solid #bbf7d0;">
-      <p class="set-text-13 color-green-700 text-semibold add-margin-bottom-4">Usage example</p>
-      <code class="set-text-12 color-green-800 font-mono">class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"</code>
+    <div class="margin-top-16 padding-16 radius-10" style="background:#f0fdf4;border:1px solid #bbf7d0;">
+      <p class="text-size-13 color-green-700 text-semibold margin-bottom-4">Usage example</p>
+      <code class="text-size-12 color-green-800 font-mono">class="grid-columns-1 md:grid-columns-2 lg:grid-columns-3"</code>
     </div>
   </section>
 
   <!-- ── DISPLAY & OVERFLOW ─────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="display" data-cat="display">
+  <section class="cat-section margin-bottom-56" id="display" data-cat="display">
     <div class="section-header">
       <div class="section-icon background-cyan-100">👁</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Display &amp; Overflow</h2>
-        <p class="set-text-13 color-gray-500">Display modes, visibility, overflow control, and cursor utilities.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Display &amp; Overflow</h2>
+        <p class="text-size-13 color-gray-500">Display modes, visibility, overflow control, and cursor utilities.</p>
       </div>
     </div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Class</th><th>CSS Output</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td>make-block</td><td>display: block</td><td>Block element</td></tr>
-          <tr><td>make-inline</td><td>display: inline</td><td>Inline element</td></tr>
-          <tr><td>make-inline-block</td><td>display: inline-block</td><td>Inline block element</td></tr>
-          <tr><td>make-hidden</td><td>display: none</td><td>Hide element (removes from flow)</td></tr>
-          <tr><td>make-invisible</td><td>visibility: hidden</td><td>Hide but keep space</td></tr>
-          <tr><td>make-visible</td><td>visibility: visible</td><td>Make visible</td></tr>
+          <tr><td>display-block</td><td>display: block</td><td>Block element</td></tr>
+          <tr><td>display-inline</td><td>display: inline</td><td>Inline element</td></tr>
+          <tr><td>display-inline-block</td><td>display: inline-block</td><td>Inline block element</td></tr>
+          <tr><td>display-none</td><td>display: none</td><td>Hide element (removes from flow)</td></tr>
+          <tr><td>visibility-hidden</td><td>visibility: hidden</td><td>Hide but keep space</td></tr>
+          <tr><td>visibility-visible</td><td>visibility: visible</td><td>Make visible</td></tr>
           <tr><td>make-table</td><td>display: table</td><td>Table display</td></tr>
           <tr><td>make-table-cell</td><td>display: table-cell</td><td>Table cell display</td></tr>
           <tr><td>make-table-row</td><td>display: table-row</td><td>Table row display</td></tr>
@@ -888,12 +888,12 @@
   </section>
 
   <!-- ── GRADIENTS ──────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="gradients" data-cat="gradients">
+  <section class="cat-section margin-bottom-56" id="gradients" data-cat="gradients">
     <div class="section-header">
       <div class="section-icon background-fuchsia-100">🌈</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Gradients</h2>
-        <p class="set-text-13 color-gray-500">Linear gradient backgrounds and text gradient effects.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Gradients</h2>
+        <p class="text-size-13 color-gray-500">Linear gradient backgrounds and text gradient effects.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -920,12 +920,12 @@
   </section>
 
   <!-- ── COMPONENT VARIANTS ─────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="components" data-cat="components">
+  <section class="cat-section margin-bottom-56" id="components" data-cat="components">
     <div class="section-header">
       <div class="section-icon background-emerald-100">🧩</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Component Variants</h2>
-        <p class="set-text-13 color-gray-500">make-button, style-*, size-*, and other component modifier classes.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Component Variants</h2>
+        <p class="text-size-13 color-gray-500">make-button, style-*, size-*, and other component modifier classes.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -967,12 +967,12 @@
   </section>
 
   <!-- ── SCROLL UTILITIES ───────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="scroll" data-cat="scroll">
+  <section class="cat-section margin-bottom-56" id="scroll" data-cat="scroll">
     <div class="section-header">
       <div class="section-icon background-lime-100">↕</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Scroll Utilities</h2>
-        <p class="set-text-13 color-gray-500">Scroll snapping, smooth scrolling, and scrollbar control.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Scroll Utilities</h2>
+        <p class="text-size-13 color-gray-500">Scroll snapping, smooth scrolling, and scrollbar control.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -1001,12 +1001,12 @@
   </section>
 
   <!-- ── LOGICAL PROPERTIES ─────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="logical" data-cat="logical">
+  <section class="cat-section margin-bottom-56" id="logical" data-cat="logical">
     <div class="section-header">
       <div class="section-icon background-rose-100">↔</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Logical Properties</h2>
-        <p class="set-text-13 color-gray-500">Writing-mode-aware margin, padding, and border utilities (LTR / RTL support).</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Logical Properties</h2>
+        <p class="text-size-13 color-gray-500">Writing-mode-aware margin, padding, and border utilities (LTR / RTL support).</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -1031,12 +1031,12 @@
   </section>
 
   <!-- ── DYNAMIC VIEWPORT ───────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="viewport" data-cat="viewport">
+  <section class="cat-section margin-bottom-56" id="viewport" data-cat="viewport">
     <div class="section-header">
       <div class="section-icon background-amber-100">📐</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Dynamic Viewport</h2>
-        <p class="set-text-13 color-gray-500">Modern dvh / svh / lvh viewport units for mobile-aware layouts.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Dynamic Viewport</h2>
+        <p class="text-size-13 color-gray-500">Modern dvh / svh / lvh viewport units for mobile-aware layouts.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -1062,12 +1062,12 @@
   </section>
 
   <!-- ── PRINT ──────────────────────────────────────────────────────────────── -->
-  <section class="cat-section add-margin-bottom-56" id="print" data-cat="print">
+  <section class="cat-section margin-bottom-56" id="print" data-cat="print">
     <div class="section-header">
       <div class="section-icon background-slate-100">🖨</div>
       <div>
-        <h2 class="set-text-24 text-bold color-gray-900">Print</h2>
-        <p class="set-text-13 color-gray-500">Control element visibility and layout when printing.</p>
+        <h2 class="text-size-24 text-bold color-gray-900">Print</h2>
+        <p class="text-size-13 color-gray-500">Control element visibility and layout when printing.</p>
       </div>
     </div>
     <div class="table-wrap">
@@ -1091,56 +1091,56 @@
 </main>
 
 <!-- ─── FOOTER ───────────────────────────────────────────────────────────────── -->
-<footer class="background-gray-900 add-padding-y-56">
+<footer class="background-gray-900 padding-y-56">
   <div class="container">
-    <div class="make-grid grid-cols-4 gap-40 add-margin-bottom-48">
+    <div class="display-grid grid-columns-4 gap-40 margin-bottom-48">
       <div>
-        <div class="make-flex align-center gap-10 add-margin-bottom-16">
-          <div class="make-flex align-center justify-center set-width-32 set-height-32 background-blue-600 round-corners-8">
+        <div class="display-flex align-center gap-10 margin-bottom-16">
+          <div class="display-flex align-center justify-center width-32 height-32 background-blue-600 radius-8">
             <svg width="18" height="18" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
           </div>
-          <span class="set-text-18 text-bold color-white">Santy<span class="color-blue-400">CSS</span></span>
+          <span class="text-size-18 text-bold color-white">Santy<span class="color-blue-400">CSS</span></span>
         </div>
-        <p class="set-text-14 color-gray-400 line-height-relaxed">Plain-English utility CSS. No build step. Just drop in and start building.</p>
+        <p class="text-size-14 color-gray-400 line-height-relaxed">Plain-English utility CSS. No build step. Just drop in and start building.</p>
       </div>
       <div>
-        <h5 class="set-text-13 text-semibold color-gray-400 text-uppercase letter-space-wide add-margin-bottom-16">Framework</h5>
-        <ul class="list-none make-flex flex-column gap-10">
-          <li><a href="index.html#getting-started" class="set-text-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Getting Started</a></li>
-          <li><a href="classes.html" class="set-text-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Class Reference</a></li>
-          <li><a href="components.html" class="set-text-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Components</a></li>
-          <li><a href="index.html#examples" class="set-text-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Examples</a></li>
+        <h5 class="text-size-13 text-semibold color-gray-400 text-uppercase letter-spacing-wide margin-bottom-16">Framework</h5>
+        <ul class="list-none display-flex flex-column gap-10">
+          <li><a href="index.html#getting-started" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Getting Started</a></li>
+          <li><a href="classes.html" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Class Reference</a></li>
+          <li><a href="components.html" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Components</a></li>
+          <li><a href="index.html#examples" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Examples</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="set-text-13 text-semibold color-gray-400 text-uppercase letter-space-wide add-margin-bottom-16">Resources</h5>
-        <ul class="list-none make-flex flex-column gap-10">
-          <li><a href="demo.html" class="set-text-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Live Demo</a></li>
-          <li><a href="animations.html" class="set-text-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Animations Showcase</a></li>
-          <li><a href="jit-demo.html" class="set-text-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">JIT Demo</a></li>
-          <li><a href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css" class="set-text-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Download CSS</a></li>
-          <li><a href="build.js" class="set-text-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Build Script</a></li>
+        <h5 class="text-size-13 text-semibold color-gray-400 text-uppercase letter-spacing-wide margin-bottom-16">Resources</h5>
+        <ul class="list-none display-flex flex-column gap-10">
+          <li><a href="demo.html" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Live Demo</a></li>
+          <li><a href="animations.html" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Animations Showcase</a></li>
+          <li><a href="jit-demo.html" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">JIT Demo</a></li>
+          <li><a href="https://cdn.jsdelivr.net/npm/santycss@2.10.0/dist/santy.css" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Download CSS</a></li>
+          <li><a href="build.js" class="text-size-14 color-gray-400 text-no-decoration on-hover:color-white transition-colors">Build Script</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="set-text-13 text-semibold color-gray-400 text-uppercase letter-space-wide add-margin-bottom-16">Quick Stats</h5>
-        <ul class="list-none make-flex flex-column gap-10">
-          <li class="set-text-14 color-gray-400">📦 ~661KB full · 35KB components · 33KB animations</li>
-          <li class="set-text-14 color-gray-400">🎨 20 color families</li>
-          <li class="set-text-14 color-gray-400">🎬 70+ animations</li>
-          <li class="set-text-14 color-gray-400">⚡ No build step</li>
-          <li class="set-text-14 color-gray-400">📱 Responsive variants</li>
-          <li class="set-text-14 color-gray-400">🌙 Dark mode support</li>
+        <h5 class="text-size-13 text-semibold color-gray-400 text-uppercase letter-spacing-wide margin-bottom-16">Quick Stats</h5>
+        <ul class="list-none display-flex flex-column gap-10">
+          <li class="text-size-14 color-gray-400">📦 ~661KB full · 35KB components · 33KB animations</li>
+          <li class="text-size-14 color-gray-400">🎨 20 color families</li>
+          <li class="text-size-14 color-gray-400">🎬 70+ animations</li>
+          <li class="text-size-14 color-gray-400">⚡ No build step</li>
+          <li class="text-size-14 color-gray-400">📱 Responsive variants</li>
+          <li class="text-size-14 color-gray-400">🌙 Dark mode support</li>
         </ul>
       </div>
     </div>
     <hr style="border-color:#374151;margin-bottom:24px;">
-    <div class="make-flex align-center justify-between flex-wrap gap-16">
-      <p class="set-text-13 color-gray-500">© 2026 SantyCSS. Built with plain English.</p>
-      <div class="make-flex align-center gap-16">
-        <a href="https://www.linkedin.com/in/santhosh-prabakar/" target="_blank" rel="noopener" class="set-text-13 color-gray-500 text-no-decoration nav-link">LinkedIn</a>
-        <a href="https://instagram.com/santystudio" target="_blank" rel="noopener" class="set-text-13 color-gray-500 text-no-decoration nav-link">Instagram</a>
-        <span class="set-text-13 color-gray-500">MIT License</span>
+    <div class="display-flex align-center justify-between flex-wrap gap-16">
+      <p class="text-size-13 color-gray-500">© 2026 SantyCSS. Built with plain English.</p>
+      <div class="display-flex align-center gap-16">
+        <a href="https://www.linkedin.com/in/santhosh-prabakar/" target="_blank" rel="noopener" class="text-size-13 color-gray-500 text-no-decoration nav-link">LinkedIn</a>
+        <a href="https://instagram.com/santystudio" target="_blank" rel="noopener" class="text-size-13 color-gray-500 text-no-decoration nav-link">Instagram</a>
+        <span class="text-size-13 color-gray-500">MIT License</span>
       </div>
     </div>
   </div>

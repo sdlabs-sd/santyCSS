@@ -66,6 +66,21 @@ pre-2.10 class name still works, with byte-identical CSS.
 - Theme-aware colour utilities: `color-primary-contrast`,
   `color-secondary-contrast`, `color-primary-dark`, `background-primary-light`.
 
+### Site and tooling
+- **Every site page uses the 2.10 names**: the homepage, docs, class reference,
+  snippets, playground, components, animations, templates and demo sites
+  (about 7,300 class names). Each page was checked before and after against
+  the same build and renders identically. Spots that teach the migration still
+  show the old names on purpose.
+- **Homepage** presents SantyCSS on its own terms. A "A look of its own"
+  showcase of the Persimmon examples and a "What's in the box" section replace
+  the framework-comparison matrix, and the upgrade section walks through
+  `npx santycss migrate`.
+- **VS Code extension 1.1.0** suggests the 2.10 names and the new components
+  first. Old names stay, tagged deprecated with a pointer to the replacement.
+  It also fixes packaging: `.vscodeignore` excluded `src/`, which the
+  extension needs in order to load.
+
 ### Fixed
 - `santy-classmap.json` listed JavaScript identifiers and URL fragments
   (`forEach`, `getElementById`, `w3`, `org`, …) as classes. It now scans

@@ -63,6 +63,9 @@ function formatCSSHover(item) {
   md.supportHtml = true;
 
   md.appendMarkdown(`**\`${item.name}\`** — SantyCSS\n\n`);
+  if (item.deprecated) {
+    md.appendMarkdown(`⚠️ Deprecated since SantyCSS 2.10. Use **\`${item.deprecated}\`** (same CSS). Run \`npx santycss migrate\` to update a project.\n\n`);
+  }
 
   if (item.doc) {
     md.appendMarkdown(`${item.doc}\n\n`);
@@ -95,7 +98,8 @@ class SantyCSSCompletionProvider {
     return filtered.slice(0, 200).map(item => {
       const completion = new vscode.CompletionItem(item.name, vscode.CompletionItemKind.Value);
 
-      completion.detail = 'SantyCSS';
+      completion.detail = item.deprecated ? `SantyCSS · deprecated, use ${item.deprecated}` : 'SantyCSS';
+      if (item.deprecated) completion.tags = [vscode.CompletionItemTag.Deprecated];
       completion.filterText = item.name;
       completion.insertText = item.name;
 
@@ -103,17 +107,15 @@ class SantyCSSCompletionProvider {
         completion.documentation = new vscode.MarkdownString(item.doc);
       }
 
-      if (item.css) {
+      if (item.css && !item.deprecated) {
         const detail = `.${item.name} { ${item.css} }`;
         completion.documentation = new vscode.MarkdownString(
           `${item.doc ? item.doc + '\n\n' : ''}\`\`\`css\n.${item.name} {\n  ${item.css}\n}\n\`\`\``
         );
       }
 
-      // Sort: exact prefix matches first
-      completion.sortText = item.name.startsWith(currentWord)
-        ? '0' + item.name
-        : '1' + item.name;
+      // Sort: exact prefix matches first, deprecated names last
+      completion.sortText = (item.deprecated ? '2' : item.name.startsWith(currentWord) ? '0' : '1') + item.name;
 
       return completion;
     });
