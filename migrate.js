@@ -3,6 +3,8 @@
  * SantyCSS Migration Tool  —  npx santycss migrate
  *
  * Converts Tailwind CSS class names to SantyCSS equivalents.
+ * To rewrite pre-2.10 SantyCSS names instead, use --from=legacy
+ * (scripts/migrate.js).
  *
  * Usage:
  *   npx santycss migrate --input=src/          # convert all HTML/JSX/TSX/Vue in src/
@@ -349,8 +351,13 @@ function exists(out) {
 }
 
 // ─── Convert a single class name ─────────────────────────────────────────────
+// Every mapping is written against the pre-2.10 names; the naming grammar
+// (lib/naming.js) turns them into current ones: make-flex → display-flex.
+const naming = require('./lib/naming');
+const toGrammar = out => out && out.split(' ').map(c => naming.toNew(c) || c).join(' ');
+
 function convertClass(tw) {
-  const out = rawConvert(tw);
+  const out = toGrammar(rawConvert(tw));
   return out && exists(out) ? out : null; // null → unmapped
 }
 
@@ -417,7 +424,11 @@ const isDryRun  = hasFlag('dry-run');
 const isReport  = hasFlag('report');
 SOURCE = (getArg('from', 'tailwind') || 'tailwind').toLowerCase();
 if (SOURCE !== 'tailwind' && SOURCE !== 'bootstrap') {
-  console.error('Unknown --from=' + SOURCE + '. Use tailwind or bootstrap.');
+  if (SOURCE === 'legacy' || SOURCE === 'santy' || SOURCE === 'santycss') {
+    process.exitCode = require('./scripts/migrate.js').main(args.filter(a => !a.startsWith('--from=')));
+    return;
+  }
+  console.error('Unknown --from=' + SOURCE + '. Use tailwind, bootstrap or legacy.');
   process.exit(1);
 }
 

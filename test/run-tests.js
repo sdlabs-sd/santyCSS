@@ -623,7 +623,9 @@ test('dynamic viewport units carry a vh/vw fallback', () => {
     ['.h-50dvh', 'height: 50vh; height: 50dvh;'],
   ];
   for (const [sel, expected] of rules) {
-    const line = c.split('\n').find(l => l.trim().startsWith(sel + ' ') || l.trim().startsWith(sel + '{'));
+    // The selector may follow its v2.10 grammar twin (".height-dvh, .set-height-dvh").
+    const re = new RegExp('(^|,\\s*)' + sel.replace(/[.\\]/g, '\\$&') + '[\\s,{]');
+    const line = c.split('\n').find(l => re.test(l.trim()));
     assert(line && line.includes(expected), `${sel} missing fallback — expected "${expected}"`);
   }
 });

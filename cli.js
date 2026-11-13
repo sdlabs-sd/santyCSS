@@ -80,6 +80,9 @@ SantyCSS CLI
   npx santycss migrate [flags]
                               Convert Tailwind (default) or Bootstrap classes in place
                               (--input=, --file=, --from=bootstrap, --dry-run, --report)
+  npx santycss migrate --from=legacy [paths] [--dry-run --diff --check --components]
+                              Rewrite pre-2.10 SantyCSS names to the new grammar
+                              (add-padding-24 → padding-24, make-flex → display-flex)
   npx santycss classes        Show class count from the bundled classmap
   npx santycss --help         This help
 
@@ -126,7 +129,13 @@ if (cmd === 'init') {
   // `npx santycss migrate …` — the documented form. `santycss-migrate` still works
   // when the package is installed locally.
   process.argv.splice(2, 1);
-  require('./migrate.js');
+  const from = (process.argv.find(a => a.startsWith('--from=')) || '').slice(7).toLowerCase();
+  if (from === 'legacy' || from === 'santy' || from === 'santycss') {
+    const rest = process.argv.slice(2).filter(a => !a.startsWith('--from='));
+    process.exitCode = require('./scripts/migrate.js').main(rest);
+  } else {
+    require('./migrate.js');
+  }
 } else if (cmd === 'purge' || (cmd && cmd.startsWith('--') && cmd !== '--help') || (!cmd && false)) {
   // `santycss purge --input=src` or legacy `santycss --input=src`
   if (cmd === 'purge') process.argv.splice(2, 1);

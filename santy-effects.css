@@ -26,14 +26,14 @@
 .opacity-100 { opacity: 1; }
 
 /* ── Box Shadow ── */
-.add-shadow-sm  { box-shadow: var(--santy-shadow-sm); }
-.add-shadow     { box-shadow: var(--santy-shadow); }
-.add-shadow-md  { box-shadow: var(--santy-shadow-md); }
-.add-shadow-lg  { box-shadow: var(--santy-shadow-lg); }
-.add-shadow-xl  { box-shadow: var(--santy-shadow-xl); }
-.add-shadow-inner { box-shadow: var(--santy-shadow-inner); }
-.add-shadow-none  { box-shadow: none; }
-.no-shadow        { box-shadow: none; }
+.shadow-sm, .add-shadow-sm  { box-shadow: var(--santy-shadow-sm); }
+.shadow, .add-shadow     { box-shadow: var(--santy-shadow); }
+.shadow-md, .add-shadow-md  { box-shadow: var(--santy-shadow-md); }
+.shadow-lg, .add-shadow-lg  { box-shadow: var(--santy-shadow-lg); }
+.shadow-xl, .add-shadow-xl  { box-shadow: var(--santy-shadow-xl); }
+.shadow-inner, .add-shadow-inner { box-shadow: var(--santy-shadow-inner); }
+.shadow-none, .add-shadow-none  { box-shadow: none; }
+.shadow-none, .no-shadow        { box-shadow: none; }
 
 /* ── Drop Shadow (filter) ── */
 .drop-shadow-sm  { filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05)); }
@@ -97,15 +97,15 @@
 .transform-origin-top-left    { transform-origin: top left; }
 
 /* ── Animation ── */
-.animate-spin     { animation: santy-spin 1s linear infinite; }
-.animate-ping     { animation: santy-ping 1s cubic-bezier(0,0,0.2,1) infinite; }
-.animate-pulse    { animation: santy-pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
-.animate-bounce   { animation: santy-bounce 1s infinite; }
-.animate-fade-in  { animation: santy-fade-in 0.5s ease; }
-.animate-fade-out { animation: santy-fade-out 0.5s ease; }
-.animate-slide-up { animation: santy-slide-up 0.4s ease; }
-.animate-slide-down { animation: santy-slide-down 0.4s ease; }
-.animate-zoom-in  { animation: santy-zoom-in 0.3s ease; }
+.animation-spin, .animate-spin     { animation: santy-spin 1s linear infinite; }
+.animation-ping, .animate-ping     { animation: santy-ping 1s cubic-bezier(0,0,0.2,1) infinite; }
+.animation-pulse, .animate-pulse    { animation: santy-pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+.animation-bounce, .animate-bounce   { animation: santy-bounce 1s infinite; }
+.animation-fade-in, .animate-fade-in  { animation: santy-fade-in 0.5s ease; }
+.animation-fade-out, .animate-fade-out { animation: santy-fade-out 0.5s ease; }
+.animation-slide-up, .animate-slide-up { animation: santy-slide-up 0.4s ease; }
+.animation-slide-down, .animate-slide-down { animation: santy-slide-down 0.4s ease; }
+.animation-zoom-in, .animate-zoom-in  { animation: santy-zoom-in 0.3s ease; }
 .animation-paused { animation-play-state: paused; }
 .animation-none   { animation: none; }
 

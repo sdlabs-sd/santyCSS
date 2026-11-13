@@ -47,7 +47,8 @@
     "./prettier": "./packages/prettier/index.js",
     "./bootstrap-map": "./lib/bootstrap-map.js",
     "./dist/*": "./dist/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./renames": "./dist/santy-renames.json"
   },
   "sideEffects": [
     "*.css",
@@ -70,6 +71,7 @@
     "vite-plugin-santycss.js",
     "purge.js",
     "migrate.js",
+    "scripts/migrate.js",
     "README.md",
     "santycss.context.md"
   ],
